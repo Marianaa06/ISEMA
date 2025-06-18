@@ -6,10 +6,10 @@
 
         <title>Laravel</title>
 
-        <!-- Fonts -->
+c
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-        <!-- Styles -->
+      
         <style>
             html, body {
                 background-color: #fff;
@@ -98,3 +98,4 @@
         </div>
     </body>
 </html>
+
