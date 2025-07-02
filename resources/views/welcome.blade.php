@@ -1,5 +1,23 @@
 @extends('layout.layout')
 @section('content')
+<!-- Navbar -->
+
+<!-- Hero Section -->
+<!-- <html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Payze
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+ </head> -->
+
+<head>
+    <script src="{{ asset('js/app.js') }}" defer></script>
+</head>
 <!-- Hero Section -->
 <section class="container mt-5 d-md-flex align-items-center justify-content-between px-3 px-md-0">
   <div class="w-100 w-md-50 position-relative z-10 pe-md-5">
