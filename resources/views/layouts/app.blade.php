@@ -1,9 +1,5 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<<<<<<< HEAD
-=======
-
->>>>>>> 006579a44e6a65324056a5400665938a61a650b7
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,13 +29,17 @@
     <!-- Custom Global Style -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
+    <!-- Animate CSS\ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
 </head>
 
 <body>
-    @include('layouts.navbar')
+    <!-- @include('layout.navbar') -->
 
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <!-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -49,10 +49,10 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side -->
+                    Left Side 
                     <ul class="navbar-nav mr-auto"></ul>
 
-                    <!-- Right Side -->
+                     Right Side
                     <ul class="navbar-nav ml-auto">
                         @guest
                         <li class="nav-item">
@@ -83,14 +83,15 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+      </nav> -->
 
         <main class="py-4">
             @yield('content')
-        </main>
+        </main> 
     </div>
 
-    <a class="nav-link" href="{{ route('about') }}">About</a>
+    <!-- <a class="nav-link" href="{{ route('about') }}">About</a> -->
+<!-- <script src="{{ mix('js/app.js') }}"></script> -->
 
 </body>
 

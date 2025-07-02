@@ -1,26 +1,33 @@
+
+
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+// import App from 'App.vue';
 
-import HomeComponent from './components/HomeComponent.vue';
-import AboutUsComponent from './components/AboutUsComponent.vue';
 import ProductComponent from './components/ProductComponent.vue';
-import SiakadDosenComponent from './components/productdetail/SiakadDosenComponent.vue';
-import SiakadAdminComponent from './components/productdetail/SiakadAdminComponent.vue';
-import SiakadMahasiswaComponent from './components/productdetail/SiakadMahasiswaComponent.vue';
-import ContactComponent from './components/ContactComponent.vue';
-
+import SiakadComponent from './components/productdetail/SiakadComponent.vue';
+import LmsComponent from './components/productdetail/LmsComponent.vue';
+import ModulComponent from './components/productdetail/ModulComponent.vue';
+import MbkmComponent from './components/productdetail/MbkmComponent.vue';
+import AlumniComponent from './components/productdetail/AlumniComponent.vue';
+import JurnalComponent from './components/productdetail/JurnalComponent.vue';
+import ReportingComponent from './components/productdetail/ReportingComponent.vue';
+import CBTComponent from './components/productdetail/CBTComponent.vue';
+import ModulSkripsiComponent from './components/productdetail/ModulSkripsiComponent.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
-    { path: '/', component: HomeComponent },
-    { path: '/about-us', component: AboutUsComponent },
     { path: '/product', component: ProductComponent },
-    { path: '/contact-us', component: ContactComponent },
-    { path: '/product/siakad-dosen', component: SiakadDosenComponent },
-    { path: '/product/siakad-admin', component: SiakadAdminComponent },
-    { path: '/product/siakad-mahasiswa', component: SiakadMahasiswaComponent }
-
+    { path: '/product/siakad', component: SiakadComponent },
+    { path: '/product/lms', component: LmsComponent},
+    { path: '/product/modul-keuangan', component: ModulComponent},
+    { path: '/product/mbkm', component: MbkmComponent},
+    { path: '/product/alumni', component: AlumniComponent},
+    { path: '/product/jurnal', component: JurnalComponent},
+    { path: '/product/reporting', component: ReportingComponent},
+    { path: '/product/cbt', component: CBTComponent},
+    { path: '/product/modul-skripsi', component: ModulSkripsiComponent},
 
 ];
 

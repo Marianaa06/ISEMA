@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Web Penjualan</a>
@@ -26,4 +26,18 @@
 
 <script>
 export default {}
-</script>
+</script> -->
+<!-- <template>
+  <div>
+    <navbar></navbar> 
+    <router-view></router-view> Tempat Vue ganti-ganti halaman
+    <footer></footer>
+  </div>
+</template> -->
+<!-- <template>
+  <div id="product-app">
+    <navbar></navbar> 
+    <router-view></router-view> 
+    <footer-component></footer-component>
+  </div>
+</template> -->

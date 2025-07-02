@@ -1,17 +1,21 @@
 <?php
 
+// use Illuminate\Support\Facades\Route;
+// use Illuminate\Support\Facades\Auth;
+// use App\Http\Controllers\HomeController;
+
+
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\HomeController;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
-// Auth::routes();
+Route::get('/about', function () {
+    return view('page.about');
+})->name('about');
 
-// Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/{any}', function () {
+Route::get('/', function () {
     return view('welcome');
+});
+Route::get('/product/{any?}', function () {
+    return view('page.product'); // Blade kosong khusus Vue
 })->where('any', '.*');
+Auth::routes();

@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-md navbar-custom d-flex align-items-center justify-content-between">
         <div class="d-flex align-items-center gap-2">
             <div class="circle-icon">
@@ -17,7 +18,7 @@
                     <a class="nav-link {{ request()->is('about') ? 'text-purple active' : 'text-dark' }}" href="{{ url('/about') }}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="#">Product</a>
+                    <a class="nav-link {{ request()->is('product*') ? 'text-purple active' : 'text-dark' }}" href="{{ url('/product') }}">Product</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a aria-expanded="false" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#" role="button">Contact Us</a>
@@ -37,3 +38,5 @@
         </div>
         <a class="btn btn-gradient d-none d-md-block color-white" href="https://wa.me/6282299543317?text=Halo,saya ingin bertanya"> Hubungi ISEMA</a>
     </nav>
+
+
