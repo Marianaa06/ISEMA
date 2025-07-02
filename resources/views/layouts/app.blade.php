@@ -88,6 +88,8 @@
     </div>
 
     <a class="nav-link" href="{{ route('about') }}">About</a>
+    <a class="nav-link" href="{{ route('contact') }}">Kontak</a>
+
 
 </body>
 

@@ -8,7 +8,8 @@ class HomeController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except(['about']);
+        // Hanya halaman 'about' dan 'contact' yang bisa diakses tanpa login
+        $this->middleware('auth')->except(['about', 'contact']);
     }
 
     public function index()
@@ -20,4 +21,10 @@ class HomeController extends Controller
     {
         return view('page.about');
     }
+
+    public function contact()
+    {
+        return view('page.contact');
+    }
+    
 }
