@@ -51,12 +51,12 @@
     <!-- Fitur Unggulan -->
     <section class="fitur-section py-5">
       <div class="container">
-        <h2 class="text-center mb-5">Fitur Unggulan CBT</h2>
+        <h2 class="text-center text-dark mb-5">Fitur Unggulan CBT</h2>
         <div class="row gy-4">
           <div class="col-md-4" v-for="(feature, index) in features" :key="index">
             <div class="bg-white shadow rounded p-4 h-100">
-              <i :class="feature.icon + ' fa-2x mb-3 text-primary'"></i>
-              <h5 class="fw-bold">{{ feature.title }}</h5>
+              <i :class="feature.icon + ' fa-2x mb-3 text-dark'"></i>
+              <h5 class="fw-bold text-dark">{{ feature.title }}</h5>
               <p class="text-muted">{{ feature.description }}</p>
             </div>
           </div>
@@ -66,9 +66,9 @@
 
     <section class="cta-cbt-section py-5">
   <div class="container-container text-center">
-    <h2 class="mb-3">Ingin Bangun Relasi Alumni yang Kuat?</h2>
-    <p class="mb-4">Hubungi kami untuk demo dan implementasi Treasure Alumni ISEMA</p>
-    <button class="btn-cbt  px-4 py-2">Hubungi Kami</button>
+    <h2 class="mb-3">Ingin Mempunyai sistem yang cepat?</h2>
+    <p class="mb-4 fw-bold fs-5">Hubungi kami untuk demo CBT ISEMA</p>
+    <button class="btn-cbt px-4 py-2">Hubungi Kami</button>
   </div>
 </section>
   </div>
@@ -79,38 +79,38 @@ export default {
   name: 'CbtComponent',
   data() {
     return {
-      features: [
-        {
-          title: 'Bank Soal Terstruktur',
-          description: 'Dosen dapat mengelola soal berdasarkan kategori, mata kuliah, dan bobot nilai.',
-          icon: 'fas fa-layer-group'
-        },
-        {
-          title: 'Randomisasi Soal & Jawaban',
-          description: 'Menghindari kecurangan dengan pengacakan otomatis soal dan jawaban.',
-          icon: 'fas fa-random'
-        },
-        {
-          title: 'Waktu Otomatis & Countdown',
-          description: 'Timer hitung mundur untuk tiap sesi ujian guna memastikan ketertiban.',
-          icon: 'fas fa-clock'
-        },
-        {
-          title: 'Multi-Tipe Soal',
-          description: 'Mendukung pilihan ganda, esai, dan isian singkat.',
-          icon: 'fas fa-tasks'
-        },
-        {
-          title: 'Analisis Hasil Ujian',
-          description: 'Laporan nilai dan statistik soal otomatis untuk analisis cepat.',
-          icon: 'fas fa-chart-bar'
-        },
-        {
-          title: 'Integrasi dengan SIAKAD',
-          description: 'Nilai langsung masuk ke sistem akademik setelah ujian selesai.',
-          icon: 'fas fa-link'
-        },
-      ]
+features: [
+  {
+    title: 'Dashboard',
+    description: 'Pusat kontrol untuk memantau jadwal ujian, jumlah peserta, dan status tes secara real-time.',
+    icon: 'fas fa-tv'
+  },
+  {
+    title: 'Entrance Test',
+    description: 'Digunakan untuk seleksi awal mahasiswa baru dengan sistem ujian berbasis komputer.',
+    icon: 'fas fa-door-open'
+  },
+  {
+    title: 'TOEFL Test',
+    description: 'Ujian kemampuan bahasa Inggris dengan sesi Listening, Structure, dan Reading.',
+    icon: 'fas fa-headphones-alt'
+  },
+  {
+    title: 'TOAFL Test',
+    description: 'Tes kemampuan bahasa Arab lengkap dengan timer dan sistem koreksi otomatis.',
+    icon: 'fas fa-language'
+  },
+  {
+    title: 'SAT Test',
+    description: 'Evaluasi potensi akademik calon mahasiswa berbasis standar nasional.',
+    icon: 'fas fa-file-alt'
+  },
+  {
+    title: 'Logout',
+    description: 'Sistem logout otomatis setelah tes selesai untuk keamanan dan validasi data.',
+    icon: 'fas fa-sign-out-alt'
+  },
+]
     }
   }
 }
@@ -118,37 +118,40 @@ export default {
 <style scoped>
 .cbt-page {
   font-family: 'Poppins', sans-serif;
-  color: #343a40;
+  color: #ffffff;
   background-color: #f8f9fa;
   padding: 50px;
 }
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, #eef4ed, #dce7dc);
+  background: linear-gradient(135deg, #4e727d, #45818c);
   padding: 20px;
 }
 .hero-title {
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 15px;
+  color: #ffffff;
 }
 .hero-title span {
-  color: #28a745;
+  color: #ffffff;
 }
 .tagline {
   text-transform: uppercase;
   font-size: 0.9rem;
-  color: #6c757d;
+  color: #ffffff;
   font-weight: 600;
 }
 .hero-subtext {
   font-size: 1.1rem;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 .hero-benefits {
   list-style: none;
   padding-left: 0;
+  color: #ffffff;
 }
 .hero-benefits li {
   position: relative;
@@ -157,14 +160,14 @@ export default {
 }
 .hero-benefits li::before {
   content: '✔';
-  color: #28a745;
+  color: #ffffff;
   font-weight: bold;
   position: absolute;
   left: 0;
 }
 .btn-cta {
-  background-color: rgb(211, 180, 8) ;
-  color: white;
+  background-color: rgb(255, 255, 255) ;
+  color: rgb(0, 0, 0);
   border: none;
   padding: 12px 30px;
   border-radius: 8px;
@@ -178,6 +181,7 @@ export default {
 /* Why Choose Section */
 .why-section {
   background-color: #ffffff;
+  color: #45818c;
 }
 .title-wrapper {
   background-color: #e8f5e9;
@@ -185,7 +189,7 @@ export default {
 .why-title {
   font-size: 2.2rem;
   font-weight: 800;
-  color: #1b5e20;
+  color: #000000;
 }
 .content-wrapper {
   background-color: #ffffff;
@@ -197,7 +201,7 @@ export default {
 }
 .why-note {
   font-style: italic;
-  color: #388e3c;
+  color: #45818c;
 }
 
 /* Fitur Section */
@@ -207,10 +211,10 @@ export default {
 .fitur-section h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #1b5e20;
+  color:#45818c;
 }
 .fitur-section .bg-white {
-  border-left: 5px solid #28a745;
+  border-left: 5px solid #45818c;
   transition: transform 0.3s ease;
 }
 .fitur-section .bg-white:hover {
@@ -218,7 +222,8 @@ export default {
 }
 
 .cta-cbt-section {
-    background: linear-gradient(135deg, #5b7756, #dce7dc);
+  background: linear-gradient(135deg, #4e727d, #45818c);
+
 
   color: #fff;
 }
@@ -233,8 +238,8 @@ export default {
 }
 
 .btn-cbt {
-  background-color: rgb(211, 180, 8) ;
-  color: #ffffff;
+  background-color: rgb(255, 255, 255) ;
+  color: #45818c;
   font-weight: 600;
   border: none;
   border-radius: 8px;
@@ -242,8 +247,8 @@ export default {
 }
 
 .btn-cbt:hover {
-    background-color: #ffffff;
-  color: darkorange 
+    background-color: #000000;
+  color: rgb(255, 255, 255) 
 }
 
 @media (max-width: 575.98px) {

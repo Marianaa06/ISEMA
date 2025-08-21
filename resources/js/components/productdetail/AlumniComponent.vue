@@ -5,12 +5,12 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 text-left">
-            <p class="tagline">Koneksi Alumni dalam Genggaman</p>
+            <p class="tagline">Jejak Karier Alumni dalam Satu Sistem</p>
             <h1 class="hero-title">
               Tracer Alumni<br><span>Menjembatani Masa Lalu dan Masa Depan</span>
             </h1>
             <p class="hero-subtext">
-              Platform ini memudahkan pelacakan alumni, keterlibatan mereka, dan membangun jaringan alumni yang aktif serta berdaya guna.
+              Platform ini memudahkan pelacakan alumni, pemetaan karier, dan keterlibatan mereka dalam pengembangan institusi.
             </p>
             <button class="btn btn-cta mt-3">Hubungi Kami</button>
           </div>
@@ -23,8 +23,8 @@
 
  <section class="treasure-advantages-section container-fluid py-5">
     <div class="text-center mb-5">
-      <h2 class="fw-bold display-5">Mengapa Memilih Tracer Alumni ISEMA?</h2>
-      <p class="lead">Dukung pengembangan karier dan kompetensi mahasiswa di luar kampus</p>
+      <h2 class="fw-bold display-6">Mengapa Memilih Tracer Alumni ISEMA?</h2>
+      <p class="lead fs-4">Pantau perkembangan karier lulusan dan optimalkan hubungan kampus dengan alumni</p>
     </div>
 
     <div class="row text-center justify-content-center gy-4">
@@ -34,7 +34,7 @@
         :key="index"
       >
         <div class="treasure-feature-item">
-          <i :class="item.icon + ' mb-3'"></i>
+          <i :class="item.icon + ' mb-3 fs-3'"></i>
           <h5 class="fw-semibold">{{ item.title }}</h5>
           <p>{{ item.description }}</p>
         </div>
@@ -42,18 +42,18 @@
     </div>
   </section>
 
-   <section class="treasure-alumni-benefit-section">
+  <section class="treasure-alumni-benefit-section">
     <div class="container-fluid d-flex flex-wrap align-items-center">
       <!-- Kiri: Tulisan -->
       <div class="text-content col-lg-6 px-5">
-        <h2 class="headline mb-3">Gabung dengan Komunitas Alumni, <br><em>bukan sekadar lulusan</em></h2>
-        <p class="lead fw-semibold">Bersama Tracer Alumni ISEMA, Anda akan mendapatkan berbagai manfaat yang mendukung perkembangan profesional dan kontribusi alumni.</p>
+        <h2 class="headline mb-3">Gabung dengan Sistem Tracer Alumni,<br><em>lebih dari sekadar pelacakan</em></em></h2>
+        <p class="lead fw-semibold">Tracer Alumni ISEMA membantu Anda memahami dampak lulusan dan meningkatkan akreditasi institusi dengan data yang akurat.</p>
         <ul class="benefit-list mt-4">
-          <li>Terhubung dengan jejaring alumni aktif dari berbagai bidang</li>
-          <li>Akses info lowongan kerja dan kolaborasi bisnis</li>
-          <li>Partisipasi dalam kegiatan kampus dan mentoring</li>
-          <li>Portal kontribusi alumni secara digital & transparan</li>
-          <li>Statistik sebaran alumni berdasarkan bidang dan lokasi</li>
+          <li>Pelacakan status pekerjaan dan pendidikan lanjutan alumni</li>
+          <li>Survei alumni otomatis dan analisis data karier</li>
+          <li>Partisipasi alumni dalam feedback dan evaluasi kurikulum</li>
+          <li>Integrasi data alumni dengan sistem akademik dan eksternal</li>
+          <li>Dashboard statistik penyebaran dan tren karier lulusan</li>
         </ul>
       </div>
 
@@ -64,13 +64,13 @@
     </div>
   </section>
 
-<section class="cta-section py-5">
-  <div class="container-container text-center">
-    <h2 class="mb-3">Ingin Bangun Relasi Alumni yang Kuat?</h2>
-    <p class="mb-4">Hubungi kami untuk demo dan implementasi Tracer Alumni ISEMA</p>
-    <button class="btn btn-primary px-4 py-2">Hubungi Kami</button>
-  </div>
-</section>
+    <section class="cta-section py-5">
+      <div class="container-container text-center">
+          <h2 class="mb-3 fw-bold fs-2">Ingin Lacak Alumni Anda secara Efektif?</h2>
+          <p class="mb-4 fw-bold fs-4">Hubungi kami untuk demo dan implementasi Tracer Alumni ISEMA</p>
+          <button class="btn px-4 py-2">Hubungi Kami</button>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -207,7 +207,7 @@ export default {
 }
 .cta-section .btn {
   background-color: #fff;
-  color: #E95420;
+  color: #000000;
   font-weight: bold;
   border-radius: 8px;
   padding: 12px 30px;
@@ -225,12 +225,12 @@ export default {
 .headline {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #093c5a;
+  color: #4a2c6b;
 }
 
 .headline em {
   font-style: normal;
-  color: #0d9276;
+  color: #f4c400;
 }
 
 .benefit-list {

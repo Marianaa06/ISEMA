@@ -39,4 +39,3 @@
         <a class="btn btn-gradient d-none d-md-block color-white" href="https://wa.me/6282299543317?text=Halo,saya ingin bertanya"> Hubungi ISEMA</a>
     </nav>
 
-

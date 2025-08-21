@@ -28,8 +28,8 @@
 <section class="reporting-slider-section py-5">
   <div class="container-fluid">
     <div class="text-center mb-4">
-      <h2 class="fw-bold section-title">Fitur Unggulan Reporting</h2>
-      <p class="section-subtitle text-muted">Membantu pengambilan keputusan berbasis data</p>
+      <h2 class="fw-bold section-title fs-2">Fitur Unggulan Reporting</h2>
+      <p class="section-subtitle fw-bold fs-5">Membantu pengambilan keputusan berbasis data</p>
     </div>
 
     <div class="scroll-container d-flex flex-nowrap overflow-auto px-4">
@@ -47,9 +47,9 @@
 
 <section class="cta-section py-5">
   <div class="container-container text-center">
-    <h2 class="mb-3">Siap Meningkatkan Efisiensi Pelaporan Kampus?</h2>
-    <p class="mb-4">Hubungi kami untuk demo sistem Reporting ISEMA dan lihat bagaimana data bisa menjadi keputusan cerdas.</p>
-    <button class="btn btn-primary px-4 py-2">Hubungi Kami</button>
+    <h2 class="mb-3 fw-bold fs-3">Siap Meningkatkan Efisiensi Pelaporan Kampus?</h2>
+    <p class="mb-4 fw-bold fs-5 text-dark">Hubungi kami untuk demo sistem Reporting ISEMA dan lihat bagaimana data bisa menjadi keputusan cerdas.</p>
+    <button class="btn px-4 py-2">Hubungi Kami</button>
   </div>
 </section>
 
@@ -103,7 +103,7 @@ features: [
   /* background: linear-gradient(135deg, #083b66, #0f4c75); */
   background-image: url(/assets/reporting-bg.png);
   background-size: cover;
-  color: #fff;
+  color: #000000;
   padding: 100px 0;
 }
 
@@ -114,7 +114,7 @@ features: [
 }
 
 .hero-title span {
-  color: #f9a825;
+  color: #8d0202;
 }
 
 .hero-benefits {
@@ -133,12 +133,12 @@ features: [
   content: '✔';
   position: absolute;
   left: 0;
-  color: #f9a825;
+  color: #8d0202;
   font-weight: bold;
 }
 
 .btn-cta {
-  background-color: #f9a825;
+  background-color: #8d0202;
   color: #fff;
   padding: 12px 28px;
   border-radius: 8px;
@@ -179,12 +179,12 @@ features: [
 
 .cta-section {
   background: linear-gradient(45deg, #b5b5b5 0%, #858585 100%);
-  color: #fff;
+  color: #8d0202;;
   text-align: center;
 }
 .cta-section .btn {
   background-color: #fff;
-  color: #E95420;
+  color: #8d0202;;
   font-weight: bold;
   border-radius: 8px;
   padding: 12px 30px;

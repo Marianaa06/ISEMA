@@ -223,9 +223,9 @@ export default {
 
     <section class="cta-section py-5">
       <div class="container-container text-center">
-        <h2 class="mb-3">Tertarik Menggunakan SIAKAD Kami?</h2>
-        <p class="mb-4">Hubungi kami untuk demo dan penawaran khusus</p>
-        <button class="btn btn-primary px-4 py-2">Hubungi Kami</button>
+        <h2 class="mb-3 fw-bold fs-2">Tertarik Menggunakan LMS Kami?</h2>
+        <p class="mb-4 fw-bold fs-3">Hubungi kami untuk demo dan penawaran khusus</p>
+        <button class="btn btn-success px-4 py-2">Hubungi Kami</button>
       </div>
     </section>
     </div>
@@ -248,60 +248,60 @@ export default {
       ],
 features: [
   {
-    title: 'Manajemen Materi',
-    description: 'Upload, kelola, dan distribusikan materi perkuliahan secara terstruktur dan mudah diakses.',
-    headerImage: '/assets/manajemen-materi-lms.png',
-    metadata: 'Terintegrasi & Cepat',
-    subDescription: 'Materi PDF, Video, dan Tautan Interaktif'
+    title: 'Dashboard',
+    description: 'Ringkasan aktivitas belajar, progres kelas, dan statistik akun dalam satu tampilan.',
+    headerImage: '/assets/dashboard-lms.png',
+    metadata: 'Pusat Kendali Akademik',
+    subDescription: 'Data Kelas, Aktivitas, Notifikasi'
   },
   {
-    title: 'Tugas & Kuis',
-    description: 'Pembuatan tugas, kuis, dan penilaian otomatis dalam satu sistem yang efisien.',
-    headerImage: '/assets/kuis-lms.png',
-    metadata: 'Akurat & Transparan',
-    subDescription: 'Penilaian Otomatis & Rekap Nilai'
+    title: 'My Class',
+    description: 'Akses seluruh kelas aktif, materi perkuliahan, dan partisipasi mahasiswa.',
+    headerImage: '/assets/myclass-lms.png',
+    metadata: 'Kelola Kelas Digital',
+    subDescription: 'Materi, Kehadiran, Forum'
   },
   {
-    title: 'Forum Diskusi',
-    description: 'Fasilitasi interaksi dan diskusi antara dosen dan mahasiswa secara real-time.',
-    headerImage: '/assets/forum-diskusi-lms.png',
-    metadata: '24/7 Akses Online',
-    subDescription: 'Diskusi Topik, Tanya Jawab, Kolaborasi'
+    title: 'Question',
+    description: 'Manajemen soal ujian, kuis, dan latihan yang dapat disesuaikan untuk setiap kelas.',
+    headerImage: '/assets/question-lms.png',
+    metadata: 'Bank Soal Interaktif',
+    subDescription: 'Kuis, Ujian, Latihan Harian'
   },
   {
-    title: 'Absensi Online',
-    description: 'Presensi mahasiswa dilakukan otomatis saat mengikuti kelas atau mengakses materi.',
-    headerImage: '/assets/absensi-lms.png',
-    metadata: 'Realtime & Otomatis',
-    subDescription: 'Monitoring Kehadiran Perkuliahan'
+    title: 'Edit Article',
+    description: 'Fitur untuk membuat dan menyunting artikel atau modul pembelajaran digital.',
+    headerImage: '/assets/article-lms.png',
+    metadata: 'Editor Konten',
+    subDescription: 'Artikel, Modul, Materi Multimedia'
   },
   {
-    title: 'Pengumuman Kelas',
-    description: 'Penyampaian informasi penting kepada seluruh mahasiswa secara langsung.',
-    headerImage: '/assets/pengumuman-kelas-lms.png',
-    metadata: 'Notifikasi Cepat',
-    subDescription: 'Info Tugas, Jadwal, dan Kegiatan'
+    title: 'Assessment',
+    description: 'Pengelolaan evaluasi pembelajaran seperti tugas, kuis, dan ujian semester.',
+    headerImage: '/assets/assessment-lms.png',
+    metadata: 'Evaluasi Terstruktur',
+    subDescription: 'Nilai, Feedback, Rubrik Penilaian'
   },
   {
-    title: 'Akses Multi-Perangkat',
-    description: 'Platform dapat diakses dari berbagai perangkat tanpa hambatan.',
-    headerImage: '/assets/akses-multi-lms.png',
-    metadata: 'Mobile-Friendly',
-    subDescription: 'Laptop, Tablet, dan Smartphone'
+    title: 'Payment',
+    description: 'Monitoring dan notifikasi tagihan akademik serta riwayat pembayaran mahasiswa.',
+    headerImage: '/assets/payment-lms.png',
+    metadata: 'Integrasi Keuangan',
+    subDescription: 'SPP, Tagihan Kuliah, Riwayat Pembayaran'
   },
   {
-    title: 'Video Conference',
-    description: 'Terintegrasi dengan platform meeting untuk kelas daring yang interaktif.',
-    headerImage: '/assets/video-conference-lms.png',
-    metadata: 'Live Learning',
-    subDescription: 'Zoom, Google Meet, Jitsi, dll'
+    title: 'Event',
+    description: 'Manajemen kegiatan kampus seperti seminar, webinar, dan pelatihan daring.',
+    headerImage: '/assets/event-lms.png',
+    metadata: 'Kegiatan Akademik',
+    subDescription: 'Workshop, Webinar, Guest Lecture'
   },
   {
-    title: 'Kalender Akademik',
-    description: 'Pantau semua aktivitas perkuliahan dalam satu tampilan kalender yang rapi.',
-    headerImage: '/assets/jadwal-dosen.png',
-    metadata: 'Terorganisir & Terjadwal',
-    subDescription: 'Jadwal Ujian, Tugas, Libur Akademik'
+    title: 'Calendar',
+    description: 'Menampilkan jadwal akademik dalam format kalender yang mudah dibaca dan interaktif.',
+    headerImage: '/assets/kalender-lms.png',
+    metadata: 'Agenda Akademik',
+    subDescription: 'Kelas, Ujian, Libur Nasional'
   }
 ]
 

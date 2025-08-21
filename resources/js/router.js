@@ -14,6 +14,7 @@ import JurnalComponent from './components/productdetail/JurnalComponent.vue';
 import ReportingComponent from './components/productdetail/ReportingComponent.vue';
 import CBTComponent from './components/productdetail/CBTComponent.vue';
 import ModulSkripsiComponent from './components/productdetail/ModulSkripsiComponent.vue';
+import PMBCompponent from './components/productdetail/PMBCompponent.vue';
 
 Vue.use(VueRouter);
 
@@ -28,6 +29,8 @@ const routes = [
     { path: '/product/reporting', component: ReportingComponent},
     { path: '/product/cbt', component: CBTComponent},
     { path: '/product/modul-skripsi', component: ModulSkripsiComponent},
+    { path: '/product/pmb', component: PMBCompponent},
+
 
 ];
 

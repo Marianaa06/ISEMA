@@ -29,7 +29,7 @@
     <!-- Fitur Unggulan -->
     <section class="fitur-jurnal py-5 bg-light">
       <div class="container-container">
-        <h2 class="text-center mb-4">Fitur Unggulan Jurnal ISEMA</h2>
+        <h2 class="text-center mb-4 fw-bold fs-2">Fitur Unggulan Jurnal ISEMA</h2>
         <div class="row">
           <div class="col-md-4 mb-4" v-for="(fitur, index) in features" :key="index">
             <div class="card h-100 shadow-sm">
@@ -47,8 +47,8 @@
     <!-- CTA -->
     <section class="cta-section py-5">
       <div class="container-cta text-center">
-        <h2 class="cta-text mb-3">Publikasikan Karya Ilmiah Anda dengan Mudah</h2>
-        <p class="cta-text mb-4">Jurnal Digital ISEMA mendukung visibilitas dan kredibilitas akademik institusi Anda.</p>
+        <h2 class="cta-text mb-3 fw-bold fs-2">Publikasikan Karya Ilmiah Anda dengan Mudah</h2>
+        <p class="cta-text mb-4 fw-bold fs-6">Jurnal Digital ISEMA mendukung visibilitas dan kredibilitas akademik institusi Anda.</p>
         <button class="btn btn-primary px-4 py-2">Hubungi Kami</button>
       </div>
     </section>
@@ -140,11 +140,11 @@ export default {
 }
 
 .hero-section{
-    background-image: url(/assets/bg-jurnal.png);
+    background-image: url(/assets/bg-jurnall.png);
     background-size: cover;
     padding: 30px;
     border-radius: 10px;
-    color: rgb(80, 0, 0);
+    color: rgb(0, 0, 0);
 }
 
 .container-container{
@@ -163,8 +163,8 @@ export default {
 }
 
 .btn-cta{
-  background-color: #e6a828;
-  color: #6b0000;
+  background-color: #6b0000;
+  color:  #fff;
 }
 
 .cta-text {
@@ -173,7 +173,7 @@ export default {
 }
 
 .cta-section .btn-primary {
-  background-color: #fcbf49;
+  background-color: #ffffff;
   border: none;
   color: #6b0000;
   font-weight: bold;

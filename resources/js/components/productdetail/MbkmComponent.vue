@@ -45,8 +45,56 @@
   </div>
 </section>
 
+<section class="fitur-mbkm-section py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center fitur-title">Fitur MBKM ISEMA</h2>
+      <div class="row g-4">
+        <div class="col-md-3 col-sm-6" 
+     v-for="(feature, index) in features" 
+     :key="index">
+  <div class="fitur-card text-center p-4 h-100"
+       @click="showFeature(feature)">
+    <i :class="feature.icon" class="mb-3 d-block fa-2x"></i>
+    <h5 class="fw-bold">{{ feature.title }}</h5>
+    <p class="text-muted mb-2">{{ feature.subDescription }}</p>
+  </div>
+</div>
 
-<section class="features-section py-5 bg-light">
+      </div>
+    </div>
+<div class="modal fade" id="featureModal" tabindex="-1" role="dialog" aria-labelledby="featureModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content shadow-lg border-0 rounded-4">
+      
+      <!-- HEADER -->
+      <div class="modal-header text-white border-0 rounded-top-4">
+        <h5 class="modal-title fw-bold d-flex align-items-center text-dark" id="featureModalLabel">
+          <i :class="selectedFeature.icon + ' me-2 fa-lg'"></i>
+          {{ selectedFeature.title }}
+        </h5>
+        <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="row g-4" v-if="selectedFeature.subfeatures && selectedFeature.subfeatures.length">
+          <div 
+            class="col-md-4 col-sm-6"
+            v-for="(sub, idx) in selectedFeature.subfeatures" 
+            :key="idx"
+          >
+            <div class="fitur-card text-center p-4 h-100">
+              <i :class="sub.icon + ' fa-2x mb-3 text-dark'"></i>
+              <h5 class="fw-bold">{{ sub.title }}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+  </section>
+<!-- <section class="features-section py-5 bg-light">
   <div class="container">
     <div class="row mb-5 text-center">
       <div class="col">
@@ -75,8 +123,8 @@
       </div>
     </div>
   </div>
-</section>
-
+</section> 
+ -->
 
 
 
@@ -114,9 +162,9 @@
 </section>
 <section class="cta-section py-5">
   <div class="container-container text-center">
-    <h2 class="mb-3">Siap Digitalisasi Program MBKM Anda?</h2>
-    <p class="mb-4">Hubungi tim kami untuk konsultasi dan demo eksklusif MBKM ISEMA</p>
-    <button class="btn btn-primary px-4 py-2">Hubungi Kami</button>
+    <h2 class="mb-3 fw-bold fs-2">Siap Digitalisasi Program MBKM Anda?</h2>
+    <p class="mb-4 fs-3">Hubungi tim kami untuk konsultasi dan demo eksklusif MBKM ISEMA</p>
+    <button class="btn px-4 py-2">Hubungi Kami</button>
   </div>
 </section>
 
@@ -125,57 +173,62 @@
 
 <script>
 export default {
-  name: 'LmsComponent',
+  name: 'MBKMComponent',
   data(){
     return{
 features: [
   {
-    title: 'Manajemen Program',
-    description: 'Kelola program Kampus Merdeka seperti Magang, Studi Independen, dan Pertukaran Mahasiswa secara terpusat.',
-    headerImage: '/assets/manajemen-materi-lms.png',
-    metadata: 'Terstruktur & Terintegrasi',
-    subDescription: 'Pengelolaan Semua Skema MBKM'
+    title: 'Lowongan',
+    icon: 'fas fa-briefcase', // Ikon lowongan kerja
+    subDescription: 'Peluang magang, riset, dan proyek real industri'
   },
   {
-    title: 'Monitoring Kegiatan',
-    description: 'Pantau progres mahasiswa secara berkala, termasuk logbook, presensi, dan laporan mingguan.',
-    headerImage: '/assets/kuis-lms.png',
-    metadata: 'Akurat & Transparan',
-    subDescription: 'Pelaporan Otomatis & Dashboard Pemantauan'
+    title: 'Jenis Aktivitas',
+    icon: 'fas fa-stream', // Ikon jenis/stream
+    subDescription: 'Beragam skema MBKM: Magang, Studi Independen, dll'
   },
   {
-    title: 'Kolaborasi Mitra',
-    description: 'Fasilitasi komunikasi dan pelaporan antara pihak kampus, mahasiswa, dan mitra eksternal.',
-    headerImage: '/assets/forum-diskusi-lms.png',
-    metadata: 'Terbuka & Kolaboratif',
-    subDescription: 'Integrasi Dosen, Mahasiswa, dan Industri'
+    title: 'Syarat Unggah Aktivitas Akhir',
+    icon: 'fas fa-upload', // Ikon unggah
+    subDescription: 'Panduan dan checklist dokumen penyelesaian aktivitas'
   },
   {
-    title: 'Validasi & Persetujuan',
-    description: 'Permudah proses validasi proposal, persetujuan aktivitas, dan pengunggahan bukti kinerja.',
-    headerImage: '/assets/absensi-lms.png',
-    metadata: 'Cepat & Efisien',
-    subDescription: 'Sirkulasi Dokumen Digital'
+    title: 'Perguruan Tinggi Luar',
+    icon: 'fas fa-university', // Ikon kampus lain
+    subDescription: 'Kolaborasi lintas kampus dan sistem konversi otomatis'
   },
   {
-    title: 'Notifikasi Kegiatan',
-    description: 'Berikan informasi tepat waktu tentang deadline, pengumuman, dan perubahan jadwal.',
-    headerImage: '/assets/pengumuman-kelas-lms.png',
-    metadata: 'Notifikasi Langsung',
-    subDescription: 'Sistem Pemberitahuan Terpusat'
+    title: 'Mitra',
+    icon: 'fas fa-handshake', // Ikon kerja sama/mitra
+    subDescription: 'Daftar mitra aktif dan status kerja sama MBKM',
+    subfeatures: [
+      { title: 'Daftar Mitra', icon: 'fas fa-university' },
+      { title: 'Jenis Mitra', icon: 'fas fa-calendar-alt' },
+      { title: 'Jenis Industri', icon: 'fas fa-calendar-alt' },
+      { title: 'Ukuran Mitra', icon: 'fas fa-calendar-alt' },
+      { title: 'Posisi Pekerjaan', icon: 'fas fa-calendar-alt' },
+      { title: 'Posisi Pekerjaan Mitra', icon: 'fas fa-calendar-alt'}
+    ]
   },
   {
-    title: 'Akses Fleksibel',
-    description: 'Sistem MBKM dapat digunakan dari berbagai perangkat kapan saja dan di mana saja.',
-    headerImage: '/assets/akses-multi-lms.png',
-    metadata: 'Multi-Platform',
-    subDescription: 'Laptop, Tablet, & Ponsel Cerdas'
-  },
-]
-
-
+    title: 'Rekomendasi Mata Kuliah',
+    icon: 'fas fa-book-open', // Ikon mata kuliah
+    subDescription: 'Daftar mata kuliah pengganti hasil konversi MBKM'
   }
-
+],
+selectedFeature: {}
+};
+},
+methods: {
+  showFeature(feature) {
+    if (feature.subfeatures && feature.subfeatures.length) {
+      this.selectedFeature = feature;
+      $('#featureModal').modal('show'); // buka modal
+    } else {
+      console.log("Fitur ini tidak punya cabang.");
+      // Bisa juga diarahkan ke halaman lain atau abaikan saja
+    }
+  }
 }
 }
 
@@ -193,8 +246,8 @@ padding: 50px;
 
 /* Hero Section */
 .hero-section {
-  /* background: linear-gradient(135deg, #006d77, #83c5be); */
-  color: #16092e;
+    background: linear-gradient(135deg, #4e727d, #45818c);
+  color: #ffd166;
   padding: 100px 0;
 }
 
@@ -222,7 +275,7 @@ padding: 50px;
 .hero-benefits {
   list-style: none;
   padding-left: 0;
-  color: #16092e;
+  color: #ffd166;
 
 }
 
@@ -370,8 +423,9 @@ padding: 50px;
 
 
 .cta-section {
-  background: linear-gradient(45deg, #c0d4ce 0%, #7a8e86 100%);
-  color: #fff;
+    background: linear-gradient(135deg, #4e727d, #45818c);
+
+  color: #ffd166;
   text-align: center;
 }
 .cta-section .btn {
@@ -383,10 +437,33 @@ padding: 50px;
   border: none;
 }
 
+
+.fitur-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #003049;
+}
+
+.fitur-card {
+  border-radius: 16px;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  transition: 0.3s ease;
+}
+
+.fitur-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+  transform: translateY(-4px);
+}
+
+.fitur-icon {
+  width: 48px;
+  height: 48px;
+}
 @media (max-width: 575.98px) {
 
   .mbkm-page{
-    padding: 0px;
+    padding: 10px;
   }
 }
 

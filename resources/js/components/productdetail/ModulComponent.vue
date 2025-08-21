@@ -70,7 +70,7 @@
     <div class="col-lg-6 contact-section text-center">
       <div class="contact-content">
         <h2 class="contact-title">Tertarik dengan Sistem Kami?</h2>
-        <p class="contact-subtitle">Kami siap membantu Anda memulai!</p>
+        <p class="contact-subtitle fs-3">Kami siap membantu Anda memulai!</p>
         <button class="btn-contact-us">Hubungi Kami</button>
       </div>
     </div>
@@ -279,8 +279,8 @@ export default {
 }
 
 .btn-contact-us {
-  background-color: #E95420;
-  color: #fff;
+  background-color: #FFD54F;
+  color: #000000;
   padding: 12px 30px;
   font-weight: 600;
   border-radius: 8px;

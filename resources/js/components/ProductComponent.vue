@@ -34,12 +34,12 @@
     <div class="word">
         <h2>Introducing Our Product</h2>
      </div>
-    <div class="category-filter">
+    <!-- <div class="category-filter">
       <button v-for="(category, index) in categories" :key="index" class="category-btn" @click="filterCategory(category)">
         {{ category }}
       </button>
       <hr class="garis-samar">
-    </div>
+    </div> -->
     </div>
 
     <div class="product-grid">
@@ -80,7 +80,10 @@
                 <div class="contact-content">
                     <h2 class="contact-title">Tertarik dengan Sistem Kami?</h2>
                     <p class="contact-subtitle">Kami siap membantu Anda memulai!</p>
-                    <button class="btn-contact-us">Hubungi Kami</button>
+                    <a href="/harga-produk" class="btn-harga-produk mt-4">
+                     Lihat Harga Produk >>>
+                    </a>
+
                 </div>
             </div>
 
@@ -126,6 +129,8 @@ export default {
         { title: 'Jurnal Digital', subtitle: 'Publikasi Dosen dan Mahasiswa', image: 'http://localhost:8000/assets/jurnal-logo.png', category: 'Jurnal', link: '/product/jurnal' },
         { title: 'Reporting Visual', subtitle: 'Laporan Real-Time', image: 'http://localhost:8000/assets/reporting-logo.png', category: 'Reporting', link: '/product/reporting' },
         { title: 'CBT', subtitle: 'Computer Based Test', image: 'http://localhost:8000/assets/cbt-logo.png', category: 'CBT', link: '/product/CBT' },
+        { title: 'PMB', subtitle: 'Penerimaan Mahasiswa Baru', image: 'http://localhost:8000/assets/pmb-logo.png', category: 'PMB', link: '/product/pmb' },
+
 
       ],
       testimonials: [
@@ -632,6 +637,27 @@ padding: 20px;
             font-size: 1em;
             line-height: 1.8;
         }
+
+.btn-harga-produk {
+  background-color: #ffffff;
+  color: #2c7a7b;
+  border: 2px solid #2c7a7b;
+  padding: 10px 24px;
+  font-weight: 600;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-harga-produk:hover {
+  background-color: #2c7a7b;
+  color: #ffffff;
+  border-color: #2c7a7b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
 
 @media (max-width: 768px) {
 

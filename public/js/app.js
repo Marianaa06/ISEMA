@@ -1969,6 +1969,12 @@ __webpack_require__.r(__webpack_exports__);
         image: 'http://localhost:8000/assets/cbt-logo.png',
         category: 'CBT',
         link: '/product/CBT'
+      }, {
+        title: 'PMB',
+        subtitle: 'Penerimaan Mahasiswa Baru',
+        image: 'http://localhost:8000/assets/pmb-logo.png',
+        category: 'PMB',
+        link: '/product/pmb'
       }],
       testimonials: [{
         text: "SIAKAD ini sangat membantu pekerjaan saya dalam mengelola data akademik dengan cepat dan efisien.",
@@ -2077,29 +2083,29 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       features: [{
-        title: 'Bank Soal Terstruktur',
-        description: 'Dosen dapat mengelola soal berdasarkan kategori, mata kuliah, dan bobot nilai.',
-        icon: 'fas fa-layer-group'
+        title: 'Dashboard',
+        description: 'Pusat kontrol untuk memantau jadwal ujian, jumlah peserta, dan status tes secara real-time.',
+        icon: 'fas fa-tv'
       }, {
-        title: 'Randomisasi Soal & Jawaban',
-        description: 'Menghindari kecurangan dengan pengacakan otomatis soal dan jawaban.',
-        icon: 'fas fa-random'
+        title: 'Entrance Test',
+        description: 'Digunakan untuk seleksi awal mahasiswa baru dengan sistem ujian berbasis komputer.',
+        icon: 'fas fa-door-open'
       }, {
-        title: 'Waktu Otomatis & Countdown',
-        description: 'Timer hitung mundur untuk tiap sesi ujian guna memastikan ketertiban.',
-        icon: 'fas fa-clock'
+        title: 'TOEFL Test',
+        description: 'Ujian kemampuan bahasa Inggris dengan sesi Listening, Structure, dan Reading.',
+        icon: 'fas fa-headphones-alt'
       }, {
-        title: 'Multi-Tipe Soal',
-        description: 'Mendukung pilihan ganda, esai, dan isian singkat.',
-        icon: 'fas fa-tasks'
+        title: 'TOAFL Test',
+        description: 'Tes kemampuan bahasa Arab lengkap dengan timer dan sistem koreksi otomatis.',
+        icon: 'fas fa-language'
       }, {
-        title: 'Analisis Hasil Ujian',
-        description: 'Laporan nilai dan statistik soal otomatis untuk analisis cepat.',
-        icon: 'fas fa-chart-bar'
+        title: 'SAT Test',
+        description: 'Evaluasi potensi akademik calon mahasiswa berbasis standar nasional.',
+        icon: 'fas fa-file-alt'
       }, {
-        title: 'Integrasi dengan SIAKAD',
-        description: 'Nilai langsung masuk ke sistem akademik setelah ujian selesai.',
-        icon: 'fas fa-link'
+        title: 'Logout',
+        description: 'Sistem logout otomatis setelah tes selesai untuk keamanan dan validasi data.',
+        icon: 'fas fa-sign-out-alt'
       }]
     };
   }
@@ -2190,53 +2196,53 @@ __webpack_require__.r(__webpack_exports__);
         desc: 'Data mahasiswa terjamin keamanannya dengan sistem terenkripsi.'
       }],
       features: [{
-        title: 'Manajemen Materi',
-        description: 'Upload, kelola, dan distribusikan materi perkuliahan secara terstruktur dan mudah diakses.',
-        headerImage: '/assets/manajemen-materi-lms.png',
-        metadata: 'Terintegrasi & Cepat',
-        subDescription: 'Materi PDF, Video, dan Tautan Interaktif'
+        title: 'Dashboard',
+        description: 'Ringkasan aktivitas belajar, progres kelas, dan statistik akun dalam satu tampilan.',
+        headerImage: '/assets/dashboard-lms.png',
+        metadata: 'Pusat Kendali Akademik',
+        subDescription: 'Data Kelas, Aktivitas, Notifikasi'
       }, {
-        title: 'Tugas & Kuis',
-        description: 'Pembuatan tugas, kuis, dan penilaian otomatis dalam satu sistem yang efisien.',
-        headerImage: '/assets/kuis-lms.png',
-        metadata: 'Akurat & Transparan',
-        subDescription: 'Penilaian Otomatis & Rekap Nilai'
+        title: 'My Class',
+        description: 'Akses seluruh kelas aktif, materi perkuliahan, dan partisipasi mahasiswa.',
+        headerImage: '/assets/myclass-lms.png',
+        metadata: 'Kelola Kelas Digital',
+        subDescription: 'Materi, Kehadiran, Forum'
       }, {
-        title: 'Forum Diskusi',
-        description: 'Fasilitasi interaksi dan diskusi antara dosen dan mahasiswa secara real-time.',
-        headerImage: '/assets/forum-diskusi-lms.png',
-        metadata: '24/7 Akses Online',
-        subDescription: 'Diskusi Topik, Tanya Jawab, Kolaborasi'
+        title: 'Question',
+        description: 'Manajemen soal ujian, kuis, dan latihan yang dapat disesuaikan untuk setiap kelas.',
+        headerImage: '/assets/question-lms.png',
+        metadata: 'Bank Soal Interaktif',
+        subDescription: 'Kuis, Ujian, Latihan Harian'
       }, {
-        title: 'Absensi Online',
-        description: 'Presensi mahasiswa dilakukan otomatis saat mengikuti kelas atau mengakses materi.',
-        headerImage: '/assets/absensi-lms.png',
-        metadata: 'Realtime & Otomatis',
-        subDescription: 'Monitoring Kehadiran Perkuliahan'
+        title: 'Edit Article',
+        description: 'Fitur untuk membuat dan menyunting artikel atau modul pembelajaran digital.',
+        headerImage: '/assets/article-lms.png',
+        metadata: 'Editor Konten',
+        subDescription: 'Artikel, Modul, Materi Multimedia'
       }, {
-        title: 'Pengumuman Kelas',
-        description: 'Penyampaian informasi penting kepada seluruh mahasiswa secara langsung.',
-        headerImage: '/assets/pengumuman-kelas-lms.png',
-        metadata: 'Notifikasi Cepat',
-        subDescription: 'Info Tugas, Jadwal, dan Kegiatan'
+        title: 'Assessment',
+        description: 'Pengelolaan evaluasi pembelajaran seperti tugas, kuis, dan ujian semester.',
+        headerImage: '/assets/assessment-lms.png',
+        metadata: 'Evaluasi Terstruktur',
+        subDescription: 'Nilai, Feedback, Rubrik Penilaian'
       }, {
-        title: 'Akses Multi-Perangkat',
-        description: 'Platform dapat diakses dari berbagai perangkat tanpa hambatan.',
-        headerImage: '/assets/akses-multi-lms.png',
-        metadata: 'Mobile-Friendly',
-        subDescription: 'Laptop, Tablet, dan Smartphone'
+        title: 'Payment',
+        description: 'Monitoring dan notifikasi tagihan akademik serta riwayat pembayaran mahasiswa.',
+        headerImage: '/assets/payment-lms.png',
+        metadata: 'Integrasi Keuangan',
+        subDescription: 'SPP, Tagihan Kuliah, Riwayat Pembayaran'
       }, {
-        title: 'Video Conference',
-        description: 'Terintegrasi dengan platform meeting untuk kelas daring yang interaktif.',
-        headerImage: '/assets/video-conference-lms.png',
-        metadata: 'Live Learning',
-        subDescription: 'Zoom, Google Meet, Jitsi, dll'
+        title: 'Event',
+        description: 'Manajemen kegiatan kampus seperti seminar, webinar, dan pelatihan daring.',
+        headerImage: '/assets/event-lms.png',
+        metadata: 'Kegiatan Akademik',
+        subDescription: 'Workshop, Webinar, Guest Lecture'
       }, {
-        title: 'Kalender Akademik',
-        description: 'Pantau semua aktivitas perkuliahan dalam satu tampilan kalender yang rapi.',
-        headerImage: '/assets/jadwal-dosen.png',
-        metadata: 'Terorganisir & Terjadwal',
-        subDescription: 'Jadwal Ujian, Tugas, Libur Akademik'
+        title: 'Calendar',
+        description: 'Menampilkan jadwal akademik dalam format kalender yang mudah dibaca dan interaktif.',
+        headerImage: '/assets/kalender-lms.png',
+        metadata: 'Agenda Akademik',
+        subDescription: 'Kelas, Ujian, Libur Nasional'
       }]
     };
   }
@@ -2254,47 +2260,72 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'LmsComponent',
+  name: 'MBKMComponent',
   data: function data() {
     return {
       features: [{
-        title: 'Manajemen Program',
-        description: 'Kelola program Kampus Merdeka seperti Magang, Studi Independen, dan Pertukaran Mahasiswa secara terpusat.',
-        headerImage: '/assets/manajemen-materi-lms.png',
-        metadata: 'Terstruktur & Terintegrasi',
-        subDescription: 'Pengelolaan Semua Skema MBKM'
+        title: 'Lowongan',
+        icon: 'fas fa-briefcase',
+        // Ikon lowongan kerja
+        subDescription: 'Peluang magang, riset, dan proyek real industri'
       }, {
-        title: 'Monitoring Kegiatan',
-        description: 'Pantau progres mahasiswa secara berkala, termasuk logbook, presensi, dan laporan mingguan.',
-        headerImage: '/assets/kuis-lms.png',
-        metadata: 'Akurat & Transparan',
-        subDescription: 'Pelaporan Otomatis & Dashboard Pemantauan'
+        title: 'Jenis Aktivitas',
+        icon: 'fas fa-stream',
+        // Ikon jenis/stream
+        subDescription: 'Beragam skema MBKM: Magang, Studi Independen, dll'
       }, {
-        title: 'Kolaborasi Mitra',
-        description: 'Fasilitasi komunikasi dan pelaporan antara pihak kampus, mahasiswa, dan mitra eksternal.',
-        headerImage: '/assets/forum-diskusi-lms.png',
-        metadata: 'Terbuka & Kolaboratif',
-        subDescription: 'Integrasi Dosen, Mahasiswa, dan Industri'
+        title: 'Syarat Unggah Aktivitas Akhir',
+        icon: 'fas fa-upload',
+        // Ikon unggah
+        subDescription: 'Panduan dan checklist dokumen penyelesaian aktivitas'
       }, {
-        title: 'Validasi & Persetujuan',
-        description: 'Permudah proses validasi proposal, persetujuan aktivitas, dan pengunggahan bukti kinerja.',
-        headerImage: '/assets/absensi-lms.png',
-        metadata: 'Cepat & Efisien',
-        subDescription: 'Sirkulasi Dokumen Digital'
+        title: 'Perguruan Tinggi Luar',
+        icon: 'fas fa-university',
+        // Ikon kampus lain
+        subDescription: 'Kolaborasi lintas kampus dan sistem konversi otomatis'
       }, {
-        title: 'Notifikasi Kegiatan',
-        description: 'Berikan informasi tepat waktu tentang deadline, pengumuman, dan perubahan jadwal.',
-        headerImage: '/assets/pengumuman-kelas-lms.png',
-        metadata: 'Notifikasi Langsung',
-        subDescription: 'Sistem Pemberitahuan Terpusat'
+        title: 'Mitra',
+        icon: 'fas fa-handshake',
+        // Ikon kerja sama/mitra
+        subDescription: 'Daftar mitra aktif dan status kerja sama MBKM',
+        subfeatures: [{
+          title: 'Daftar Mitra',
+          icon: 'fas fa-university'
+        }, {
+          title: 'Jenis Mitra',
+          icon: 'fas fa-calendar-alt'
+        }, {
+          title: 'Jenis Industri',
+          icon: 'fas fa-calendar-alt'
+        }, {
+          title: 'Ukuran Mitra',
+          icon: 'fas fa-calendar-alt'
+        }, {
+          title: 'Posisi Pekerjaan',
+          icon: 'fas fa-calendar-alt'
+        }, {
+          title: 'Posisi Pekerjaan Mitra',
+          icon: 'fas fa-calendar-alt'
+        }]
       }, {
-        title: 'Akses Fleksibel',
-        description: 'Sistem MBKM dapat digunakan dari berbagai perangkat kapan saja dan di mana saja.',
-        headerImage: '/assets/akses-multi-lms.png',
-        metadata: 'Multi-Platform',
-        subDescription: 'Laptop, Tablet, & Ponsel Cerdas'
-      }]
+        title: 'Rekomendasi Mata Kuliah',
+        icon: 'fas fa-book-open',
+        // Ikon mata kuliah
+        subDescription: 'Daftar mata kuliah pengganti hasil konversi MBKM'
+      }],
+      selectedFeature: {}
     };
+  },
+  methods: {
+    showFeature: function showFeature(feature) {
+      if (feature.subfeatures && feature.subfeatures.length) {
+        this.selectedFeature = feature;
+        $('#featureModal').modal('show'); // buka modal
+      } else {
+        console.log("Fitur ini tidak punya cabang.");
+        // Bisa juga diarahkan ke halaman lain atau abaikan saja
+      }
+    }
   }
 });
 
@@ -2376,6 +2407,71 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/productdetail/PMBCompponent.vue?vue&type=script&lang=js":
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/productdetail/PMBCompponent.vue?vue&type=script&lang=js ***!
+  \*************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'PmbComponent',
+  data: function data() {
+    return {
+      fiturPmb: [{
+        title: 'Periode Pendaftaran',
+        icon: 'fas fa-calendar-alt' // Ikon jadwal
+      }, {
+        title: 'Program Studi',
+        icon: 'fas fa-university' // Ikon kampus/prodi
+      }, {
+        title: 'Seleksi Pendaftaran',
+        icon: 'fas fa-list-check' // Ikon proses seleksi
+      }, {
+        title: 'Syarat Seleksi',
+        icon: 'fas fa-file-signature' // Ikon syarat dengan tanda tangan
+      }, {
+        title: 'Uang Kuliah Tunggal',
+        icon: 'fas fa-coins' // Ikon uang koin
+      }, {
+        title: 'Pengaturan PMB',
+        icon: 'fas fa-sliders-h' // Ikon setting pengaturan horizontal
+      }, {
+        title: 'Nilai Seleksi',
+        icon: 'fas fa-star-half-alt' // Ikon nilai
+      }, {
+        title: 'Syarat Seleksi',
+        icon: 'fas fa-file-contract' // Variasi ikon dokumen syarat
+      }, {
+        title: 'Pengisian Nilai',
+        icon: 'fas fa-pen-nib' // Ikon menulis nilai
+      }, {
+        title: 'Kelengkapan Syarat',
+        icon: 'fas fa-check-double' // Ikon centang ganda
+      }, {
+        title: 'UKT Pendaftar',
+        icon: 'fas fa-wallet' // Ikon dompet
+      }, {
+        title: 'KIP Kuliah',
+        icon: 'fas fa-id-card' // Ikon kartu (untuk beasiswa KIP)
+      }, {
+        title: 'Rekomendasi Prodi',
+        icon: 'fas fa-thumbs-up' // Ikon rekomendasi
+      }, {
+        title: 'Registrasi Ulang',
+        icon: 'fas fa-undo' // Ikon ulang/daftar ulang
+      }, {
+        title: 'Generate Mahasiswa',
+        icon: 'fas fa-user-plus' // Ikon penambahan mahasiswa
+      }]
+    };
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/productdetail/ReportingComponent.vue?vue&type=script&lang=js":
 /*!******************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/productdetail/ReportingComponent.vue?vue&type=script&lang=js ***!
@@ -2427,64 +2523,440 @@ __webpack_require__.r(__webpack_exports__);
   name: 'SiakadComponent',
   data: function data() {
     return {
+      // isi data lengkapmu di sini
       featuresadmin: [{
-        title: 'Panel Admin Efisien',
-        description: 'Admin kampus dapat mengelola seluruh data dan pengguna dari satu dashboard.',
-        headerImage: '/assets/panel.png',
-        metadata: 'Manajemen Data Komprehensif',
-        subDescription: 'Pengelolaan Pengguna & Sistem'
+        title: 'Mahasiswa',
+        // description: 'Kelola data mahasiswa secara lengkap, mulai dari biodata hingga riwayat akademik.',
+        icon: 'fas fa-user-graduate'
       }, {
-        title: 'Laporan Otomatis',
-        description: 'Laporan akademik dan kinerja dosen ter-generate otomatis untuk institusi.',
-        headerImage: '/assets/report.png',
-        metadata: 'Visualisasi Data Akurat',
-        subDescription: 'Laporan Kinerja & Akademik'
+        title: 'Pegawai',
+        // description: 'Atur data dosen dan tenaga kependidikan termasuk jabatan dan riwayat kerja.',
+        icon: 'fas fa-users-cog'
       }, {
-        title: 'Akses Multi-Perangkat',
-        description: 'Sistem dapat diakses dari laptop, tablet, maupun smartphone kapan saja.',
-        headerImage: '/assets/smartphone.png',
-        metadata: 'Mobile-Friendly',
-        subDescription: 'Akses Dimana Saja, Kapan Saja'
+        title: 'Kegiatan',
+        // description: 'Manajemen kegiatan akademik seperti seminar, pelatihan, dan organisasi kemahasiswaan.',
+        icon: 'fas fa-calendar-check',
+        subfeatures: [{
+          title: 'Kegiatan Akademik',
+          icon: 'fas fa-university'
+        }, {
+          title: 'Kalender Akademik',
+          icon: 'fas fa-calendar-alt'
+        }]
+      }, {
+        title: 'Data Kurikulum',
+        // description: 'Mengelola mata kuliah, kurikulum prodi, prasyarat, ekivalensi, dan aturan akademik lainnya.',
+        icon: 'fas fa-book',
+        subfeatures: [{
+          title: 'Mata Kuliah',
+          icon: 'fas fa-book'
+        }, {
+          title: 'Kurikulum Prodi',
+          icon: 'fas fa-graduation-cap'
+        }, {
+          title: 'Prasyarat Mata Kuliah',
+          icon: 'fas fa-clipboard-list'
+        }, {
+          title: 'Ekavalensi Mata Kuliah',
+          icon: 'fas fa-exchange-alt'
+        }, {
+          title: 'Tahun Kurikulum',
+          icon: 'fas fa-calendar'
+        }, {
+          title: 'Batas SKS',
+          icon: 'fas fa-hourglass-half'
+        }, {
+          title: 'Skala Nilai',
+          icon: 'fas fa-chart-line'
+        }, {
+          title: 'Komposisi Nilai',
+          icon: 'fas fa-percentage'
+        }, {
+          title: 'Kurikulum Konsentrasi',
+          icon: 'fas fa-project-diagram'
+        }]
+      }, {
+        title: 'Data Kelas',
+        // description: 'Pengaturan kelas kuliah, jadwal, tahun ajaran, dan monitoring ruang.',
+        icon: 'fas fa-chalkboard-teacher',
+        subfeatures: [{
+          title: 'Kelas Kuliah',
+          icon: 'fas fa-chalkboard'
+        }, {
+          title: 'Jadwal & Presentasi',
+          icon: 'fas fa-calendar-day'
+        }, {
+          title: 'Tahun Ajaran',
+          icon: 'fas fa-calendar'
+        }, {
+          title: 'Monitoring Ruang (Jadwal)',
+          icon: 'fas fa-door-open'
+        }]
+      }, {
+        title: 'Administrasi',
+        // description: 'Pengelolaan administrasi akademik seperti transfer dan pengajuan status mahasiswa.',
+        icon: 'fas fa-file-alt',
+        subfeatures: [{
+          title: 'Transfer Mahasiswa',
+          icon: 'fas fa-random'
+        }, {
+          title: 'Pengajuan Status Mahasiswa',
+          icon: 'fas fa-user-edit'
+        }]
+      }, {
+        title: 'Proposal/Tugas Akhir',
+        // description: 'Manajemen proposal penelitian dan tugas akhir mahasiswa.',
+        icon: 'fas fa-file-signature',
+        subfeatures: [{
+          title: 'Daftar Proposal',
+          icon: 'fas fa-file-alt'
+        }, {
+          title: 'Daftar Tugas Akhir',
+          icon: 'fas fa-scroll'
+        }]
+      }, {
+        title: 'Data Yudisium',
+        // description: 'Pengaturan data yudisium, penomoran dokumen, dan periode pelaksanaan.',
+        icon: 'fas fa-certificate',
+        subfeatures: [{
+          title: 'Daftar Yudisium',
+          icon: 'fas fa-list'
+        }, {
+          title: 'Penomoran Dokumen',
+          icon: 'fas fa-sort-numeric-up'
+        }, {
+          title: 'Periode Yudisium',
+          icon: 'fas fa-calendar-check'
+        }]
+      }, {
+        title: 'Kegiatan Pendukung',
+        // description: 'Pengelolaan kegiatan akademik tambahan dan kalender kampus.',
+        icon: 'fas fa-calendar-alt',
+        subfeatures: [{
+          title: 'Kegiatan Akademik',
+          icon: 'fas fa-users'
+        }, {
+          title: 'Kalender Akademik',
+          icon: 'fas fa-calendar-alt'
+        }]
+      }, {
+        title: 'Data Wisuda',
+        // description: 'Pengaturan periode wisuda dan daftar peserta yang lulus.',
+        icon: 'fas fa-user-graduate',
+        subfeatures: [{
+          title: 'Periode Wisuda',
+          icon: 'fas fa-calendar-day'
+        }, {
+          title: 'Peserta Wisuda',
+          icon: 'fas fa-user-friends'
+        }]
+      }, {
+        title: 'Institut',
+        // description: 'Pengaturan profil institusi termasuk logo, nama kampus, dan informasi resmi lainnya.',
+        icon: 'fas fa-university',
+        subfeatures: [{
+          title: 'Informasi Perguruan Tinggi',
+          icon: 'fas fa-info-circle'
+        }, {
+          title: 'Fakultas',
+          icon: 'fas fa-building'
+        }, {
+          title: 'Jurusan',
+          icon: 'fas fa-sitemap'
+        }, {
+          title: 'Prodi',
+          icon: 'fas fa-graduation-cap'
+        }, {
+          title: 'Fokus',
+          icon: 'fas fa-bullseye'
+        }, {
+          title: 'Skala Pendidikan',
+          icon: 'fas fa-ruler'
+        }, {
+          title: 'Skala Pendidikan Universitas',
+          icon: 'fas fa-university'
+        }, {
+          title: 'Sistem Pembelajaran',
+          icon: 'fas fa-laptop'
+        }, {
+          title: 'Gedung Pembelajaran',
+          icon: 'fas fa-school'
+        }, {
+          title: 'Ruang Pembelajaran',
+          icon: 'fas fa-door-open'
+        }, {
+          title: 'Aktivitas Akademik',
+          icon: 'fas fa-tasks'
+        }, {
+          title: 'Kalender Akademik',
+          icon: 'fas fa-calendar-alt'
+        }, {
+          title: 'Universitas Lain',
+          icon: 'fas fa-globe'
+        }]
+      }, {
+        title: 'Studi',
+        // description: 'Kelola program studi, kurikulum, mata kuliah, dan jenjang pendidikan.',
+        icon: 'fas fa-book-open',
+        subfeatures: [{
+          title: 'Jenis Mata Kuliah',
+          icon: 'fas fa-book'
+        }, {
+          title: 'Kelompok Mata Kuliah',
+          icon: 'fas fa-layer-group'
+        }, {
+          title: 'Bidang Keahlian',
+          icon: 'fas fa-lightbulb'
+        }, {
+          title: 'Komponen Penilaian',
+          icon: 'fas fa-percentage'
+        }, {
+          title: 'Sesi Perkuliahan',
+          icon: 'fas fa-clock'
+        }, {
+          title: 'Sesi Pembelajaran',
+          icon: 'fas fa-laptop-house'
+        }, {
+          title: 'Catatan Kehadiran',
+          icon: 'fas fa-clipboard-check'
+        }, {
+          title: 'Kategori Pertemuan',
+          icon: 'fas fa-list-ul'
+        }, {
+          title: 'Kategori Aktivitas Pendukung',
+          icon: 'fas fa-people-carry'
+        }]
+      }, {
+        title: 'Identitas',
+        // description: 'Manajemen identitas kampus dan unit akademik secara administratif.',
+        icon: 'fas fa-id-card-alt',
+        subfeatures: [{
+          title: 'Agama',
+          icon: 'fas fa-praying-hands'
+        }, {
+          title: 'Pekerjaan',
+          icon: 'fas fa-briefcase'
+        }, {
+          title: 'Pendapatan',
+          icon: 'fas fa-money-bill-wave'
+        }]
+      }, {
+        title: 'Tugas Akhir',
+        // description: 'Monitoring dan pengelolaan proses skripsi, tesis, dan disertasi.',
+        icon: 'fas fa-scroll',
+        subfeatures: [{
+          title: 'Pengaturan Tugas Akhir',
+          icon: 'fas fa-cogs'
+        }, {
+          title: 'Unsur Nilai',
+          icon: 'fas fa-percentage'
+        }, {
+          title: 'Pengaturan Nilai',
+          icon: 'fas fa-cog'
+        }]
+      }, {
+        title: 'Data Mahasiswa',
+        // description: 'Kelola seluruh database mahasiswa aktif dan non-aktif dengan mudah.',
+        icon: 'fas fa-database',
+        subfeatures: [{
+          title: 'Status Mahasiswa',
+          icon: 'fas fa-user-check'
+        }, {
+          title: 'Kategori Hunian',
+          icon: 'fas fa-home'
+        }, {
+          title: 'Transportasi',
+          icon: 'fas fa-bus'
+        }, {
+          title: 'Kebutuhan Khusus',
+          icon: 'fas fa-wheelchair'
+        }, {
+          title: 'Jenis Dokumen Tambahan Biodata',
+          icon: 'fas fa-file-alt'
+        }, {
+          title: 'Dokumen Tambahan Biodata',
+          icon: 'fas fa-folder-open'
+        }]
+      }, {
+        title: 'Pegawai',
+        // description: 'Pengelolaan data pegawai untuk kepentingan administrasi dan akademik.',
+        icon: 'fas fa-briefcase',
+        subfeatures: [{
+          title: 'Klasifikasi Pegawai',
+          icon: 'fas fa-id-badge'
+        }, {
+          title: 'Kategori/Jabatan',
+          icon: 'fas fa-user-tie'
+        }, {
+          title: 'Peran Khusus',
+          icon: 'fas fa-star'
+        }, {
+          title: 'Status Pegawai',
+          icon: 'fas fa-user'
+        }, {
+          title: 'Peran Struktural',
+          icon: 'fas fa-sitemap'
+        }, {
+          title: 'Status Keaktifan',
+          icon: 'fas fa-toggle-on'
+        }]
+      }, {
+        title: 'Wilayah',
+        // description: 'Manajemen wilayah domisili mahasiswa untuk keperluan statistik dan zonasi.',
+        icon: 'fas fa-map-marked-alt',
+        subfeatures: [{
+          title: 'Negara',
+          icon: 'fas fa-flag'
+        }, {
+          title: 'Provinsi',
+          icon: 'fas fa-map'
+        }, {
+          title: 'Kota',
+          icon: 'fas fa-city'
+        }, {
+          title: 'Kecamatan',
+          icon: 'fas fa-map-pin'
+        }]
+      }, {
+        title: 'Arsip Dosen',
+        // description: 'Penyimpanan data riwayat aktivitas dan dokumen dosen secara digital.',
+        icon: 'fas fa-archive',
+        subfeatures: [{
+          title: 'Rekap Jadwal Mengajar Dosen',
+          icon: 'fas fa-clipboard'
+        }]
+      }, {
+        title: 'Arsip Mahasiswa',
+        // description: 'Manajemen dokumen penting mahasiswa: ijazah, sertifikat, transkrip.',
+        icon: 'fas fa-folder-open',
+        subfeatures: [{
+          title: 'KHS',
+          icon: 'fas fa-file-alt'
+        }, {
+          title: 'KRS',
+          icon: 'fas fa-file-alt'
+        }, {
+          title: 'Daftar Mahasiswa Keseluruhan',
+          icon: 'fas fa-users'
+        }, {
+          title: 'Daftar Mahasiswa Per Periode',
+          icon: 'fas fa-user-clock'
+        }, {
+          title: 'Daftar Yudisium',
+          icon: 'fas fa-list'
+        }]
+      }, {
+        title: 'Periode Akademik',
+        description: 'Atur semester aktif dan jadwal akademik tahunan kampus.',
+        icon: 'fas fa-calendar-alt'
       }],
       featuresdosen: [{
-        title: 'Manajemen Jadwal Akademik',
-        description: 'Atur jadwal kuliah, bimbingan, dan ujian dengan sistem otomatis dan fleksibel.',
-        headerImage: '/assets/jadwal-dosen.png',
-        metadata: 'Terintegrasi & Cepat',
-        subDescription: 'Untuk Dosen & Staf Akademik'
+        title: 'Daftar Proposal',
+        description: 'Kelola pengajuan proposal mahasiswa secara digital, termasuk pemantauan status dan komentar pembimbing.',
+        icon: 'fas fa-file-signature'
       }, {
-        title: 'Input dan Rekap Nilai',
-        description: 'Proses penilaian cepat dan akurat, langsung terintegrasi ke data mahasiswa.',
-        headerImage: '/assets/inputnilai.png',
-        metadata: 'Akurat & Transparan',
-        subDescription: 'Otomatisasi Laporan Nilai'
+        title: 'Daftar Skripsi',
+        // description: 'Pantau seluruh proses skripsi dari pendaftaran, bimbingan, hingga penilaian akhir secara efisien.',
+        icon: 'fas fa-book-open'
       }, {
-        title: 'Laporan Otomatis',
-        description: 'Laporan akademik dan kinerja dosen ter-generate otomatis untuk institusi.',
-        headerImage: '/assets/report.png',
-        metadata: 'Visualisasi Data Akurat',
-        subDescription: 'Laporan Kinerja & Akademik'
+        title: 'Jadwal Sidang',
+        // description: 'Atur dan tinjau jadwal sidang mahasiswa secara otomatis dan terintegrasi dengan kalender akademik.',
+        icon: 'fas fa-calendar-check'
+      }, {
+        title: 'Kelas Saya',
+        // description: 'Kelola perkuliahan Anda dengan daftar kelas, presensi, dan materi yang terdokumentasi rapi.',
+        icon: 'fas fa-chalkboard-teacher'
+      }, {
+        title: 'Kalender Akademik',
+        // description: 'Lihat kegiatan akademik, ujian, dan cuti bersama dalam tampilan kalender interaktif.',
+        icon: 'fas fa-calendar-alt'
+      }, {
+        title: 'RPS',
+        // description: 'Unggah dan perbarui Rencana Pembelajaran Semester (RPS) secara daring dengan format yang sesuai standar.',
+        icon: 'fas fa-tasks'
       }],
       featuresmahasiswa: [{
-        title: 'Layanan Mahasiswa Terpadu',
-        description: 'Mahasiswa dapat mengakses data akademik, KRS, KHS, dan transkrip secara real-time.',
-        headerImage: '/assets/isemaweb.png',
-        metadata: '24/7 Akses Online',
-        subDescription: 'KRS, KHS, Transkrip'
+        title: 'Dashboard Mahasiswa'
+        // description: 'Pusat kontrol mahasiswa untuk memantau akademik, keuangan, dan kegiatan secara real-time.',
+        // metadata: 'Info Terintegrasi',
+        // subDescription: 'KRS, KHS, Transkrip, Pembayaran'
       }, {
-        title: 'Akses Multi-Perangkat',
-        description: 'Sistem dapat diakses dari laptop, tablet, maupun smartphone kapan saja.',
-        headerImage: '/assets/smartphone.png',
-        metadata: 'Mobile-Friendly',
-        subDescription: 'Akses Dimana Saja, Kapan Saja'
+        title: 'Biodata'
+        // description: 'Update dan kelola data pribadi, kontak darurat, serta informasi penting lainnya.',
+        // metadata: 'Editable & Tersimpan Aman',
+        // subDescription: 'Nama, Alamat, NIK, Kontak'
       }, {
-        title: 'Monitoring Status Akademik',
-        description: 'Mahasiswa dapat melihat status aktif, cuti, beasiswa, dan progress semester berjalan.',
-        headerImage: '/assets/jadwal-dosen.png',
-        metadata: 'Pantauan Real-Time',
-        subDescription: 'Status Aktif, Cuti, Beasiswa, IPK'
-      }]
+        title: 'Kalender Akademik'
+        // description: 'Lihat jadwal akademik lengkap mulai dari perkuliahan hingga cuti dan ujian.',
+        // metadata: 'Terjadwal & Terupdate',
+        // subDescription: 'Kuliah, Ujian, Libur, Cuti'
+      }, {
+        title: 'Kelas Saya'
+        // description: 'Pantau jadwal kelas, dosen pengajar, materi perkuliahan, dan presensi.',
+        // metadata: 'Tersinkronisasi Otomatis',
+        // subDescription: 'Daftar Mata Kuliah & Absensi'
+      }, {
+        title: 'KRS'
+        // description: 'Ambil mata kuliah sesuai semester aktif dan kuota kelas secara mandiri.',
+        // metadata: 'Pengisian Mandiri',
+        // subDescription: 'Mata Kuliah, Syarat, Validasi'
+      }, {
+        title: 'Kurikulum Program Studi'
+        // description: 'Lihat struktur kurikulum program studi lengkap dengan sks dan prasyaratnya.',
+        // metadata: 'Struktur Akademik',
+        // subDescription: 'Daftar MK, Semester, SKS'
+      }, {
+        title: 'Transkrip Nilai'
+        // description: 'Akses nilai lengkap seluruh semester dan rekap IPK secara otomatis.',
+        // metadata: 'Akurat & Transparan',
+        // subDescription: 'Nilai Semester & IPK'
+      }, {
+        title: 'Daftar Pengajuan'
+        // description: 'Lihat semua riwayat pengajuan surat, cuti, dan permohonan akademik lainnya.',
+        // metadata: 'Riwayat Lengkap',
+        // subDescription: 'Surat Aktif, Cuti, Validasi'
+      }, {
+        title: 'Formulir Pengajuan'
+        // description: 'Isi dan ajukan berbagai keperluan administratif kampus secara digital.',
+        // metadata: 'Form Online',
+        // subDescription: 'Keterangan, Cuti, Beasiswa'
+      }, {
+        title: 'Proposal'
+        // description: 'Ajukan proposal kegiatan, penelitian, atau tugas akhir dengan sistem pelacakan status.',
+        // metadata: 'Tracking Proposal',
+        // subDescription: 'Status, Catatan, Revisi'
+      }, {
+        title: 'Tugas Akhir'
+        // description: 'Kelola proses tugas akhir mulai dari bimbingan, unggah dokumen, hingga sidang.',
+        // metadata: 'Monitoring Lengkap',
+        // subDescription: 'Bimbingan, Upload, Nilai'
+      }],
+      showAllAdmin: false,
+      showAllDosen: false,
+      showAllMahasiswa: false
     };
+  },
+  computed: {
+    limitedFeaturesAdmin: function limitedFeaturesAdmin() {
+      return this.showAllAdmin ? this.featuresadmin : this.featuresadmin.slice(0, 7);
+    },
+    limitedFeaturesDosen: function limitedFeaturesDosen() {
+      return this.showAllDosen ? this.featuresdosen : this.featuresdosen.slice(0, 7);
+    },
+    limitedFeaturesMahasiswa: function limitedFeaturesMahasiswa() {
+      return this.showAllMahasiswa ? this.featuresmahasiswa : this.featuresmahasiswa.slice(0, 7);
+    }
+  },
+  methods: {
+    toggleFeatures: function toggleFeatures(group) {
+      if (group === 'admin') {
+        this.showAllAdmin = !this.showAllAdmin;
+      } else if (group === 'dosen') {
+        this.showAllDosen = !this.showAllDosen;
+      } else if (group === 'mahasiswa') {
+        this.showAllMahasiswa = !this.showAllMahasiswa;
+      }
+    }
   }
 });
 
@@ -2506,23 +2978,7 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("div", {
     staticClass: "product-page"
-  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("div", {
-    staticClass: "word-category"
-  }, [_vm._m(2), _vm._v(" "), _c("div", {
-    staticClass: "category-filter"
-  }, [_vm._l(_vm.categories, function (category, index) {
-    return _c("button", {
-      key: index,
-      staticClass: "category-btn",
-      on: {
-        click: function click($event) {
-          return _vm.filterCategory(category);
-        }
-      }
-    }, [_vm._v("\n      " + _vm._s(category) + "\n    ")]);
-  }), _vm._v(" "), _c("hr", {
-    staticClass: "garis-samar"
-  })], 2)]), _vm._v(" "), _c("div", {
+  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _c("div", {
     staticClass: "product-grid"
   }, _vm._l(_vm.filteredProducts, function (product, index) {
     return _c("div", {
@@ -2665,8 +3121,10 @@ var staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
+    staticClass: "word-category"
+  }, [_c("div", {
     staticClass: "word"
-  }, [_c("h2", [_vm._v("Introducing Our Product")])]);
+  }, [_c("h2", [_vm._v("Introducing Our Product")])])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
@@ -2684,9 +3142,12 @@ var staticRenderFns = [function () {
     staticClass: "contact-title"
   }, [_vm._v("Tertarik dengan Sistem Kami?")]), _vm._v(" "), _c("p", {
     staticClass: "contact-subtitle"
-  }, [_vm._v("Kami siap membantu Anda memulai!")]), _vm._v(" "), _c("button", {
-    staticClass: "btn-contact-us"
-  }, [_vm._v("Hubungi Kami")])])]);
+  }, [_vm._v("Kami siap membantu Anda memulai!")]), _vm._v(" "), _c("a", {
+    staticClass: "btn-harga-produk mt-4",
+    attrs: {
+      href: "/harga-produk"
+    }
+  }, [_vm._v("\n                   Lihat Harga Produk >>>\n                  ")])])]);
 }];
 render._withStripped = true;
 
@@ -2720,7 +3181,7 @@ var render = function render() {
     }, [_c("div", {
       staticClass: "treasure-feature-item"
     }, [_c("i", {
-      "class": item.icon + " mb-3"
+      "class": item.icon + " mb-3 fs-3"
     }), _vm._v(" "), _c("h5", {
       staticClass: "fw-semibold"
     }, [_vm._v(_vm._s(item.title))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(item.description))])])]);
@@ -2739,11 +3200,11 @@ var staticRenderFns = [function () {
     staticClass: "col-lg-6 text-left"
   }, [_c("p", {
     staticClass: "tagline"
-  }, [_vm._v("Koneksi Alumni dalam Genggaman")]), _vm._v(" "), _c("h1", {
+  }, [_vm._v("Jejak Karier Alumni dalam Satu Sistem")]), _vm._v(" "), _c("h1", {
     staticClass: "hero-title"
-  }, [_vm._v("\n              Tracer Alumni"), _c("br"), _c("span", [_vm._v("Menjembatani Masa Lalu dan Masa Depan")])]), _vm._v(" "), _c("p", {
+  }, [_vm._v("\n             Tracer Alumni"), _c("br"), _c("span", [_vm._v("Menjembatani Masa Lalu dan Masa Depan")])]), _vm._v(" "), _c("p", {
     staticClass: "hero-subtext"
-  }, [_vm._v("\n              Platform ini memudahkan pelacakan alumni, keterlibatan mereka, dan membangun jaringan alumni yang aktif serta berdaya guna.\n            ")]), _vm._v(" "), _c("button", {
+  }, [_vm._v("\n             Platform ini memudahkan pelacakan alumni, pemetaan karier, dan keterlibatan mereka dalam pengembangan institusi.\n           ")]), _vm._v(" "), _c("button", {
     staticClass: "btn btn-cta mt-3"
   }, [_vm._v("Hubungi Kami")])]), _vm._v(" "), _c("div", {
     staticClass: "col-lg-6 text-center"
@@ -2760,10 +3221,10 @@ var staticRenderFns = [function () {
   return _c("div", {
     staticClass: "text-center mb-5"
   }, [_c("h2", {
-    staticClass: "fw-bold display-5"
+    staticClass: "fw-bold display-6"
   }, [_vm._v("Mengapa Memilih Tracer Alumni ISEMA?")]), _vm._v(" "), _c("p", {
-    staticClass: "lead"
-  }, [_vm._v("Dukung pengembangan karier dan kompetensi mahasiswa di luar kampus")])]);
+    staticClass: "lead fs-4"
+  }, [_vm._v("Pantau perkembangan karier lulusan dan optimalkan hubungan kampus dengan alumni")])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
@@ -2775,11 +3236,11 @@ var staticRenderFns = [function () {
     staticClass: "text-content col-lg-6 px-5"
   }, [_c("h2", {
     staticClass: "headline mb-3"
-  }, [_vm._v("Gabung dengan Komunitas Alumni, "), _c("br"), _c("em", [_vm._v("bukan sekadar lulusan")])]), _vm._v(" "), _c("p", {
+  }, [_vm._v("Gabung dengan Sistem Tracer Alumni,"), _c("br"), _c("em", [_vm._v("lebih dari sekadar pelacakan")])]), _vm._v(" "), _c("p", {
     staticClass: "lead fw-semibold"
-  }, [_vm._v("Bersama Tracer Alumni ISEMA, Anda akan mendapatkan berbagai manfaat yang mendukung perkembangan profesional dan kontribusi alumni.")]), _vm._v(" "), _c("ul", {
+  }, [_vm._v("Tracer Alumni ISEMA membantu Anda memahami dampak lulusan dan meningkatkan akreditasi institusi dengan data yang akurat.")]), _vm._v(" "), _c("ul", {
     staticClass: "benefit-list mt-4"
-  }, [_c("li", [_vm._v("Terhubung dengan jejaring alumni aktif dari berbagai bidang")]), _vm._v(" "), _c("li", [_vm._v("Akses info lowongan kerja dan kolaborasi bisnis")]), _vm._v(" "), _c("li", [_vm._v("Partisipasi dalam kegiatan kampus dan mentoring")]), _vm._v(" "), _c("li", [_vm._v("Portal kontribusi alumni secara digital & transparan")]), _vm._v(" "), _c("li", [_vm._v("Statistik sebaran alumni berdasarkan bidang dan lokasi")])])]), _vm._v(" "), _c("div", {
+  }, [_c("li", [_vm._v("Pelacakan status pekerjaan dan pendidikan lanjutan alumni")]), _vm._v(" "), _c("li", [_vm._v("Survei alumni otomatis dan analisis data karier")]), _vm._v(" "), _c("li", [_vm._v("Partisipasi alumni dalam feedback dan evaluasi kurikulum")]), _vm._v(" "), _c("li", [_vm._v("Integrasi data alumni dengan sistem akademik dan eksternal")]), _vm._v(" "), _c("li", [_vm._v("Dashboard statistik penyebaran dan tren karier lulusan")])])]), _vm._v(" "), _c("div", {
     staticClass: "image-content col-lg-6 text-center"
   }, [_c("img", {
     staticClass: "img-fluid rounded shadow",
@@ -2796,11 +3257,11 @@ var staticRenderFns = [function () {
   }, [_c("div", {
     staticClass: "container-container text-center"
   }, [_c("h2", {
-    staticClass: "mb-3"
-  }, [_vm._v("Ingin Bangun Relasi Alumni yang Kuat?")]), _vm._v(" "), _c("p", {
-    staticClass: "mb-4"
+    staticClass: "mb-3 fw-bold fs-2"
+  }, [_vm._v("Ingin Lacak Alumni Anda secara Efektif?")]), _vm._v(" "), _c("p", {
+    staticClass: "mb-4 fw-bold fs-4"
   }, [_vm._v("Hubungi kami untuk demo dan implementasi Tracer Alumni ISEMA")]), _vm._v(" "), _c("button", {
-    staticClass: "btn btn-primary px-4 py-2"
+    staticClass: "btn px-4 py-2"
   }, [_vm._v("Hubungi Kami")])])]);
 }];
 render._withStripped = true;
@@ -2829,7 +3290,7 @@ var render = function render() {
   }, [_c("div", {
     staticClass: "container"
   }, [_c("h2", {
-    staticClass: "text-center mb-5"
+    staticClass: "text-center text-dark mb-5"
   }, [_vm._v("Fitur Unggulan CBT")]), _vm._v(" "), _c("div", {
     staticClass: "row gy-4"
   }, _vm._l(_vm.features, function (feature, index) {
@@ -2839,9 +3300,9 @@ var render = function render() {
     }, [_c("div", {
       staticClass: "bg-white shadow rounded p-4 h-100"
     }, [_c("i", {
-      "class": feature.icon + " fa-2x mb-3 text-primary"
+      "class": feature.icon + " fa-2x mb-3 text-dark"
     }), _vm._v(" "), _c("h5", {
-      staticClass: "fw-bold"
+      staticClass: "fw-bold text-dark"
     }, [_vm._v(_vm._s(feature.title))]), _vm._v(" "), _c("p", {
       staticClass: "text-muted"
     }, [_vm._v(_vm._s(feature.description))])])]);
@@ -2908,9 +3369,9 @@ var staticRenderFns = [function () {
     staticClass: "container-container text-center"
   }, [_c("h2", {
     staticClass: "mb-3"
-  }, [_vm._v("Ingin Bangun Relasi Alumni yang Kuat?")]), _vm._v(" "), _c("p", {
-    staticClass: "mb-4"
-  }, [_vm._v("Hubungi kami untuk demo dan implementasi Treasure Alumni ISEMA")]), _vm._v(" "), _c("button", {
+  }, [_vm._v("Ingin Mempunyai sistem yang cepat?")]), _vm._v(" "), _c("p", {
+    staticClass: "mb-4 fw-bold fs-5"
+  }, [_vm._v("Hubungi kami untuk demo CBT ISEMA")]), _vm._v(" "), _c("button", {
     staticClass: "btn-cbt px-4 py-2"
   }, [_vm._v("Hubungi Kami")])])]);
 }];
@@ -2940,7 +3401,7 @@ var render = function render() {
   }, [_c("div", {
     staticClass: "container-container"
   }, [_c("h2", {
-    staticClass: "text-center mb-4"
+    staticClass: "text-center mb-4 fw-bold fs-2"
   }, [_vm._v("Fitur Unggulan Jurnal ISEMA")]), _vm._v(" "), _c("div", {
     staticClass: "row"
   }, _vm._l(_vm.features, function (fitur, index) {
@@ -2999,9 +3460,9 @@ var staticRenderFns = [function () {
   }, [_c("div", {
     staticClass: "container-cta text-center"
   }, [_c("h2", {
-    staticClass: "cta-text mb-3"
+    staticClass: "cta-text mb-3 fw-bold fs-2"
   }, [_vm._v("Publikasikan Karya Ilmiah Anda dengan Mudah")]), _vm._v(" "), _c("p", {
-    staticClass: "cta-text mb-4"
+    staticClass: "cta-text mb-4 fw-bold fs-6"
   }, [_vm._v("Jurnal Digital ISEMA mendukung visibilitas dan kredibilitas akademik institusi Anda.")]), _vm._v(" "), _c("button", {
     staticClass: "btn btn-primary px-4 py-2"
   }, [_vm._v("Hubungi Kami")])])]);
@@ -3153,11 +3614,11 @@ var staticRenderFns = [function () {
   }, [_c("div", {
     staticClass: "container-container text-center"
   }, [_c("h2", {
-    staticClass: "mb-3"
-  }, [_vm._v("Tertarik Menggunakan SIAKAD Kami?")]), _vm._v(" "), _c("p", {
-    staticClass: "mb-4"
+    staticClass: "mb-3 fw-bold fs-2"
+  }, [_vm._v("Tertarik Menggunakan LMS Kami?")]), _vm._v(" "), _c("p", {
+    staticClass: "mb-4 fw-bold fs-3"
   }, [_vm._v("Hubungi kami untuk demo dan penawaran khusus")]), _vm._v(" "), _c("button", {
-    staticClass: "btn btn-primary px-4 py-2"
+    staticClass: "btn btn-success px-4 py-2"
   }, [_vm._v("Hubungi Kami")])])]);
 }];
 render._withStripped = true;
@@ -3182,41 +3643,80 @@ var render = function render() {
   return _c("div", {
     staticClass: "mbkm-page"
   }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("section", {
-    staticClass: "features-section py-5 bg-light"
+    staticClass: "fitur-mbkm-section py-5"
   }, [_c("div", {
     staticClass: "container"
-  }, [_vm._m(2), _vm._v(" "), _c("div", {
-    staticClass: "row gx-4 gy-4 justify-content-center"
+  }, [_c("h2", {
+    staticClass: "mb-4 text-center fitur-title"
+  }, [_vm._v("Fitur MBKM ISEMA")]), _vm._v(" "), _c("div", {
+    staticClass: "row g-4"
   }, _vm._l(_vm.features, function (feature, index) {
     return _c("div", {
       key: index,
-      staticClass: "col-sm-6 col-md-4 col-lg-4"
+      staticClass: "col-md-3 col-sm-6"
     }, [_c("div", {
-      staticClass: "feature-card h-100"
-    }, [_c("div", {
-      staticClass: "feature-card-header"
-    }, [feature.headerImage ? _c("img", {
-      staticClass: "card-header-bg-image",
-      attrs: {
-        src: feature.headerImage,
-        alt: "Card Header Background"
+      staticClass: "fitur-card text-center p-4 h-100",
+      on: {
+        click: function click($event) {
+          return _vm.showFeature(feature);
+        }
       }
-    }) : _vm._e()]), _vm._v(" "), _c("div", {
-      staticClass: "feature-card-content p-3 text-center"
-    }, [_c("h5", {
-      staticClass: "font-weight-bold mt-2 mb-2"
+    }, [_c("i", {
+      staticClass: "mb-3 d-block fa-2x",
+      "class": feature.icon
+    }), _vm._v(" "), _c("h5", {
+      staticClass: "fw-bold"
     }, [_vm._v(_vm._s(feature.title))]), _vm._v(" "), _c("p", {
       staticClass: "text-muted mb-2"
-    }, [_vm._v(_vm._s(feature.description))]), _vm._v(" "), _c("p", {
-      staticClass: "metadata mb-1"
+    }, [_vm._v(_vm._s(feature.subDescription))])])]);
+  }), 0)]), _vm._v(" "), _c("div", {
+    staticClass: "modal fade",
+    attrs: {
+      id: "featureModal",
+      tabindex: "-1",
+      role: "dialog",
+      "aria-labelledby": "featureModalLabel",
+      "aria-hidden": "true"
+    }
+  }, [_c("div", {
+    staticClass: "modal-dialog modal-lg modal-dialog-centered",
+    attrs: {
+      role: "document"
+    }
+  }, [_c("div", {
+    staticClass: "modal-content shadow-lg border-0 rounded-4"
+  }, [_c("div", {
+    staticClass: "modal-header text-white border-0 rounded-top-4"
+  }, [_c("h5", {
+    staticClass: "modal-title fw-bold d-flex align-items-center text-dark",
+    attrs: {
+      id: "featureModalLabel"
+    }
+  }, [_c("i", {
+    "class": _vm.selectedFeature.icon + " me-2 fa-lg"
+  }), _vm._v("\n          " + _vm._s(_vm.selectedFeature.title) + "\n        ")]), _vm._v(" "), _c("button", {
+    staticClass: "btn-close btn-close-dark",
+    attrs: {
+      type: "button",
+      "data-bs-dismiss": "modal",
+      "aria-label": "Close"
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "modal-body"
+  }, [_vm.selectedFeature.subfeatures && _vm.selectedFeature.subfeatures.length ? _c("div", {
+    staticClass: "row g-4"
+  }, _vm._l(_vm.selectedFeature.subfeatures, function (sub, idx) {
+    return _c("div", {
+      key: idx,
+      staticClass: "col-md-4 col-sm-6"
+    }, [_c("div", {
+      staticClass: "fitur-card text-center p-4 h-100"
     }, [_c("i", {
-      staticClass: "fas fa-bolt me-2 text-warning"
-    }), _vm._v(" " + _vm._s(feature.metadata) + "\n            ")]), _vm._v(" "), _c("p", {
-      staticClass: "sub-description"
-    }, [_c("i", {
-      staticClass: "fas fa-check-circle me-2 text-success"
-    }), _vm._v(" " + _vm._s(feature.subDescription) + "\n            ")])])])]);
-  }), 0)])]), _vm._v(" "), _vm._m(3), _vm._v(" "), _vm._m(4)]);
+      "class": sub.icon + " fa-2x mb-3 text-dark"
+    }), _vm._v(" "), _c("h5", {
+      staticClass: "fw-bold"
+    }, [_vm._v(_vm._s(sub.title))])])]);
+  }), 0) : _vm._e()])])])])]), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3)]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
@@ -3271,18 +3771,6 @@ var staticRenderFns = [function () {
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "row mb-5 text-center"
-  }, [_c("div", {
-    staticClass: "col"
-  }, [_c("h2", {
-    staticClass: "section-title"
-  }, [_vm._v("Fitur Unggulan")]), _vm._v(" "), _c("p", {
-    staticClass: "section-subtitle"
-  }, [_vm._v("Satu sistem untuk semua kebutuhan akademik Anda")])])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
   return _c("section", {
     staticClass: "mbkm-advantages-section container-fluid py-5"
   }, [_c("div", {
@@ -3326,11 +3814,11 @@ var staticRenderFns = [function () {
   }, [_c("div", {
     staticClass: "container-container text-center"
   }, [_c("h2", {
-    staticClass: "mb-3"
+    staticClass: "mb-3 fw-bold fs-2"
   }, [_vm._v("Siap Digitalisasi Program MBKM Anda?")]), _vm._v(" "), _c("p", {
-    staticClass: "mb-4"
+    staticClass: "mb-4 fs-3"
   }, [_vm._v("Hubungi tim kami untuk konsultasi dan demo eksklusif MBKM ISEMA")]), _vm._v(" "), _c("button", {
-    staticClass: "btn btn-primary px-4 py-2"
+    staticClass: "btn px-4 py-2"
   }, [_vm._v("Hubungi Kami")])])]);
 }];
 render._withStripped = true;
@@ -3445,7 +3933,7 @@ var staticRenderFns = [function () {
   }, [_c("h2", {
     staticClass: "contact-title"
   }, [_vm._v("Tertarik dengan Sistem Kami?")]), _vm._v(" "), _c("p", {
-    staticClass: "contact-subtitle"
+    staticClass: "contact-subtitle fs-3"
   }, [_vm._v("Kami siap membantu Anda memulai!")]), _vm._v(" "), _c("button", {
     staticClass: "btn-contact-us"
   }, [_vm._v("Hubungi Kami")])])])])]);
@@ -3570,6 +4058,117 @@ render._withStripped = true;
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/productdetail/PMBCompponent.vue?vue&type=template&id=488a8af4&scoped=true":
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/productdetail/PMBCompponent.vue?vue&type=template&id=488a8af4&scoped=true ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
+    staticClass: "pmb-page"
+  }, [_vm._m(0), _vm._v(" "), _c("section", {
+    staticClass: "fitur-pmb-section py-5"
+  }, [_c("div", {
+    staticClass: "container"
+  }, [_c("h2", {
+    staticClass: "mb-4 text-center fitur-title"
+  }, [_vm._v("Fitur Unggulan PMB")]), _vm._v(" "), _c("div", {
+    staticClass: "row g-4"
+  }, _vm._l(_vm.fiturPmb, function (item, index) {
+    return _c("div", {
+      key: index,
+      staticClass: "col-md-3 col-sm-6"
+    }, [_c("div", {
+      staticClass: "fitur-card text-center p-4 h-100"
+    }, [_c("i", {
+      staticClass: "mb-3 d-block fa-2x",
+      "class": item.icon,
+      attrs: {
+        alt: "Icon"
+      }
+    }), _vm._v(" "), _c("h5", {
+      staticClass: "fw-bold"
+    }, [_vm._v(_vm._s(item.title))])])]);
+  }), 0)])]), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2)]);
+};
+var staticRenderFns = [function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("section", {
+    staticClass: "hero-section d-flex align-items-center"
+  }, [_c("div", {
+    staticClass: "container"
+  }, [_c("div", {
+    staticClass: "row align-items-center"
+  }, [_c("div", {
+    staticClass: "col-lg-6 text-left"
+  }, [_c("p", {
+    staticClass: "tagline"
+  }, [_vm._v("Proses Penerimaan Lebih Mudah")]), _vm._v(" "), _c("h1", {
+    staticClass: "hero-title"
+  }, [_vm._v("\n            PMB ISEMA"), _c("br"), _c("span", [_vm._v("Digital dan Terintegrasi")])]), _vm._v(" "), _c("p", {
+    staticClass: "hero-subtext"
+  }, [_vm._v("\n            Kelola seluruh alur penerimaan mahasiswa baru, dari pendaftaran hingga pengumuman hasil seleksi, dalam satu platform.\n          ")]), _vm._v(" "), _c("ul", {
+    staticClass: "hero-benefits"
+  }, [_c("li", [_vm._v("Pendaftaran Online & Validasi Data")]), _vm._v(" "), _c("li", [_vm._v("Seleksi Ujian Digital & Rekomendasi Otomatis")]), _vm._v(" "), _c("li", [_vm._v("Dashboard Monitoring Proses PMB")])]), _vm._v(" "), _c("button", {
+    staticClass: "btn btn-cta mt-3"
+  }, [_vm._v("Hubungi Kami")])]), _vm._v(" "), _c("div", {
+    staticClass: "col-lg-6 text-center"
+  }, [_c("img", {
+    staticClass: "img-fluid hero-image shadow rounded",
+    attrs: {
+      src: "https://upload.wikimedia.org/wikipedia/commons/7/74/Belajar_Bersama.jpg",
+      alt: "Ilustrasi PMB"
+    }
+  })])])])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("section", {
+    staticClass: "why-pmb-section"
+  }, [_c("div", {
+    staticClass: "row g-0 align-items-center"
+  }, [_c("div", {
+    staticClass: "col-md-5 bg-light text-dark text-center py-5 px-4 title-wrapper"
+  }, [_c("h2", {
+    staticClass: "why-title"
+  }, [_vm._v("Why Choose "), _c("br"), _vm._v(" PMB ISEMA?")])]), _vm._v(" "), _c("div", {
+    staticClass: "col-md-7 content-wrapper p-5"
+  }, [_c("p", {
+    staticClass: "why-desc"
+  }, [_vm._v("\n          Sistem PMB ISEMA mendukung alur pendaftaran mahasiswa baru secara digital dan efisien.\n        ")]), _vm._v(" "), _c("p", {
+    staticClass: "why-desc"
+  }, [_vm._v("\n          Dari pengisian formulir hingga cetak kartu ujian, semua terintegrasi dan dipantau real-time oleh admin kampus.\n        ")]), _vm._v(" "), _c("p", {
+    staticClass: "why-note"
+  }, [_vm._v("\n          *PMB ISEMA dapat digunakan oleh calon mahasiswa, admin kampus, hingga tim seleksi akademik.*\n        ")])])])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("section", {
+    staticClass: "cta-section py-5"
+  }, [_c("div", {
+    staticClass: "container text-center"
+  }, [_c("h2", {
+    staticClass: "mb-3 fw-bold fs-3"
+  }, [_vm._v("Siap Menyambut Mahasiswa Baru dengan Sistem Digital?")]), _vm._v(" "), _c("p", {
+    staticClass: "mb-4 fw-bold fs-5"
+  }, [_vm._v("Hubungi kami untuk demo dan aktivasi PMB ISEMA")]), _vm._v(" "), _c("button", {
+    staticClass: "btn btn-primary px-4 py-2"
+  }, [_vm._v("Hubungi Kami")])])]);
+}];
+render._withStripped = true;
+
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/productdetail/ReportingComponent.vue?vue&type=template&id=7fb72c49&scoped=true":
 /*!****************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/productdetail/ReportingComponent.vue?vue&type=template&id=7fb72c49&scoped=true ***!
@@ -3643,9 +4242,9 @@ var staticRenderFns = [function () {
   return _c("div", {
     staticClass: "text-center mb-4"
   }, [_c("h2", {
-    staticClass: "fw-bold section-title"
+    staticClass: "fw-bold section-title fs-2"
   }, [_vm._v("Fitur Unggulan Reporting")]), _vm._v(" "), _c("p", {
-    staticClass: "section-subtitle text-muted"
+    staticClass: "section-subtitle fw-bold fs-5"
   }, [_vm._v("Membantu pengambilan keputusan berbasis data")])]);
 }, function () {
   var _vm = this,
@@ -3655,11 +4254,11 @@ var staticRenderFns = [function () {
   }, [_c("div", {
     staticClass: "container-container text-center"
   }, [_c("h2", {
-    staticClass: "mb-3"
+    staticClass: "mb-3 fw-bold fs-3"
   }, [_vm._v("Siap Meningkatkan Efisiensi Pelaporan Kampus?")]), _vm._v(" "), _c("p", {
-    staticClass: "mb-4"
+    staticClass: "mb-4 fw-bold fs-5 text-dark"
   }, [_vm._v("Hubungi kami untuk demo sistem Reporting ISEMA dan lihat bagaimana data bisa menjadi keputusan cerdas.")]), _vm._v(" "), _c("button", {
-    staticClass: "btn btn-primary px-4 py-2"
+    staticClass: "btn px-4 py-2"
   }, [_vm._v("Hubungi Kami")])])]);
 }];
 render._withStripped = true;
@@ -3683,84 +4282,114 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("div", {
     staticClass: "siakad-page"
-  }, [_vm._m(0), _vm._v(" "), _c("section", {
-    staticClass: "features-section py-5 bg-light"
+  }, [_vm._m(0), _vm._v(" "), _c("div", {
+    staticClass: "features-section d-flex"
   }, [_c("div", {
-    staticClass: "container-fluid px-5"
-  }, [_vm._m(1), _vm._v(" "), _c("div", {
-    staticClass: "row gx-4 gy-4"
-  }, _vm._l(_vm.featuresadmin, function (feature, index) {
-    return _c("div", {
-      key: index,
-      staticClass: "col-sm-6 col-md-4 col-lg-4"
-    }, [_c("div", {
-      staticClass: "feature-card h-100 shadow rounded"
-    }, [_c("div", {
-      staticClass: "feature-card-header"
-    }, [feature.headerImage ? _c("img", {
-      staticClass: "card-header-bg-image",
-      attrs: {
-        src: feature.headerImage,
-        alt: "Card Header Background"
-      }
-    }) : _vm._e()]), _vm._v(" "), _c("div", {
-      staticClass: "feature-card-content p-3"
-    }, [_c("h5", {
-      staticClass: "font-weight-bold mt-2 mb-2"
-    }, [_vm._v(_vm._s(feature.title))]), _vm._v(" "), _c("p", {
-      staticClass: "text-muted mb-2"
-    }, [_vm._v(_vm._s(feature.description))])])])]);
+    staticClass: "feature-container",
+    staticStyle: {
+      "border-color": "darkgreen",
+      border: "2px solid darkgreen"
+    }
+  }, [_c("div", {
+    staticClass: "feature-head"
+  }, [_c("h2", {
+    staticClass: "feature text-center",
+    staticStyle: {
+      color: "darkgreen"
+    }
+  }, [_vm._v("Fitur SIAKAD Admin")]), _vm._v(" "), _c("p", [_vm._v("Membantu Admin untuk mengelola akademik")]), _vm._v(" "), _c("hr", {
+    staticClass: "hr-border"
+  }), _vm._v(" "), _c("ul", {
+    staticClass: "features-item"
+  }, _vm._l(_vm.limitedFeaturesAdmin, function (feature, index) {
+    return _c("li", {
+      key: "admin-" + (feature.title || index),
+      staticClass: "list-feature d-flex"
+    }, [_c("i", {
+      "class": ["mb-1", "fa-1x", feature.icon]
+    }), _vm._v(" "), _c("h5", {
+      staticClass: "mt-1 mb-1"
+    }, [_vm._v(_vm._s(feature.title))])]);
   }), 0)]), _vm._v(" "), _c("div", {
-    staticClass: "container-fluid px-5"
-  }, [_vm._m(2), _vm._v(" "), _c("div", {
-    staticClass: "row gx-4 gy-4"
-  }, _vm._l(_vm.featuresdosen, function (feature, index) {
-    return _c("div", {
-      key: index,
-      staticClass: "col-sm-6 col-md-4 col-lg-4"
-    }, [_c("div", {
-      staticClass: "feature-card h-100 shadow rounded"
-    }, [_c("div", {
-      staticClass: "feature-card-header"
-    }, [feature.headerImage ? _c("img", {
-      staticClass: "card-header-bg-image",
-      attrs: {
-        src: feature.headerImage,
-        alt: "Card Header Background"
+    staticClass: "see-more-wrapper text-center"
+  }, [_c("button", {
+    staticClass: "see-more-btn",
+    on: {
+      click: function click($event) {
+        return _vm.toggleFeatures("admin");
       }
-    }) : _vm._e()]), _vm._v(" "), _c("div", {
-      staticClass: "feature-card-content p-3"
-    }, [_c("h5", {
-      staticClass: "font-weight-bold mt-2 mb-2"
-    }, [_vm._v(_vm._s(feature.title))]), _vm._v(" "), _c("p", {
-      staticClass: "text-muted mb-2"
-    }, [_vm._v(_vm._s(feature.description))])])])]);
+    }
+  }, [_vm._v("\r\n            " + _vm._s(_vm.showAllAdmin ? "See less" : "See more") + "\r\n          ")])])]), _vm._v(" "), _c("div", {
+    staticClass: "feature-container",
+    staticStyle: {
+      "border-color": "darkmagenta",
+      border: "2px solid darkmagenta"
+    }
+  }, [_c("div", {
+    staticClass: "feature-head"
+  }, [_c("h2", {
+    staticClass: "feature text-center",
+    staticStyle: {
+      color: "darkmagenta"
+    }
+  }, [_vm._v("Fitur SIAKAD Dosen")]), _vm._v(" "), _c("p", [_vm._v("Membantu Dosen mengelola akademik")]), _vm._v(" "), _c("hr", {
+    staticClass: "hr-border"
+  }), _vm._v(" "), _c("ul", {
+    staticClass: "features-item"
+  }, _vm._l(_vm.limitedFeaturesDosen, function (feature, index) {
+    return _c("li", {
+      key: "dosen-" + (feature.title || index),
+      staticClass: "list-feature d-flex"
+    }, [_c("i", {
+      "class": ["mb-1", "fa-1x", feature.icon]
+    }), _vm._v(" "), _c("h5", {
+      staticClass: "mt-1 mb-1"
+    }, [_vm._v(_vm._s(feature.title))])]);
   }), 0)]), _vm._v(" "), _c("div", {
-    staticClass: "container-fluid px-5"
-  }, [_vm._m(3), _vm._v(" "), _c("div", {
-    staticClass: "row gx-4 gy-4"
-  }, _vm._l(_vm.featuresmahasiswa, function (feature, index) {
-    return _c("div", {
-      key: index,
-      staticClass: "col-sm-6 col-md-4 col-lg-4"
-    }, [_c("div", {
-      staticClass: "feature-card h-100 shadow rounded"
-    }, [_c("div", {
-      staticClass: "feature-card-header"
-    }, [feature.headerImage ? _c("img", {
-      staticClass: "card-header-bg-image",
-      attrs: {
-        src: feature.headerImage,
-        alt: "Card Header Background"
+    staticClass: "see-more-wrapper text-center"
+  }, [_c("button", {
+    staticClass: "see-more-btn",
+    on: {
+      click: function click($event) {
+        return _vm.toggleFeatures("dosen");
       }
-    }) : _vm._e()]), _vm._v(" "), _c("div", {
-      staticClass: "feature-card-content p-3"
-    }, [_c("h5", {
-      staticClass: "font-weight-bold mt-2 mb-2"
-    }, [_vm._v(_vm._s(feature.title))]), _vm._v(" "), _c("p", {
-      staticClass: "text-muted mb-2"
-    }, [_vm._v(_vm._s(feature.description))])])])]);
-  }), 0)])]), _vm._v(" "), _vm._m(4), _vm._v(" "), _vm._m(5)]);
+    }
+  }, [_vm._v("\r\n            " + _vm._s(_vm.showAllDosen ? "See less" : "See more") + "\r\n          ")])])]), _vm._v(" "), _c("div", {
+    staticClass: "feature-container",
+    staticStyle: {
+      "border-color": "darkslateblue",
+      border: "2px solid darkslateblue"
+    }
+  }, [_c("div", {
+    staticClass: "feature-head"
+  }, [_c("h2", {
+    staticClass: "feature text-center",
+    staticStyle: {
+      color: "darkslateblue"
+    }
+  }, [_vm._v("Fitur SIAKAD Mahasiswa")]), _vm._v(" "), _c("p", [_vm._v("Membantu Mahasiswa mengelola akademik")]), _vm._v(" "), _c("hr", {
+    staticClass: "hr-border"
+  }), _vm._v(" "), _c("ul", {
+    staticClass: "features-item"
+  }, _vm._l(_vm.limitedFeaturesMahasiswa, function (feature, index) {
+    return _c("li", {
+      key: "mahasiswa-" + (feature.title || index),
+      staticClass: "list-feature d-flex"
+    }, [_c("i", {
+      "class": ["mb-1", "fa-1x", feature.icon]
+    }), _vm._v(" "), _c("h5", {
+      staticClass: "mt-1 mb-1"
+    }, [_vm._v(_vm._s(feature.title))])]);
+  }), 0)]), _vm._v(" "), _c("div", {
+    staticClass: "see-more-wrapper text-center"
+  }, [_c("button", {
+    staticClass: "see-more-btn",
+    on: {
+      click: function click($event) {
+        return _vm.toggleFeatures("mahasiswa");
+      }
+    }
+  }, [_vm._v("\r\n            " + _vm._s(_vm.showAllMahasiswa ? "See less" : "See more") + "\r\n          ")])])])]), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2)]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
@@ -3777,9 +4406,9 @@ var staticRenderFns = [function () {
     staticClass: "tagline"
   }, [_vm._v("Solusi Akademik Digital Modern")]), _vm._v(" "), _c("h1", {
     staticClass: "hero-title"
-  }, [_vm._v("\n          SIAKAD Terintegrasi "), _c("br"), _c("span", [_vm._v("untuk Era Kampus Digital")])]), _vm._v(" "), _c("p", {
+  }, [_vm._v("\r\n          SIAKAD Terintegrasi "), _c("br"), _c("span", [_vm._v("untuk Era Kampus Digital")])]), _vm._v(" "), _c("p", {
     staticClass: "hero-subtext"
-  }, [_vm._v("\n          Bangun sistem kampus yang efisien, real-time, dan mudah diakses oleh dosen, mahasiswa, dan admin.\n        ")]), _vm._v(" "), _c("ul", {
+  }, [_vm._v("\r\n          Bangun sistem kampus yang efisien, real-time, dan mudah diakses oleh dosen, mahasiswa, dan admin.\r\n        ")]), _vm._v(" "), _c("ul", {
     staticClass: "hero-benefits"
   }, [_c("li", [_vm._v("Mengelola data akademik real-time")]), _vm._v(" "), _c("li", [_vm._v("Integrasi penuh dengan LMS, MBKM, dan Keuangan")]), _vm._v(" "), _c("li", [_vm._v("Akses fleksibel dari semua perangkat")])]), _vm._v(" "), _c("button", {
     staticClass: "btn btn-cta mt-3"
@@ -3795,36 +4424,6 @@ var staticRenderFns = [function () {
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "row mb-5 text-center"
-  }, [_c("div", {
-    staticClass: "col"
-  }, [_c("h2", {
-    staticClass: "section-title"
-  }, [_vm._v("Fitur Admin")])])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "row mb-5 text-center"
-  }, [_c("div", {
-    staticClass: "col"
-  }, [_c("h2", {
-    staticClass: "section-title"
-  }, [_vm._v("Fitur Dosen")])])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "row mb-5 text-center"
-  }, [_c("div", {
-    staticClass: "col"
-  }, [_c("h2", {
-    staticClass: "section-title"
-  }, [_vm._v("Fitur Mahasiswa")])])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
   return _c("section", {
     staticClass: "keunggulan-siakad"
   }, [_c("div", {
@@ -3837,7 +4436,7 @@ var staticRenderFns = [function () {
     staticClass: "headline"
   }, [_vm._v("Gabung Bersama SIAKAD Modern, "), _c("br"), _c("em", [_vm._v("bukan sekadar sistem")])]), _vm._v(" "), _c("p", {
     staticClass: "subheadline"
-  }, [_vm._v("\n            Dengan SIAKAD kami, Anda mendapatkan keunggulan yang mendukung transformasi digital kampus Anda:\n          ")]), _vm._v(" "), _c("ul", {
+  }, [_vm._v("\r\n            Dengan SIAKAD kami, Anda mendapatkan keunggulan yang mendukung transformasi digital kampus Anda:\r\n          ")]), _vm._v(" "), _c("ul", {
     staticClass: "benefit-list"
   }, [_c("li", [_vm._v("Mengelola data akademik dari mana saja secara real-time.")]), _vm._v(" "), _c("li", [_vm._v("Mendukung integrasi penuh dengan sistem LMS, MBKM, dan Keuangan.")]), _vm._v(" "), _c("li", [_vm._v("Akses mudah bagi dosen, mahasiswa, dan admin kampus.")]), _vm._v(" "), _c("li", [_vm._v("Dashboard analitik untuk pelaporan akademik & performa dosen.")]), _vm._v(" "), _c("li", [_vm._v("Dirancang untuk fleksibilitas perangkat: laptop, tablet, dan smartphone.")])])]), _vm._v(" "), _c("div", {
     staticClass: "col-lg-6 image-wrapper h-100"
@@ -3855,11 +4454,11 @@ var staticRenderFns = [function () {
   }, [_c("div", {
     staticClass: "container text-center"
   }, [_c("h2", {
-    staticClass: "mb-3"
+    staticClass: "mb-3 fw-bold fs-2"
   }, [_vm._v("Tertarik Menggunakan SIAKAD Kami?")]), _vm._v(" "), _c("p", {
-    staticClass: "mb-4"
+    staticClass: "mb-4 fs-3"
   }, [_vm._v("Hubungi kami untuk demo dan penawaran khusus")]), _vm._v(" "), _c("button", {
-    staticClass: "btn btn-primary px-4 py-2"
+    staticClass: "btn px-4 py-2"
   }, [_vm._v("Hubungi Kami")])])]);
 }];
 render._withStripped = true;
@@ -8245,7 +8844,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.product-page[data-v-9e91ef8e] {\r\n  /* max-width: 1200px; */\r\n  margin: 0 auto;\r\n  padding: 80px;\n}\n.content-left[data-v-9e91ef8e] {\r\n    background-color: #31444d; \r\n    color: #fff;\n}\n.content-left .title[data-v-9e91ef8e] { \r\n    color: #fff;\r\n    line-height: 1.1; \r\n    font-size: 50px;\n}\n.content-left h2[data-v-9e91ef8e] {\r\n    color: #fff; \r\n    font-size: 1.0rem; \r\n    margin-bottom: 15px;\n}\n.content-left p[data-v-9e91ef8e] {\r\n    color: #ccc; \r\n    font-size: 1.120rem; \r\n    margin-bottom: 30px;\n}\n.cta-section h4[data-v-9e91ef8e],\r\n.cta-section p[data-v-9e91ef8e] {\r\n    color: #ccc; \r\n    margin-bottom: 5px;\n}\n.cta-section p[data-v-9e91ef8e] {\r\n    margin-bottom: 20px;\n}\n.btn-demo[data-v-9e91ef8e] {\r\n    display: inline-block; \r\n    background-color: #e95420;\r\n    color: #fff; \r\n    padding: 15px 30px;\r\n    border: none;\r\n    border-radius: 5px; \r\n    cursor: pointer;\r\n    font-size: 1em;\r\n    font-weight: 700;\r\n    text-decoration: none; \r\n    transition: background-color 0.3s ease;\n}\n.btn-demo[data-v-9e91ef8e]:hover {\r\n    background-color: #d14a1a;\n}\n.image-right[data-v-9e91ef8e] {\r\n    background-image: url('https://www.shutterstock.com/image-photo/successful-caucasian-young-man-student-600nw-2141124049.jpg');\r\n    background-size: cover;\r\n    background-position: center; \r\n    background-repeat: no-repeat;\r\n    min-height: 500px; \r\n    position: relative;\n}\n.image-right[data-v-9e91ef8e]::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: rgba(0, 0, 0, 0.2); \r\n    z-index: 1;\n}\n.title[data-v-9e91ef8e]{\r\n  font-family: 'Montserrat', 'Poppins', sans-serif;\r\n  font-weight: 300px;\r\n  color: #000000;\r\n  font-size: 70px;\n}\r\n\r\n/* .head{\r\n    background-image: url(https://st2.depositphotos.com/4297569/10000/i/450/depositphotos_100000524-stock-photo-self-employed-business-person-working.jpg);\r\n    background-size: cover;\r\n} */\n.category-filter[data-v-9e91ef8e] {\r\n  display: flex;\r\n  gap: 15px;\r\n  /* margin-bottom: 30px; */\r\n  flex-wrap: wrap;\n}\n.category-btn[data-v-9e91ef8e] {\r\n  padding: 8px 16px;\r\n  background-color: #bebdbd;\r\n  border: none;\r\n  border-radius: 15px;\r\n  cursor: pointer;\r\n  font-weight: 500;\n}\n.category-btn[data-v-9e91ef8e]:hover {\r\n  background-color: #d0d0d0;\n}\n.garis-samar[data-v-9e91ef8e] {\r\n    border: none; \r\n    border-top: 3px solid #000000; \r\n    width: 100%; \r\n    margin-left: auto; \r\n    margin-right: auto; \r\n    margin-bottom: 0;\n}\n.word-category[data-v-9e91ef8e]{\r\n    background-color: rgb(241, 240, 240);\r\n    padding: 20px;\r\n    border-radius: 20px 20px 0 0;\r\n    margin-top: 30px;\n}\n.word[data-v-9e91ef8e]{\r\n    font-size: 20px;\r\n    font-family: Impact,'Arial Narrow Bold', sans-serif;\r\n    text-align: center;\r\n    margin-bottom: 30px;\r\n    margin-top: 10px;\r\n    letter-spacing: 1px;\n}\n.logo img[data-v-9e91ef8e]{\r\n    width: 10%;\r\n    height: 10%;\r\n    margin-top: 15px;\r\n    margin-left: 100px;\n}\n.product-card[data-v-9e91ef8e] {\r\n  display: flex;\r\n  align-items: center;\r\n  background-color: rgb(255, 255, 255);\r\n  box-shadow: 0 4px 12px rgba(0,0,0,0.1);\r\n  cursor: pointer;\r\n  transition: transform 0.2s ease, box-shadow 0.2s ease;\r\n  padding: 10px;\r\n  height: 120px;\r\n  border-radius: 12px;\n}\n.product-card[data-v-9e91ef8e]:hover {\r\n  transform: translateY(-3px);\r\n  box-shadow: 0 8px 16px rgba(0,0,0,0.15);\n}\n.product-image[data-v-9e91ef8e] {\r\n  width: 100px;\r\n  height: 80px;\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  border-radius: 8px;\r\n  margin-right: 20px;\n}\n.product-content[data-v-9e91ef8e] {\r\n  flex: 1;\n}\n.product-title[data-v-9e91ef8e] {\r\n  font-size: 18px;\r\n  font-weight: bold;\r\n  margin-bottom: 5px;\n}\n.product-subtitle[data-v-9e91ef8e] {\r\n  font-size: 14px;\r\n  color: #555;\r\n  margin-bottom: 10px;\n}\n.product-badge[data-v-9e91ef8e] {\r\n  display: inline-block;\r\n  background-color: #bebdbd;\r\n  color: rgb(0, 0, 0);\r\n  padding: 5px 10px;\r\n  border-radius: 12px;\r\n  font-size: 12px;\n}\n.testimonial-container[data-v-9e91ef8e] {\r\n  text-align: center;\r\n  padding: 50px 20px;\r\n  margin-top: 40px;\n}\n.testimonial-title[data-v-9e91ef8e] {\r\n  font-size: 28px;\r\n  margin-bottom: 40px;\n}\n.testimonial-content[data-v-9e91ef8e] {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\n}\n.testimonial-text[data-v-9e91ef8e] {\r\n  width: 800px;\r\n  padding: 0 20px;\n}\n.author-info[data-v-9e91ef8e] {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  margin-top: 20px;\n}\n.author-image[data-v-9e91ef8e] {\r\n  width: 80px;\r\n  height: 80px;\r\n  border-radius: 50%;\r\n  margin-right: 15px;\n}\n.nav-button[data-v-9e91ef8e] {\r\n  background: none;\r\n  border: none;\r\n  font-size: 40px;\r\n  cursor: pointer;\r\n  color: grey;\n}\n.nav-button[data-v-9e91ef8e]:hover {\r\n  color: black;\n}\n.btn-demo[data-v-9e91ef8e]{\r\n  border-radius: 15px;\r\n  color: #000000;\r\n  background-color: #a0a0a0;\n}\n.product-grid[data-v-9e91ef8e] {\r\n  display: grid;\r\n  grid-template-columns: 1fr 1fr 1fr;\r\n  gap: 20px;\r\nbackground-color: rgb(241, 240, 240);\r\npadding: 20px;\n}\n.partner[data-v-9e91ef8e]{\r\n    background-color: #f8f8f8;\n}\n.combined-sections .row[data-v-9e91ef8e] {\r\n            min-height: 100vh;\n}\n.contact-section[data-v-9e91ef8e] {\r\n            background-color: #2F4F4F;\r\n\r\n            color: #fff;\r\n            min-height: 400px; \r\n            display: flex; \r\n            align-items: center; \r\n            justify-content: center; \r\n            text-align: center; \r\n            padding: 60px 30px; \r\n            position: relative; \r\n            box-sizing: border-box;\n}\n.contact-section[data-v-9e91ef8e]::before {\r\n            content: '';\r\n            position: absolute;\r\n            top: 0;\r\n            left: 0;\r\n            width: 100%;\r\n            height: 100%;\r\n            background-color: rgba(0, 0, 0, 0.3); \r\n            z-index: 1;\n}\n.contact-content[data-v-9e91ef8e] {\r\n            position: relative;\r\n            z-index: 2;\r\n            max-width: 600px; \r\n            margin: 0 auto;\n}\n.contact-title[data-v-9e91ef8e] {\r\n            font-size: 2.5em;\r\n            font-weight: 700;\r\n            margin-bottom: 20px;\r\n            color: #fff;\r\n            line-height: 1.2;\n}\n.contact-subtitle[data-v-9e91ef8e] {\r\n            font-size: 1.2em;\r\n            color: #eee;\r\n            margin-bottom: 30px;\n}\n.btn-contact-us[data-v-9e91ef8e] {\r\n            display: inline-block;\r\n            background-color: #e95420; \r\n            color: #fff;\r\n            padding: 15px 30px;\r\n            border: none;\r\n            border-radius: 5px;\r\n            cursor: pointer;\r\n            font-size: 1em;\r\n            font-weight: 700;\r\n            text-decoration: none;\r\n            transition: background-color 0.3s ease;\n}\n.btn-contact-us[data-v-9e91ef8e]:hover {\r\n            background-color: #d14a1a;\n}\n.faq-wrapper[data-v-9e91ef8e] {\r\n\r\n            padding: 30px; \r\n            display: flex; \r\n            align-items: center;\r\n            justify-content: center; \r\n            background-color: #f0f2f5; \r\n            box-sizing: border-box;\n}\n.faq-section[data-v-9e91ef8e] {\r\n            padding: 60px 30px; \r\n            background-color: #f0f2f5; \r\n            border-radius: 12px;\r\n            /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */\r\n            flex-grow: 1; \r\n            min-height: -moz-fit-content; \r\n            min-height: fit-content; \r\n            max-width: 600px;\n}\n.faq-title[data-v-9e91ef8e] {\r\n            text-align: center;\r\n            font-size: 2.8em;\r\n            font-weight: 700;\r\n            margin-bottom: 50px;\r\n            color: #343a40;\n}\n.faq-item[data-v-9e91ef8e] {\r\n            background-color: #ffffff;\r\n            border-radius: 8px;\r\n            margin-bottom: 20px;\r\n            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);\r\n            overflow: hidden;\r\n            transition: all 0.3s ease;\n}\n.faq-item[data-v-9e91ef8e]:last-child {\r\n            margin-bottom: 0;\n}\n.faq-item[data-v-9e91ef8e]:hover {\r\n            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);\r\n            transform: translateY(-2px);\n}\n.faq-question[data-v-9e91ef8e] {\r\n            display: flex;\r\n            justify-content: space-between;\r\n            align-items: center;\r\n            padding: 20px 25px;\r\n            cursor: pointer;\r\n            background-color: #ffffff;\r\n            border-bottom: 1px solid #e0e0e0;\r\n            transition: background-color 0.3s ease;\n}\n.faq-item.active .faq-question[data-v-9e91ef8e] {\r\n            background-color: #e9ecef;\r\n            border-bottom: none;\n}\n.faq-question h4[data-v-9e91ef8e] {\r\n            margin: 0;\r\n            font-size: 1.25em;\r\n            font-weight: 600;\r\n            color: #333;\r\n            flex-grow: 1;\n}\n.faq-question span[data-v-9e91ef8e] {\r\n            font-size: 1.8em;\r\n            font-weight: 700;\r\n            color: #555;\r\n            width: 30px;\r\n            text-align: center;\r\n            line-height: 1;\r\n            transition: transform 0.3s ease;\n}\n.faq-item.active .faq-question span[data-v-9e91ef8e] {\r\n            transform: rotate(180deg);\r\n            color: #555;\n}\n.faq-answer[data-v-9e91ef8e] {\r\n            padding: 0 25px;\r\n            max-height: 0;\r\n            overflow: hidden;\r\n            transition: max-height 0.5s ease-out, padding 0.5s ease-out;\r\n            background-color: #fdfdfd;\r\n            color: #555;\n}\n.faq-item.active .faq-answer[data-v-9e91ef8e] {\r\n            max-height: 200px;\r\n            padding: 15px 25px 25px;\n}\n.faq-answer p[data-v-9e91ef8e] {\r\n            margin: 0;\r\n            font-size: 1em;\r\n            line-height: 1.8;\n}\n@media (max-width: 768px) {\n.product-page[data-v-9e91ef8e]{\r\n    padding: 0px;\n}\n.product-grid[data-v-9e91ef8e] {\r\n    grid-template-columns: 1fr;\n}\n.content-left[data-v-9e91ef8e] {\r\n        padding: 40px 20px;\r\n        text-align: center;\n}\n.image-right[data-v-9e91ef8e] {\r\n        min-height: 300px;\n}\n.content-left h1[data-v-9e91ef8e] {\r\n        font-size: 2.5rem;\n}\n.combined-sections .row[data-v-9e91ef8e] {\r\n                flex-direction: column; \r\n                min-height: auto;\n}\n.contact-section[data-v-9e91ef8e], .faq-wrapper[data-v-9e91ef8e] {\r\n                min-height: 60vh; \r\n                padding: 40px 20px;\n}\n.contact-title[data-v-9e91ef8e] {\r\n                font-size: 2.5em;\n}\n.contact-subtitle[data-v-9e91ef8e] {\r\n                font-size: 1em;\n}\n.btn-contact-us[data-v-9e91ef8e] {\r\n                padding: 12px 25px;\r\n                font-size: 0.9em;\n}\n.faq-wrapper[data-v-9e91ef8e] {\r\n                padding: 20px;\n}\n.faq-section[data-v-9e91ef8e] {\r\n                max-width: 100%; \r\n                margin: 0; \r\n                padding: 30px 20px;\n}\n.faq-title[data-v-9e91ef8e] {\r\n                font-size: 2.2em;\r\n                margin-bottom: 30px;\n}\n.faq-question[data-v-9e91ef8e] {\r\n                padding: 15px 20px;\n}\n.faq-question h4[data-v-9e91ef8e] {\r\n                font-size: 1.1em;\n}\n.faq-question span[data-v-9e91ef8e] {\r\n                font-size: 1.5em;\n}\n.faq-answer[data-v-9e91ef8e] {\r\n                padding: 0 20px;\n}\n.faq-item.active .faq-answer[data-v-9e91ef8e] {\r\n                padding: 10px 20px 20px;\n}\n}\r\n", ""]);
+exports.push([module.i, "\n.product-page[data-v-9e91ef8e] {\r\n  /* max-width: 1200px; */\r\n  margin: 0 auto;\r\n  padding: 80px;\n}\n.content-left[data-v-9e91ef8e] {\r\n    background-color: #31444d; \r\n    color: #fff;\n}\n.content-left .title[data-v-9e91ef8e] { \r\n    color: #fff;\r\n    line-height: 1.1; \r\n    font-size: 50px;\n}\n.content-left h2[data-v-9e91ef8e] {\r\n    color: #fff; \r\n    font-size: 1.0rem; \r\n    margin-bottom: 15px;\n}\n.content-left p[data-v-9e91ef8e] {\r\n    color: #ccc; \r\n    font-size: 1.120rem; \r\n    margin-bottom: 30px;\n}\n.cta-section h4[data-v-9e91ef8e],\r\n.cta-section p[data-v-9e91ef8e] {\r\n    color: #ccc; \r\n    margin-bottom: 5px;\n}\n.cta-section p[data-v-9e91ef8e] {\r\n    margin-bottom: 20px;\n}\n.btn-demo[data-v-9e91ef8e] {\r\n    display: inline-block; \r\n    background-color: #e95420;\r\n    color: #fff; \r\n    padding: 15px 30px;\r\n    border: none;\r\n    border-radius: 5px; \r\n    cursor: pointer;\r\n    font-size: 1em;\r\n    font-weight: 700;\r\n    text-decoration: none; \r\n    transition: background-color 0.3s ease;\n}\n.btn-demo[data-v-9e91ef8e]:hover {\r\n    background-color: #d14a1a;\n}\n.image-right[data-v-9e91ef8e] {\r\n    background-image: url('https://www.shutterstock.com/image-photo/successful-caucasian-young-man-student-600nw-2141124049.jpg');\r\n    background-size: cover;\r\n    background-position: center; \r\n    background-repeat: no-repeat;\r\n    min-height: 500px; \r\n    position: relative;\n}\n.image-right[data-v-9e91ef8e]::before {\r\n    content: \"\";\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: rgba(0, 0, 0, 0.2); \r\n    z-index: 1;\n}\n.title[data-v-9e91ef8e]{\r\n  font-family: 'Montserrat', 'Poppins', sans-serif;\r\n  font-weight: 300px;\r\n  color: #000000;\r\n  font-size: 70px;\n}\r\n\r\n/* .head{\r\n    background-image: url(https://st2.depositphotos.com/4297569/10000/i/450/depositphotos_100000524-stock-photo-self-employed-business-person-working.jpg);\r\n    background-size: cover;\r\n} */\n.category-filter[data-v-9e91ef8e] {\r\n  display: flex;\r\n  gap: 15px;\r\n  /* margin-bottom: 30px; */\r\n  flex-wrap: wrap;\n}\n.category-btn[data-v-9e91ef8e] {\r\n  padding: 8px 16px;\r\n  background-color: #bebdbd;\r\n  border: none;\r\n  border-radius: 15px;\r\n  cursor: pointer;\r\n  font-weight: 500;\n}\n.category-btn[data-v-9e91ef8e]:hover {\r\n  background-color: #d0d0d0;\n}\n.garis-samar[data-v-9e91ef8e] {\r\n    border: none; \r\n    border-top: 3px solid #000000; \r\n    width: 100%; \r\n    margin-left: auto; \r\n    margin-right: auto; \r\n    margin-bottom: 0;\n}\n.word-category[data-v-9e91ef8e]{\r\n    background-color: rgb(241, 240, 240);\r\n    padding: 20px;\r\n    border-radius: 20px 20px 0 0;\r\n    margin-top: 30px;\n}\n.word[data-v-9e91ef8e]{\r\n    font-size: 20px;\r\n    font-family: Impact,'Arial Narrow Bold', sans-serif;\r\n    text-align: center;\r\n    margin-bottom: 30px;\r\n    margin-top: 10px;\r\n    letter-spacing: 1px;\n}\n.logo img[data-v-9e91ef8e]{\r\n    width: 10%;\r\n    height: 10%;\r\n    margin-top: 15px;\r\n    margin-left: 100px;\n}\n.product-card[data-v-9e91ef8e] {\r\n  display: flex;\r\n  align-items: center;\r\n  background-color: rgb(255, 255, 255);\r\n  box-shadow: 0 4px 12px rgba(0,0,0,0.1);\r\n  cursor: pointer;\r\n  transition: transform 0.2s ease, box-shadow 0.2s ease;\r\n  padding: 10px;\r\n  height: 120px;\r\n  border-radius: 12px;\n}\n.product-card[data-v-9e91ef8e]:hover {\r\n  transform: translateY(-3px);\r\n  box-shadow: 0 8px 16px rgba(0,0,0,0.15);\n}\n.product-image[data-v-9e91ef8e] {\r\n  width: 100px;\r\n  height: 80px;\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  border-radius: 8px;\r\n  margin-right: 20px;\n}\n.product-content[data-v-9e91ef8e] {\r\n  flex: 1;\n}\n.product-title[data-v-9e91ef8e] {\r\n  font-size: 18px;\r\n  font-weight: bold;\r\n  margin-bottom: 5px;\n}\n.product-subtitle[data-v-9e91ef8e] {\r\n  font-size: 14px;\r\n  color: #555;\r\n  margin-bottom: 10px;\n}\n.product-badge[data-v-9e91ef8e] {\r\n  display: inline-block;\r\n  background-color: #bebdbd;\r\n  color: rgb(0, 0, 0);\r\n  padding: 5px 10px;\r\n  border-radius: 12px;\r\n  font-size: 12px;\n}\n.testimonial-container[data-v-9e91ef8e] {\r\n  text-align: center;\r\n  padding: 50px 20px;\r\n  margin-top: 40px;\n}\n.testimonial-title[data-v-9e91ef8e] {\r\n  font-size: 28px;\r\n  margin-bottom: 40px;\n}\n.testimonial-content[data-v-9e91ef8e] {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\n}\n.testimonial-text[data-v-9e91ef8e] {\r\n  width: 800px;\r\n  padding: 0 20px;\n}\n.author-info[data-v-9e91ef8e] {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  margin-top: 20px;\n}\n.author-image[data-v-9e91ef8e] {\r\n  width: 80px;\r\n  height: 80px;\r\n  border-radius: 50%;\r\n  margin-right: 15px;\n}\n.nav-button[data-v-9e91ef8e] {\r\n  background: none;\r\n  border: none;\r\n  font-size: 40px;\r\n  cursor: pointer;\r\n  color: grey;\n}\n.nav-button[data-v-9e91ef8e]:hover {\r\n  color: black;\n}\n.btn-demo[data-v-9e91ef8e]{\r\n  border-radius: 15px;\r\n  color: #000000;\r\n  background-color: #a0a0a0;\n}\n.product-grid[data-v-9e91ef8e] {\r\n  display: grid;\r\n  grid-template-columns: 1fr 1fr 1fr;\r\n  gap: 20px;\r\nbackground-color: rgb(241, 240, 240);\r\npadding: 20px;\n}\n.partner[data-v-9e91ef8e]{\r\n    background-color: #f8f8f8;\n}\n.combined-sections .row[data-v-9e91ef8e] {\r\n            min-height: 100vh;\n}\n.contact-section[data-v-9e91ef8e] {\r\n            background-color: #2F4F4F;\r\n\r\n            color: #fff;\r\n            min-height: 400px; \r\n            display: flex; \r\n            align-items: center; \r\n            justify-content: center; \r\n            text-align: center; \r\n            padding: 60px 30px; \r\n            position: relative; \r\n            box-sizing: border-box;\n}\n.contact-section[data-v-9e91ef8e]::before {\r\n            content: '';\r\n            position: absolute;\r\n            top: 0;\r\n            left: 0;\r\n            width: 100%;\r\n            height: 100%;\r\n            background-color: rgba(0, 0, 0, 0.3); \r\n            z-index: 1;\n}\n.contact-content[data-v-9e91ef8e] {\r\n            position: relative;\r\n            z-index: 2;\r\n            max-width: 600px; \r\n            margin: 0 auto;\n}\n.contact-title[data-v-9e91ef8e] {\r\n            font-size: 2.5em;\r\n            font-weight: 700;\r\n            margin-bottom: 20px;\r\n            color: #fff;\r\n            line-height: 1.2;\n}\n.contact-subtitle[data-v-9e91ef8e] {\r\n            font-size: 1.2em;\r\n            color: #eee;\r\n            margin-bottom: 30px;\n}\n.btn-contact-us[data-v-9e91ef8e] {\r\n            display: inline-block;\r\n            background-color: #e95420; \r\n            color: #fff;\r\n            padding: 15px 30px;\r\n            border: none;\r\n            border-radius: 5px;\r\n            cursor: pointer;\r\n            font-size: 1em;\r\n            font-weight: 700;\r\n            text-decoration: none;\r\n            transition: background-color 0.3s ease;\n}\n.btn-contact-us[data-v-9e91ef8e]:hover {\r\n            background-color: #d14a1a;\n}\n.faq-wrapper[data-v-9e91ef8e] {\r\n\r\n            padding: 30px; \r\n            display: flex; \r\n            align-items: center;\r\n            justify-content: center; \r\n            background-color: #f0f2f5; \r\n            box-sizing: border-box;\n}\n.faq-section[data-v-9e91ef8e] {\r\n            padding: 60px 30px; \r\n            background-color: #f0f2f5; \r\n            border-radius: 12px;\r\n            /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */\r\n            flex-grow: 1; \r\n            min-height: -moz-fit-content; \r\n            min-height: fit-content; \r\n            max-width: 600px;\n}\n.faq-title[data-v-9e91ef8e] {\r\n            text-align: center;\r\n            font-size: 2.8em;\r\n            font-weight: 700;\r\n            margin-bottom: 50px;\r\n            color: #343a40;\n}\n.faq-item[data-v-9e91ef8e] {\r\n            background-color: #ffffff;\r\n            border-radius: 8px;\r\n            margin-bottom: 20px;\r\n            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);\r\n            overflow: hidden;\r\n            transition: all 0.3s ease;\n}\n.faq-item[data-v-9e91ef8e]:last-child {\r\n            margin-bottom: 0;\n}\n.faq-item[data-v-9e91ef8e]:hover {\r\n            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);\r\n            transform: translateY(-2px);\n}\n.faq-question[data-v-9e91ef8e] {\r\n            display: flex;\r\n            justify-content: space-between;\r\n            align-items: center;\r\n            padding: 20px 25px;\r\n            cursor: pointer;\r\n            background-color: #ffffff;\r\n            border-bottom: 1px solid #e0e0e0;\r\n            transition: background-color 0.3s ease;\n}\n.faq-item.active .faq-question[data-v-9e91ef8e] {\r\n            background-color: #e9ecef;\r\n            border-bottom: none;\n}\n.faq-question h4[data-v-9e91ef8e] {\r\n            margin: 0;\r\n            font-size: 1.25em;\r\n            font-weight: 600;\r\n            color: #333;\r\n            flex-grow: 1;\n}\n.faq-question span[data-v-9e91ef8e] {\r\n            font-size: 1.8em;\r\n            font-weight: 700;\r\n            color: #555;\r\n            width: 30px;\r\n            text-align: center;\r\n            line-height: 1;\r\n            transition: transform 0.3s ease;\n}\n.faq-item.active .faq-question span[data-v-9e91ef8e] {\r\n            transform: rotate(180deg);\r\n            color: #555;\n}\n.faq-answer[data-v-9e91ef8e] {\r\n            padding: 0 25px;\r\n            max-height: 0;\r\n            overflow: hidden;\r\n            transition: max-height 0.5s ease-out, padding 0.5s ease-out;\r\n            background-color: #fdfdfd;\r\n            color: #555;\n}\n.faq-item.active .faq-answer[data-v-9e91ef8e] {\r\n            max-height: 200px;\r\n            padding: 15px 25px 25px;\n}\n.faq-answer p[data-v-9e91ef8e] {\r\n            margin: 0;\r\n            font-size: 1em;\r\n            line-height: 1.8;\n}\n.btn-harga-produk[data-v-9e91ef8e] {\r\n  background-color: #ffffff;\r\n  color: #2c7a7b;\r\n  border: 2px solid #2c7a7b;\r\n  padding: 10px 24px;\r\n  font-weight: 600;\r\n  border-radius: 8px;\r\n  font-size: 1rem;\r\n  transition: all 0.3s ease;\r\n  text-decoration: none;\r\n  display: inline-block;\n}\n.btn-harga-produk[data-v-9e91ef8e]:hover {\r\n  background-color: #2c7a7b;\r\n  color: #ffffff;\r\n  border-color: #2c7a7b;\r\n  transform: translateY(-2px);\r\n  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);\n}\n@media (max-width: 768px) {\n.product-page[data-v-9e91ef8e]{\r\n    padding: 0px;\n}\n.product-grid[data-v-9e91ef8e] {\r\n    grid-template-columns: 1fr;\n}\n.content-left[data-v-9e91ef8e] {\r\n        padding: 40px 20px;\r\n        text-align: center;\n}\n.image-right[data-v-9e91ef8e] {\r\n        min-height: 300px;\n}\n.content-left h1[data-v-9e91ef8e] {\r\n        font-size: 2.5rem;\n}\n.combined-sections .row[data-v-9e91ef8e] {\r\n                flex-direction: column; \r\n                min-height: auto;\n}\n.contact-section[data-v-9e91ef8e], .faq-wrapper[data-v-9e91ef8e] {\r\n                min-height: 60vh; \r\n                padding: 40px 20px;\n}\n.contact-title[data-v-9e91ef8e] {\r\n                font-size: 2.5em;\n}\n.contact-subtitle[data-v-9e91ef8e] {\r\n                font-size: 1em;\n}\n.btn-contact-us[data-v-9e91ef8e] {\r\n                padding: 12px 25px;\r\n                font-size: 0.9em;\n}\n.faq-wrapper[data-v-9e91ef8e] {\r\n                padding: 20px;\n}\n.faq-section[data-v-9e91ef8e] {\r\n                max-width: 100%; \r\n                margin: 0; \r\n                padding: 30px 20px;\n}\n.faq-title[data-v-9e91ef8e] {\r\n                font-size: 2.2em;\r\n                margin-bottom: 30px;\n}\n.faq-question[data-v-9e91ef8e] {\r\n                padding: 15px 20px;\n}\n.faq-question h4[data-v-9e91ef8e] {\r\n                font-size: 1.1em;\n}\n.faq-question span[data-v-9e91ef8e] {\r\n                font-size: 1.5em;\n}\n.faq-answer[data-v-9e91ef8e] {\r\n                padding: 0 20px;\n}\n.faq-item.active .faq-answer[data-v-9e91ef8e] {\r\n                padding: 10px 20px 20px;\n}\n}\r\n", ""]);
 
 // exports
 
@@ -8264,7 +8863,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.alumni-page[data-v-995f0d96] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f9f9f9;\r\n  color: #333;\r\n  padding: 50px;\n}\r\n\r\n/* Hero Section */\n.hero-section[data-v-995f0d96] {\r\n  background: linear-gradient(135deg, #4a2c6b, #7b3e9e); /* Ungu ISEMA */\r\n  color: #fff;\r\n  padding: 80px 0;\n}\n.tagline[data-v-995f0d96] {\r\n  font-size: 1rem;\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  color: #ffd700;\r\n  font-weight: 500;\n}\n.hero-title[data-v-995f0d96] {\r\n  font-size: 2.7rem;\r\n  font-weight: 800;\r\n  margin: 20px 0 15px;\n}\n.hero-title span[data-v-995f0d96] {\r\n  color: #ffdd57;\n}\n.hero-subtext[data-v-995f0d96] {\r\n  font-size: 1.1rem;\r\n  line-height: 1.6;\r\n  color: #f0f0f0;\r\n  margin-bottom: 20px;\n}\n.hero-benefits[data-v-995f0d96] {\r\n  list-style: none;\r\n  padding-left: 0;\r\n  color: #fff;\r\n  margin-bottom: 20px;\n}\n.hero-benefits li[data-v-995f0d96] {\r\n  position: relative;\r\n  padding-left: 24px;\r\n  margin-bottom: 12px;\r\n  font-size: 1rem;\n}\n.hero-benefits li[data-v-995f0d96]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #ffd700;\r\n  font-weight: bold;\n}\r\n\r\n/* CTA Button */\n.btn-cta[data-v-995f0d96] {\r\n  background-color: #ffd700;\r\n  color: #4a2c6b;\r\n  padding: 12px 28px;\r\n  border: none;\r\n  font-weight: 600;\r\n  font-size: 1rem;\r\n  border-radius: 8px;\r\n  transition: 0.3s ease;\n}\n.btn-cta[data-v-995f0d96]:hover {\r\n  background-color: #f4c400;\r\n  color: #fff;\n}\r\n\r\n/* Hero Image */\n.hero-image[data-v-995f0d96] {\r\n  max-width: 100%;\r\n  height: auto;\r\n  border-radius: 12px;\r\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);\n}\n.treasure-advantages-section[data-v-995f0d96] {\r\n  background-color: #fafafa;\r\n  color: #002b36;\r\n  font-family: 'Poppins', sans-serif;\n}\n.cta-section[data-v-995f0d96] {\r\n  background: linear-gradient(45deg, #4c006f 0%, #8530d4 100%);\r\n  color: #fff;\r\n  text-align: center;\n}\n.cta-section .btn[data-v-995f0d96] {\r\n  background-color: #fff;\r\n  color: #E95420;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  border: none;\n}\n.treasure-alumni-benefit-section[data-v-995f0d96] {\r\n  background-color: #e4e4e4;\r\n  padding: 80px 0;\r\n  font-family: 'Poppins', sans-serif;\r\n  margin-bottom: 20px;\n}\n.headline[data-v-995f0d96] {\r\n  font-size: 2.5rem;\r\n  font-weight: 700;\r\n  color: #093c5a;\n}\n.headline em[data-v-995f0d96] {\r\n  font-style: normal;\r\n  color: #0d9276;\n}\n.benefit-list[data-v-995f0d96] {\r\n  list-style-type: disc;\r\n  padding-left: 20px;\r\n  color: #444;\r\n  font-size: 1.05rem;\n}\n.benefit-list li[data-v-995f0d96] {\r\n  margin-bottom: 12px;\r\n  line-height: 1.6;\n}\n.image-content img[data-v-995f0d96] {\r\n  max-width: 95%;\r\n  border-radius: 12px;\r\n  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);\n}\n@media (max-width: 991.98px) {\n.hero-title[data-v-995f0d96] {\r\n    font-size: 2rem;\n}\n.hero-subtext[data-v-995f0d96] {\r\n    font-size: 1rem;\n}\n.btn-cta[data-v-995f0d96] {\r\n    font-size: 0.95rem;\r\n    padding: 10px 24px;\n}\n.image-content img[data-v-995f0d96] {\r\n    max-width: 100%;\r\n    margin-top: 20px;\n}\n.headline[data-v-995f0d96] {\r\n    font-size: 2rem;\r\n    text-align: center;\n}\n.benefit-list[data-v-995f0d96] {\r\n    font-size: 1rem;\r\n    padding-left: 16px;\n}\n.treasure-alumni-benefit-section .container-fluid[data-v-995f0d96] {\r\n    flex-direction: column;\r\n    text-align: center;\n}\n.text-content[data-v-995f0d96],\r\n  .image-content[data-v-995f0d96] {\r\n    padding: 20px !important;\n}\n}\n@media (max-width: 575.98px) {\n.alumni-page[data-v-995f0d96]{\r\n    padding: 0px;\n}\n.hero-title[data-v-995f0d96] {\r\n    font-size: 1.7rem;\n}\n.headline[data-v-995f0d96] {\r\n    font-size: 1.5rem;\n}\n.benefit-list li[data-v-995f0d96] {\r\n    font-size: 0.95rem;\n}\n.btn-cta[data-v-995f0d96] {\r\n    padding: 10px 20px;\r\n    font-size: 0.9rem;\n}\n.hero-subtext[data-v-995f0d96] {\r\n    font-size: 0.95rem;\n}\n.treasure-alumni-benefit-section[data-v-995f0d96] {\r\n    padding: 50px 0;\n}\n.cta-section .btn[data-v-995f0d96] {\r\n    padding: 10px 24px;\r\n    font-size: 0.95rem;\n}\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.alumni-page[data-v-995f0d96] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f9f9f9;\r\n  color: #333;\r\n  padding: 50px;\n}\r\n\r\n/* Hero Section */\n.hero-section[data-v-995f0d96] {\r\n  background: linear-gradient(135deg, #4a2c6b, #7b3e9e); /* Ungu ISEMA */\r\n  color: #fff;\r\n  padding: 80px 0;\n}\n.tagline[data-v-995f0d96] {\r\n  font-size: 1rem;\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  color: #ffd700;\r\n  font-weight: 500;\n}\n.hero-title[data-v-995f0d96] {\r\n  font-size: 2.7rem;\r\n  font-weight: 800;\r\n  margin: 20px 0 15px;\n}\n.hero-title span[data-v-995f0d96] {\r\n  color: #ffdd57;\n}\n.hero-subtext[data-v-995f0d96] {\r\n  font-size: 1.1rem;\r\n  line-height: 1.6;\r\n  color: #f0f0f0;\r\n  margin-bottom: 20px;\n}\n.hero-benefits[data-v-995f0d96] {\r\n  list-style: none;\r\n  padding-left: 0;\r\n  color: #fff;\r\n  margin-bottom: 20px;\n}\n.hero-benefits li[data-v-995f0d96] {\r\n  position: relative;\r\n  padding-left: 24px;\r\n  margin-bottom: 12px;\r\n  font-size: 1rem;\n}\n.hero-benefits li[data-v-995f0d96]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #ffd700;\r\n  font-weight: bold;\n}\r\n\r\n/* CTA Button */\n.btn-cta[data-v-995f0d96] {\r\n  background-color: #ffd700;\r\n  color: #4a2c6b;\r\n  padding: 12px 28px;\r\n  border: none;\r\n  font-weight: 600;\r\n  font-size: 1rem;\r\n  border-radius: 8px;\r\n  transition: 0.3s ease;\n}\n.btn-cta[data-v-995f0d96]:hover {\r\n  background-color: #f4c400;\r\n  color: #fff;\n}\r\n\r\n/* Hero Image */\n.hero-image[data-v-995f0d96] {\r\n  max-width: 100%;\r\n  height: auto;\r\n  border-radius: 12px;\r\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);\n}\n.treasure-advantages-section[data-v-995f0d96] {\r\n  background-color: #fafafa;\r\n  color: #002b36;\r\n  font-family: 'Poppins', sans-serif;\n}\n.cta-section[data-v-995f0d96] {\r\n  background: linear-gradient(45deg, #4c006f 0%, #8530d4 100%);\r\n  color: #fff;\r\n  text-align: center;\n}\n.cta-section .btn[data-v-995f0d96] {\r\n  background-color: #fff;\r\n  color: #000000;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  border: none;\n}\n.treasure-alumni-benefit-section[data-v-995f0d96] {\r\n  background-color: #e4e4e4;\r\n  padding: 80px 0;\r\n  font-family: 'Poppins', sans-serif;\r\n  margin-bottom: 20px;\n}\n.headline[data-v-995f0d96] {\r\n  font-size: 2.5rem;\r\n  font-weight: 700;\r\n  color: #4a2c6b;\n}\n.headline em[data-v-995f0d96] {\r\n  font-style: normal;\r\n  color: #f4c400;\n}\n.benefit-list[data-v-995f0d96] {\r\n  list-style-type: disc;\r\n  padding-left: 20px;\r\n  color: #444;\r\n  font-size: 1.05rem;\n}\n.benefit-list li[data-v-995f0d96] {\r\n  margin-bottom: 12px;\r\n  line-height: 1.6;\n}\n.image-content img[data-v-995f0d96] {\r\n  max-width: 95%;\r\n  border-radius: 12px;\r\n  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);\n}\n@media (max-width: 991.98px) {\n.hero-title[data-v-995f0d96] {\r\n    font-size: 2rem;\n}\n.hero-subtext[data-v-995f0d96] {\r\n    font-size: 1rem;\n}\n.btn-cta[data-v-995f0d96] {\r\n    font-size: 0.95rem;\r\n    padding: 10px 24px;\n}\n.image-content img[data-v-995f0d96] {\r\n    max-width: 100%;\r\n    margin-top: 20px;\n}\n.headline[data-v-995f0d96] {\r\n    font-size: 2rem;\r\n    text-align: center;\n}\n.benefit-list[data-v-995f0d96] {\r\n    font-size: 1rem;\r\n    padding-left: 16px;\n}\n.treasure-alumni-benefit-section .container-fluid[data-v-995f0d96] {\r\n    flex-direction: column;\r\n    text-align: center;\n}\n.text-content[data-v-995f0d96],\r\n  .image-content[data-v-995f0d96] {\r\n    padding: 20px !important;\n}\n}\n@media (max-width: 575.98px) {\n.alumni-page[data-v-995f0d96]{\r\n    padding: 0px;\n}\n.hero-title[data-v-995f0d96] {\r\n    font-size: 1.7rem;\n}\n.headline[data-v-995f0d96] {\r\n    font-size: 1.5rem;\n}\n.benefit-list li[data-v-995f0d96] {\r\n    font-size: 0.95rem;\n}\n.btn-cta[data-v-995f0d96] {\r\n    padding: 10px 20px;\r\n    font-size: 0.9rem;\n}\n.hero-subtext[data-v-995f0d96] {\r\n    font-size: 0.95rem;\n}\n.treasure-alumni-benefit-section[data-v-995f0d96] {\r\n    padding: 50px 0;\n}\n.cta-section .btn[data-v-995f0d96] {\r\n    padding: 10px 24px;\r\n    font-size: 0.95rem;\n}\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -8283,7 +8882,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.cbt-page[data-v-08fb0b62] {\r\n  font-family: 'Poppins', sans-serif;\r\n  color: #343a40;\r\n  background-color: #f8f9fa;\r\n  padding: 50px;\n}\r\n\r\n/* Hero Section */\n.hero-section[data-v-08fb0b62] {\r\n  background: linear-gradient(135deg, #eef4ed, #dce7dc);\r\n  padding: 20px;\n}\n.hero-title[data-v-08fb0b62] {\r\n  font-size: 2.5rem;\r\n  font-weight: 800;\r\n  margin-bottom: 15px;\n}\n.hero-title span[data-v-08fb0b62] {\r\n  color: #28a745;\n}\n.tagline[data-v-08fb0b62] {\r\n  text-transform: uppercase;\r\n  font-size: 0.9rem;\r\n  color: #6c757d;\r\n  font-weight: 600;\n}\n.hero-subtext[data-v-08fb0b62] {\r\n  font-size: 1.1rem;\r\n  margin-bottom: 20px;\n}\n.hero-benefits[data-v-08fb0b62] {\r\n  list-style: none;\r\n  padding-left: 0;\n}\n.hero-benefits li[data-v-08fb0b62] {\r\n  position: relative;\r\n  padding-left: 25px;\r\n  margin-bottom: 10px;\n}\n.hero-benefits li[data-v-08fb0b62]::before {\r\n  content: '\\2714';\r\n  color: #28a745;\r\n  font-weight: bold;\r\n  position: absolute;\r\n  left: 0;\n}\n.btn-cta[data-v-08fb0b62] {\r\n  background-color: rgb(211, 180, 8) ;\r\n  color: white;\r\n  border: none;\r\n  padding: 12px 30px;\r\n  border-radius: 8px;\r\n  font-weight: bold;\r\n  transition: 0.3s ease;\n}\n.btn-cta[data-v-08fb0b62]:hover {\r\n  background-color: #218838;\n}\r\n\r\n/* Why Choose Section */\n.why-section[data-v-08fb0b62] {\r\n  background-color: #ffffff;\n}\n.title-wrapper[data-v-08fb0b62] {\r\n  background-color: #e8f5e9;\n}\n.why-title[data-v-08fb0b62] {\r\n  font-size: 2.2rem;\r\n  font-weight: 800;\r\n  color: #1b5e20;\n}\n.content-wrapper[data-v-08fb0b62] {\r\n  background-color: #ffffff;\r\n  font-size: 1.1rem;\r\n  line-height: 1.8;\n}\n.why-desc[data-v-08fb0b62] {\r\n  margin-bottom: 1rem;\n}\n.why-note[data-v-08fb0b62] {\r\n  font-style: italic;\r\n  color: #388e3c;\n}\r\n\r\n/* Fitur Section */\r\n/* .fitur-section {\r\n  background-color: #f1fdf4;\r\n} */\n.fitur-section h2[data-v-08fb0b62] {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color: #1b5e20;\n}\n.fitur-section .bg-white[data-v-08fb0b62] {\r\n  border-left: 5px solid #28a745;\r\n  transition: transform 0.3s ease;\n}\n.fitur-section .bg-white[data-v-08fb0b62]:hover {\r\n  transform: translateY(-5px);\n}\n.cta-cbt-section[data-v-08fb0b62] {\r\n    background: linear-gradient(135deg, #5b7756, #dce7dc);\r\n\r\n  color: #fff;\n}\n.cta-cbt-section h2[data-v-08fb0b62] {\r\n  font-weight: 700;\r\n  font-size: 2rem;\n}\n.cta-cbt-section p[data-v-08fb0b62] {\r\n  font-size: 1.1rem;\n}\n.btn-cbt[data-v-08fb0b62] {\r\n  background-color: rgb(211, 180, 8) ;\r\n  color: #ffffff;\r\n  font-weight: 600;\r\n  border: none;\r\n  border-radius: 8px;\r\n  transition: 0.3s ease;\n}\n.btn-cbt[data-v-08fb0b62]:hover {\r\n    background-color: #ffffff;\r\n  color: darkorange\n}\n@media (max-width: 575.98px) {\n.cbt-page[data-v-08fb0b62]{\r\n    padding: 0px;\n}\n}\r\n", ""]);
+exports.push([module.i, "\n.cbt-page[data-v-08fb0b62] {\r\n  font-family: 'Poppins', sans-serif;\r\n  color: #ffffff;\r\n  background-color: #f8f9fa;\r\n  padding: 50px;\n}\r\n\r\n/* Hero Section */\n.hero-section[data-v-08fb0b62] {\r\n  background: linear-gradient(135deg, #4e727d, #45818c);\r\n  padding: 20px;\n}\n.hero-title[data-v-08fb0b62] {\r\n  font-size: 2.5rem;\r\n  font-weight: 800;\r\n  margin-bottom: 15px;\r\n  color: #ffffff;\n}\n.hero-title span[data-v-08fb0b62] {\r\n  color: #ffffff;\n}\n.tagline[data-v-08fb0b62] {\r\n  text-transform: uppercase;\r\n  font-size: 0.9rem;\r\n  color: #ffffff;\r\n  font-weight: 600;\n}\n.hero-subtext[data-v-08fb0b62] {\r\n  font-size: 1.1rem;\r\n  margin-bottom: 20px;\r\n  color: #ffffff;\n}\n.hero-benefits[data-v-08fb0b62] {\r\n  list-style: none;\r\n  padding-left: 0;\r\n  color: #ffffff;\n}\n.hero-benefits li[data-v-08fb0b62] {\r\n  position: relative;\r\n  padding-left: 25px;\r\n  margin-bottom: 10px;\n}\n.hero-benefits li[data-v-08fb0b62]::before {\r\n  content: '\\2714';\r\n  color: #ffffff;\r\n  font-weight: bold;\r\n  position: absolute;\r\n  left: 0;\n}\n.btn-cta[data-v-08fb0b62] {\r\n  background-color: rgb(255, 255, 255) ;\r\n  color: rgb(0, 0, 0);\r\n  border: none;\r\n  padding: 12px 30px;\r\n  border-radius: 8px;\r\n  font-weight: bold;\r\n  transition: 0.3s ease;\n}\n.btn-cta[data-v-08fb0b62]:hover {\r\n  background-color: #218838;\n}\r\n\r\n/* Why Choose Section */\n.why-section[data-v-08fb0b62] {\r\n  background-color: #ffffff;\r\n  color: #45818c;\n}\n.title-wrapper[data-v-08fb0b62] {\r\n  background-color: #e8f5e9;\n}\n.why-title[data-v-08fb0b62] {\r\n  font-size: 2.2rem;\r\n  font-weight: 800;\r\n  color: #000000;\n}\n.content-wrapper[data-v-08fb0b62] {\r\n  background-color: #ffffff;\r\n  font-size: 1.1rem;\r\n  line-height: 1.8;\n}\n.why-desc[data-v-08fb0b62] {\r\n  margin-bottom: 1rem;\n}\n.why-note[data-v-08fb0b62] {\r\n  font-style: italic;\r\n  color: #45818c;\n}\r\n\r\n/* Fitur Section */\r\n/* .fitur-section {\r\n  background-color: #f1fdf4;\r\n} */\n.fitur-section h2[data-v-08fb0b62] {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color:#45818c;\n}\n.fitur-section .bg-white[data-v-08fb0b62] {\r\n  border-left: 5px solid #45818c;\r\n  transition: transform 0.3s ease;\n}\n.fitur-section .bg-white[data-v-08fb0b62]:hover {\r\n  transform: translateY(-5px);\n}\n.cta-cbt-section[data-v-08fb0b62] {\r\n  background: linear-gradient(135deg, #4e727d, #45818c);\r\n\r\n\r\n  color: #fff;\n}\n.cta-cbt-section h2[data-v-08fb0b62] {\r\n  font-weight: 700;\r\n  font-size: 2rem;\n}\n.cta-cbt-section p[data-v-08fb0b62] {\r\n  font-size: 1.1rem;\n}\n.btn-cbt[data-v-08fb0b62] {\r\n  background-color: rgb(255, 255, 255) ;\r\n  color: #45818c;\r\n  font-weight: 600;\r\n  border: none;\r\n  border-radius: 8px;\r\n  transition: 0.3s ease;\n}\n.btn-cbt[data-v-08fb0b62]:hover {\r\n    background-color: #000000;\r\n  color: rgb(255, 255, 255)\n}\n@media (max-width: 575.98px) {\n.cbt-page[data-v-08fb0b62]{\r\n    padding: 0px;\n}\n}\r\n", ""]);
 
 // exports
 
@@ -8302,7 +8901,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.jurnal-page[data-v-470fd0fe] {\r\n  padding: 50px;\n}\n.jurnal-page .hero-title[data-v-470fd0fe] {\r\n  font-size: 2.8rem;\r\n  font-weight: 700;\n}\n.jurnal-page .hero-benefits[data-v-470fd0fe] {\r\n  list-style: none;\r\n  padding-left: 0;\n}\n.jurnal-page .hero-benefits li[data-v-470fd0fe] {\r\n  padding-left: 25px;\r\n  position: relative;\r\n  margin-bottom: 10px;\n}\n.jurnal-page .hero-benefits li[data-v-470fd0fe]::before {\r\n  content: \"\\2714\";\r\n  position: absolute;\r\n  left: 0;\r\n  color: #fcbf49;\n}\n.fitur-jurnal .card-title[data-v-470fd0fe] {\r\n  font-size: 1.2rem;\r\n  font-weight: 600;\n}\n.card[data-v-470fd0fe]{\r\n    background-color: #003049;\r\n    padding: 2px;\n}\n.card-body[data-v-470fd0fe]{\r\n    background-color: rgb(248, 248, 242);\n}\n.hero-section[data-v-470fd0fe]{\r\n    background-image: url(/assets/bg-jurnal.png);\r\n    background-size: cover;\r\n    padding: 30px;\r\n    border-radius: 10px;\r\n    color: rgb(80, 0, 0);\n}\n.container-container[data-v-470fd0fe]{\r\n    padding: 50px;\n}\n.cta-section[data-v-470fd0fe] {\r\n  background: linear-gradient(90deg, #6b0000, #8e1c1c); /* gradasi maroon */\r\n  color: #fff;\r\n  padding: 60px 0;\n}\n.container-cta[data-v-470fd0fe] {\r\n  max-width: 800px;\r\n  margin: 0 auto;\n}\n.btn-cta[data-v-470fd0fe]{\r\n  background-color: #e6a828;\r\n  color: #6b0000;\n}\n.cta-text[data-v-470fd0fe] {\r\n  color: #fff;\r\n  font-family: 'Poppins', sans-serif;\n}\n.cta-section .btn-primary[data-v-470fd0fe] {\r\n  background-color: #fcbf49;\r\n  border: none;\r\n  color: #6b0000;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  transition: background-color 0.3s ease;\n}\n.cta-section .btn-primary[data-v-470fd0fe]:hover {\r\n  background-color: #e6a828;\r\n  color: #fff;\n}\n@media (max-width: 575.98px) {\n.jurnal-page[data-v-470fd0fe]{\r\n    padding: 0px;\n}\n}\r\n", ""]);
+exports.push([module.i, "\n.jurnal-page[data-v-470fd0fe] {\r\n  padding: 50px;\n}\n.jurnal-page .hero-title[data-v-470fd0fe] {\r\n  font-size: 2.8rem;\r\n  font-weight: 700;\n}\n.jurnal-page .hero-benefits[data-v-470fd0fe] {\r\n  list-style: none;\r\n  padding-left: 0;\n}\n.jurnal-page .hero-benefits li[data-v-470fd0fe] {\r\n  padding-left: 25px;\r\n  position: relative;\r\n  margin-bottom: 10px;\n}\n.jurnal-page .hero-benefits li[data-v-470fd0fe]::before {\r\n  content: \"\\2714\";\r\n  position: absolute;\r\n  left: 0;\r\n  color: #fcbf49;\n}\n.fitur-jurnal .card-title[data-v-470fd0fe] {\r\n  font-size: 1.2rem;\r\n  font-weight: 600;\n}\n.card[data-v-470fd0fe]{\r\n    background-color: #003049;\r\n    padding: 2px;\n}\n.card-body[data-v-470fd0fe]{\r\n    background-color: rgb(248, 248, 242);\n}\n.hero-section[data-v-470fd0fe]{\r\n    background-image: url(/assets/bg-jurnall.png);\r\n    background-size: cover;\r\n    padding: 30px;\r\n    border-radius: 10px;\r\n    color: rgb(0, 0, 0);\n}\n.container-container[data-v-470fd0fe]{\r\n    padding: 50px;\n}\n.cta-section[data-v-470fd0fe] {\r\n  background: linear-gradient(90deg, #6b0000, #8e1c1c); /* gradasi maroon */\r\n  color: #fff;\r\n  padding: 60px 0;\n}\n.container-cta[data-v-470fd0fe] {\r\n  max-width: 800px;\r\n  margin: 0 auto;\n}\n.btn-cta[data-v-470fd0fe]{\r\n  background-color: #6b0000;\r\n  color:  #fff;\n}\n.cta-text[data-v-470fd0fe] {\r\n  color: #fff;\r\n  font-family: 'Poppins', sans-serif;\n}\n.cta-section .btn-primary[data-v-470fd0fe] {\r\n  background-color: #ffffff;\r\n  border: none;\r\n  color: #6b0000;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  transition: background-color 0.3s ease;\n}\n.cta-section .btn-primary[data-v-470fd0fe]:hover {\r\n  background-color: #e6a828;\r\n  color: #fff;\n}\n@media (max-width: 575.98px) {\n.jurnal-page[data-v-470fd0fe]{\r\n    padding: 0px;\n}\n}\r\n", ""]);
 
 // exports
 
@@ -8340,7 +8939,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.mbkm-page[data-v-2f6b809c] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f8faff;\r\ncolor: #16092e;\r\npadding: 50px;\n}\r\n\r\n/* Hero Section */\n.hero-section[data-v-2f6b809c] {\r\n  /* background: linear-gradient(135deg, #006d77, #83c5be); */\r\n  color: #16092e;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-2f6b809c] {\r\n  font-size: 2.5rem;\r\n  font-weight: 700;\r\n  margin-bottom: 15px;\n}\n.hero-title span[data-v-2f6b809c] {\r\n  color: #ffd166;\n}\n.tagline[data-v-2f6b809c] {\r\n  font-size: 1rem;\r\n  letter-spacing: 1px;\r\n  text-transform: uppercase;\n}\n.hero-subtext[data-v-2f6b809c] {\r\n  font-size: 1.1rem;\r\n  margin-bottom: 20px;\n}\n.hero-benefits[data-v-2f6b809c] {\r\n  list-style: none;\r\n  padding-left: 0;\r\n  color: #16092e;\n}\n.hero-benefits li[data-v-2f6b809c] {\r\n  margin-bottom: 10px;\r\n  padding-left: 25px;\r\n  position: relative;\n}\n.hero-benefits li[data-v-2f6b809c]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #ffd166;\r\n  font-weight: bold;\n}\n.btn-cta[data-v-2f6b809c] {\r\n  background-color: #ffd166;\r\n  color: #333;\r\n  padding: 10px 24px;\r\n  border: none;\r\n  font-weight: bold;\r\n  border-radius: 8px;\n}\r\n\r\n/* Gambar Hero */\n.hero-image[data-v-2f6b809c] {\r\n  max-width: 100%;\r\n  height: auto;\r\n  border-radius: 10px;\r\n  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);\n}\r\n\r\n/* Why MBKM Section */\n.why-mbkm-section[data-v-2f6b809c] { \r\n  /* background-color: #f1f1f1; */\r\n  font-family: 'Poppins', sans-serif;\n}\n.title-wrapper[data-v-2f6b809c] {\r\n  background-color: #caf0f8;\n}\n.why-title[data-v-2f6b809c] {\r\n  font-size: 2.4rem;\r\n  font-weight: 800;\r\n  color: #023047;\n}\n.content-wrapper[data-v-2f6b809c] {\r\n  background-color: #ffffff; \r\n  font-size: 1.1rem;\r\n  color: #333;\r\n  line-height: 1.7;\r\n  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.05);\n}\n.why-desc[data-v-2f6b809c] {\r\n  margin-bottom: 1rem;\n}\n.why-note[data-v-2f6b809c] {\r\n  font-style: italic;\r\n  color: #006d77;\r\n  font-size: 0.95rem;\r\n  margin-top: 1.5rem;\n}\n.mbkm-advantages-section[data-v-2f6b809c] {\r\n  background-color: #fafafa;\r\n  color: #002b36;\r\n  font-family: 'Poppins', sans-serif;\n}\n.features-section[data-v-2f6b809c] {\r\n  font-family: 'Montserrat', 'Poppins', sans-serif;\r\n  background-color: #ededed !important;\n}\n.section-title[data-v-2f6b809c]{\r\n  font-size: 40px;\r\n  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;\n}\n.section-subtitle[data-v-2f6b809c]{\r\n  font-size: 20px;\r\n  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;\n}\n.feature-card[data-v-2f6b809c] {\r\n  background-color: whitesmoke;\r\n  border-radius: 15px !important;\r\n  /* box-shadow: 0 5px 20px rgba(0,0,0,0.08); */\r\n  border: 1px solid rgb(185, 185, 185);\r\n  overflow: hidden;\r\n  width: 280px;\r\n  color: rgb(81, 81, 81);\r\n  height: 350px !important;\n}\n.feature-card-header[data-v-2f6b809c] {\r\n  height: 150px;\r\n  position: relative;\n}\n.card-header-bg-image[data-v-2f6b809c] {\r\n  width: 100%;\r\n  height: 100%;\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  filter: brightness(0.9);\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  border-radius: 15px;\r\n  padding: 10px;\n}\n.card-header-tag[data-v-2f6b809c] {\r\n  position: relative;\r\n  z-index: 1;\r\n  background-color: rgba(255,255,255,0.25);\r\n  color: #fff;\r\n  border-radius: 5px;\r\n  font-size: 0.85em;\r\n  font-weight: 600;\n}\n.feature-card-content h5[data-v-2f6b809c] {\r\n  font-weight: bold;\r\n  font-size: 1.2em;\n}\n.feature-card-content p[data-v-2f6b809c] {\r\n  font-size: 0.95em;\r\n  color: #003049;\n}\n.metadata[data-v-2f6b809c], .sub-description[data-v-2f6b809c] {\r\n  font-size: 0.9rem;\r\n  color: #ccc;\r\n  display: flex;\r\n  align-items: center;\n}\n.metadata i[data-v-2f6b809c],\r\n.sub-description i[data-v-2f6b809c] {\r\n  margin-right: 8px;\n}\n.cta-section[data-v-2f6b809c] {\r\n  background: linear-gradient(45deg, #c0d4ce 0%, #7a8e86 100%);\r\n  color: #fff;\r\n  text-align: center;\n}\n.cta-section .btn[data-v-2f6b809c] {\r\n  background-color: #fff;\r\n  color: #E95420;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  border: none;\n}\n@media (max-width: 575.98px) {\n.mbkm-page[data-v-2f6b809c]{\r\n    padding: 0px;\n}\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.mbkm-page[data-v-2f6b809c] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f8faff;\r\ncolor: #16092e;\r\npadding: 50px;\n}\r\n\r\n/* Hero Section */\n.hero-section[data-v-2f6b809c] {\r\n    background: linear-gradient(135deg, #4e727d, #45818c);\r\n  color: #ffd166;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-2f6b809c] {\r\n  font-size: 2.5rem;\r\n  font-weight: 700;\r\n  margin-bottom: 15px;\n}\n.hero-title span[data-v-2f6b809c] {\r\n  color: #ffd166;\n}\n.tagline[data-v-2f6b809c] {\r\n  font-size: 1rem;\r\n  letter-spacing: 1px;\r\n  text-transform: uppercase;\n}\n.hero-subtext[data-v-2f6b809c] {\r\n  font-size: 1.1rem;\r\n  margin-bottom: 20px;\n}\n.hero-benefits[data-v-2f6b809c] {\r\n  list-style: none;\r\n  padding-left: 0;\r\n  color: #ffd166;\n}\n.hero-benefits li[data-v-2f6b809c] {\r\n  margin-bottom: 10px;\r\n  padding-left: 25px;\r\n  position: relative;\n}\n.hero-benefits li[data-v-2f6b809c]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #ffd166;\r\n  font-weight: bold;\n}\n.btn-cta[data-v-2f6b809c] {\r\n  background-color: #ffd166;\r\n  color: #333;\r\n  padding: 10px 24px;\r\n  border: none;\r\n  font-weight: bold;\r\n  border-radius: 8px;\n}\r\n\r\n/* Gambar Hero */\n.hero-image[data-v-2f6b809c] {\r\n  max-width: 100%;\r\n  height: auto;\r\n  border-radius: 10px;\r\n  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);\n}\r\n\r\n/* Why MBKM Section */\n.why-mbkm-section[data-v-2f6b809c] { \r\n  /* background-color: #f1f1f1; */\r\n  font-family: 'Poppins', sans-serif;\n}\n.title-wrapper[data-v-2f6b809c] {\r\n  background-color: #caf0f8;\n}\n.why-title[data-v-2f6b809c] {\r\n  font-size: 2.4rem;\r\n  font-weight: 800;\r\n  color: #023047;\n}\n.content-wrapper[data-v-2f6b809c] {\r\n  background-color: #ffffff; \r\n  font-size: 1.1rem;\r\n  color: #333;\r\n  line-height: 1.7;\r\n  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.05);\n}\n.why-desc[data-v-2f6b809c] {\r\n  margin-bottom: 1rem;\n}\n.why-note[data-v-2f6b809c] {\r\n  font-style: italic;\r\n  color: #006d77;\r\n  font-size: 0.95rem;\r\n  margin-top: 1.5rem;\n}\n.mbkm-advantages-section[data-v-2f6b809c] {\r\n  background-color: #fafafa;\r\n  color: #002b36;\r\n  font-family: 'Poppins', sans-serif;\n}\n.features-section[data-v-2f6b809c] {\r\n  font-family: 'Montserrat', 'Poppins', sans-serif;\r\n  background-color: #ededed !important;\n}\n.section-title[data-v-2f6b809c]{\r\n  font-size: 40px;\r\n  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;\n}\n.section-subtitle[data-v-2f6b809c]{\r\n  font-size: 20px;\r\n  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;\n}\n.feature-card[data-v-2f6b809c] {\r\n  background-color: whitesmoke;\r\n  border-radius: 15px !important;\r\n  /* box-shadow: 0 5px 20px rgba(0,0,0,0.08); */\r\n  border: 1px solid rgb(185, 185, 185);\r\n  overflow: hidden;\r\n  width: 280px;\r\n  color: rgb(81, 81, 81);\r\n  height: 350px !important;\n}\n.feature-card-header[data-v-2f6b809c] {\r\n  height: 150px;\r\n  position: relative;\n}\n.card-header-bg-image[data-v-2f6b809c] {\r\n  width: 100%;\r\n  height: 100%;\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  filter: brightness(0.9);\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  border-radius: 15px;\r\n  padding: 10px;\n}\n.card-header-tag[data-v-2f6b809c] {\r\n  position: relative;\r\n  z-index: 1;\r\n  background-color: rgba(255,255,255,0.25);\r\n  color: #fff;\r\n  border-radius: 5px;\r\n  font-size: 0.85em;\r\n  font-weight: 600;\n}\n.feature-card-content h5[data-v-2f6b809c] {\r\n  font-weight: bold;\r\n  font-size: 1.2em;\n}\n.feature-card-content p[data-v-2f6b809c] {\r\n  font-size: 0.95em;\r\n  color: #003049;\n}\n.metadata[data-v-2f6b809c], .sub-description[data-v-2f6b809c] {\r\n  font-size: 0.9rem;\r\n  color: #ccc;\r\n  display: flex;\r\n  align-items: center;\n}\n.metadata i[data-v-2f6b809c],\r\n.sub-description i[data-v-2f6b809c] {\r\n  margin-right: 8px;\n}\n.cta-section[data-v-2f6b809c] {\r\n    background: linear-gradient(135deg, #4e727d, #45818c);\r\n\r\n  color: #ffd166;\r\n  text-align: center;\n}\n.cta-section .btn[data-v-2f6b809c] {\r\n  background-color: #fff;\r\n  color: #E95420;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  border: none;\n}\n.fitur-title[data-v-2f6b809c] {\r\n  font-size: 1.8rem;\r\n  font-weight: 700;\r\n  color: #003049;\n}\n.fitur-card[data-v-2f6b809c] {\r\n  border-radius: 16px;\r\n  background-color: #fafafa;\r\n  border: 1px solid #ddd;\r\n  transition: 0.3s ease;\n}\n.fitur-card[data-v-2f6b809c]:hover {\r\n  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);\r\n  transform: translateY(-4px);\n}\n.fitur-icon[data-v-2f6b809c] {\r\n  width: 48px;\r\n  height: 48px;\n}\n@media (max-width: 575.98px) {\n.mbkm-page[data-v-2f6b809c]{\r\n    padding: 10px;\n}\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -8359,7 +8958,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.modul-page[data-v-46157c3e] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f8faff;\r\n  padding: 50px;\n}\n.hero-section[data-v-46157c3e] {\r\n  background: linear-gradient(135deg, #29374A, #365486);\r\n  color: #fff;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-46157c3e] {\r\n  font-size: 2.5rem;\r\n  font-weight: 700;\n}\n.hero-title span[data-v-46157c3e] {\r\n  color: #FFD54F;\n}\n.tagline[data-v-46157c3e] {\r\n  font-size: 0.9rem;\r\n  text-transform: uppercase;\n}\n.hero-benefits[data-v-46157c3e] {\r\n  list-style: none;\r\n  padding: 0;\n}\n.hero-benefits li[data-v-46157c3e] {\r\n  position: relative;\r\n  padding-left: 25px;\r\n  margin-bottom: 10px;\n}\n.hero-benefits li[data-v-46157c3e]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #FFD54F;\n}\n.btn-cta[data-v-46157c3e] {\r\n  background-color: #FFD54F;\r\n  border: none;\r\n  padding: 10px 20px;\r\n  color: #333;\r\n  font-weight: bold;\r\n  border-radius: 6px;\n}\n.fitur-title[data-v-46157c3e] {\r\n  font-size: 1.8rem;\r\n  font-weight: 700;\r\n  color: #003049;\n}\n.fitur-card[data-v-46157c3e] {\r\n  border-radius: 16px;\r\n  background-color: #fafafa;\r\n  border: 1px solid #ddd;\r\n  transition: 0.3s ease;\n}\n.fitur-card[data-v-46157c3e]:hover {\r\n  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);\r\n  transform: translateY(-4px);\n}\n.fitur-icon[data-v-46157c3e] {\r\n  width: 48px;\r\n  height: 48px;\n}\n.why-lms-section[data-v-46157c3e] {\r\n  background-color: #f8f9fa;\r\n  font-family: 'Poppins', sans-serif;\n}\n.title-wrapper[data-v-46157c3e] {\r\n  background-color: #a9a8a8;\n}\n.why-title[data-v-46157c3e] {\r\n  font-size: 2.4rem;\r\n  font-weight: 800;\r\n  color: #003049;\n}\n.content-wrapper[data-v-46157c3e] {\r\n  background-color: #ffffff;\r\n  font-size: 1.1rem;\r\n  color: #333;\r\n  line-height: 1.7;\r\n  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.05);\n}\n.why-desc[data-v-46157c3e] {\r\n  margin-bottom: 1rem;\n}\n.why-note[data-v-46157c3e] {\r\n  font-style: italic;\r\n  color: #006d77;\r\n  font-size: 0.95rem;\r\n  margin-top: 1.5rem;\n}\n.text-tittle[data-v-46157c3e]{\r\n  width: 100%;\r\n  font-size: 1.5rem;\r\n  font-weight: 800;\r\n  color: #003049;\r\n  font-family: 'Poppins', sans-serif;\n}\n.lms-benefit-section[data-v-46157c3e] {\r\n  background-color: #f8f9fa;\r\n  padding: 80px 0;\n}\n.text-tittle[data-v-46157c3e] {\r\n  font-size: 2rem;\r\n  color: #003049;\r\n  font-weight: 600;\n}\n.lms-benefit-section .rounded[data-v-46157c3e] {\r\n  border: 2px solid #dee2e6;\r\n  transition: 0.3s ease;\n}\n.lms-benefit-section .rounded[data-v-46157c3e]:hover {\r\n  transform: translateY(-5px);\r\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);\r\n  border-color: #F9A825;\n}\n.lms-benefit-section i[data-v-46157c3e] {\r\n  color: #003049;\n}\n.combined-sections[data-v-46157c3e] {\r\n  background: linear-gradient(135deg,#29374A, #365486);\r\n  padding: 60px 0;\n}\n.contact-section[data-v-46157c3e] {\r\n  padding: 40px;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\n}\n.contact-content[data-v-46157c3e] {\r\n  max-width: 600px;\n}\n.contact-title[data-v-46157c3e] {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color: whitesmoke;\r\n  margin-bottom: 20px;\n}\n.contact-subtitle[data-v-46157c3e] {\r\n  font-size: 1.1rem;\r\n  color: whitesmoke;\r\n  margin-bottom: 30px;\n}\n.btn-contact-us[data-v-46157c3e] {\r\n  background-color: #E95420;\r\n  color: #fff;\r\n  padding: 12px 30px;\r\n  font-weight: 600;\r\n  border-radius: 8px;\r\n  border: none;\r\n  transition: 0.3s ease;\n}\n.btn-contact-us[data-v-46157c3e]:hover {\r\n  background-color: #c74319;\n}\n.mbkm-features-section .section-title[data-v-46157c3e] {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color: #023516;\n}\n.mbkm-features-section .section-subtitle[data-v-46157c3e] {\r\n  font-size: 1.1rem;\r\n  color: #555;\n}\n.feature-box i[data-v-46157c3e] {\r\n  color: #2a7b55;\n}\n.feature-box[data-v-46157c3e] {\r\n  border: 1px solid #eee;\r\n  transition: transform 0.3s ease;\n}\n.feature-box[data-v-46157c3e]:hover {\r\n  transform: translateY(-5px);\r\n  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);\n}\n@media (max-width: 575.98px) {\n.modul-page[data-v-46157c3e]{\r\n    padding: 0px;\n}\n}\r\n", ""]);
+exports.push([module.i, "\n.modul-page[data-v-46157c3e] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f8faff;\r\n  padding: 50px;\n}\n.hero-section[data-v-46157c3e] {\r\n  background: linear-gradient(135deg, #29374A, #365486);\r\n  color: #fff;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-46157c3e] {\r\n  font-size: 2.5rem;\r\n  font-weight: 700;\n}\n.hero-title span[data-v-46157c3e] {\r\n  color: #FFD54F;\n}\n.tagline[data-v-46157c3e] {\r\n  font-size: 0.9rem;\r\n  text-transform: uppercase;\n}\n.hero-benefits[data-v-46157c3e] {\r\n  list-style: none;\r\n  padding: 0;\n}\n.hero-benefits li[data-v-46157c3e] {\r\n  position: relative;\r\n  padding-left: 25px;\r\n  margin-bottom: 10px;\n}\n.hero-benefits li[data-v-46157c3e]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #FFD54F;\n}\n.btn-cta[data-v-46157c3e] {\r\n  background-color: #FFD54F;\r\n  border: none;\r\n  padding: 10px 20px;\r\n  color: #333;\r\n  font-weight: bold;\r\n  border-radius: 6px;\n}\n.fitur-title[data-v-46157c3e] {\r\n  font-size: 1.8rem;\r\n  font-weight: 700;\r\n  color: #003049;\n}\n.fitur-card[data-v-46157c3e] {\r\n  border-radius: 16px;\r\n  background-color: #fafafa;\r\n  border: 1px solid #ddd;\r\n  transition: 0.3s ease;\n}\n.fitur-card[data-v-46157c3e]:hover {\r\n  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);\r\n  transform: translateY(-4px);\n}\n.fitur-icon[data-v-46157c3e] {\r\n  width: 48px;\r\n  height: 48px;\n}\n.why-lms-section[data-v-46157c3e] {\r\n  background-color: #f8f9fa;\r\n  font-family: 'Poppins', sans-serif;\n}\n.title-wrapper[data-v-46157c3e] {\r\n  background-color: #a9a8a8;\n}\n.why-title[data-v-46157c3e] {\r\n  font-size: 2.4rem;\r\n  font-weight: 800;\r\n  color: #003049;\n}\n.content-wrapper[data-v-46157c3e] {\r\n  background-color: #ffffff;\r\n  font-size: 1.1rem;\r\n  color: #333;\r\n  line-height: 1.7;\r\n  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.05);\n}\n.why-desc[data-v-46157c3e] {\r\n  margin-bottom: 1rem;\n}\n.why-note[data-v-46157c3e] {\r\n  font-style: italic;\r\n  color: #006d77;\r\n  font-size: 0.95rem;\r\n  margin-top: 1.5rem;\n}\n.text-tittle[data-v-46157c3e]{\r\n  width: 100%;\r\n  font-size: 1.5rem;\r\n  font-weight: 800;\r\n  color: #003049;\r\n  font-family: 'Poppins', sans-serif;\n}\n.lms-benefit-section[data-v-46157c3e] {\r\n  background-color: #f8f9fa;\r\n  padding: 80px 0;\n}\n.text-tittle[data-v-46157c3e] {\r\n  font-size: 2rem;\r\n  color: #003049;\r\n  font-weight: 600;\n}\n.lms-benefit-section .rounded[data-v-46157c3e] {\r\n  border: 2px solid #dee2e6;\r\n  transition: 0.3s ease;\n}\n.lms-benefit-section .rounded[data-v-46157c3e]:hover {\r\n  transform: translateY(-5px);\r\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);\r\n  border-color: #F9A825;\n}\n.lms-benefit-section i[data-v-46157c3e] {\r\n  color: #003049;\n}\n.combined-sections[data-v-46157c3e] {\r\n  background: linear-gradient(135deg,#29374A, #365486);\r\n  padding: 60px 0;\n}\n.contact-section[data-v-46157c3e] {\r\n  padding: 40px;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\n}\n.contact-content[data-v-46157c3e] {\r\n  max-width: 600px;\n}\n.contact-title[data-v-46157c3e] {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color: whitesmoke;\r\n  margin-bottom: 20px;\n}\n.contact-subtitle[data-v-46157c3e] {\r\n  font-size: 1.1rem;\r\n  color: whitesmoke;\r\n  margin-bottom: 30px;\n}\n.btn-contact-us[data-v-46157c3e] {\r\n  background-color: #FFD54F;\r\n  color: #000000;\r\n  padding: 12px 30px;\r\n  font-weight: 600;\r\n  border-radius: 8px;\r\n  border: none;\r\n  transition: 0.3s ease;\n}\n.btn-contact-us[data-v-46157c3e]:hover {\r\n  background-color: #c74319;\n}\n.mbkm-features-section .section-title[data-v-46157c3e] {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color: #023516;\n}\n.mbkm-features-section .section-subtitle[data-v-46157c3e] {\r\n  font-size: 1.1rem;\r\n  color: #555;\n}\n.feature-box i[data-v-46157c3e] {\r\n  color: #2a7b55;\n}\n.feature-box[data-v-46157c3e] {\r\n  border: 1px solid #eee;\r\n  transition: transform 0.3s ease;\n}\n.feature-box[data-v-46157c3e]:hover {\r\n  transform: translateY(-5px);\r\n  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);\n}\n@media (max-width: 575.98px) {\n.modul-page[data-v-46157c3e]{\r\n    padding: 0px;\n}\n}\r\n", ""]);
 
 // exports
 
@@ -8385,6 +8984,25 @@ exports.push([module.i, "\n.modul-page[data-v-74f2fd35] {\r\n  font-family: 'Pop
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/productdetail/PMBCompponent.vue?vue&type=style&index=0&id=488a8af4&scoped=true&lang=css":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/productdetail/PMBCompponent.vue?vue&type=style&index=0&id=488a8af4&scoped=true&lang=css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.pmb-page[data-v-488a8af4] {\r\n  font-family: 'Poppins', sans-serif;\r\n  /* background-color: #f8faff; */\r\n  padding: 50px;\n}\r\n\r\n/* Hero */\n.hero-section[data-v-488a8af4] {\r\n  background: linear-gradient(135deg, #075E54, #25D366);\r\n  color: #fff;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-488a8af4] {\r\n  font-size: 2.8rem;\r\n  font-weight: 700;\n}\n.hero-title span[data-v-488a8af4] {\r\n  color: #eafaf1;\n}\n.tagline[data-v-488a8af4] {\r\n  font-size: 0.9rem;\r\n  text-transform: uppercase;\n}\n.hero-benefits[data-v-488a8af4] {\r\n  list-style: none;\r\n  padding: 0;\n}\n.hero-benefits li[data-v-488a8af4] {\r\n  position: relative;\r\n  padding-left: 25px;\r\n  margin-bottom: 10px;\n}\n.hero-benefits li[data-v-488a8af4]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #c8f8dd;\n}\n.btn-cta[data-v-488a8af4] {\r\n  background-color: #c8f8dd;\r\n  border: none;\r\n  padding: 10px 20px;\r\n  color: #075E54;\r\n  font-weight: bold;\r\n  border-radius: 6px;\n}\r\n\r\n/* Fitur */\n.fitur-title[data-v-488a8af4] {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color: #000000;\n}\n.fitur-card[data-v-488a8af4] {\r\n  border-radius: 16px;\r\n  background-color: #fff;\r\n  border: 2px solid #075E54;\r\n  transition: 0.3s ease;\n}\n.fitur-card[data-v-488a8af4]:hover {\r\n  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);\r\n  transform: translateY(-4px);\n}\n.fitur-icon[data-v-488a8af4] {\r\n  width: 48px;\r\n  height: 48px;\n}\r\n\r\n/* Why Section */\n.why-pmb-section[data-v-488a8af4] {\r\n  background-color: #f8f9fa;\n}\n.title-wrapper[data-v-488a8af4] {\r\n  background-color: #d4fbe7;\n}\n.why-title[data-v-488a8af4] {\r\n  font-size: 2.4rem;\r\n  font-weight: 800;\r\n  color: #075E54;\n}\n.content-wrapper[data-v-488a8af4] {\r\n  background-color: #ffffff;\r\n  font-size: 1.1rem;\r\n  color: #333;\r\n  line-height: 1.7;\r\n  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.05);\n}\n.why-desc[data-v-488a8af4] {\r\n  margin-bottom: 1rem;\n}\n.why-note[data-v-488a8af4] {\r\n  font-style: italic;\r\n  color: #4f8b67;\r\n  font-size: 0.95rem;\r\n  margin-top: 1.5rem;\n}\r\n\r\n/* CTA */\n.cta-section[data-v-488a8af4] {\r\n  background-color: #075E54;\r\n  color: #fff;\n}\n.cta-section .btn[data-v-488a8af4] {\r\n  background-color: #c8f8dd;\r\n  color: #075E54;\r\n  font-weight: bold;\r\n  border: none;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/productdetail/ReportingComponent.vue?vue&type=style&index=0&id=7fb72c49&scoped=true&lang=css":
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/productdetail/ReportingComponent.vue?vue&type=style&index=0&id=7fb72c49&scoped=true&lang=css ***!
@@ -8397,7 +9015,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.reporting-page[data-v-7fb72c49] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f7f9fc;\r\n  color: #333;\r\n  padding: 50px;\n}\n.hero-section[data-v-7fb72c49] {\r\n  /* background: linear-gradient(135deg, #083b66, #0f4c75); */\r\n  background-image: url(/assets/reporting-bg.png);\r\n  background-size: cover;\r\n  color: #fff;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-7fb72c49] {\r\n  font-size: 2.5rem;\r\n  font-weight: 700;\r\n  margin-bottom: 15px;\n}\n.hero-title span[data-v-7fb72c49] {\r\n  color: #f9a825;\n}\n.hero-benefits[data-v-7fb72c49] {\r\n  list-style: none;\r\n  padding-left: 0;\r\n  margin-top: 15px;\n}\n.hero-benefits li[data-v-7fb72c49] {\r\n  margin-bottom: 10px;\r\n  padding-left: 25px;\r\n  position: relative;\n}\n.hero-benefits li[data-v-7fb72c49]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #f9a825;\r\n  font-weight: bold;\n}\n.btn-cta[data-v-7fb72c49] {\r\n  background-color: #f9a825;\r\n  color: #fff;\r\n  padding: 12px 28px;\r\n  border-radius: 8px;\r\n  font-weight: 600;\r\n  border: none;\n}\n.reporting-slider-section[data-v-7fb72c49] {\r\n  background-color: #f8f9fa;\r\n  font-family: 'Poppins', sans-serif;\n}\n.section-title[data-v-7fb72c49] {\r\n  color: #000000;\n}\n.reporting-slide-card[data-v-7fb72c49] {\r\n  width: 160px;\r\n  padding: 10px 12px;\r\n  border-radius: 12px;\r\n  border: 1px solid #ddd;\r\n  transition: all 0.3s ease;\n}\n.reporting-slide-card[data-v-7fb72c49]:hover {\r\n  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);\r\n  transform: translateY(-3px);\n}\n.reporting-slide-card img[data-v-7fb72c49] {\r\n  width: 100%;\r\n  height: 100px;\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  border-radius: 6px;\n}\n.cta-section[data-v-7fb72c49] {\r\n  background: linear-gradient(45deg, #b5b5b5 0%, #858585 100%);\r\n  color: #fff;\r\n  text-align: center;\n}\n.cta-section .btn[data-v-7fb72c49] {\r\n  background-color: #fff;\r\n  color: #E95420;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  border: none;\n}\n@media (max-width: 575.98px) {\n.reporting-page[data-v-7fb72c49]{\r\n    padding: 0px;\n}\n}\r\n", ""]);
+exports.push([module.i, "\n.reporting-page[data-v-7fb72c49] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f7f9fc;\r\n  color: #333;\r\n  padding: 50px;\n}\n.hero-section[data-v-7fb72c49] {\r\n  /* background: linear-gradient(135deg, #083b66, #0f4c75); */\r\n  background-image: url(/assets/reporting-bg.png);\r\n  background-size: cover;\r\n  color: #000000;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-7fb72c49] {\r\n  font-size: 2.5rem;\r\n  font-weight: 700;\r\n  margin-bottom: 15px;\n}\n.hero-title span[data-v-7fb72c49] {\r\n  color: #8d0202;\n}\n.hero-benefits[data-v-7fb72c49] {\r\n  list-style: none;\r\n  padding-left: 0;\r\n  margin-top: 15px;\n}\n.hero-benefits li[data-v-7fb72c49] {\r\n  margin-bottom: 10px;\r\n  padding-left: 25px;\r\n  position: relative;\n}\n.hero-benefits li[data-v-7fb72c49]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #8d0202;\r\n  font-weight: bold;\n}\n.btn-cta[data-v-7fb72c49] {\r\n  background-color: #8d0202;\r\n  color: #fff;\r\n  padding: 12px 28px;\r\n  border-radius: 8px;\r\n  font-weight: 600;\r\n  border: none;\n}\n.reporting-slider-section[data-v-7fb72c49] {\r\n  background-color: #f8f9fa;\r\n  font-family: 'Poppins', sans-serif;\n}\n.section-title[data-v-7fb72c49] {\r\n  color: #000000;\n}\n.reporting-slide-card[data-v-7fb72c49] {\r\n  width: 160px;\r\n  padding: 10px 12px;\r\n  border-radius: 12px;\r\n  border: 1px solid #ddd;\r\n  transition: all 0.3s ease;\n}\n.reporting-slide-card[data-v-7fb72c49]:hover {\r\n  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);\r\n  transform: translateY(-3px);\n}\n.reporting-slide-card img[data-v-7fb72c49] {\r\n  width: 100%;\r\n  height: 100px;\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  border-radius: 6px;\n}\n.cta-section[data-v-7fb72c49] {\r\n  background: linear-gradient(45deg, #b5b5b5 0%, #858585 100%);\r\n  color: #8d0202;;\r\n  text-align: center;\n}\n.cta-section .btn[data-v-7fb72c49] {\r\n  background-color: #fff;\r\n  color: #8d0202;;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  border: none;\n}\n@media (max-width: 575.98px) {\n.reporting-page[data-v-7fb72c49]{\r\n    padding: 0px;\n}\n}\r\n", ""]);
 
 // exports
 
@@ -8416,7 +9034,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.siakad-page[data-v-5c996da0] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f8faff;\r\n  color: whitesmoke;\r\n  padding: 70px;\n}\n.hero-section[data-v-5c996da0] {\r\n  background-image: url('/assets/ggreen-bg.png');\r\n  background-size: cover;\r\n  background-position: center;\r\n  color: #16300c;\r\n  min-height: 80vh;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-5c996da0] {\r\n  font-size: 2.8rem;\r\n  font-weight: 800;\r\n  line-height: 1.3;\r\n  margin-bottom: 20px;\n}\n.hero-title span[data-v-5c996da0] {\r\n  color: #E95420;\n}\n.tagline[data-v-5c996da0] {\r\n  font-size: 1rem;\r\n  font-weight: 600;\r\n  color: #16300c;\r\n  letter-spacing: 1px;\r\n  text-transform: uppercase;\n}\n.hero-subtext[data-v-5c996da0] {\r\n  font-size: 1.1rem;\r\n  color: whitesmoke;\r\n  margin-bottom: 20px;\n}\n.hero-benefits[data-v-5c996da0] {\r\n  list-style: none;\r\n  color: whitesmoke;\r\n  padding-left: 0;\n}\n.hero-benefits li[data-v-5c996da0] {\r\n  position: relative;\r\n  padding-left: 25px;\r\n  margin-bottom: 12px;\r\n  font-size: 1rem;\n}\n.hero-benefits li[data-v-5c996da0]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #16300c;\r\n  font-weight: bold;\n}\n.btn-cta[data-v-5c996da0] {\r\n  background-color: #E95420;\r\n  color: #fff;\r\n  border: none;\r\n  padding: 12px 28px;\r\n  font-size: 1rem;\r\n  font-weight: 600;\r\n  border-radius: 8px;\r\n  transition: 0.3s ease;\n}\n.btn-cta[data-v-5c996da0]:hover {\r\n  background-color: #c74319;\n}\n.hero-image[data-v-5c996da0] {\r\n  max-width: 100%;\r\n  height: auto;\r\n  opacity: 0.9;\n}\n.features-section[data-v-5c996da0] {\r\n  color: #023516;\r\n  font-family: 'Montserrat', 'Poppins', sans-serif;\r\n  background-color: #fff9f9 !important;\n}\n.section-title[data-v-5c996da0]{\r\n  font-size: 40px;\r\n  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;\r\n  margin-top: 50px;\n}\n.section-subtitle[data-v-5c996da0]{\r\n  font-size: 20px;\r\n  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;\n}\n.feature-card[data-v-5c996da0] {\r\n  background-color: #ebebeb;\r\n  border-radius: 0 0  20px 20px !important;\r\n  box-shadow: 0 5px 20px rgba(0,0,0,0.08);\r\n  overflow: hidden;\r\n  width: 80%;\r\n  color: rgb(81, 81, 81);\n}\n.feature-card-header[data-v-5c996da0] {\r\n  height: 150px;\r\n  position: relative;\n}\n.card-header-bg-image[data-v-5c996da0] {\r\n  border-radius: 0px !important;\r\n  width: 100%;\r\n  height: 100%;\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  filter: brightness(0.9);\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  border-radius: 25px;\r\n  padding: 2px;\n}\n.card-header-tag[data-v-5c996da0] {\r\n  position: relative;\r\n  z-index: 1;\r\n  background-color: rgba(255,255,255,0.25);\r\n  color: #fff;\r\n  border-radius: 5px;\r\n  font-size: 0.85em;\r\n  font-weight: 600;\n}\n.feature-card-content h5[data-v-5c996da0] {\r\n  font-weight: bold;\r\n  font-size: 1.2em;\n}\n.feature-card-content p[data-v-5c996da0] {\r\n  font-size: 0.95em;\r\n  color: whitesmoke;\n}\n.cta-section[data-v-5c996da0] {\r\n  background: linear-gradient(45deg, #8b8b8b 0%, #8c8c8c 100%);\r\n  color: #fff;\r\n  text-align: center;\n}\n.cta-section .btn[data-v-5c996da0] {\r\n  background-color: #fff;\r\n  color: #E95420;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  border: none;\n}\n.keunggulan-siakad[data-v-5c996da0] {\r\n  background: #fff;\r\n  overflow: hidden;\n}\n.keunggulan-siakad .container-fluid[data-v-5c996da0] {\r\n  margin: 0 auto;\n}\n.keunggulan-siakad .content[data-v-5c996da0] {\r\n  background: #fcfdff;\r\n  border-radius: 15px;\r\n  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  height: 100%;\n}\n.keunggulan-siakad .headline[data-v-5c996da0] {\r\n  font-size: 2.5em;\r\n  font-weight: 700;\r\n  color: #16300c;\r\n  line-height: 1.2;\r\n  margin-bottom: 20px;\n}\n.keunggulan-siakad .headline em[data-v-5c996da0] {\r\n  font-style: normal;\r\n  color: #E95420;\r\n  font-weight: 800;\n}\n.keunggulan-siakad .subheadline[data-v-5c996da0] {\r\n  font-size: 1.2em;\r\n  color: #555;\r\n  line-height: 1.7;\r\n  margin-bottom: 2px;\n}\n.keunggulan-siakad .benefit-list[data-v-5c996da0] {\r\n  list-style: none;\r\n  padding: 0;\r\n  margin: 0;\n}\n.keunggulan-siakad .benefit-list li[data-v-5c996da0] {\r\n  font-size: 1.1em;\r\n  color: #343a40;\r\n  margin-bottom: 18px;\r\n  position: relative;\r\n  padding-left: 35px;\r\n  line-height: 1.5;\n}\n.keunggulan-siakad .benefit-list li[data-v-5c996da0]::before {\r\n  content: '\\F00C';\r\n  font-family: \"Font Awesome 6 Free\";\r\n  font-weight: 900;\r\n  position: absolute;\r\n  left: 0;\r\n  top: 2px;\r\n  color: #16300c;\r\n  font-size: 1.2em;\n}\n.keunggulan-siakad .image-wrapper[data-v-5c996da0] {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  height: 100%;\r\n  background: #eaf7ff;\n}\n.image-wrapper img[data-v-5c996da0]{\r\n  height: 538px !important;\n}\n.keunggulan-siakad .tilted-image[data-v-5c996da0] {\r\n  width: 100%;\r\n  height: 100%; \r\n  -o-object-fit: cover; \r\n     object-fit: cover; \r\n  border-radius: 20px;\r\n  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35);\r\n  display: block;\n}\n.keunggulan-siakad .row[data-v-5c996da0] {\r\n  display: flex;\r\n  min-height: 100%;\r\n  height: 100%;\n}\n@media (max-width: 768px) {\n.siakad-page[data-v-5c996da0]{\r\n    padding: 20px;\n}\n.hero-section[data-v-5c996da0] {\r\n    padding: 50px 20px;\r\n    text-align: center;\n}\n.hero-title[data-v-5c996da0] {\r\n    font-size: 2rem;\r\n    text-align: center;\n}\n.tagline[data-v-5c996da0],\r\n  .hero-subtext[data-v-5c996da0],\r\n  .hero-benefits[data-v-5c996da0] {\r\n    text-align: center;\r\n    font-size: 1rem;\n}\n.hero-benefits li[data-v-5c996da0] {\r\n    padding-left: 20px;\r\n    font-size: 0.95rem;\n}\n.hero-benefits li[data-v-5c996da0]::before {\r\n    left: 5px;\n}\n.btn-cta[data-v-5c996da0] {\r\n    width: 100%;\r\n    padding: 12px 0;\r\n    font-size: 1rem;\n}\n.hero-image[data-v-5c996da0] {\r\n    transform: none;\r\n    margin-top: 30px;\n}\n.feature-card[data-v-5c996da0] {\r\n    width: 100%;\n}\n.keunggulan-siakad .content[data-v-5c996da0] {\r\n    padding: 20px;\n}\n.keunggulan-siakad .headline[data-v-5c996da0] {\r\n    font-size: 1.8em;\r\n    text-align: center;\n}\n.keunggulan-siakad .subheadline[data-v-5c996da0] {\r\n    text-align: center;\r\n    font-size: 1em;\r\n    margin-bottom: 20px;\n}\n.keunggulan-siakad .benefit-list li[data-v-5c996da0] {\r\n    font-size: 1rem;\r\n    padding-left: 28px;\n}\n.keunggulan-siakad .benefit-list li[data-v-5c996da0]::before {\r\n    font-size: 1rem;\r\n    left: 0;\n}\n.keunggulan-siakad .image-wrapper[data-v-5c996da0] {\r\n    padding: 15px;\r\n    height: auto;\n}\n.keunggulan-siakad .tilted-image[data-v-5c996da0] {\r\n    height: auto;\r\n    border-radius: 10px;\n}\n.cta-section h2[data-v-5c996da0] {\r\n    font-size: 1.8rem;\n}\n.cta-section p[data-v-5c996da0] {\r\n    font-size: 1rem;\n}\n.cta-section .btn[data-v-5c996da0] {\r\n    width: 100%;\r\n    padding: 12px;\n}\n.section-title[data-v-5c996da0] {\r\n    font-size: 1.8rem;\n}\n.section-subtitle[data-v-5c996da0] {\r\n    font-size: 1rem;\n}\n}\r\n\r\n\r\n", ""]);
+exports.push([module.i, "\n.siakad-page[data-v-5c996da0] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f8faff;\r\n  padding: 70px;\n}\n.hero-section[data-v-5c996da0] {\r\n  background-image: url('/assets/ggreen-bg.png');\r\n  background-size: cover;\r\n  background-position: center;\r\n  color: #16300c;\r\n  min-height: 80vh;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-5c996da0] {\r\n  font-size: 2.8rem;\r\n  font-weight: 800;\r\n  line-height: 1.3;\r\n  margin-bottom: 20px;\n}\n.tagline[data-v-5c996da0] {\r\n  font-size: 1rem;\r\n  font-weight: 600;\r\n  color: #16300c;\r\n  letter-spacing: 1px;\r\n  text-transform: uppercase;\n}\n.hero-subtext[data-v-5c996da0] {\r\n  font-size: 1.1rem;\r\n  color: whitesmoke;\r\n  margin-bottom: 20px;\n}\n.hero-benefits[data-v-5c996da0] {\r\n  list-style: none;\r\n  color: whitesmoke;\r\n  padding-left: 0;\n}\n.hero-benefits li[data-v-5c996da0] {\r\n  position: relative;\r\n  padding-left: 25px;\r\n  margin-bottom: 12px;\r\n  font-size: 1rem;\n}\n.hero-benefits li[data-v-5c996da0]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #16300c;\r\n  font-weight: bold;\n}\n.btn-cta[data-v-5c996da0] {\r\n  background-color: #16300c;\r\n  color: #fff;\r\n  border: none;\r\n  padding: 12px 28px;\r\n  font-size: 1rem;\r\n  font-weight: 600;\r\n  border-radius: 8px;\r\n  transition: 0.3s ease;\n}\n.btn-cta[data-v-5c996da0]:hover {\r\n  background-color: #c74319;\n}\n.hero-image[data-v-5c996da0] {\r\n  max-width: 100%;\r\n  height: auto;\r\n  opacity: 0.9;\n}\n.features-section[data-v-5c996da0] {\r\n  display: flex;\r\n  justify-content: center;\r\n  gap: 20px;\r\n  flex-wrap: wrap;\r\n  padding: 40px 20px;\r\n  background: #f8f9fb;\n}\n.feature-container[data-v-5c996da0] {\r\n  flex: 1 1 300px;\r\n  max-width: 350px;\r\n  background: #fff;\r\n  border: 1px solid #e5e8ec;\r\n  border-radius: 12px;\r\n  box-shadow: 0 4px 12px rgba(0,0,0,0.05);\r\n  transition: all 0.3s ease;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: stretch;\n}\n.hr-border[data-v-5c996da0]{\r\n  border: 1px solid #000000;\r\n  padding: 0;\r\n  margin-bottom:20px ;\n}\n.feature-container[data-v-5c996da0]:hover {\r\n  transform: translateY(-5px);\r\n  box-shadow: 0 8px 24px rgba(0,0,0,0.1);\n}\n.feature-head[data-v-5c996da0] {\r\n  padding: 20px;\r\n  border-bottom: 1px solid #e5e8ec;\r\n  text-align: center;\n}\n.feature-head h2.feature[data-v-5c996da0] {\r\n  font-size: 25px;\r\n  font-weight: 600;\r\n  margin-bottom: 5px;\r\n  color: #222;\r\n  margin-bottom: 10px ;\n}\n.feature-head p[data-v-5c996da0] {\r\n  font-size: 0.9rem;\r\n  color: #666;\r\n  margin-bottom: 10px;\n}\r\n\r\n/* Daftar fitur */\n.features-item[data-v-5c996da0] {\r\n  list-style: none;\r\n  margin: 0;\n}\n.list-feature[data-v-5c996da0] {\r\n  display: flex;\r\n  align-items: flex-start;\r\n  gap: 10px;\r\n  padding: 10px 0;\r\n  padding-left: 30px;\n}\n.list-feature[data-v-5c996da0]:last-child {\r\n  border-bottom: none;\n}\n.list-feature i[data-v-5c996da0] {\r\n  color: #000000;\r\n  font-size: 1rem;\r\n  margin-top: 4px;\n}\n.list-feature h5[data-v-5c996da0] {\r\n  font-size: 0.95rem;\r\n  margin: 0;\r\n  font-weight: 400;\r\n  color: #333;\r\n  text-align: left;\r\n  min-width: 200px;\n}\n.see-more-wrapper[data-v-5c996da0] {\r\n  margin-top: 15px;\n}\n.see-more-btn[data-v-5c996da0] {\r\n  background-color: darkgreen;  /* warna dasar */\r\n  color: #fff;                  /* warna tulisan */\r\n  border: none;                 /* hilangkan border */\r\n  padding: 10px 20px;           /* ruang dalam */\r\n  border-radius: 25px;          /* bikin rounded */\r\n  font-size: 14px;\r\n  font-weight: bold;\r\n  cursor: pointer;              /* pointer pas hover */\r\n  transition: all 0.3s ease;    /* animasi halus */\n}\n.see-more-btn[data-v-5c996da0]:hover {\r\n  background-color: #0b5c0b;    /* warna saat hover */\r\n  transform: translateY(-2px);  /* sedikit naik */\r\n  box-shadow: 0 4px 10px rgba(0,0,0,0.2);\n}\n.see-more-btn[data-v-5c996da0]:active {\r\n  transform: translateY(0);     /* kembali normal saat ditekan */\r\n  box-shadow: 0 2px 5px rgba(0,0,0,0.2);\n}\r\n\r\n/*  \r\n.section-title{\r\n  font-size: 40px;\r\n  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;\r\n  margin-top: 50px;\r\n  color: #57075e;\r\n}\r\n.section-subtitle{\r\n  font-size: 20px;\r\n  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;\r\n}\r\n.feature-card {\r\n  background-color: #ebebeb;\r\n  border-radius: 0 0  20px 20px !important;\r\n  box-shadow: 0 5px 20px rgba(0,0,0,0.08);\r\n  overflow: hidden;\r\n  width: 80%;\r\n  color: rgb(81, 81, 81);\r\n  \r\n}\r\n.feature-card-header {\r\n  height: 150px;\r\n  position: relative;\r\n}\r\n.card-header-bg-image {\r\n  border-radius: 0px !important;\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  filter: brightness(0.9);\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  border-radius: 25px;\r\n  padding: 2px;\r\n}\r\n.card-header-tag {\r\n  position: relative;\r\n  z-index: 1;\r\n  background-color: rgba(255,255,255,0.25);\r\n  color: #fff;\r\n  border-radius: 5px;\r\n  font-size: 0.85em;\r\n  font-weight: 600;\r\n} */\n.cta-section[data-v-5c996da0] {\r\n  background: linear-gradient(45deg, #8b8b8b 0%, #8c8c8c 100%);\r\n  color: #023516;\r\n  font-weight: bold;\r\n  text-align: center;\n}\n.cta-section .btn[data-v-5c996da0] {\r\n  background-color: #023516;\r\n  color: #fff;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  border: none;\n}\n.keunggulan-siakad[data-v-5c996da0] {\r\n  background: #fff;\r\n  overflow: hidden;\n}\n.keunggulan-siakad .container-fluid[data-v-5c996da0] {\r\n  margin: 0 auto;\n}\n.keunggulan-siakad .content[data-v-5c996da0] {\r\n  background: #fcfdff;\r\n  border-radius: 15px;\r\n  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  height: 100%;\n}\n.keunggulan-siakad .headline[data-v-5c996da0] {\r\n  font-size: 2.5em;\r\n  font-weight: 700;\r\n  color: #16300c;\r\n  line-height: 1.2;\r\n  margin-bottom: 20px;\n}\n.keunggulan-siakad .headline em[data-v-5c996da0] {\r\n  font-style: normal;\r\n  color: #E95420;\r\n  font-weight: 800;\n}\n.keunggulan-siakad .subheadline[data-v-5c996da0] {\r\n  font-size: 1.2em;\r\n  color: #555;\r\n  line-height: 1.7;\r\n  margin-bottom: 2px;\n}\n.keunggulan-siakad .benefit-list[data-v-5c996da0] {\r\n  list-style: none;\r\n  padding: 0;\r\n  margin: 0;\n}\n.keunggulan-siakad .benefit-list li[data-v-5c996da0] {\r\n  font-size: 1.1em;\r\n  color: #343a40;\r\n  margin-bottom: 18px;\r\n  position: relative;\r\n  padding-left: 35px;\r\n  line-height: 1.5;\n}\n.keunggulan-siakad .benefit-list li[data-v-5c996da0]::before {\r\n  content: '\\F00C';\r\n  font-family: \"Font Awesome 6 Free\";\r\n  font-weight: 900;\r\n  position: absolute;\r\n  left: 0;\r\n  top: 2px;\r\n  color: #16300c;\r\n  font-size: 1.2em;\n}\n.keunggulan-siakad .image-wrapper[data-v-5c996da0] {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  height: 100%;\r\n  background: #eaf7ff;\n}\n.image-wrapper img[data-v-5c996da0]{\r\n  height: 538px !important;\n}\n.keunggulan-siakad .tilted-image[data-v-5c996da0] {\r\n  width: 100%;\r\n  height: 100%; \r\n  -o-object-fit: cover; \r\n     object-fit: cover; \r\n  border-radius: 20px;\r\n  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35);\r\n  display: block;\n}\n.keunggulan-siakad .row[data-v-5c996da0] {\r\n  display: flex;\r\n  min-height: 100%;\r\n  height: 100%;\n}\r\n/* .fitur-title {\r\n  font-size: 1.8rem;\r\n  font-weight: 700;\r\n  color: #075E54;\r\n}\r\n\r\n.modal-content {\r\n  background-color: #fff;\r\n  transition: all 0.3s ease;\r\n}\r\n\r\n.modal-header {\r\n  padding: 1rem 1.5rem;\r\n  background-color: green;\r\n}\r\n.fitur-card {\r\n  border-radius: 16px;\r\n  background-color: #fff;\r\n  border: 2px solid  #075E54;;\r\n  transition: 0.3s ease;\r\n}\r\n.fitur-card:hover {\r\n  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);\r\n  transform: translateY(-4px);\r\n}\r\n.fitur-icon {\r\n  width: 48px;\r\n  height: 48px;\r\n}\r\n\r\n\r\n.features-section {\r\n  font-family: 'Montserrat', 'Poppins', sans-serif;\r\n  background-color: #ededed !important;\r\n}\r\n\r\n.section-title{\r\n  font-size: 40px;\r\n  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;\r\n}\r\n.section-subtitle{\r\n  font-size: 20px;\r\n  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;\r\n}\r\n.feature-card {\r\n  background-color: whitesmoke;\r\n  border-radius: 15px !important;\r\n  border: 2px solid #57075e;;\r\n  overflow: hidden;\r\n  width: 280px;\r\n  color: rgb(81, 81, 81);\r\n  height: 350px !important;\r\n  \r\n}\r\n.feature-card-header {\r\n  height: 150px;\r\n  position: relative;\r\n}\r\n.card-header-bg-image {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  filter: brightness(0.9);\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  border-radius: 15px;\r\n  padding: 10px;\r\n}\r\n.card-header-tag {\r\n  position: relative;\r\n  z-index: 1;\r\n  background-color: rgba(255,255,255,0.25);\r\n  color: #fff;\r\n  border-radius: 5px;\r\n  font-size: 0.85em;\r\n  font-weight: 600;\r\n}\r\n\r\n.feature-card-content h5 {\r\n  font-weight: bold;\r\n  font-size: 1.2em;\r\n}\r\n.feature-card-content p {\r\n  font-size: 0.95em;\r\n  color: #003049;\r\n\r\n}\r\n.metadata, .sub-description {\r\n  font-size: 0.9rem;\r\n  color: #ccc;\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.metadata i,\r\n.sub-description i {\r\n  margin-right: 8px;\r\n} */\n@media (max-width: 768px) {\n.siakad-page[data-v-5c996da0]{\r\n    padding: 20px;\n}\n.hero-section[data-v-5c996da0] {\r\n    padding: 50px 20px;\r\n    text-align: center;\n}\n.hero-title[data-v-5c996da0] {\r\n    font-size: 2rem;\r\n    text-align: center;\n}\n.tagline[data-v-5c996da0],\r\n  .hero-subtext[data-v-5c996da0],\r\n  .hero-benefits[data-v-5c996da0] {\r\n    text-align: center;\r\n    font-size: 1rem;\n}\n.hero-benefits li[data-v-5c996da0] {\r\n    padding-left: 20px;\r\n    font-size: 0.95rem;\n}\n.hero-benefits li[data-v-5c996da0]::before {\r\n    left: 5px;\n}\n.btn-cta[data-v-5c996da0] {\r\n    width: 100%;\r\n    padding: 12px 0;\r\n    font-size: 1rem;\n}\n.hero-image[data-v-5c996da0] {\r\n    transform: none;\r\n    margin-top: 30px;\n}\n.feature-card[data-v-5c996da0] {\r\n    width: 100%;\n}\n.keunggulan-siakad .content[data-v-5c996da0] {\r\n    padding: 20px;\n}\n.keunggulan-siakad .headline[data-v-5c996da0] {\r\n    font-size: 1.8em;\r\n    text-align: center;\n}\n.keunggulan-siakad .subheadline[data-v-5c996da0] {\r\n    text-align: center;\r\n    font-size: 1em;\r\n    margin-bottom: 20px;\n}\n.keunggulan-siakad .benefit-list li[data-v-5c996da0] {\r\n    font-size: 1rem;\r\n    padding-left: 28px;\n}\n.keunggulan-siakad .benefit-list li[data-v-5c996da0]::before {\r\n    font-size: 1rem;\r\n    left: 0;\n}\n.keunggulan-siakad .image-wrapper[data-v-5c996da0] {\r\n    padding: 15px;\r\n    height: auto;\n}\n.keunggulan-siakad .tilted-image[data-v-5c996da0] {\r\n    height: auto;\r\n    border-radius: 10px;\n}\n.cta-section h2[data-v-5c996da0] {\r\n    font-size: 1.8rem;\n}\n.cta-section p[data-v-5c996da0] {\r\n    font-size: 1rem;\n}\n.cta-section .btn[data-v-5c996da0] {\r\n    width: 100%;\r\n    padding: 12px;\n}\n.section-title[data-v-5c996da0] {\r\n    font-size: 1.8rem;\n}\n.section-subtitle[data-v-5c996da0] {\r\n    font-size: 1rem;\n}\n}\r\n\r\n\r\n", ""]);
 
 // exports
 
@@ -39714,6 +40332,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/productdetail/PMBCompponent.vue?vue&type=style&index=0&id=488a8af4&scoped=true&lang=css":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/productdetail/PMBCompponent.vue?vue&type=style&index=0&id=488a8af4&scoped=true&lang=css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./PMBCompponent.vue?vue&type=style&index=0&id=488a8af4&scoped=true&lang=css */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/productdetail/PMBCompponent.vue?vue&type=style&index=0&id=488a8af4&scoped=true&lang=css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/productdetail/ReportingComponent.vue?vue&type=style&index=0&id=7fb72c49&scoped=true&lang=css":
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/productdetail/ReportingComponent.vue?vue&type=style&index=0&id=7fb72c49&scoped=true&lang=css ***!
@@ -56327,6 +56975,93 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/productdetail/PMBCompponent.vue":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/productdetail/PMBCompponent.vue ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _PMBCompponent_vue_vue_type_template_id_488a8af4_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PMBCompponent.vue?vue&type=template&id=488a8af4&scoped=true */ "./resources/js/components/productdetail/PMBCompponent.vue?vue&type=template&id=488a8af4&scoped=true");
+/* harmony import */ var _PMBCompponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PMBCompponent.vue?vue&type=script&lang=js */ "./resources/js/components/productdetail/PMBCompponent.vue?vue&type=script&lang=js");
+/* empty/unused harmony star reexport *//* harmony import */ var _PMBCompponent_vue_vue_type_style_index_0_id_488a8af4_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PMBCompponent.vue?vue&type=style&index=0&id=488a8af4&scoped=true&lang=css */ "./resources/js/components/productdetail/PMBCompponent.vue?vue&type=style&index=0&id=488a8af4&scoped=true&lang=css");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _PMBCompponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"],
+  _PMBCompponent_vue_vue_type_template_id_488a8af4_scoped_true__WEBPACK_IMPORTED_MODULE_0__["render"],
+  _PMBCompponent_vue_vue_type_template_id_488a8af4_scoped_true__WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "488a8af4",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/productdetail/PMBCompponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/productdetail/PMBCompponent.vue?vue&type=script&lang=js":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/productdetail/PMBCompponent.vue?vue&type=script&lang=js ***!
+  \*****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PMBCompponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./PMBCompponent.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/productdetail/PMBCompponent.vue?vue&type=script&lang=js");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PMBCompponent_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/productdetail/PMBCompponent.vue?vue&type=style&index=0&id=488a8af4&scoped=true&lang=css":
+/*!*************************************************************************************************************************!*\
+  !*** ./resources/js/components/productdetail/PMBCompponent.vue?vue&type=style&index=0&id=488a8af4&scoped=true&lang=css ***!
+  \*************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PMBCompponent_vue_vue_type_style_index_0_id_488a8af4_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./PMBCompponent.vue?vue&type=style&index=0&id=488a8af4&scoped=true&lang=css */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/productdetail/PMBCompponent.vue?vue&type=style&index=0&id=488a8af4&scoped=true&lang=css");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PMBCompponent_vue_vue_type_style_index_0_id_488a8af4_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PMBCompponent_vue_vue_type_style_index_0_id_488a8af4_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PMBCompponent_vue_vue_type_style_index_0_id_488a8af4_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PMBCompponent_vue_vue_type_style_index_0_id_488a8af4_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/components/productdetail/PMBCompponent.vue?vue&type=template&id=488a8af4&scoped=true":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/components/productdetail/PMBCompponent.vue?vue&type=template&id=488a8af4&scoped=true ***!
+  \***********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_PMBCompponent_vue_vue_type_template_id_488a8af4_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ref--6!../../../../node_modules/vue-loader/lib??vue-loader-options!./PMBCompponent.vue?vue&type=template&id=488a8af4&scoped=true */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/productdetail/PMBCompponent.vue?vue&type=template&id=488a8af4&scoped=true");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_PMBCompponent_vue_vue_type_template_id_488a8af4_scoped_true__WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ref_6_node_modules_vue_loader_lib_index_js_vue_loader_options_PMBCompponent_vue_vue_type_template_id_488a8af4_scoped_true__WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/productdetail/ReportingComponent.vue":
 /*!**********************************************************************!*\
   !*** ./resources/js/components/productdetail/ReportingComponent.vue ***!
@@ -56523,9 +57258,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_productdetail_ReportingComponent_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/productdetail/ReportingComponent.vue */ "./resources/js/components/productdetail/ReportingComponent.vue");
 /* harmony import */ var _components_productdetail_CBTComponent_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/productdetail/CBTComponent.vue */ "./resources/js/components/productdetail/CBTComponent.vue");
 /* harmony import */ var _components_productdetail_ModulSkripsiComponent_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/productdetail/ModulSkripsiComponent.vue */ "./resources/js/components/productdetail/ModulSkripsiComponent.vue");
+/* harmony import */ var _components_productdetail_PMBCompponent_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/productdetail/PMBCompponent.vue */ "./resources/js/components/productdetail/PMBCompponent.vue");
 
 
 // import App from 'App.vue';
+
 
 
 
@@ -56568,6 +57305,9 @@ var routes = [{
 }, {
   path: '/product/modul-skripsi',
   component: _components_productdetail_ModulSkripsiComponent_vue__WEBPACK_IMPORTED_MODULE_11__["default"]
+}, {
+  path: '/product/pmb',
+  component: _components_productdetail_PMBCompponent_vue__WEBPACK_IMPORTED_MODULE_12__["default"]
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: 'history',
