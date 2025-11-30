@@ -1,22 +1,8 @@
 @extends('layout.layout')
 @section('content')
-<!-- Navbar -->
-
-<!-- Hero Section -->
-<!-- <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
-   Payze
-  </title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
- </head> -->
 
 <head>
-    <script src="{{ asset('js/app.js') }}" defer></script>
+  <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <!-- Hero Section -->
 <section class="container mt-5 d-md-flex align-items-center justify-content-between px-3 px-md-0">
@@ -36,10 +22,11 @@
       mulai dari pemesanan produk hingga layanan purna jual yang andal.
     </p>
     <div class="d-flex gap-3">
-      <button class="btn btn-gradient btn-sm px-4">
+      <a href="{{url('/harga')}}" class="btn btn-gradient btn-sm px-4">
         Pesan Sekarang
-      </button>
+      </a>
     </div>
+
   </div>
   <div class="w-100 w-md-50 position-relative">
     <div class="position-absolute top-0 end-0 h-100 d-none d-md-block rounded-tr-4 rounded-br-4" style="
@@ -227,8 +214,8 @@
 <section class="container mt-5 rounded-3 py-5 px-3 px-md-0">
   <p class="text-purple fs-7 mb-2 d-flex justify-content-center align-items-center gap-2">
     <span class="border border-purple rounded-circle d-inline-block" style="width: 10px; height: 10px">
-      </span>
-      Layanan Kami  
+    </span>
+    Layanan Kami
   </p>
   <h2 class="text-center fw-semibold fs-4 mb-3" style="max-width: 600px; margin: 0 auto">
     Kami Memprioritaskan Keamanan dan Kepuasan dalam Penjualan ISEMA

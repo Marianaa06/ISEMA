@@ -78,6 +78,7 @@
         .text-center-mobile {
             text-align: center;
         }
+
         .social-icons {
             justify-content: center;
         }
@@ -119,15 +120,19 @@
 
             <!-- Kolom 3 -->
             <div class="col-md-4 text-center-mobile">
-                <h5>Lokasi</h5>
-                <iframe class="map-frame"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.3337866630404!2d119.87407057349812!3d-0.892950635319646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d8bedc0398bbf61%3A0x6b38cb63e4e092c!2sTechno%20Celebes!5e0!3m2!1sid!2sid!4v1751099962881!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                <h5>Informasi</h5>
+                <ul class="list-unstyled">
+                    <li><a href="{{url('/tims')}}">Tims</a></li>
+                    <li><a href="{{url('/credit')}}">Credit</a></li>
+                    <li><a href="{{url('/privacy')}}">Privacy Policy</a></li>
+                    <li><a href="{{url('/karir')}}">Karir</a></li>
+                    <li><a href="/dokumentasi">Dokumentasi</a></li>
+                    <li><a href="/term">Term And Condition</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-bottom mt-4 text-center">
+                <small>© 2025 <strong>ISEMA</strong> • All rights reserved.</small>
             </div>
         </div>
-
-        <div class="footer-bottom mt-4">
-            <small>© 2025 <strong>ISEMA</strong> • All rights reserved.</small>
-        </div>
     </div>
-</div>

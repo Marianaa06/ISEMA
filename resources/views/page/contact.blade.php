@@ -1,5 +1,6 @@
 @extends('layout.layout')
 @section('content')
+
 <!-- Hero Section -->
 <section class="about-hero position-relative text-white text-center d-flex align-items-center justify-content-center mb-5">
   <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
