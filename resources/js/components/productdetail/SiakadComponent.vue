@@ -123,76 +123,116 @@
 </section> -->
  <div class="features-section d-flex">
       <!-- ADMIN -->
-      <div class="feature-container" style="border-color: darkgreen; border: 2px solid darkgreen;">
-        <div class="feature-head">
-          <h2 class="feature text-center" style="color: darkgreen;">Fitur SIAKAD Admin</h2>
-          <p>Membantu Admin untuk mengelola akademik</p>
-          <hr class="hr-border" />
-          <ul class="features-item">
-            <li
-              class="list-feature d-flex"
-              v-for="(feature, index) in limitedFeaturesAdmin"
-              :key="'admin-' + (feature.title || index)"
-            >
-              <i :class="['mb-1','fa-1x', feature.icon]"></i>
-              <h5 class="mt-1 mb-1">{{ feature.title }}</h5>
-            </li>
-          </ul>
+<div class="feature-container" style="border-color: darkgreen;">
+  <div class="feature-head">
+    <h2 class="feature text-center" style="color: darkgreen;">Fitur SIAKAD Admin</h2>
+    <p>Mempermudah pengelolaan data kampus</p>
+    <hr class="hr-border" />
+    <ul class="features-item" :class="{ 'expanded': showAllAdmin }">
+      <li v-for="(feature, index) in limitedFeaturesAdmin" :key="'admin-' + (feature.title || index)">
+        <div 
+          class="list-feature d-flex"
+          :class="{ 'has-subfeatures': feature.subfeatures }"
+          @click="toggleSubfeatures(feature)"
+        >
+          <i :class="['mb-1','fa-1x', feature.icon]"></i>
+          <h5 class="mt-1 mb-1">{{ feature.title }}</h5>
+          <i v-if="feature.subfeatures" class="fa-solid fa-angle-right ms-auto toggle-icon" :class="{ 'rotated': isSubfeatureOpen(feature) }"></i>
         </div>
-        <div class="see-more-wrapper text-center">
-          <button class="see-more-btn" @click="toggleFeatures('admin')">
-            {{ showAllAdmin ? 'See less' : 'See more' }}
-          </button>
-        </div>
-      </div>
+        <ul 
+          class="sub-features-list" 
+          v-show="isSubfeatureOpen(feature)"
+        >
+          <li v-for="(sub, subIdx) in feature.subfeatures" :key="'sub-' + subIdx">
+            <div class="sub-feature-item d-flex">
+              <i :class="['fa-2x','mb-1','fa-1x', sub.icon]"></i>
+              <h5 class="mt-1 mb-1">{{ sub.title }}</h5>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="see-more-wrapper text-center">
+    <button class="see-more-btn" @click="toggleFeatures('admin')">
+      {{ showAllAdmin ? 'See less' : 'See more' }}
+    </button>
+  </div>
+</div>
 
-      <!-- DOSEN -->
-      <div class="feature-container" style="border-color: darkmagenta; border: 2px solid darkmagenta;">
-        <div class="feature-head">
-          <h2 class="feature text-center" style="color: darkmagenta;">Fitur SIAKAD Dosen</h2>
-          <p>Membantu Dosen mengelola akademik</p>
-          <hr class="hr-border" />
-          <ul class="features-item">
-            <li
-              class="list-feature d-flex"
-              v-for="(feature, index) in limitedFeaturesDosen"
-              :key="'dosen-' + (feature.title || index)"
-            >
-              <i :class="['mb-1','fa-1x', feature.icon]"></i>
-              <h5 class="mt-1 mb-1">{{ feature.title }}</h5>
-            </li>
-          </ul>
+<div class="feature-container" style="border-color: darkmagenta;">
+  <div class="feature-head">
+    <h2 class="feature text-center" style="color: darkmagenta;">Fitur SIAKAD Dosen</h2>
+    <p>Membantu dosen dalam mengelola perkuliahan</p>
+    <hr class="hr-border" />
+    <ul class="features-item" :class="{ 'expanded': showAllDosen }">
+      <li v-for="(feature, index) in limitedFeaturesDosen" :key="'dosen-' + (feature.title || index)">
+        <div 
+          class="list-feature d-flex"
+          :class="{ 'has-subfeatures': feature.subfeatures }"
+          @click="toggleSubfeatures(feature)"
+        >
+          <i :class="['mb-1','fa-1x', feature.icon]"></i>
+          <h5 class="mt-1 mb-1">{{ feature.title }}</h5>
+          <i v-if="feature.subfeatures" class="fa-solid fa-angle-right ms-auto toggle-icon" :class="{ 'rotated': isSubfeatureOpen(feature) }"></i>
         </div>
-        <div class="see-more-wrapper text-center">
-          <button class="see-more-btn" @click="toggleFeatures('dosen')">
-            {{ showAllDosen ? 'See less' : 'See more' }}
-          </button>
-        </div>
-      </div>
+        <ul 
+          class="sub-features-list" 
+          v-show="isSubfeatureOpen(feature)"
+        >
+          <li v-for="(sub, subIdx) in feature.subfeatures" :key="'sub-' + subIdx">
+            <div class="sub-feature-item d-flex">
+              <i :class="['fa-2x','mb-1','fa-1x', sub.icon]"></i>
+              <h5 class="mt-1 mb-1">{{ sub.title }}</h5>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="see-more-wrapper text-center">
+    <button class="see-more-btn" @click="toggleFeatures('dosen')">
+      {{ showAllDosen ? 'See less' : 'See more' }}
+    </button>
+  </div>
+</div>
 
-      <!-- MAHASISWA -->
-      <div class="feature-container" style="border-color: darkslateblue; border: 2px solid darkslateblue;">
-        <div class="feature-head">
-          <h2 class="feature text-center" style="color: darkslateblue;">Fitur SIAKAD Mahasiswa</h2>
-          <p>Membantu Mahasiswa mengelola akademik</p>
-          <hr class="hr-border" />
-          <ul class="features-item">
-            <li
-              class="list-feature d-flex"
-              v-for="(feature, index) in limitedFeaturesMahasiswa"
-              :key="'mahasiswa-' + (feature.title || index)"
-            >
-              <i :class="['mb-1','fa-1x', feature.icon]"></i>
-              <h5 class="mt-1 mb-1">{{ feature.title }}</h5>
-            </li>
-          </ul>
+<div class="feature-container" style="border-color: darkslateblue;">
+  <div class="feature-head">
+    <h2 class="feature text-center" style="color: darkslateblue;">Fitur SIAKAD Mahasiswa</h2>
+    <p>Memberikan akses mudah bagi mahasiswa</p>
+    <hr class="hr-border" />
+    <ul class="features-item" :class="{ 'expanded': showAllMahasiswa }">
+      <li v-for="(feature, index) in limitedFeaturesMahasiswa" :key="'mahasiswa-' + (feature.title || index)">
+        <div 
+          class="list-feature d-flex"
+          :class="{ 'has-subfeatures': feature.subfeatures }"
+          @click="toggleSubfeatures(feature)"
+        >
+          <i :class="['mb-1','fa-1x', feature.icon]"></i>
+          <h5 class="mt-1 mb-1">{{ feature.title }}</h5>
+          <i v-if="feature.subfeatures" class="fa-solid fa-angle-right ms-auto toggle-icon" :class="{ 'rotated': isSubfeatureOpen(feature) }"></i>
         </div>
-        <div class="see-more-wrapper text-center">
-          <button class="see-more-btn" @click="toggleFeatures('mahasiswa')">
-            {{ showAllMahasiswa ? 'See less' : 'See more' }}
-          </button>
-        </div>
-      </div>
+        <ul 
+          class="sub-features-list" 
+          v-show="isSubfeatureOpen(feature)"
+        >
+          <li v-for="(sub, subIdx) in feature.subfeatures" :key="'sub-' + subIdx">
+            <div class="sub-feature-item d-flex">
+              <i :class="['fa-2x','mb-1','fa-1x', sub.icon]"></i>
+              <h5 class="mt-1 mb-1">{{ sub.title }}</h5>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="see-more-wrapper text-center">
+    <button class="see-more-btn" @click="toggleFeatures('mahasiswa')">
+      {{ showAllMahasiswa ? 'See less' : 'See more' }}
+    </button>
+  </div>
+</div>
     </div>
 <section class="keunggulan-siakad">
   <div class="container-fluid py-5">
@@ -227,694 +267,254 @@
   </div>
 </template>
 
-<!-- <script>
-export default {
-  name: 'SiakadComponent',
-  data() {
-    return {
-featuresadmin: [
-  {
-    title: 'Mahasiswa',
-    // description: 'Kelola data mahasiswa secara lengkap, mulai dari biodata hingga riwayat akademik.',
-    icon: 'fas fa-user-graduate'
-  },
-  {
-    title: 'Pegawai',
-    // description: 'Atur data dosen dan tenaga kependidikan termasuk jabatan dan riwayat kerja.',
-    icon: 'fas fa-users-cog'
-  },
-  {
-    title: 'Kegiatan',
-    // description: 'Manajemen kegiatan akademik seperti seminar, pelatihan, dan organisasi kemahasiswaan.',
-    icon: 'fas fa-calendar-check',
-    subfeatures: [
-      { title: 'Kegiatan Akademik', icon: 'fas fa-university' },
-      { title: 'Kalender Akademik', icon: 'fas fa-calendar-alt' }
-    ]
-  },
-  {
-    title: 'Data Kurikulum',
-    // description: 'Mengelola mata kuliah, kurikulum prodi, prasyarat, ekivalensi, dan aturan akademik lainnya.',
-    icon: 'fas fa-book',
-    subfeatures: [
-      { title: 'Mata Kuliah', icon: 'fas fa-book' },
-      { title: 'Kurikulum Prodi', icon: 'fas fa-graduation-cap' },
-      { title: 'Prasyarat Mata Kuliah', icon: 'fas fa-clipboard-list' },
-      { title: 'Ekavalensi Mata Kuliah', icon: 'fas fa-exchange-alt' },
-      { title: 'Tahun Kurikulum', icon: 'fas fa-calendar' },
-      { title: 'Batas SKS', icon: 'fas fa-hourglass-half' },
-      { title: 'Skala Nilai', icon: 'fas fa-chart-line' },
-      { title: 'Komposisi Nilai', icon: 'fas fa-percentage' },
-      { title: 'Kurikulum Konsentrasi', icon: 'fas fa-project-diagram' }
-    ]
-  },
-  {
-    title: 'Data Kelas',
-    // description: 'Pengaturan kelas kuliah, jadwal, tahun ajaran, dan monitoring ruang.',
-    icon: 'fas fa-chalkboard-teacher',
-    subfeatures: [
-      { title: 'Kelas Kuliah', icon: 'fas fa-chalkboard' },
-      { title: 'Jadwal & Presentasi', icon: 'fas fa-calendar-day' },
-      { title: 'Tahun Ajaran', icon: 'fas fa-calendar' },
-      { title: 'Monitoring Ruang (Jadwal)', icon: 'fas fa-door-open' }
-    ]
-  },
-  {
-    title: 'Administrasi',
-    // description: 'Pengelolaan administrasi akademik seperti transfer dan pengajuan status mahasiswa.',
-    icon: 'fas fa-file-alt',
-    subfeatures: [
-      { title: 'Transfer Mahasiswa', icon: 'fas fa-random' },
-      { title: 'Pengajuan Status Mahasiswa', icon: 'fas fa-user-edit' }
-    ]
-  },
-  {
-    title: 'Proposal/Tugas Akhir',
-    // description: 'Manajemen proposal penelitian dan tugas akhir mahasiswa.',
-    icon: 'fas fa-file-signature',
-    subfeatures: [
-      { title: 'Daftar Proposal', icon: 'fas fa-file-alt' },
-      { title: 'Daftar Tugas Akhir', icon: 'fas fa-scroll' }
-    ]
-  },
-  {
-    title: 'Data Yudisium',
-    // description: 'Pengaturan data yudisium, penomoran dokumen, dan periode pelaksanaan.',
-    icon: 'fas fa-certificate',
-    subfeatures: [
-      { title: 'Daftar Yudisium', icon: 'fas fa-list' },
-      { title: 'Penomoran Dokumen', icon: 'fas fa-sort-numeric-up' },
-      { title: 'Periode Yudisium', icon: 'fas fa-calendar-check' }
-    ]
-  },
-  {
-    title: 'Kegiatan Pendukung',
-    // description: 'Pengelolaan kegiatan akademik tambahan dan kalender kampus.',
-    icon: 'fas fa-calendar-alt',
-    subfeatures: [
-      { title: 'Kegiatan Akademik', icon: 'fas fa-users' },
-      { title: 'Kalender Akademik', icon: 'fas fa-calendar-alt' }
-    ]
-  },
-  {
-    title: 'Data Wisuda',
-    // description: 'Pengaturan periode wisuda dan daftar peserta yang lulus.',
-    icon: 'fas fa-user-graduate',
-    subfeatures: [
-      { title: 'Periode Wisuda', icon: 'fas fa-calendar-day' },
-      { title: 'Peserta Wisuda', icon: 'fas fa-user-friends' }
-    ]
-  },
-  {
-    title: 'Institut',
-    // description: 'Pengaturan profil institusi termasuk logo, nama kampus, dan informasi resmi lainnya.',
-    icon: 'fas fa-university',
-    subfeatures: [
-      { title: 'Informasi Perguruan Tinggi', icon: 'fas fa-info-circle' },
-      { title: 'Fakultas', icon: 'fas fa-building' },
-      { title: 'Jurusan', icon: 'fas fa-sitemap' },
-      { title: 'Prodi', icon: 'fas fa-graduation-cap' },
-      { title: 'Fokus', icon: 'fas fa-bullseye' },
-      { title: 'Skala Pendidikan', icon: 'fas fa-ruler' },
-      { title: 'Skala Pendidikan Universitas', icon: 'fas fa-university' },
-      { title: 'Sistem Pembelajaran', icon: 'fas fa-laptop' },
-      { title: 'Gedung Pembelajaran', icon: 'fas fa-school' },
-      { title: 'Ruang Pembelajaran', icon: 'fas fa-door-open' },
-      { title: 'Aktivitas Akademik', icon: 'fas fa-tasks' },
-      { title: 'Kalender Akademik', icon: 'fas fa-calendar-alt' },
-      { title: 'Universitas Lain', icon: 'fas fa-globe' }
-    ]
-  },
-  {
-    title: 'Studi',
-    // description: 'Kelola program studi, kurikulum, mata kuliah, dan jenjang pendidikan.',
-    icon: 'fas fa-book-open',
-    subfeatures: [
-      { title: 'Jenis Mata Kuliah', icon: 'fas fa-book' },
-      { title: 'Kelompok Mata Kuliah', icon: 'fas fa-layer-group' },
-      { title: 'Bidang Keahlian', icon: 'fas fa-lightbulb' },
-      { title: 'Komponen Penilaian', icon: 'fas fa-percentage' },
-      { title: 'Sesi Perkuliahan', icon: 'fas fa-clock' },
-      { title: 'Sesi Pembelajaran', icon: 'fas fa-laptop-house' },
-      { title: 'Catatan Kehadiran', icon: 'fas fa-clipboard-check' },
-      { title: 'Kategori Pertemuan', icon: 'fas fa-list-ul' },
-      { title: 'Kategori Aktivitas Pendukung', icon: 'fas fa-people-carry' }
-    ]
-  },
-  {
-    title: 'Identitas',
-    // description: 'Manajemen identitas kampus dan unit akademik secara administratif.',
-    icon: 'fas fa-id-card-alt',
-    subfeatures: [
-      { title: 'Agama', icon: 'fas fa-praying-hands' },
-      { title: 'Pekerjaan', icon: 'fas fa-briefcase' },
-      { title: 'Pendapatan', icon: 'fas fa-money-bill-wave' }
-    ]
-  },
-  {
-    title: 'Tugas Akhir',
-    // description: 'Monitoring dan pengelolaan proses skripsi, tesis, dan disertasi.',
-    icon: 'fas fa-scroll',
-    subfeatures: [
-      { title: 'Pengaturan Tugas Akhir', icon: 'fas fa-cogs' },
-      { title: 'Unsur Nilai', icon: 'fas fa-percentage' },
-      { title: 'Pengaturan Nilai', icon: 'fas fa-cog' }
-    ]
-  },
-  {
-    title: 'Data Mahasiswa',
-    // description: 'Kelola seluruh database mahasiswa aktif dan non-aktif dengan mudah.',
-    icon: 'fas fa-database',
-    subfeatures: [
-      { title: 'Status Mahasiswa', icon: 'fas fa-user-check' },
-      { title: 'Kategori Hunian', icon: 'fas fa-home' },
-      { title: 'Transportasi', icon: 'fas fa-bus' },
-      { title: 'Kebutuhan Khusus', icon: 'fas fa-wheelchair' },
-      { title: 'Jenis Dokumen Tambahan Biodata', icon: 'fas fa-file-alt' },
-      { title: 'Dokumen Tambahan Biodata', icon: 'fas fa-folder-open' }
-    ]
-  },
-  {
-    title: 'Pegawai',
-    // description: 'Pengelolaan data pegawai untuk kepentingan administrasi dan akademik.',
-    icon: 'fas fa-briefcase',
-    subfeatures: [
-      { title: 'Klasifikasi Pegawai', icon: 'fas fa-id-badge' },
-      { title: 'Kategori/Jabatan', icon: 'fas fa-user-tie' },
-      { title: 'Peran Khusus', icon: 'fas fa-star' },
-      { title: 'Status Pegawai', icon: 'fas fa-user' },
-      { title: 'Peran Struktural', icon: 'fas fa-sitemap' },
-      { title: 'Status Keaktifan', icon: 'fas fa-toggle-on' }
-    ]
-  },
-  {
-    title: 'Wilayah',
-    // description: 'Manajemen wilayah domisili mahasiswa untuk keperluan statistik dan zonasi.',
-    icon: 'fas fa-map-marked-alt',
-    subfeatures: [
-      { title: 'Negara', icon: 'fas fa-flag' },
-      { title: 'Provinsi', icon: 'fas fa-map' },
-      { title: 'Kota', icon: 'fas fa-city' },
-      { title: 'Kecamatan', icon: 'fas fa-map-pin' }
-    ]
-  },
-  {
-    title: 'Arsip Dosen',
-    // description: 'Penyimpanan data riwayat aktivitas dan dokumen dosen secara digital.',
-    icon: 'fas fa-archive',
-    subfeatures: [
-      { title: 'Rekap Jadwal Mengajar Dosen', icon: 'fas fa-clipboard' }
-    ]
-  },
-  {
-    title: 'Arsip Mahasiswa',
-    // description: 'Manajemen dokumen penting mahasiswa: ijazah, sertifikat, transkrip.',
-    icon: 'fas fa-folder-open',
-    subfeatures: [
-      { title: 'KHS', icon: 'fas fa-file-alt' },
-      { title: 'KRS', icon: 'fas fa-file-alt' },
-      { title: 'Daftar Mahasiswa Keseluruhan', icon: 'fas fa-users' },
-      { title: 'Daftar Mahasiswa Per Periode', icon: 'fas fa-user-clock' },
-      { title: 'Daftar Yudisium', icon: 'fas fa-list' }
-    ]
-  },
-  {
-    title: 'Periode Akademik',
-    description: 'Atur semester aktif dan jadwal akademik tahunan kampus.',
-    icon: 'fas fa-calendar-alt'
-  }
-],
-featuresdosen: [
-  {
-    title: 'Daftar Proposal',
-    description: 'Kelola pengajuan proposal mahasiswa secara digital, termasuk pemantauan status dan komentar pembimbing.',
-    icon: 'fas fa-file-signature'
-  },
-  {
-    title: 'Daftar Skripsi',
-    // description: 'Pantau seluruh proses skripsi dari pendaftaran, bimbingan, hingga penilaian akhir secara efisien.',
-    icon: 'fas fa-book-open'
-  },
-  {
-    title: 'Jadwal Sidang',
-    // description: 'Atur dan tinjau jadwal sidang mahasiswa secara otomatis dan terintegrasi dengan kalender akademik.',
-    icon: 'fas fa-calendar-check'
-  },
-  {
-    title: 'Kelas Saya',
-    // description: 'Kelola perkuliahan Anda dengan daftar kelas, presensi, dan materi yang terdokumentasi rapi.',
-    icon: 'fas fa-chalkboard-teacher'
-  },
-  {
-    title: 'Kalender Akademik',
-    // description: 'Lihat kegiatan akademik, ujian, dan cuti bersama dalam tampilan kalender interaktif.',
-    icon: 'fas fa-calendar-alt'
-  },
-  {
-    title: 'RPS',
-    // description: 'Unggah dan perbarui Rencana Pembelajaran Semester (RPS) secara daring dengan format yang sesuai standar.',
-    icon: 'fas fa-tasks'
-  }
-],
-featuresmahasiswa: [
-  {
-    title: 'Dashboard Mahasiswa',
-    // description: 'Pusat kontrol mahasiswa untuk memantau akademik, keuangan, dan kegiatan secara real-time.',
-    // metadata: 'Info Terintegrasi',
-    // subDescription: 'KRS, KHS, Transkrip, Pembayaran'
-  },
-  {
-    title: 'Biodata',
-    // description: 'Update dan kelola data pribadi, kontak darurat, serta informasi penting lainnya.',
-    // metadata: 'Editable & Tersimpan Aman',
-    // subDescription: 'Nama, Alamat, NIK, Kontak'
-  },
-  {
-    title: 'Kalender Akademik',
-    // description: 'Lihat jadwal akademik lengkap mulai dari perkuliahan hingga cuti dan ujian.',
-    // metadata: 'Terjadwal & Terupdate',
-    // subDescription: 'Kuliah, Ujian, Libur, Cuti'
-  },
-  {
-    title: 'Kelas Saya',
-    // description: 'Pantau jadwal kelas, dosen pengajar, materi perkuliahan, dan presensi.',
-    // metadata: 'Tersinkronisasi Otomatis',
-    // subDescription: 'Daftar Mata Kuliah & Absensi'
-  },
-  {
-    title: 'KRS',
-    // description: 'Ambil mata kuliah sesuai semester aktif dan kuota kelas secara mandiri.',
-    // metadata: 'Pengisian Mandiri',
-    // subDescription: 'Mata Kuliah, Syarat, Validasi'
-  },
-  {
-    title: 'Kurikulum Program Studi',
-    // description: 'Lihat struktur kurikulum program studi lengkap dengan sks dan prasyaratnya.',
-    // metadata: 'Struktur Akademik',
-    // subDescription: 'Daftar MK, Semester, SKS'
-  },
-  {
-    title: 'Transkrip Nilai',
-    // description: 'Akses nilai lengkap seluruh semester dan rekap IPK secara otomatis.',
-    // metadata: 'Akurat & Transparan',
-    // subDescription: 'Nilai Semester & IPK'
-  },
-  {
-    title: 'Daftar Pengajuan',
-    // description: 'Lihat semua riwayat pengajuan surat, cuti, dan permohonan akademik lainnya.',
-    // metadata: 'Riwayat Lengkap',
-    // subDescription: 'Surat Aktif, Cuti, Validasi'
-  },
-  {
-    title: 'Formulir Pengajuan',
-    // description: 'Isi dan ajukan berbagai keperluan administratif kampus secara digital.',
-    // metadata: 'Form Online',
-    // subDescription: 'Keterangan, Cuti, Beasiswa'
-  },
-  {
-    title: 'Proposal',
-    // description: 'Ajukan proposal kegiatan, penelitian, atau tugas akhir dengan sistem pelacakan status.',
-    // metadata: 'Tracking Proposal',
-    // subDescription: 'Status, Catatan, Revisi'
-  },
-  {
-    title: 'Tugas Akhir',
-    // description: 'Kelola proses tugas akhir mulai dari bimbingan, unggah dokumen, hingga sidang.',
-    // metadata: 'Monitoring Lengkap',
-    // subDescription: 'Bimbingan, Upload, Nilai'
-  }
-],
-selectedFeature: {},
-    showAll: false
-}
-},
- computed: {
-    limitedFeatures() {
-      return this.showAll ? this.featuresadmin : this.featuresadmin.slice(0, 7);
-    },
-      limitedFeaturesdosen() {
-      return this.showAll ? this.featuresdosen : this.featuresdosen.slice(0, 7);
-    }
-  },
-methods: {
-      toggleFeatures() {
-      this.showAll = !this.showAll;
-    },
-
-}
-
-
-
-};
-</script> -->
-
 <script>
 export default {
   name: 'SiakadComponent',
   data() {
     return {
-      // isi data lengkapmu di sini
-featuresadmin: [
-  {
-    title: 'Mahasiswa',
-    // description: 'Kelola data mahasiswa secara lengkap, mulai dari biodata hingga riwayat akademik.',
-    icon: 'fas fa-user-graduate'
-  },
-  {
-    title: 'Pegawai',
-    // description: 'Atur data dosen dan tenaga kependidikan termasuk jabatan dan riwayat kerja.',
-    icon: 'fas fa-users-cog'
-  },
-  {
-    title: 'Kegiatan',
-    // description: 'Manajemen kegiatan akademik seperti seminar, pelatihan, dan organisasi kemahasiswaan.',
-    icon: 'fas fa-calendar-check',
-    subfeatures: [
-      { title: 'Kegiatan Akademik', icon: 'fas fa-university' },
-      { title: 'Kalender Akademik', icon: 'fas fa-calendar-alt' }
-    ]
-  },
-  {
-    title: 'Data Kurikulum',
-    // description: 'Mengelola mata kuliah, kurikulum prodi, prasyarat, ekivalensi, dan aturan akademik lainnya.',
-    icon: 'fas fa-book',
-    subfeatures: [
-      { title: 'Mata Kuliah', icon: 'fas fa-book' },
-      { title: 'Kurikulum Prodi', icon: 'fas fa-graduation-cap' },
-      { title: 'Prasyarat Mata Kuliah', icon: 'fas fa-clipboard-list' },
-      { title: 'Ekavalensi Mata Kuliah', icon: 'fas fa-exchange-alt' },
-      { title: 'Tahun Kurikulum', icon: 'fas fa-calendar' },
-      { title: 'Batas SKS', icon: 'fas fa-hourglass-half' },
-      { title: 'Skala Nilai', icon: 'fas fa-chart-line' },
-      { title: 'Komposisi Nilai', icon: 'fas fa-percentage' },
-      { title: 'Kurikulum Konsentrasi', icon: 'fas fa-project-diagram' }
-    ]
-  },
-  {
-    title: 'Data Kelas',
-    // description: 'Pengaturan kelas kuliah, jadwal, tahun ajaran, dan monitoring ruang.',
-    icon: 'fas fa-chalkboard-teacher',
-    subfeatures: [
-      { title: 'Kelas Kuliah', icon: 'fas fa-chalkboard' },
-      { title: 'Jadwal & Presentasi', icon: 'fas fa-calendar-day' },
-      { title: 'Tahun Ajaran', icon: 'fas fa-calendar' },
-      { title: 'Monitoring Ruang (Jadwal)', icon: 'fas fa-door-open' }
-    ]
-  },
-  {
-    title: 'Administrasi',
-    // description: 'Pengelolaan administrasi akademik seperti transfer dan pengajuan status mahasiswa.',
-    icon: 'fas fa-file-alt',
-    subfeatures: [
-      { title: 'Transfer Mahasiswa', icon: 'fas fa-random' },
-      { title: 'Pengajuan Status Mahasiswa', icon: 'fas fa-user-edit' }
-    ]
-  },
-  {
-    title: 'Proposal/Tugas Akhir',
-    // description: 'Manajemen proposal penelitian dan tugas akhir mahasiswa.',
-    icon: 'fas fa-file-signature',
-    subfeatures: [
-      { title: 'Daftar Proposal', icon: 'fas fa-file-alt' },
-      { title: 'Daftar Tugas Akhir', icon: 'fas fa-scroll' }
-    ]
-  },
-  {
-    title: 'Data Yudisium',
-    // description: 'Pengaturan data yudisium, penomoran dokumen, dan periode pelaksanaan.',
-    icon: 'fas fa-certificate',
-    subfeatures: [
-      { title: 'Daftar Yudisium', icon: 'fas fa-list' },
-      { title: 'Penomoran Dokumen', icon: 'fas fa-sort-numeric-up' },
-      { title: 'Periode Yudisium', icon: 'fas fa-calendar-check' }
-    ]
-  },
-  {
-    title: 'Kegiatan Pendukung',
-    // description: 'Pengelolaan kegiatan akademik tambahan dan kalender kampus.',
-    icon: 'fas fa-calendar-alt',
-    subfeatures: [
-      { title: 'Kegiatan Akademik', icon: 'fas fa-users' },
-      { title: 'Kalender Akademik', icon: 'fas fa-calendar-alt' }
-    ]
-  },
-  {
-    title: 'Data Wisuda',
-    // description: 'Pengaturan periode wisuda dan daftar peserta yang lulus.',
-    icon: 'fas fa-user-graduate',
-    subfeatures: [
-      { title: 'Periode Wisuda', icon: 'fas fa-calendar-day' },
-      { title: 'Peserta Wisuda', icon: 'fas fa-user-friends' }
-    ]
-  },
-  {
-    title: 'Institut',
-    // description: 'Pengaturan profil institusi termasuk logo, nama kampus, dan informasi resmi lainnya.',
-    icon: 'fas fa-university',
-    subfeatures: [
-      { title: 'Informasi Perguruan Tinggi', icon: 'fas fa-info-circle' },
-      { title: 'Fakultas', icon: 'fas fa-building' },
-      { title: 'Jurusan', icon: 'fas fa-sitemap' },
-      { title: 'Prodi', icon: 'fas fa-graduation-cap' },
-      { title: 'Fokus', icon: 'fas fa-bullseye' },
-      { title: 'Skala Pendidikan', icon: 'fas fa-ruler' },
-      { title: 'Skala Pendidikan Universitas', icon: 'fas fa-university' },
-      { title: 'Sistem Pembelajaran', icon: 'fas fa-laptop' },
-      { title: 'Gedung Pembelajaran', icon: 'fas fa-school' },
-      { title: 'Ruang Pembelajaran', icon: 'fas fa-door-open' },
-      { title: 'Aktivitas Akademik', icon: 'fas fa-tasks' },
-      { title: 'Kalender Akademik', icon: 'fas fa-calendar-alt' },
-      { title: 'Universitas Lain', icon: 'fas fa-globe' }
-    ]
-  },
-  {
-    title: 'Studi',
-    // description: 'Kelola program studi, kurikulum, mata kuliah, dan jenjang pendidikan.',
-    icon: 'fas fa-book-open',
-    subfeatures: [
-      { title: 'Jenis Mata Kuliah', icon: 'fas fa-book' },
-      { title: 'Kelompok Mata Kuliah', icon: 'fas fa-layer-group' },
-      { title: 'Bidang Keahlian', icon: 'fas fa-lightbulb' },
-      { title: 'Komponen Penilaian', icon: 'fas fa-percentage' },
-      { title: 'Sesi Perkuliahan', icon: 'fas fa-clock' },
-      { title: 'Sesi Pembelajaran', icon: 'fas fa-laptop-house' },
-      { title: 'Catatan Kehadiran', icon: 'fas fa-clipboard-check' },
-      { title: 'Kategori Pertemuan', icon: 'fas fa-list-ul' },
-      { title: 'Kategori Aktivitas Pendukung', icon: 'fas fa-people-carry' }
-    ]
-  },
-  {
-    title: 'Identitas',
-    // description: 'Manajemen identitas kampus dan unit akademik secara administratif.',
-    icon: 'fas fa-id-card-alt',
-    subfeatures: [
-      { title: 'Agama', icon: 'fas fa-praying-hands' },
-      { title: 'Pekerjaan', icon: 'fas fa-briefcase' },
-      { title: 'Pendapatan', icon: 'fas fa-money-bill-wave' }
-    ]
-  },
-  {
-    title: 'Tugas Akhir',
-    // description: 'Monitoring dan pengelolaan proses skripsi, tesis, dan disertasi.',
-    icon: 'fas fa-scroll',
-    subfeatures: [
-      { title: 'Pengaturan Tugas Akhir', icon: 'fas fa-cogs' },
-      { title: 'Unsur Nilai', icon: 'fas fa-percentage' },
-      { title: 'Pengaturan Nilai', icon: 'fas fa-cog' }
-    ]
-  },
-  {
-    title: 'Data Mahasiswa',
-    // description: 'Kelola seluruh database mahasiswa aktif dan non-aktif dengan mudah.',
-    icon: 'fas fa-database',
-    subfeatures: [
-      { title: 'Status Mahasiswa', icon: 'fas fa-user-check' },
-      { title: 'Kategori Hunian', icon: 'fas fa-home' },
-      { title: 'Transportasi', icon: 'fas fa-bus' },
-      { title: 'Kebutuhan Khusus', icon: 'fas fa-wheelchair' },
-      { title: 'Jenis Dokumen Tambahan Biodata', icon: 'fas fa-file-alt' },
-      { title: 'Dokumen Tambahan Biodata', icon: 'fas fa-folder-open' }
-    ]
-  },
-  {
-    title: 'Pegawai',
-    // description: 'Pengelolaan data pegawai untuk kepentingan administrasi dan akademik.',
-    icon: 'fas fa-briefcase',
-    subfeatures: [
-      { title: 'Klasifikasi Pegawai', icon: 'fas fa-id-badge' },
-      { title: 'Kategori/Jabatan', icon: 'fas fa-user-tie' },
-      { title: 'Peran Khusus', icon: 'fas fa-star' },
-      { title: 'Status Pegawai', icon: 'fas fa-user' },
-      { title: 'Peran Struktural', icon: 'fas fa-sitemap' },
-      { title: 'Status Keaktifan', icon: 'fas fa-toggle-on' }
-    ]
-  },
-  {
-    title: 'Wilayah',
-    // description: 'Manajemen wilayah domisili mahasiswa untuk keperluan statistik dan zonasi.',
-    icon: 'fas fa-map-marked-alt',
-    subfeatures: [
-      { title: 'Negara', icon: 'fas fa-flag' },
-      { title: 'Provinsi', icon: 'fas fa-map' },
-      { title: 'Kota', icon: 'fas fa-city' },
-      { title: 'Kecamatan', icon: 'fas fa-map-pin' }
-    ]
-  },
-  {
-    title: 'Arsip Dosen',
-    // description: 'Penyimpanan data riwayat aktivitas dan dokumen dosen secara digital.',
-    icon: 'fas fa-archive',
-    subfeatures: [
-      { title: 'Rekap Jadwal Mengajar Dosen', icon: 'fas fa-clipboard' }
-    ]
-  },
-  {
-    title: 'Arsip Mahasiswa',
-    // description: 'Manajemen dokumen penting mahasiswa: ijazah, sertifikat, transkrip.',
-    icon: 'fas fa-folder-open',
-    subfeatures: [
-      { title: 'KHS', icon: 'fas fa-file-alt' },
-      { title: 'KRS', icon: 'fas fa-file-alt' },
-      { title: 'Daftar Mahasiswa Keseluruhan', icon: 'fas fa-users' },
-      { title: 'Daftar Mahasiswa Per Periode', icon: 'fas fa-user-clock' },
-      { title: 'Daftar Yudisium', icon: 'fas fa-list' }
-    ]
-  },
-  {
-    title: 'Periode Akademik',
-    description: 'Atur semester aktif dan jadwal akademik tahunan kampus.',
-    icon: 'fas fa-calendar-alt'
-  }
-],
-featuresdosen: [
-  {
-    title: 'Daftar Proposal',
-    description: 'Kelola pengajuan proposal mahasiswa secara digital, termasuk pemantauan status dan komentar pembimbing.',
-    icon: 'fas fa-file-signature'
-  },
-  {
-    title: 'Daftar Skripsi',
-    // description: 'Pantau seluruh proses skripsi dari pendaftaran, bimbingan, hingga penilaian akhir secara efisien.',
-    icon: 'fas fa-book-open'
-  },
-  {
-    title: 'Jadwal Sidang',
-    // description: 'Atur dan tinjau jadwal sidang mahasiswa secara otomatis dan terintegrasi dengan kalender akademik.',
-    icon: 'fas fa-calendar-check'
-  },
-  {
-    title: 'Kelas Saya',
-    // description: 'Kelola perkuliahan Anda dengan daftar kelas, presensi, dan materi yang terdokumentasi rapi.',
-    icon: 'fas fa-chalkboard-teacher'
-  },
-  {
-    title: 'Kalender Akademik',
-    // description: 'Lihat kegiatan akademik, ujian, dan cuti bersama dalam tampilan kalender interaktif.',
-    icon: 'fas fa-calendar-alt'
-  },
-  {
-    title: 'RPS',
-    // description: 'Unggah dan perbarui Rencana Pembelajaran Semester (RPS) secara daring dengan format yang sesuai standar.',
-    icon: 'fas fa-tasks'
-  }
-],
-featuresmahasiswa: [
-  {
-    title: 'Dashboard Mahasiswa',
-    // description: 'Pusat kontrol mahasiswa untuk memantau akademik, keuangan, dan kegiatan secara real-time.',
-    // metadata: 'Info Terintegrasi',
-    // subDescription: 'KRS, KHS, Transkrip, Pembayaran'
-  },
-  {
-    title: 'Biodata',
-    // description: 'Update dan kelola data pribadi, kontak darurat, serta informasi penting lainnya.',
-    // metadata: 'Editable & Tersimpan Aman',
-    // subDescription: 'Nama, Alamat, NIK, Kontak'
-  },
-  {
-    title: 'Kalender Akademik',
-    // description: 'Lihat jadwal akademik lengkap mulai dari perkuliahan hingga cuti dan ujian.',
-    // metadata: 'Terjadwal & Terupdate',
-    // subDescription: 'Kuliah, Ujian, Libur, Cuti'
-  },
-  {
-    title: 'Kelas Saya',
-    // description: 'Pantau jadwal kelas, dosen pengajar, materi perkuliahan, dan presensi.',
-    // metadata: 'Tersinkronisasi Otomatis',
-    // subDescription: 'Daftar Mata Kuliah & Absensi'
-  },
-  {
-    title: 'KRS',
-    // description: 'Ambil mata kuliah sesuai semester aktif dan kuota kelas secara mandiri.',
-    // metadata: 'Pengisian Mandiri',
-    // subDescription: 'Mata Kuliah, Syarat, Validasi'
-  },
-  {
-    title: 'Kurikulum Program Studi',
-    // description: 'Lihat struktur kurikulum program studi lengkap dengan sks dan prasyaratnya.',
-    // metadata: 'Struktur Akademik',
-    // subDescription: 'Daftar MK, Semester, SKS'
-  },
-  {
-    title: 'Transkrip Nilai',
-    // description: 'Akses nilai lengkap seluruh semester dan rekap IPK secara otomatis.',
-    // metadata: 'Akurat & Transparan',
-    // subDescription: 'Nilai Semester & IPK'
-  },
-  {
-    title: 'Daftar Pengajuan',
-    // description: 'Lihat semua riwayat pengajuan surat, cuti, dan permohonan akademik lainnya.',
-    // metadata: 'Riwayat Lengkap',
-    // subDescription: 'Surat Aktif, Cuti, Validasi'
-  },
-  {
-    title: 'Formulir Pengajuan',
-    // description: 'Isi dan ajukan berbagai keperluan administratif kampus secara digital.',
-    // metadata: 'Form Online',
-    // subDescription: 'Keterangan, Cuti, Beasiswa'
-  },
-  {
-    title: 'Proposal',
-    // description: 'Ajukan proposal kegiatan, penelitian, atau tugas akhir dengan sistem pelacakan status.',
-    // metadata: 'Tracking Proposal',
-    // subDescription: 'Status, Catatan, Revisi'
-  },
-  {
-    title: 'Tugas Akhir',
-    // description: 'Kelola proses tugas akhir mulai dari bimbingan, unggah dokumen, hingga sidang.',
-    // metadata: 'Monitoring Lengkap',
-    // subDescription: 'Bimbingan, Upload, Nilai'
-  }
-],
+      featuresadmin: [
+        { title: 'Mahasiswa', icon: 'fas fa-user-graduate' },
+        { title: 'Pegawai', icon: 'fas fa-users-cog' },
+        {
+          title: 'Kegiatan',
+          icon: 'fas fa-calendar-check',
+          subfeatures: [
+            { title: 'Kegiatan Akademik', icon: 'fas fa-university' },
+            { title: 'Kalender Akademik', icon: 'fas fa-calendar-alt' }
+          ]
+        },
+        {
+          title: 'Data Kurikulum',
+          icon: 'fas fa-book',
+          subfeatures: [
+            { title: 'Mata Kuliah', icon: 'fas fa-book' },
+            { title: 'Kurikulum Prodi', icon: 'fas fa-graduation-cap' },
+            { title: 'Prasyarat Mata Kuliah', icon: 'fas fa-clipboard-list' },
+            { title: 'Ekavalensi Mata Kuliah', icon: 'fas fa-exchange-alt' },
+            { title: 'Tahun Kurikulum', icon: 'fas fa-calendar' },
+            { title: 'Batas SKS', icon: 'fas fa-hourglass-half' },
+            { title: 'Skala Nilai', icon: 'fas fa-chart-line' },
+            { title: 'Komposisi Nilai', icon: 'fas fa-percentage' },
+            { title: 'Kurikulum Konsentrasi', icon: 'fas fa-project-diagram' }
+          ]
+        },
+        {
+          title: 'Data Kelas',
+          icon: 'fas fa-chalkboard-teacher',
+          subfeatures: [
+            { title: 'Kelas Kuliah', icon: 'fas fa-chalkboard' },
+            { title: 'Jadwal & Presentasi', icon: 'fas fa-calendar-day' },
+            { title: 'Tahun Ajaran', icon: 'fas fa-calendar' },
+            { title: 'Monitoring Ruang (Jadwal)', icon: 'fas fa-door-open' }
+          ]
+        },
+        {
+          title: 'Administrasi',
+          icon: 'fas fa-file-alt',
+          subfeatures: [
+            { title: 'Transfer Mahasiswa', icon: 'fas fa-random' },
+            { title: 'Pengajuan Status Mahasiswa', icon: 'fas fa-user-edit' }
+          ]
+        },
+        {
+          title: 'Proposal/Tugas Akhir',
+          icon: 'fas fa-file-signature',
+          subfeatures: [
+            { title: 'Daftar Proposal', icon: 'fas fa-file-alt' },
+            { title: 'Daftar Tugas Akhir', icon: 'fas fa-scroll' }
+          ]
+        },
+        {
+          title: 'Data Yudisium',
+          icon: 'fas fa-certificate',
+          subfeatures: [
+            { title: 'Daftar Yudisium', icon: 'fas fa-list' },
+            { title: 'Penomoran Dokumen', icon: 'fas fa-sort-numeric-up' },
+            { title: 'Periode Yudisium', icon: 'fas fa-calendar-check' }
+          ]
+        },
+        {
+          title: 'Kegiatan Pendukung',
+          icon: 'fas fa-calendar-alt',
+          subfeatures: [
+            { title: 'Kegiatan Akademik', icon: 'fas fa-users' },
+            { title: 'Kalender Akademik', icon: 'fas fa-calendar-alt' }
+          ]
+        },
+        {
+          title: 'Data Wisuda',
+          icon: 'fas fa-user-graduate',
+          subfeatures: [
+            { title: 'Periode Wisuda', icon: 'fas fa-calendar-day' },
+            { title: 'Peserta Wisuda', icon: 'fas fa-user-friends' }
+          ]
+        },
+        {
+          title: 'Institut',
+          icon: 'fas fa-university',
+          subfeatures: [
+            { title: 'Informasi Perguruan Tinggi', icon: 'fas fa-info-circle' },
+            { title: 'Fakultas', icon: 'fas fa-building' },
+            { title: 'Jurusan', icon: 'fas fa-sitemap' },
+            { title: 'Prodi', icon: 'fas fa-graduation-cap' },
+            { title: 'Fokus', icon: 'fas fa-bullseye' },
+            { title: 'Skala Pendidikan', icon: 'fas fa-ruler' },
+            { title: 'Skala Pendidikan Universitas', icon: 'fas fa-university' },
+            { title: 'Sistem Pembelajaran', icon: 'fas fa-laptop' },
+            { title: 'Gedung Pembelajaran', icon: 'fas fa-school' },
+            { title: 'Ruang Pembelajaran', icon: 'fas fa-door-open' },
+            { title: 'Aktivitas Akademik', icon: 'fas fa-tasks' },
+            { title: 'Kalender Akademik', icon: 'fas fa-calendar-alt' },
+            { title: 'Universitas Lain', icon: 'fas fa-globe' }
+          ]
+        },
+        {
+          title: 'Studi',
+          icon: 'fas fa-book-open',
+          subfeatures: [
+            { title: 'Jenis Mata Kuliah', icon: 'fas fa-book' },
+            { title: 'Kelompok Mata Kuliah', icon: 'fas fa-layer-group' },
+            { title: 'Bidang Keahlian', icon: 'fas fa-lightbulb' },
+            { title: 'Komponen Penilaian', icon: 'fas fa-percentage' },
+            { title: 'Sesi Perkuliahan', icon: 'fas fa-clock' },
+            { title: 'Sesi Pembelajaran', icon: 'fas fa-laptop-house' },
+            { title: 'Catatan Kehadiran', icon: 'fas fa-clipboard-check' },
+            { title: 'Kategori Pertemuan', icon: 'fas fa-list-ul' },
+            { title: 'Kategori Aktivitas Pendukung', icon: 'fas fa-people-carry' }
+          ]
+        },
+        {
+          title: 'Identitas',
+          icon: 'fas fa-id-card-alt',
+          subfeatures: [
+            { title: 'Agama', icon: 'fas fa-praying-hands' },
+            { title: 'Pekerjaan', icon: 'fas fa-briefcase' },
+            { title: 'Pendapatan', icon: 'fas fa-money-bill-wave' }
+          ]
+        },
+        {
+          title: 'Tugas Akhir',
+          icon: 'fas fa-scroll',
+          subfeatures: [
+            { title: 'Pengaturan Tugas Akhir', icon: 'fas fa-cogs' },
+            { title: 'Unsur Nilai', icon: 'fas fa-percentage' },
+            { title: 'Pengaturan Nilai', icon: 'fas fa-cog' }
+          ]
+        },
+        {
+          title: 'Data Mahasiswa',
+          icon: 'fas fa-database',
+          subfeatures: [
+            { title: 'Status Mahasiswa', icon: 'fas fa-user-check' },
+            { title: 'Kategori Hunian', icon: 'fas fa-home' },
+            { title: 'Transportasi', icon: 'fas fa-bus' },
+            { title: 'Kebutuhan Khusus', icon: 'fas fa-wheelchair' },
+            { title: 'Jenis Dokumen Tambahan Biodata', icon: 'fas fa-file-alt' },
+            { title: 'Dokumen Tambahan Biodata', icon: 'fas fa-folder-open' }
+          ]
+        },
+        {
+          title: 'Pegawai',
+          icon: 'fas fa-briefcase',
+          subfeatures: [
+            { title: 'Klasifikasi Pegawai', icon: 'fas fa-id-badge' },
+            { title: 'Kategori/Jabatan', icon: 'fas fa-user-tie' },
+            { title: 'Peran Khusus', icon: 'fas fa-star' },
+            { title: 'Status Pegawai', icon: 'fas fa-user' },
+            { title: 'Peran Struktural', icon: 'fas fa-sitemap' },
+            { title: 'Status Keaktifan', icon: 'fas fa-toggle-on' }
+          ]
+        },
+        {
+          title: 'Wilayah',
+          icon: 'fas fa-map-marked-alt',
+          subfeatures: [
+            { title: 'Negara', icon: 'fas fa-flag' },
+            { title: 'Provinsi', icon: 'fas fa-map' },
+            { title: 'Kota', icon: 'fas fa-city' },
+            { title: 'Kecamatan', icon: 'fas fa-map-pin' }
+          ]
+        },
+        {
+          title: 'Arsip Dosen',
+          icon: 'fas fa-archive',
+          subfeatures: [
+            { title: 'Rekap Jadwal Mengajar Dosen', icon: 'fas fa-clipboard' }
+          ]
+        },
+        {
+          title: 'Arsip Mahasiswa',
+          icon: 'fas fa-folder-open',
+          subfeatures: [
+            { title: 'KHS', icon: 'fas fa-file-alt' },
+            { title: 'KRS', icon: 'fas fa-file-alt' },
+            { title: 'Daftar Mahasiswa Keseluruhan', icon: 'fas fa-users' },
+            { title: 'Daftar Mahasiswa Per Periode', icon: 'fas fa-user-clock' },
+            { title: 'Daftar Yudisium', icon: 'fas fa-list' }
+          ]
+        },
+        { title: 'Periode Akademik', icon: 'fas fa-calendar-alt' }
+      ],
+
+      featuresdosen: [
+        { title: 'Daftar Proposal', icon: 'fas fa-file-signature' },
+        { title: 'Daftar Skripsi', icon: 'fas fa-book-open' },
+        { title: 'Jadwal Sidang', icon: 'fas fa-calendar-check' },
+        { title: 'Kelas Saya', icon: 'fas fa-chalkboard-teacher' },
+        { title: 'Kalender Akademik', icon: 'fas fa-calendar-alt' },
+        { title: 'RPS', icon: 'fas fa-tasks' }
+      ],
+
+      featuresmahasiswa: [
+        { title: 'Dashboard Mahasiswa', icon: 'fas fa-tachometer-alt' },
+        { title: 'Biodata', icon: 'fas fa-address-card' },
+        { title: 'Kalender Akademik', icon: 'fas fa-calendar-alt' },
+        { title: 'Kelas Saya', icon: 'fas fa-chalkboard-teacher' },
+        { title: 'KRS', icon: 'fas fa-file-alt' },
+        { title: 'Kurikulum Program Studi', icon: 'fas fa-book-open' },
+        { title: 'Transkrip Nilai', icon: 'fas fa-scroll' },
+        { title: 'Daftar Pengajuan', icon: 'fas fa-file-signature' },
+        { title: 'Formulir Pengajuan', icon: 'fas fa-wpforms' },
+        { title: 'Proposal', icon: 'fas fa-lightbulb' },
+        { title: 'Tugas Akhir', icon: 'fas fa-graduation-cap' }
+      ],
+
       showAllAdmin: false,
       showAllDosen: false,
-      showAllMahasiswa: false
-    };
+      showAllMahasiswa: false,
+      openSubfeatures: {}
+    }
   },
   computed: {
     limitedFeaturesAdmin() {
-      return this.showAllAdmin ? this.featuresadmin : this.featuresadmin.slice(0, 7);
+      return this.showAllAdmin ? this.featuresadmin : this.featuresadmin.slice(0, 6)
     },
     limitedFeaturesDosen() {
-      return this.showAllDosen ? this.featuresdosen : this.featuresdosen.slice(0, 7);
+      return this.showAllDosen ? this.featuresdosen : this.featuresdosen.slice(0, 6)
     },
     limitedFeaturesMahasiswa() {
-      return this.showAllMahasiswa ? this.featuresmahasiswa : this.featuresmahasiswa.slice(0, 7);
+      return this.showAllMahasiswa ? this.featuresmahasiswa : this.featuresmahasiswa.slice(0, 6)
     }
   },
   methods: {
     toggleFeatures(group) {
-      if (group === 'admin') {
-        this.showAllAdmin = !this.showAllAdmin;
-      } else if (group === 'dosen') {
-        this.showAllDosen = !this.showAllDosen;
-      } else if (group === 'mahasiswa') {
-        this.showAllMahasiswa = !this.showAllMahasiswa;
+      if (group === 'admin') this.showAllAdmin = !this.showAllAdmin
+      else if (group === 'dosen') this.showAllDosen = !this.showAllDosen
+      else if (group === 'mahasiswa') this.showAllMahasiswa = !this.showAllMahasiswa
+    },
+    toggleSubfeatures(feature) {
+      if (feature.subfeatures) {
+        this.$set(this.openSubfeatures, feature.title, !this.openSubfeatures[feature.title])
       }
+    },
+    isSubfeatureOpen(feature) {
+      return this.openSubfeatures[feature.title]
     }
   }
-};
+}
 </script>
+
+
 <style scoped>
 .siakad-page {
   font-family: 'Poppins', sans-serif;
@@ -984,7 +584,7 @@ featuresmahasiswa: [
 }
 
 .btn-cta:hover {
-  background-color: #c74319;
+  background-color: #0a7366;
 }
 
 .hero-image {
@@ -1005,13 +605,17 @@ featuresmahasiswa: [
   flex: 1 1 300px;
   max-width: 350px;
   background: #fff;
-  border: 1px solid #e5e8ec;
+  border: 2px solid #e5e8ec;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  /* * Ini adalah perbaikan utamanya
+  * Membuat setiap kolom memiliki tinggi mandiri
+  */
+  align-self: flex-start; 
 }
 
 .hr-border{
@@ -1026,7 +630,7 @@ featuresmahasiswa: [
 
 .feature-head {
   padding: 20px;
-  border-bottom: 1px solid #e5e8ec;
+  /* border-bottom: 1px solid #e5e8ec; */
   text-align: center;
 }
 
@@ -1044,120 +648,106 @@ featuresmahasiswa: [
   margin-bottom: 10px;
 }
 
-/* Daftar fitur */
 .features-item {
   list-style: none;
+  padding: 0;
   margin: 0;
 }
 
-.list-feature {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 10px 0;
-  padding-left: 30px;
+.features-item li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #f0f0f0;
 }
 
-.list-feature:last-child {
+.features-item li:last-child {
   border-bottom: none;
 }
 
-.list-feature i {
-  color: #000000;
-  font-size: 1rem;
-  margin-top: 4px;
+.features-item .list-feature {
+  gap: 15px;
 }
 
-.list-feature h5 {
-  font-size: 0.95rem;
-  margin: 0;
+.features-item .list-feature i {
+  color: #2e3131;
+  font-size: 1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.features-item .list-feature h5 {
+  font-size: 1rem;
   font-weight: 400;
   color: #333;
-  text-align: left;
-  min-width: 200px;
+  margin: 0;
 }
+/* Gaya untuk daftar sub-fitur */
+.sub-features-list {
+  list-style: none;
+  padding-left: 50px; /* Indentasi agar terlihat sebagai sub-item */
+  padding-top: 10px;
+  border-top: 1px dashed #e0e0e0;
+  margin-top: 10px;
+}
+
+.sub-features-list li {
+  padding: 5px 0;
+}
+
+.sub-feature-item i {
+  font-size: 0.8rem !important;
+  margin-right: 10px;
+  color: #6c757d;
+   line-height: 1.5; /* Sesuaikan nilai ini */
+   text-align: center;
+}
+
+.sub-feature-item h5 {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #555;
+  margin: 0;
+   line-height: 1.5; /* Sesuaikan nilai ini */
+}
+
+/* Transisi untuk ikon panah */
+.toggle-icon {
+  transition: transform 0.3s ease;
+}
+
+.toggle-icon.rotated {
+  transform: rotate(90deg);
+}
+
 .see-more-wrapper {
-  margin-top: 15px;
+  padding: 15px;
 }
-
 .see-more-btn {
-  background-color: darkgreen;  /* warna dasar */
-  color: #fff;                  /* warna tulisan */
-  border: none;                 /* hilangkan border */
-  padding: 10px 20px;           /* ruang dalam */
-  border-radius: 25px;          /* bikin rounded */
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;              /* pointer pas hover */
-  transition: all 0.3s ease;    /* animasi halus */
-}
-
-.see-more-btn:hover {
-  background-color: #0b5c0b;    /* warna saat hover */
-  transform: translateY(-2px);  /* sedikit naik */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.see-more-btn:active {
-  transform: translateY(0);     /* kembali normal saat ditekan */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-/*  
-.section-title{
-  font-size: 40px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
-  margin-top: 50px;
-  color: #57075e;
-}
-.section-subtitle{
-  font-size: 20px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
-}
-.feature-card {
-  background-color: #ebebeb;
-  border-radius: 0 0  20px 20px !important;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-  overflow: hidden;
-  width: 80%;
-  color: rgb(81, 81, 81);
-  
-}
-.feature-card-header {
-  height: 150px;
-  position: relative;
-}
-.card-header-bg-image {
-  border-radius: 0px !important;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.9);
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 25px;
-  padding: 2px;
-}
-.card-header-tag {
-  position: relative;
-  z-index: 1;
-  background-color: rgba(255,255,255,0.25);
+  background-color: #075E54;
   color: #fff;
+  border: none;
+  padding: 10px 20px;
   border-radius: 5px;
-  font-size: 0.85em;
-  font-weight: 600;
-} */
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+.see-more-btn:hover {
+  background-color: #0a7366;
+}
+
 
 .cta-section {
-  background: linear-gradient(45deg, #8b8b8b 0%, #8c8c8c 100%);
-  color: #023516;
+  background: linear-gradient(45deg, #263f28 0%, #28451e 100%);
+  color: #ffffff;
   font-weight: bold;
   text-align: center;
 }
 .cta-section .btn {
-  background-color: #023516;
-  color: #fff;
+  background-color: #ffffff;
+  color: #0c3b0e;
   font-weight: bold;
   border-radius: 8px;
   padding: 12px 30px;
@@ -1253,107 +843,6 @@ featuresmahasiswa: [
   min-height: 100%;
   height: 100%;
 }
-/* .fitur-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #075E54;
-}
-
-.modal-content {
-  background-color: #fff;
-  transition: all 0.3s ease;
-}
-
-.modal-header {
-  padding: 1rem 1.5rem;
-  background-color: green;
-}
-.fitur-card {
-  border-radius: 16px;
-  background-color: #fff;
-  border: 2px solid  #075E54;;
-  transition: 0.3s ease;
-}
-.fitur-card:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
-  transform: translateY(-4px);
-}
-.fitur-icon {
-  width: 48px;
-  height: 48px;
-}
-
-
-.features-section {
-  font-family: 'Montserrat', 'Poppins', sans-serif;
-  background-color: #ededed !important;
-}
-
-.section-title{
-  font-size: 40px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
-}
-.section-subtitle{
-  font-size: 20px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
-}
-.feature-card {
-  background-color: whitesmoke;
-  border-radius: 15px !important;
-  border: 2px solid #57075e;;
-  overflow: hidden;
-  width: 280px;
-  color: rgb(81, 81, 81);
-  height: 350px !important;
-  
-}
-.feature-card-header {
-  height: 150px;
-  position: relative;
-}
-.card-header-bg-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.9);
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 15px;
-  padding: 10px;
-}
-.card-header-tag {
-  position: relative;
-  z-index: 1;
-  background-color: rgba(255,255,255,0.25);
-  color: #fff;
-  border-radius: 5px;
-  font-size: 0.85em;
-  font-weight: 600;
-}
-
-.feature-card-content h5 {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-.feature-card-content p {
-  font-size: 0.95em;
-  color: #003049;
-
-}
-.metadata, .sub-description {
-  font-size: 0.9rem;
-  color: #ccc;
-  display: flex;
-  align-items: center;
-}
-
-.metadata i,
-.sub-description i {
-  margin-right: 8px;
-} */
-
-
 @media (max-width: 768px) {
 
   .siakad-page{

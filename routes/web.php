@@ -16,6 +16,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/product/{any?}', function () {
-    return view('page.product'); // Blade kosong khusus Vue
+    return view('page.product');
 })->where('any', '.*');
 Auth::routes();

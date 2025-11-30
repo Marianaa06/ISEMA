@@ -25,34 +25,59 @@
       </div>
     </section>
 
-<section class="reporting-slider-section py-5">
-  <div class="container-fluid">
-    <div class="text-center mb-4">
-      <h2 class="fw-bold section-title fs-2">Fitur Unggulan Reporting</h2>
-      <p class="section-subtitle fw-bold fs-5">Membantu pengambilan keputusan berbasis data</p>
-    </div>
-
-    <div class="scroll-container d-flex flex-nowrap overflow-auto px-4">
-      <div
-        class="reporting-slide-card me-3 flex-shrink-0 text-center bg-white shadow-sm"
-        v-for="(feature, index) in features"
-        :key="index"
-      >
-        <img :src="feature.image" alt="icon" class="img-fluid mb-2" />
-        <h6 class="fw-semibold">{{ feature.title }}</h6>
+    <section class="why-and-features-section py-5 bg-light">
+      <div class="container px-5">
+        <div class="row g-4 justify-content-center ">
+          <div class="col-lg-6 d-flex">
+            <div class="why-container p-4 h-100">
+              <div class="text-center">
+                <h2 class="why-title">Why Choose Reporting ISEMA?</h2>
+                <hr class="hr-border" />
+                <p class="why-desc mb-3">
+                  Akses laporan real-time dengan grafik interaktif, rekap nilai, kehadiran, dan performa institusi dalam satu dashboard.
+                </p>
+                <p class="why-desc mb-3">
+                  Membuat pengambilan keputusan berbasis data menjadi lebih mudah dan cepat bagi tim kepemimpinan di kampus.
+                </p>
+                <p class="why-note">
+                  <i class="fas fa-chart-line"></i> Data Visualisasi | <i class="fas fa-sync-alt"></i> Laporan Real-Time | <i class="fas fa-database"></i> Integrasi Otomatis
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex">
+            <div class="feature-container h-100">
+              <div class="feature-head">
+                <h2 class="feature-title text-center">Fitur Unggulan Reporting</h2>
+                <p class="feature-subtitle">Membantu pengambilan keputusan berbasis data</p>
+                <hr class="hr-border" />
+                <ul class="features-item">
+                  <li v-for="(feature, index) in displayedFeatures" :key="'reporting-' + index">
+                    <div class="list-feature d-flex align-items-center">
+                      <i :class="['mb-1', 'fa-1x', feature.icon]"></i>
+                      <h5 class="mt-1 mb-1">{{ feature.title }}</h5>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="see-more-wrapper text-center">
+                <button class="see-more-btn" @click="toggleFeatures">
+                  {{ showAllFeatures ? 'See Less' : 'See More' }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="cta-section py-5">
-  <div class="container-container text-center">
-    <h2 class="mb-3 fw-bold fs-3">Siap Meningkatkan Efisiensi Pelaporan Kampus?</h2>
-    <p class="mb-4 fw-bold fs-5 text-dark">Hubungi kami untuk demo sistem Reporting ISEMA dan lihat bagaimana data bisa menjadi keputusan cerdas.</p>
-    <button class="btn px-4 py-2">Hubungi Kami</button>
-  </div>
-</section>
-
+    <section class="cta-section py-5">
+      <div class="container text-center">
+        <h2 class="mb-3 fw-bold fs-3">Siap Meningkatkan Efisiensi Pelaporan Kampus?</h2>
+        <p class="mb-4 fw-bold fs-5 text-dark">Hubungi kami untuk demo sistem Reporting ISEMA dan lihat bagaimana data bisa menjadi keputusan cerdas.</p>
+        <button class="btn px-4 py-2">Hubungi Kami</button>
+      </div>
+    </section>
   </div>
 </template>
 <script>
@@ -60,37 +85,34 @@ export default {
   name: 'ReportingComponent',
   data() {
     return {
-features: [
-  {
-    image: 'https://assets-a1.kompasiana.com/items/album/2020/04/10/whatsapp-image-2020-04-10-at-01-09-28-5e8f674e097f360a8d69e443.jpeg',
-    title: 'Dashboard Statistik'
+      features: [
+        { title: 'Dashboard Statistik', icon: 'fas fa-chart-pie' },
+        { title: 'Laporan Akademik', icon: 'fas fa-graduation-cap' },
+        { title: 'Laporan Kepemimpinan', icon: 'fas fa-user-tie' },
+        { title: 'Ekspor Data', icon: 'fas fa-file-export' },
+        { title: 'Notifikasi Otomatis', icon: 'fas fa-bell' },
+        { title: 'Sinkronisasi Real-Time', icon: 'fas fa-sync-alt' },
+        { title: 'Laporan Keuangan', icon: 'fas fa-chart-bar' },
+        { title: 'Analisis Prediktif', icon: 'fas fa-brain' },
+        { title: 'Integrasi Sistem', icon: 'fas fa-plug' }
+      ],
+      showAllFeatures: false,
+      visibleFeatures: 6 // Jumlah fitur yang ditampilkan di awal
+    };
   },
-  {
-    image: 'https://statik.tempo.co/data/2024/03/06/id_1285164/1285164_720.jpg',
-    title: 'Laporan Akademik'
+  computed: {
+    displayedFeatures() {
+      return this.showAllFeatures ? this.features : this.features.slice(0, this.visibleFeatures);
+    }
   },
-  {
-    image: 'https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/06/03/pexels-tracy-le-blanc-607812-2349088402.jpg',
-    title: 'Laporan Kepemimpinan'
-  },
-  {
-    image: 'https://cdn0-production-images-kly.akamaized.net/JdvySvdqsVwq9ailosUQSkn7460=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/668602/original/aplikasi%20mobile.jpg',
-    title: 'Ekspor Data'
-  },
-  {
-    image: 'https://cdn1-production-images-kly.akamaized.net/XfTGAaBboHDMpoB_q_jkSHE-Mg0=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/1543146/original/026949400_1490095734-komputer.jpg',
-    title: 'Notifikasi Otomatis'
-  },
-  {
-    image: 'https://www.nesabamedia.com/wp-content/uploads/2020/12/Perbedaan-Software-dan-Aplikasi.jpg',
-    title: 'Sinkronisasi Real-Time'
-  }
-]
-
+  methods: {
+    toggleFeatures() {
+      this.showAllFeatures = !this.showAllFeatures;
     }
   }
-}
+};
 </script>
+
 <style scoped>
 .reporting-page {
   font-family: 'Poppins', sans-serif;
@@ -100,7 +122,6 @@ features: [
 }
 
 .hero-section {
-  /* background: linear-gradient(135deg, #083b66, #0f4c75); */
   background-image: url(/assets/reporting-bg.png);
   background-size: cover;
   color: #000000;
@@ -146,52 +167,126 @@ features: [
   border: none;
 }
 
-.reporting-slider-section {
+/* --- CSS BARU UNTUK WHY & FEATURES --- */
+.why-and-features-section {
   background-color: #f8f9fa;
   font-family: 'Poppins', sans-serif;
 }
-
-.section-title {
-  color: #000000;
+.why-and-features-section .row {
+  display: flex;
+  align-items: flex-start;
 }
-
-.reporting-slide-card {
-  width: 160px;
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid #ddd;
-  transition: all 0.3s ease;
+.why-container {
+  background: #fff;
+  border: 1px solid #e5e8ec;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-color: #8d0202;
+  min-height: 490px;
 }
-
-.reporting-slide-card:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  transform: translateY(-3px);
+.why-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #8d0202;
 }
-
-.reporting-slide-card img {
+.why-desc {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.7;
+}
+.why-note {
+  font-style: italic;
+  color: #8d0202;
+  font-size: 0.95rem;
+  margin-top: 1.5rem;
+}
+.feature-container {
+  background: #fff;
+  border: 1px solid #e5e8ec;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-color: #8d0202;
+}
+.feature-head {
+  padding: 20px;
+  text-align: center;
+}
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #8d0202;
+  margin-bottom: 5px;
+}
+.feature-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+}
+.hr-border {
+  border-top: 1px solid #ccc;
+  margin: 15px 0;
+}
+.features-item {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.features-item li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.features-item li:last-child {
+  border-bottom: none;
+}
+.features-item .list-feature {
+  gap: 15px;
+}
+.features-item .list-feature i {
+  color: #8d0202;
+  font-size: 1rem;
+  width: 20px;
+  text-align: center;
+}
+.features-item .list-feature h5 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333;
+  margin: 0;
+}
+.see-more-wrapper {
+  padding: 15px;
+}
+.see-more-btn {
+  background-color: #8d0202;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
   width: 100%;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 6px;
+  display: block;
+  box-sizing: border-box;
+}
+.see-more-btn:hover {
+  background-color: #a30202;
 }
 
-
-
+/* CTA */
 .cta-section {
   background: linear-gradient(45deg, #b5b5b5 0%, #858585 100%);
-  color: #8d0202;;
+  color: #8d0202;
   text-align: center;
 }
 .cta-section .btn {
   background-color: #fff;
-  color: #8d0202;;
+  color: #8d0202;
   font-weight: bold;
   border-radius: 8px;
   padding: 12px 30px;
   border: none;
 }
 @media (max-width: 575.98px) {
-
   .reporting-page{
     padding: 0px;
   }

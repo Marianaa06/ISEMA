@@ -1,6 +1,5 @@
 <template>
   <div class="modul-page">
-    <!-- Hero Section -->
     <section class="hero-section d-flex align-items-center">
       <div class="container">
         <div class="row align-items-center">
@@ -13,7 +12,6 @@
               Atur pengelolaan dokumen akademik dengan sistem modern yang terintegrasi.
             </p>
             <ul class="hero-benefits">
-              <!-- <li>Manajemen pembayaran dan tagihan mahasiswa</li> -->
               <li>Repository dokumen: skripsi, jurnal, dan arsip</li>
               <li>Dashboard real-time</li>
             </ul>
@@ -26,82 +24,96 @@
       </div>
     </section>
 
-    <!-- Fitur Modul Section -->
-  <section class="fitur-lms-section py-5">
-    <div class="container">
-      <h2 class="mb-4 text-center fitur-title">Fitur Modul Repository</h2>
-      <div class="row g-4">
-        <div class="col-md-3 col-sm-6" v-for="(item, index) in fiturKeuangan" :key="index">
-          <div class="fitur-card text-center p-4 h-100">
-            <img :src="item.icon" class="fitur-icon mb-3" alt="Icon" />
-            <h5 class="fw-bold">{{ item.title }}</h5>
+    <section class="why-and-features-section py-5 bg-light">
+      <div class="container px-5">
+        <div class="row g-4 justify-content-center ">
+          <div class="col-lg-6 d-flex">
+            <div class="why-container p-4 h-100" style="border-color: #365486;">
+              <div class="text-center">
+                <h2 class="why-title" style="color: #365486;">Why Choose Modul Repository ISEMA?</h2>
+                <hr class="hr-border" />
+                <p class="why-desc mb-3">
+                  Modul ISEMA dirancang untuk memudahkan pengelolaan dokumen akademik secara efisien dan terdigitalisasi.
+                </p>
+                <p class="why-desc mb-3">
+                  Terintegrasi langsung dengan sistem akademik dan LMS, modul ini membantu pihak kampus dalam mencatat, menyimpan, serta mengakses informasi penting dengan cepat dan aman.
+                </p>
+                <p class="why-note">
+                  *Modul ISEMA dapat mendukung transparansi dan efisiensi pengelolaan data.*
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex">
+            <div class="feature-container h-100" style="border-color: #365486;">
+              <div class="feature-head">
+                <h2 class="feature text-center" style="color: #365486;">Fitur Modul Repository</h2>
+                <p>Semua fitur yang Anda butuhkan untuk manajemen dokumen yang efektif</p>
+                <hr class="hr-border" />
+                <ul class="features-item">
+                  <li v-for="(feature, index) in displayedFeatures" :key="'repo-' + index">
+                    <div class="list-feature d-flex align-items-center">
+                      <i :class="['mb-1', 'fa-1x', feature.icon]"></i>
+                      <h5 class="mt-1 mb-1">{{ feature.title }}</h5>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="see-more-wrapper text-center">
+                <button class="see-more-btn" @click="toggleFeatures" style="background-color: #365486;">
+                  {{ showAllFeatures ? 'See Less' : 'See More' }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="combined-sections container-fluid p-0">
+      <div class="row g-0 justify-content-center align-items-center min-vh-50">
+        <div class="col-lg-6 contact-section text-center">
+          <div class="contact-content">
+            <h2 class="contact-title">Tertarik dengan Sistem Kami?</h2>
+            <p class="contact-subtitle">Kami siap membantu Anda memulai!</p>
+            <button class="btn-contact-us">Hubungi Kami</button>
           </div>
         </div>
       </div>
     </div>
-  </section>
-
-<section class="why-lms-section">
-  <div class="lms-section p-0">
-    <div class="row g-0 align-items-center">
-      <!-- Kiri: Judul -->
-      <div class="col-md-5 bg-light text-dark text-center py-5 px-4 title-wrapper">
-        <h2 class="why-title">Why Choose <br> Modul Repository ISEMA?</h2>
-      </div>
-
-      <!-- Kanan: Isi -->
-      <div class="col-md-7 content-wrapper p-5">
-        <!-- <p class="why-desc">
-          Modul ISEMA dirancang untuk memudahkan pengelolaan keuangan kampus dan repository dokumen secara efisien dan terdigitalisasi.
-        </p> -->
-        <p class="why-desc">
-          Terintegrasi langsung dengan sistem akademik dan LMS, modul ini membantu pihak kampus dalam mencatat, menyimpan, serta mengakses informasi penting dengan cepat dan aman.
-        </p>
-        <p class="why-note">
-          *Modul ISEMA dapat digunakan oleh staf akademik untuk mendukung transparansi dan efisiensi pengelolaan data.*
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="combined-sections container-fluid p-0">
-  <div class="row g-0 justify-content-center align-items-center min-vh-50">
-    <div class="col-lg-6 contact-section text-center">
-      <div class="contact-content">
-        <h2 class="contact-title">Tertarik dengan Sistem Kami?</h2>
-        <p class="contact-subtitle">Kami siap membantu Anda memulai!</p>
-        <button class="btn-contact-us">Hubungi Kami</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
   </div>
 </template>
-
 <script>
 export default {
   name: 'ModulComponent',
   data() {
     return {
-      fiturKeuangan: [
-        // { title: 'Tagihan Otomatis', icon: '/assets/tagihan-otomatis-modul.png' },
-        // { title: 'Upload Bukti Pembayaran', icon: '/assets/upload-modul.png' },
-        // { title: 'Histori Pembayaran Mahasiswa', icon: '/assets/history-modul.png' },
-        { title: 'Download Laporan', icon: '/assets/download-laporan-modul.png' },
-        // { title: 'Validasi Keuangan', icon: '/assets/validasi-keuangan-modul.png' },
-        { title: 'Manajemen Dokumen', icon: '/assets/manajemen-dokumen-modul.png' },
-        { title: 'Approval Repository', icon: '/assets/approval-repository-modul.png' },
-        { title: 'Filter Berdasarkan Kategori', icon: '/assets/filter-modul.png' }
-      ]
+      featuresRepository: [
+        { icon: 'fas fa-download', title: 'Download Laporan' },
+        { icon: 'fas fa-folder-open', title: 'Manajemen Dokumen' },
+        { icon: 'fas fa-check-square', title: 'Approval Repository' },
+        { icon: 'fas fa-filter', title: 'Filter Berdasarkan Kategori' },
+        { icon: 'fas fa-search', title: 'Pencarian Cepat' },
+        { icon: 'fas fa-shield-alt', title: 'Keamanan Data' },
+        { icon: 'fas fa-file-upload', title: 'Upload Dokumen Massal' },
+        { icon: 'fas fa-file-alt', title: 'Versi Dokumen' }
+      ],
+      showAllFeatures: false,
+      visibleFeatures: 6 // Jumlah fitur yang ditampilkan di awal
+    };
+  },
+  computed: {
+    displayedFeatures() {
+      return this.showAllFeatures ? this.featuresRepository : this.featuresRepository.slice(0, this.visibleFeatures);
+    }
+  },
+  methods: {
+    toggleFeatures() {
+      this.showAllFeatures = !this.showAllFeatures;
     }
   }
 }
 </script>
-
 <style scoped>
 .modul-page {
   font-family: 'Poppins', sans-serif;
@@ -156,54 +168,34 @@ export default {
   border-radius: 6px;
 }
 
-.fitur-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #003049;
-}
-
-.fitur-card {
-  border-radius: 16px;
-  background-color: #fafafa;
-  border: 1px solid #ddd;
-  transition: 0.3s ease;
-}
-
-.fitur-card:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
-  transform: translateY(-4px);
-}
-
-.fitur-icon {
-  width: 48px;
-  height: 48px;
-}
-
-.why-lms-section {
+/* --- CSS BARU UNTUK WHY & FEATURES --- */
+.why-and-features-section {
   background-color: #f8f9fa;
   font-family: 'Poppins', sans-serif;
 }
 
-.title-wrapper {
-  background-color: #a9a8a8;
+.why-and-features-section .row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.why-container {
+  background: #fff;
+  border: 1px solid #e5e8ec;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .why-title {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 800;
   color: #003049;
 }
 
-.content-wrapper {
-  background-color: #ffffff;
+.why-desc {
   font-size: 1.1rem;
   color: #333;
   line-height: 1.7;
-  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.05);
-}
-
-.why-desc {
-  margin-bottom: 1rem;
 }
 
 .why-note {
@@ -211,6 +203,90 @@ export default {
   color: #006d77;
   font-size: 0.95rem;
   margin-top: 1.5rem;
+}
+
+.feature-container {
+  background: #fff;
+  border: 1px solid #e5e8ec;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.feature-head {
+  padding: 20px;
+  text-align: center;
+}
+
+.feature-head h2.feature {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: inherit;
+  margin-bottom: 5px;
+}
+
+.feature-head p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.hr-border {
+  border-top: 1px solid #ccc;
+  margin: 15px 0;
+}
+
+.features-item {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-item li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.features-item li:last-child {
+  border-bottom: none;
+}
+
+.features-item .list-feature {
+  gap: 15px;
+}
+
+.features-item .list-feature i {
+  color: #365486;
+  font-size: 1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.features-item .list-feature h5 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333;
+  margin: 0;
+}
+
+.see-more-wrapper {
+  padding: 15px;
+}
+
+.see-more-btn {
+  background-color: #365486;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.see-more-btn:hover {
+  background-color: #4b6a9e;
 }
 
 .text-tittle{

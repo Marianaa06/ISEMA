@@ -1985,7 +1985,7 @@ __webpack_require__.r(__webpack_exports__);
         text: "Sistem LMS ini memudahkan mahasiswa dan dosen dalam pembelajaran jarak jauh. Luar biasa!",
         name: "Prof. Lisa M. Brown",
         position: "Kaprodi Informatika - Universitas XYZ",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPAEGNILM8eg7jxCzwEmNbTfK2kZ641aesGyh2Y7WEuO1EbYxRWyX9Sk5v3Ia_0F7eJ-8&usqp=CAU"
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJLIJqXm0aH3NWm7sHFxxaU0Lzkw2qpXfc8g&s"
       }, {
         text: "Modul MBKM-nya sangat membantu dalam administrasi magang mahasiswa secara terstruktur.",
         name: "Dr. John Smith",
@@ -2079,35 +2079,32 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'CbtComponent',
+  name: "CBTComponent",
   data: function data() {
     return {
-      features: [{
-        title: 'Dashboard',
-        description: 'Pusat kontrol untuk memantau jadwal ujian, jumlah peserta, dan status tes secara real-time.',
-        icon: 'fas fa-tv'
+      featuresCBT: [{
+        icon: "fas fa-tv",
+        title: "Dashboard Ujian"
       }, {
-        title: 'Entrance Test',
-        description: 'Digunakan untuk seleksi awal mahasiswa baru dengan sistem ujian berbasis komputer.',
-        icon: 'fas fa-door-open'
+        icon: "fas fa-door-open",
+        title: "Entrance Test"
       }, {
-        title: 'TOEFL Test',
-        description: 'Ujian kemampuan bahasa Inggris dengan sesi Listening, Structure, dan Reading.',
-        icon: 'fas fa-headphones-alt'
-      }, {
-        title: 'TOAFL Test',
-        description: 'Tes kemampuan bahasa Arab lengkap dengan timer dan sistem koreksi otomatis.',
-        icon: 'fas fa-language'
-      }, {
-        title: 'SAT Test',
-        description: 'Evaluasi potensi akademik calon mahasiswa berbasis standar nasional.',
-        icon: 'fas fa-file-alt'
-      }, {
-        title: 'Logout',
-        description: 'Sistem logout otomatis setelah tes selesai untuk keamanan dan validasi data.',
-        icon: 'fas fa-sign-out-alt'
-      }]
+        icon: "fas fa-file-alt",
+        title: "Custom Test"
+      }],
+      showAllFeatures: false,
+      visibleFeatures: 3 // Menampilkan 3 fitur utama di awal
     };
+  },
+  computed: {
+    displayedFeatures: function displayedFeatures() {
+      return this.showAllFeatures ? this.featuresCBT : this.featuresCBT.slice(0, this.visibleFeatures);
+    }
+  },
+  methods: {
+    toggleFeatures: function toggleFeatures() {
+      this.showAllFeatures = !this.showAllFeatures;
+    }
   }
 });
 
@@ -2126,32 +2123,38 @@ __webpack_require__.r(__webpack_exports__);
   name: "JurnalComponent",
   data: function data() {
     return {
-      features: [{
+      featuresJurnal: [{
         icon: "fas fa-upload",
-        title: "Submission Online",
-        desc: "Proses submit artikel secara daring oleh dosen maupun mahasiswa."
+        title: "Submission Online"
       }, {
         icon: "fas fa-comments",
-        title: "Peer Review Otomatis",
-        desc: "Sistem mendukung proses review double-blind oleh mitra bebestari."
+        title: "Peer Review Terstruktur"
       }, {
         icon: "fas fa-link",
-        title: "Integrasi DOI",
-        desc: "Artikel yang dipublikasikan dapat memiliki DOI dan indeksasi."
+        title: "Integrasi DOI & OJS"
       }, {
         icon: "fas fa-database",
-        title: "Manajemen Terpusat",
-        desc: "Semua jurnal kampus dikelola dalam satu dashboard terintegrasi."
+        title: "Manajemen Artikel Terpusat"
       }, {
         icon: "fas fa-chart-line",
-        title: "Statistik & Pelaporan",
-        desc: "Lacak statistik artikel terpopuler, reviewer aktif, dan lainnya."
+        title: "Statistik & Pelaporan Jurnal"
       }, {
         icon: "fas fa-globe",
-        title: "Tampilan Multibahasa",
-        desc: "Dukung publikasi berbahasa Inggris, Arab, dan Indonesia."
-      }]
+        title: "Akses Global & Indeksasi"
+      }],
+      showAllFeatures: false,
+      visibleFeatures: 6 // Menampilkan 3 fitur utama di awal
     };
+  },
+  computed: {
+    displayedFeatures: function displayedFeatures() {
+      return this.showAllFeatures ? this.featuresJurnal : this.featuresJurnal.slice(0, this.visibleFeatures);
+    }
+  },
+  methods: {
+    toggleFeatures: function toggleFeatures() {
+      this.showAllFeatures = !this.showAllFeatures;
+    }
   }
 });
 
@@ -2195,56 +2198,56 @@ __webpack_require__.r(__webpack_exports__);
         title: 'Keamanan Data',
         desc: 'Data mahasiswa terjamin keamanannya dengan sistem terenkripsi.'
       }],
-      features: [{
-        title: 'Dashboard',
-        description: 'Ringkasan aktivitas belajar, progres kelas, dan statistik akun dalam satu tampilan.',
-        headerImage: '/assets/dashboard-lms.png',
-        metadata: 'Pusat Kendali Akademik',
-        subDescription: 'Data Kelas, Aktivitas, Notifikasi'
+      featuresLms: [{
+        icon: 'fas fa-desktop',
+        title: 'Dashboard'
       }, {
-        title: 'My Class',
-        description: 'Akses seluruh kelas aktif, materi perkuliahan, dan partisipasi mahasiswa.',
-        headerImage: '/assets/myclass-lms.png',
-        metadata: 'Kelola Kelas Digital',
-        subDescription: 'Materi, Kehadiran, Forum'
+        icon: 'fas fa-book-open',
+        title: 'My Class'
       }, {
-        title: 'Question',
-        description: 'Manajemen soal ujian, kuis, dan latihan yang dapat disesuaikan untuk setiap kelas.',
-        headerImage: '/assets/question-lms.png',
-        metadata: 'Bank Soal Interaktif',
-        subDescription: 'Kuis, Ujian, Latihan Harian'
+        icon: 'fas fa-question-circle',
+        title: 'Question'
       }, {
-        title: 'Edit Article',
-        description: 'Fitur untuk membuat dan menyunting artikel atau modul pembelajaran digital.',
-        headerImage: '/assets/article-lms.png',
-        metadata: 'Editor Konten',
-        subDescription: 'Artikel, Modul, Materi Multimedia'
+        icon: 'fas fa-edit',
+        title: 'Edit Article'
       }, {
-        title: 'Assessment',
-        description: 'Pengelolaan evaluasi pembelajaran seperti tugas, kuis, dan ujian semester.',
-        headerImage: '/assets/assessment-lms.png',
-        metadata: 'Evaluasi Terstruktur',
-        subDescription: 'Nilai, Feedback, Rubrik Penilaian'
+        icon: 'fas fa-clipboard-check',
+        title: 'Assessment'
       }, {
-        title: 'Payment',
-        description: 'Monitoring dan notifikasi tagihan akademik serta riwayat pembayaran mahasiswa.',
-        headerImage: '/assets/payment-lms.png',
-        metadata: 'Integrasi Keuangan',
-        subDescription: 'SPP, Tagihan Kuliah, Riwayat Pembayaran'
+        icon: 'fas fa-credit-card',
+        title: 'Payment'
       }, {
-        title: 'Event',
-        description: 'Manajemen kegiatan kampus seperti seminar, webinar, dan pelatihan daring.',
-        headerImage: '/assets/event-lms.png',
-        metadata: 'Kegiatan Akademik',
-        subDescription: 'Workshop, Webinar, Guest Lecture'
+        icon: 'fas fa-calendar-alt',
+        title: 'Event'
       }, {
-        title: 'Calendar',
-        description: 'Menampilkan jadwal akademik dalam format kalender yang mudah dibaca dan interaktif.',
-        headerImage: '/assets/kalender-lms.png',
-        metadata: 'Agenda Akademik',
-        subDescription: 'Kelas, Ujian, Libur Nasional'
-      }]
+        icon: 'fas fa-calendar',
+        title: 'Calendar'
+      }, {
+        icon: 'fas fa-users',
+        title: 'User Management'
+      }, {
+        icon: 'fas fa-chart-bar',
+        title: 'Reports & Analytics'
+      }, {
+        icon: 'fas fa-envelope',
+        title: 'Messaging System'
+      }, {
+        icon: 'fas fa-cog',
+        title: 'System Settings'
+      }],
+      showAllFeatures: false,
+      visibleFeatures: 6 // Jumlah fitur yang ditampilkan di awal
     };
+  },
+  computed: {
+    displayedFeatures: function displayedFeatures() {
+      return this.showAllFeatures ? this.featuresLms : this.featuresLms.slice(0, this.visibleFeatures);
+    }
+  },
+  methods: {
+    toggleFeatures: function toggleFeatures() {
+      this.showAllFeatures = !this.showAllFeatures;
+    }
   }
 });
 
@@ -2263,68 +2266,46 @@ __webpack_require__.r(__webpack_exports__);
   name: 'MBKMComponent',
   data: function data() {
     return {
-      features: [{
-        title: 'Lowongan',
+      featuresMbkm: [{
         icon: 'fas fa-briefcase',
-        // Ikon lowongan kerja
-        subDescription: 'Peluang magang, riset, dan proyek real industri'
+        title: 'Lowongan'
       }, {
-        title: 'Jenis Aktivitas',
         icon: 'fas fa-stream',
-        // Ikon jenis/stream
-        subDescription: 'Beragam skema MBKM: Magang, Studi Independen, dll'
+        title: 'Jenis Aktivitas'
       }, {
-        title: 'Syarat Unggah Aktivitas Akhir',
         icon: 'fas fa-upload',
-        // Ikon unggah
-        subDescription: 'Panduan dan checklist dokumen penyelesaian aktivitas'
+        title: 'Syarat Unggah Aktivitas Akhir'
       }, {
-        title: 'Perguruan Tinggi Luar',
         icon: 'fas fa-university',
-        // Ikon kampus lain
-        subDescription: 'Kolaborasi lintas kampus dan sistem konversi otomatis'
+        title: 'Perguruan Tinggi Luar'
       }, {
-        title: 'Mitra',
         icon: 'fas fa-handshake',
-        // Ikon kerja sama/mitra
-        subDescription: 'Daftar mitra aktif dan status kerja sama MBKM',
-        subfeatures: [{
-          title: 'Daftar Mitra',
-          icon: 'fas fa-university'
-        }, {
-          title: 'Jenis Mitra',
-          icon: 'fas fa-calendar-alt'
-        }, {
-          title: 'Jenis Industri',
-          icon: 'fas fa-calendar-alt'
-        }, {
-          title: 'Ukuran Mitra',
-          icon: 'fas fa-calendar-alt'
-        }, {
-          title: 'Posisi Pekerjaan',
-          icon: 'fas fa-calendar-alt'
-        }, {
-          title: 'Posisi Pekerjaan Mitra',
-          icon: 'fas fa-calendar-alt'
-        }]
+        title: 'Mitra'
       }, {
-        title: 'Rekomendasi Mata Kuliah',
         icon: 'fas fa-book-open',
-        // Ikon mata kuliah
-        subDescription: 'Daftar mata kuliah pengganti hasil konversi MBKM'
+        title: 'Rekomendasi Mata Kuliah'
+      }, {
+        icon: 'fas fa-user-check',
+        title: 'Terverifikasi & Terpantau'
+      }, {
+        icon: 'fas fa-laptop-house',
+        title: 'Belajar Fleksibel'
+      }, {
+        icon: 'fas fa-award',
+        title: 'Konversi Otomatis'
       }],
-      selectedFeature: {}
+      showAllFeatures: false,
+      visibleFeatures: 6 // Jumlah fitur yang ditampilkan di awal
     };
   },
+  computed: {
+    displayedFeatures: function displayedFeatures() {
+      return this.showAllFeatures ? this.featuresMbkm : this.featuresMbkm.slice(0, this.visibleFeatures);
+    }
+  },
   methods: {
-    showFeature: function showFeature(feature) {
-      if (feature.subfeatures && feature.subfeatures.length) {
-        this.selectedFeature = feature;
-        $('#featureModal').modal('show'); // buka modal
-      } else {
-        console.log("Fitur ini tidak punya cabang.");
-        // Bisa juga diarahkan ke halaman lain atau abaikan saja
-      }
+    toggleFeatures: function toggleFeatures() {
+      this.showAllFeatures = !this.showAllFeatures;
     }
   }
 });
@@ -2344,26 +2325,44 @@ __webpack_require__.r(__webpack_exports__);
   name: 'ModulComponent',
   data: function data() {
     return {
-      fiturKeuangan: [{
-        title: 'Tagihan Otomatis',
-        icon: '/assets/tagihan-otomatis-modul.png'
+      featuresKeuangan: [{
+        icon: 'fas fa-file-invoice-dollar',
+        title: 'Tagihan Otomatis'
       }, {
-        title: 'Upload Bukti Pembayaran',
-        icon: '/assets/upload-modul.png'
+        icon: 'fas fa-upload',
+        title: 'Upload Bukti Pembayaran'
       }, {
-        title: 'Histori Pembayaran Mahasiswa',
-        icon: '/assets/history-modul.png'
-      },
-      // { title: 'Download Laporan', icon: '/assets/download-laporan-modul.png' },
-      {
-        title: 'Validasi Keuangan',
-        icon: '/assets/validasi-keuangan-modul.png'
-      }
-      // { title: 'Manajemen Dokumen', icon: '/assets/manajemen-dokumen-modul.png' },
-      // { title: 'Approval Repository', icon: '/assets/approval-repository-modul.png' },
-      // { title: 'Filter Berdasarkan Kategori', icon: '/assets/filter-modul.png' }
-      ]
+        icon: 'fas fa-history',
+        title: 'Histori Pembayaran'
+      }, {
+        icon: 'fas fa-check-circle',
+        title: 'Validasi Keuangan'
+      }, {
+        icon: 'fas fa-chart-bar',
+        title: 'Laporan Keuangan'
+      }, {
+        icon: 'fas fa-users-cog',
+        title: 'Manajemen Akun'
+      }, {
+        icon: 'fas fa-money-check-alt',
+        title: 'Manajemen Biaya Kuliah'
+      }, {
+        icon: 'fas fa-wallet',
+        title: 'Portal Pembayaran'
+      }],
+      showAllFeatures: false,
+      visibleFeatures: 6 // Jumlah fitur yang ditampilkan di awal
     };
+  },
+  computed: {
+    displayedFeatures: function displayedFeatures() {
+      return this.showAllFeatures ? this.featuresKeuangan : this.featuresKeuangan.slice(0, this.visibleFeatures);
+    }
+  },
+  methods: {
+    toggleFeatures: function toggleFeatures() {
+      this.showAllFeatures = !this.showAllFeatures;
+    }
   }
 });
 
@@ -2382,26 +2381,44 @@ __webpack_require__.r(__webpack_exports__);
   name: 'ModulComponent',
   data: function data() {
     return {
-      fiturKeuangan: [
-      // { title: 'Tagihan Otomatis', icon: '/assets/tagihan-otomatis-modul.png' },
-      // { title: 'Upload Bukti Pembayaran', icon: '/assets/upload-modul.png' },
-      // { title: 'Histori Pembayaran Mahasiswa', icon: '/assets/history-modul.png' },
-      {
-        title: 'Download Laporan',
-        icon: '/assets/download-laporan-modul.png'
-      },
-      // { title: 'Validasi Keuangan', icon: '/assets/validasi-keuangan-modul.png' },
-      {
-        title: 'Manajemen Dokumen',
-        icon: '/assets/manajemen-dokumen-modul.png'
+      featuresRepository: [{
+        icon: 'fas fa-download',
+        title: 'Download Laporan'
       }, {
-        title: 'Approval Repository',
-        icon: '/assets/approval-repository-modul.png'
+        icon: 'fas fa-folder-open',
+        title: 'Manajemen Dokumen'
       }, {
-        title: 'Filter Berdasarkan Kategori',
-        icon: '/assets/filter-modul.png'
-      }]
+        icon: 'fas fa-check-square',
+        title: 'Approval Repository'
+      }, {
+        icon: 'fas fa-filter',
+        title: 'Filter Berdasarkan Kategori'
+      }, {
+        icon: 'fas fa-search',
+        title: 'Pencarian Cepat'
+      }, {
+        icon: 'fas fa-shield-alt',
+        title: 'Keamanan Data'
+      }, {
+        icon: 'fas fa-file-upload',
+        title: 'Upload Dokumen Massal'
+      }, {
+        icon: 'fas fa-file-alt',
+        title: 'Versi Dokumen'
+      }],
+      showAllFeatures: false,
+      visibleFeatures: 6 // Jumlah fitur yang ditampilkan di awal
     };
+  },
+  computed: {
+    displayedFeatures: function displayedFeatures() {
+      return this.showAllFeatures ? this.featuresRepository : this.featuresRepository.slice(0, this.visibleFeatures);
+    }
+  },
+  methods: {
+    toggleFeatures: function toggleFeatures() {
+      this.showAllFeatures = !this.showAllFeatures;
+    }
   }
 });
 
@@ -2422,51 +2439,63 @@ __webpack_require__.r(__webpack_exports__);
     return {
       fiturPmb: [{
         title: 'Periode Pendaftaran',
-        icon: 'fas fa-calendar-alt' // Ikon jadwal
+        icon: 'fas fa-calendar-alt'
       }, {
         title: 'Program Studi',
-        icon: 'fas fa-university' // Ikon kampus/prodi
+        icon: 'fas fa-university'
       }, {
         title: 'Seleksi Pendaftaran',
-        icon: 'fas fa-list-check' // Ikon proses seleksi
+        icon: 'fas fa-list-check'
       }, {
         title: 'Syarat Seleksi',
-        icon: 'fas fa-file-signature' // Ikon syarat dengan tanda tangan
+        icon: 'fas fa-file-signature'
       }, {
         title: 'Uang Kuliah Tunggal',
-        icon: 'fas fa-coins' // Ikon uang koin
+        icon: 'fas fa-coins'
       }, {
         title: 'Pengaturan PMB',
-        icon: 'fas fa-sliders-h' // Ikon setting pengaturan horizontal
+        icon: 'fas fa-sliders-h'
       }, {
         title: 'Nilai Seleksi',
-        icon: 'fas fa-star-half-alt' // Ikon nilai
+        icon: 'fas fa-star-half-alt'
       }, {
         title: 'Syarat Seleksi',
-        icon: 'fas fa-file-contract' // Variasi ikon dokumen syarat
+        icon: 'fas fa-file-contract'
       }, {
         title: 'Pengisian Nilai',
-        icon: 'fas fa-pen-nib' // Ikon menulis nilai
+        icon: 'fas fa-pen-nib'
       }, {
         title: 'Kelengkapan Syarat',
-        icon: 'fas fa-check-double' // Ikon centang ganda
+        icon: 'fas fa-check-double'
       }, {
         title: 'UKT Pendaftar',
-        icon: 'fas fa-wallet' // Ikon dompet
+        icon: 'fas fa-wallet'
       }, {
         title: 'KIP Kuliah',
-        icon: 'fas fa-id-card' // Ikon kartu (untuk beasiswa KIP)
+        icon: 'fas fa-id-card'
       }, {
         title: 'Rekomendasi Prodi',
-        icon: 'fas fa-thumbs-up' // Ikon rekomendasi
+        icon: 'fas fa-thumbs-up'
       }, {
         title: 'Registrasi Ulang',
-        icon: 'fas fa-undo' // Ikon ulang/daftar ulang
+        icon: 'fas fa-undo'
       }, {
         title: 'Generate Mahasiswa',
-        icon: 'fas fa-user-plus' // Ikon penambahan mahasiswa
-      }]
+        icon: 'fas fa-user-plus'
+      }],
+      showAllFeatures: false,
+      visibleFeatures: 6 // Jumlah fitur yang ditampilkan di awal
     };
+  },
+  computed: {
+    displayedFeatures: function displayedFeatures() {
+      return this.showAllFeatures ? this.fiturPmb : this.fiturPmb.slice(0, this.visibleFeatures);
+    }
+  },
+  methods: {
+    toggleFeatures: function toggleFeatures() {
+      this.showAllFeatures = !this.showAllFeatures;
+    }
   }
 });
 
@@ -2486,25 +2515,46 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       features: [{
-        image: 'https://assets-a1.kompasiana.com/items/album/2020/04/10/whatsapp-image-2020-04-10-at-01-09-28-5e8f674e097f360a8d69e443.jpeg',
-        title: 'Dashboard Statistik'
+        title: 'Dashboard Statistik',
+        icon: 'fas fa-chart-pie'
       }, {
-        image: 'https://statik.tempo.co/data/2024/03/06/id_1285164/1285164_720.jpg',
-        title: 'Laporan Akademik'
+        title: 'Laporan Akademik',
+        icon: 'fas fa-graduation-cap'
       }, {
-        image: 'https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/06/03/pexels-tracy-le-blanc-607812-2349088402.jpg',
-        title: 'Laporan Kepemimpinan'
+        title: 'Laporan Kepemimpinan',
+        icon: 'fas fa-user-tie'
       }, {
-        image: 'https://cdn0-production-images-kly.akamaized.net/JdvySvdqsVwq9ailosUQSkn7460=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/668602/original/aplikasi%20mobile.jpg',
-        title: 'Ekspor Data'
+        title: 'Ekspor Data',
+        icon: 'fas fa-file-export'
       }, {
-        image: 'https://cdn1-production-images-kly.akamaized.net/XfTGAaBboHDMpoB_q_jkSHE-Mg0=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/1543146/original/026949400_1490095734-komputer.jpg',
-        title: 'Notifikasi Otomatis'
+        title: 'Notifikasi Otomatis',
+        icon: 'fas fa-bell'
       }, {
-        image: 'https://www.nesabamedia.com/wp-content/uploads/2020/12/Perbedaan-Software-dan-Aplikasi.jpg',
-        title: 'Sinkronisasi Real-Time'
-      }]
+        title: 'Sinkronisasi Real-Time',
+        icon: 'fas fa-sync-alt'
+      }, {
+        title: 'Laporan Keuangan',
+        icon: 'fas fa-chart-bar'
+      }, {
+        title: 'Analisis Prediktif',
+        icon: 'fas fa-brain'
+      }, {
+        title: 'Integrasi Sistem',
+        icon: 'fas fa-plug'
+      }],
+      showAllFeatures: false,
+      visibleFeatures: 6 // Jumlah fitur yang ditampilkan di awal
     };
+  },
+  computed: {
+    displayedFeatures: function displayedFeatures() {
+      return this.showAllFeatures ? this.features : this.features.slice(0, this.visibleFeatures);
+    }
+  },
+  methods: {
+    toggleFeatures: function toggleFeatures() {
+      this.showAllFeatures = !this.showAllFeatures;
+    }
   }
 });
 
@@ -2523,18 +2573,14 @@ __webpack_require__.r(__webpack_exports__);
   name: 'SiakadComponent',
   data: function data() {
     return {
-      // isi data lengkapmu di sini
       featuresadmin: [{
         title: 'Mahasiswa',
-        // description: 'Kelola data mahasiswa secara lengkap, mulai dari biodata hingga riwayat akademik.',
         icon: 'fas fa-user-graduate'
       }, {
         title: 'Pegawai',
-        // description: 'Atur data dosen dan tenaga kependidikan termasuk jabatan dan riwayat kerja.',
         icon: 'fas fa-users-cog'
       }, {
         title: 'Kegiatan',
-        // description: 'Manajemen kegiatan akademik seperti seminar, pelatihan, dan organisasi kemahasiswaan.',
         icon: 'fas fa-calendar-check',
         subfeatures: [{
           title: 'Kegiatan Akademik',
@@ -2545,7 +2591,6 @@ __webpack_require__.r(__webpack_exports__);
         }]
       }, {
         title: 'Data Kurikulum',
-        // description: 'Mengelola mata kuliah, kurikulum prodi, prasyarat, ekivalensi, dan aturan akademik lainnya.',
         icon: 'fas fa-book',
         subfeatures: [{
           title: 'Mata Kuliah',
@@ -2577,7 +2622,6 @@ __webpack_require__.r(__webpack_exports__);
         }]
       }, {
         title: 'Data Kelas',
-        // description: 'Pengaturan kelas kuliah, jadwal, tahun ajaran, dan monitoring ruang.',
         icon: 'fas fa-chalkboard-teacher',
         subfeatures: [{
           title: 'Kelas Kuliah',
@@ -2594,7 +2638,6 @@ __webpack_require__.r(__webpack_exports__);
         }]
       }, {
         title: 'Administrasi',
-        // description: 'Pengelolaan administrasi akademik seperti transfer dan pengajuan status mahasiswa.',
         icon: 'fas fa-file-alt',
         subfeatures: [{
           title: 'Transfer Mahasiswa',
@@ -2605,7 +2648,6 @@ __webpack_require__.r(__webpack_exports__);
         }]
       }, {
         title: 'Proposal/Tugas Akhir',
-        // description: 'Manajemen proposal penelitian dan tugas akhir mahasiswa.',
         icon: 'fas fa-file-signature',
         subfeatures: [{
           title: 'Daftar Proposal',
@@ -2616,7 +2658,6 @@ __webpack_require__.r(__webpack_exports__);
         }]
       }, {
         title: 'Data Yudisium',
-        // description: 'Pengaturan data yudisium, penomoran dokumen, dan periode pelaksanaan.',
         icon: 'fas fa-certificate',
         subfeatures: [{
           title: 'Daftar Yudisium',
@@ -2630,7 +2671,6 @@ __webpack_require__.r(__webpack_exports__);
         }]
       }, {
         title: 'Kegiatan Pendukung',
-        // description: 'Pengelolaan kegiatan akademik tambahan dan kalender kampus.',
         icon: 'fas fa-calendar-alt',
         subfeatures: [{
           title: 'Kegiatan Akademik',
@@ -2641,7 +2681,6 @@ __webpack_require__.r(__webpack_exports__);
         }]
       }, {
         title: 'Data Wisuda',
-        // description: 'Pengaturan periode wisuda dan daftar peserta yang lulus.',
         icon: 'fas fa-user-graduate',
         subfeatures: [{
           title: 'Periode Wisuda',
@@ -2652,7 +2691,6 @@ __webpack_require__.r(__webpack_exports__);
         }]
       }, {
         title: 'Institut',
-        // description: 'Pengaturan profil institusi termasuk logo, nama kampus, dan informasi resmi lainnya.',
         icon: 'fas fa-university',
         subfeatures: [{
           title: 'Informasi Perguruan Tinggi',
@@ -2696,7 +2734,6 @@ __webpack_require__.r(__webpack_exports__);
         }]
       }, {
         title: 'Studi',
-        // description: 'Kelola program studi, kurikulum, mata kuliah, dan jenjang pendidikan.',
         icon: 'fas fa-book-open',
         subfeatures: [{
           title: 'Jenis Mata Kuliah',
@@ -2728,7 +2765,6 @@ __webpack_require__.r(__webpack_exports__);
         }]
       }, {
         title: 'Identitas',
-        // description: 'Manajemen identitas kampus dan unit akademik secara administratif.',
         icon: 'fas fa-id-card-alt',
         subfeatures: [{
           title: 'Agama',
@@ -2742,7 +2778,6 @@ __webpack_require__.r(__webpack_exports__);
         }]
       }, {
         title: 'Tugas Akhir',
-        // description: 'Monitoring dan pengelolaan proses skripsi, tesis, dan disertasi.',
         icon: 'fas fa-scroll',
         subfeatures: [{
           title: 'Pengaturan Tugas Akhir',
@@ -2756,7 +2791,6 @@ __webpack_require__.r(__webpack_exports__);
         }]
       }, {
         title: 'Data Mahasiswa',
-        // description: 'Kelola seluruh database mahasiswa aktif dan non-aktif dengan mudah.',
         icon: 'fas fa-database',
         subfeatures: [{
           title: 'Status Mahasiswa',
@@ -2779,7 +2813,6 @@ __webpack_require__.r(__webpack_exports__);
         }]
       }, {
         title: 'Pegawai',
-        // description: 'Pengelolaan data pegawai untuk kepentingan administrasi dan akademik.',
         icon: 'fas fa-briefcase',
         subfeatures: [{
           title: 'Klasifikasi Pegawai',
@@ -2802,7 +2835,6 @@ __webpack_require__.r(__webpack_exports__);
         }]
       }, {
         title: 'Wilayah',
-        // description: 'Manajemen wilayah domisili mahasiswa untuk keperluan statistik dan zonasi.',
         icon: 'fas fa-map-marked-alt',
         subfeatures: [{
           title: 'Negara',
@@ -2819,7 +2851,6 @@ __webpack_require__.r(__webpack_exports__);
         }]
       }, {
         title: 'Arsip Dosen',
-        // description: 'Penyimpanan data riwayat aktivitas dan dokumen dosen secara digital.',
         icon: 'fas fa-archive',
         subfeatures: [{
           title: 'Rekap Jadwal Mengajar Dosen',
@@ -2827,7 +2858,6 @@ __webpack_require__.r(__webpack_exports__);
         }]
       }, {
         title: 'Arsip Mahasiswa',
-        // description: 'Manajemen dokumen penting mahasiswa: ijazah, sertifikat, transkrip.',
         icon: 'fas fa-folder-open',
         subfeatures: [{
           title: 'KHS',
@@ -2847,115 +2877,89 @@ __webpack_require__.r(__webpack_exports__);
         }]
       }, {
         title: 'Periode Akademik',
-        description: 'Atur semester aktif dan jadwal akademik tahunan kampus.',
         icon: 'fas fa-calendar-alt'
       }],
       featuresdosen: [{
         title: 'Daftar Proposal',
-        description: 'Kelola pengajuan proposal mahasiswa secara digital, termasuk pemantauan status dan komentar pembimbing.',
         icon: 'fas fa-file-signature'
       }, {
         title: 'Daftar Skripsi',
-        // description: 'Pantau seluruh proses skripsi dari pendaftaran, bimbingan, hingga penilaian akhir secara efisien.',
         icon: 'fas fa-book-open'
       }, {
         title: 'Jadwal Sidang',
-        // description: 'Atur dan tinjau jadwal sidang mahasiswa secara otomatis dan terintegrasi dengan kalender akademik.',
         icon: 'fas fa-calendar-check'
       }, {
         title: 'Kelas Saya',
-        // description: 'Kelola perkuliahan Anda dengan daftar kelas, presensi, dan materi yang terdokumentasi rapi.',
         icon: 'fas fa-chalkboard-teacher'
       }, {
         title: 'Kalender Akademik',
-        // description: 'Lihat kegiatan akademik, ujian, dan cuti bersama dalam tampilan kalender interaktif.',
         icon: 'fas fa-calendar-alt'
       }, {
         title: 'RPS',
-        // description: 'Unggah dan perbarui Rencana Pembelajaran Semester (RPS) secara daring dengan format yang sesuai standar.',
         icon: 'fas fa-tasks'
       }],
       featuresmahasiswa: [{
-        title: 'Dashboard Mahasiswa'
-        // description: 'Pusat kontrol mahasiswa untuk memantau akademik, keuangan, dan kegiatan secara real-time.',
-        // metadata: 'Info Terintegrasi',
-        // subDescription: 'KRS, KHS, Transkrip, Pembayaran'
+        title: 'Dashboard Mahasiswa',
+        icon: 'fas fa-tachometer-alt'
       }, {
-        title: 'Biodata'
-        // description: 'Update dan kelola data pribadi, kontak darurat, serta informasi penting lainnya.',
-        // metadata: 'Editable & Tersimpan Aman',
-        // subDescription: 'Nama, Alamat, NIK, Kontak'
+        title: 'Biodata',
+        icon: 'fas fa-address-card'
       }, {
-        title: 'Kalender Akademik'
-        // description: 'Lihat jadwal akademik lengkap mulai dari perkuliahan hingga cuti dan ujian.',
-        // metadata: 'Terjadwal & Terupdate',
-        // subDescription: 'Kuliah, Ujian, Libur, Cuti'
+        title: 'Kalender Akademik',
+        icon: 'fas fa-calendar-alt'
       }, {
-        title: 'Kelas Saya'
-        // description: 'Pantau jadwal kelas, dosen pengajar, materi perkuliahan, dan presensi.',
-        // metadata: 'Tersinkronisasi Otomatis',
-        // subDescription: 'Daftar Mata Kuliah & Absensi'
+        title: 'Kelas Saya',
+        icon: 'fas fa-chalkboard-teacher'
       }, {
-        title: 'KRS'
-        // description: 'Ambil mata kuliah sesuai semester aktif dan kuota kelas secara mandiri.',
-        // metadata: 'Pengisian Mandiri',
-        // subDescription: 'Mata Kuliah, Syarat, Validasi'
+        title: 'KRS',
+        icon: 'fas fa-file-alt'
       }, {
-        title: 'Kurikulum Program Studi'
-        // description: 'Lihat struktur kurikulum program studi lengkap dengan sks dan prasyaratnya.',
-        // metadata: 'Struktur Akademik',
-        // subDescription: 'Daftar MK, Semester, SKS'
+        title: 'Kurikulum Program Studi',
+        icon: 'fas fa-book-open'
       }, {
-        title: 'Transkrip Nilai'
-        // description: 'Akses nilai lengkap seluruh semester dan rekap IPK secara otomatis.',
-        // metadata: 'Akurat & Transparan',
-        // subDescription: 'Nilai Semester & IPK'
+        title: 'Transkrip Nilai',
+        icon: 'fas fa-scroll'
       }, {
-        title: 'Daftar Pengajuan'
-        // description: 'Lihat semua riwayat pengajuan surat, cuti, dan permohonan akademik lainnya.',
-        // metadata: 'Riwayat Lengkap',
-        // subDescription: 'Surat Aktif, Cuti, Validasi'
+        title: 'Daftar Pengajuan',
+        icon: 'fas fa-file-signature'
       }, {
-        title: 'Formulir Pengajuan'
-        // description: 'Isi dan ajukan berbagai keperluan administratif kampus secara digital.',
-        // metadata: 'Form Online',
-        // subDescription: 'Keterangan, Cuti, Beasiswa'
+        title: 'Formulir Pengajuan',
+        icon: 'fas fa-wpforms'
       }, {
-        title: 'Proposal'
-        // description: 'Ajukan proposal kegiatan, penelitian, atau tugas akhir dengan sistem pelacakan status.',
-        // metadata: 'Tracking Proposal',
-        // subDescription: 'Status, Catatan, Revisi'
+        title: 'Proposal',
+        icon: 'fas fa-lightbulb'
       }, {
-        title: 'Tugas Akhir'
-        // description: 'Kelola proses tugas akhir mulai dari bimbingan, unggah dokumen, hingga sidang.',
-        // metadata: 'Monitoring Lengkap',
-        // subDescription: 'Bimbingan, Upload, Nilai'
+        title: 'Tugas Akhir',
+        icon: 'fas fa-graduation-cap'
       }],
       showAllAdmin: false,
       showAllDosen: false,
-      showAllMahasiswa: false
+      showAllMahasiswa: false,
+      openSubfeatures: {}
     };
   },
   computed: {
     limitedFeaturesAdmin: function limitedFeaturesAdmin() {
-      return this.showAllAdmin ? this.featuresadmin : this.featuresadmin.slice(0, 7);
+      return this.showAllAdmin ? this.featuresadmin : this.featuresadmin.slice(0, 6);
     },
     limitedFeaturesDosen: function limitedFeaturesDosen() {
-      return this.showAllDosen ? this.featuresdosen : this.featuresdosen.slice(0, 7);
+      return this.showAllDosen ? this.featuresdosen : this.featuresdosen.slice(0, 6);
     },
     limitedFeaturesMahasiswa: function limitedFeaturesMahasiswa() {
-      return this.showAllMahasiswa ? this.featuresmahasiswa : this.featuresmahasiswa.slice(0, 7);
+      return this.showAllMahasiswa ? this.featuresmahasiswa : this.featuresmahasiswa.slice(0, 6);
     }
   },
   methods: {
     toggleFeatures: function toggleFeatures(group) {
-      if (group === 'admin') {
-        this.showAllAdmin = !this.showAllAdmin;
-      } else if (group === 'dosen') {
-        this.showAllDosen = !this.showAllDosen;
-      } else if (group === 'mahasiswa') {
-        this.showAllMahasiswa = !this.showAllMahasiswa;
+      if (group === 'admin') this.showAllAdmin = !this.showAllAdmin;else if (group === 'dosen') this.showAllDosen = !this.showAllDosen;else if (group === 'mahasiswa') this.showAllMahasiswa = !this.showAllMahasiswa;
+    },
+    toggleSubfeatures: function toggleSubfeatures(feature) {
+      if (feature.subfeatures) {
+        this.$set(this.openSubfeatures, feature.title, !this.openSubfeatures[feature.title]);
       }
+    },
+    isSubfeatureOpen: function isSubfeatureOpen(feature) {
+      return this.openSubfeatures[feature.title];
     }
   }
 });
@@ -3285,28 +3289,37 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("div", {
     staticClass: "cbt-page"
-  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("section", {
-    staticClass: "fitur-section py-5"
+  }, [_vm._m(0), _vm._v(" "), _c("section", {
+    staticClass: "why-and-features-section py-5 bg-light"
   }, [_c("div", {
-    staticClass: "container"
+    staticClass: "container px-5"
+  }, [_c("div", {
+    staticClass: "row g-4 justify-content-center align-items-stretch"
+  }, [_vm._m(1), _vm._v(" "), _c("div", {
+    staticClass: "col-lg-6 d-flex"
+  }, [_c("div", {
+    staticClass: "feature-container h-100"
+  }, [_c("div", {
+    staticClass: "feature-head"
   }, [_c("h2", {
-    staticClass: "text-center text-dark mb-5"
-  }, [_vm._v("Fitur Unggulan CBT")]), _vm._v(" "), _c("div", {
-    staticClass: "row gy-4"
-  }, _vm._l(_vm.features, function (feature, index) {
-    return _c("div", {
-      key: index,
-      staticClass: "col-md-4"
+    staticClass: "feature-title text-center"
+  }, [_vm._v("Fitur Unggulan CBT")]), _vm._v(" "), _c("p", {
+    staticClass: "feature-subtitle"
+  }, [_vm._v("Maksimalkan proses ujian dan penilaian")]), _vm._v(" "), _c("hr", {
+    staticClass: "hr-border"
+  }), _vm._v(" "), _c("ul", {
+    staticClass: "features-item"
+  }, _vm._l(_vm.displayedFeatures, function (feature, index) {
+    return _c("li", {
+      key: "cbt-" + index
     }, [_c("div", {
-      staticClass: "bg-white shadow rounded p-4 h-100"
+      staticClass: "list-feature d-flex align-items-center"
     }, [_c("i", {
-      "class": feature.icon + " fa-2x mb-3 text-dark"
+      "class": ["mb-1", "fa-1x", feature.icon]
     }), _vm._v(" "), _c("h5", {
-      staticClass: "fw-bold text-dark"
-    }, [_vm._v(_vm._s(feature.title))]), _vm._v(" "), _c("p", {
-      staticClass: "text-muted"
-    }, [_vm._v(_vm._s(feature.description))])])]);
-  }), 0)])]), _vm._v(" "), _vm._m(2)]);
+      staticClass: "mt-1 mb-1"
+    }, [_vm._v(_vm._s(feature.title))])])]);
+  }), 0)])])])])])]), _vm._v(" "), _vm._m(2)]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
@@ -3323,9 +3336,9 @@ var staticRenderFns = [function () {
     staticClass: "tagline"
   }, [_vm._v("Ujian Digital Terstruktur")]), _vm._v(" "), _c("h1", {
     staticClass: "hero-title"
-  }, [_vm._v("\n              CBT Terintegrasi"), _c("br"), _c("span", [_vm._v("untuk Ujian Aman dan Akurat")])]), _vm._v(" "), _c("p", {
+  }, [_vm._v("\n            CBT Terintegrasi"), _c("br"), _c("span", [_vm._v("untuk Ujian Aman dan Akurat")])]), _vm._v(" "), _c("p", {
     staticClass: "hero-subtext"
-  }, [_vm._v("\n              Platform ujian berbasis komputer yang mendukung evaluasi akademik secara efisien dan real-time.\n            ")]), _vm._v(" "), _c("ul", {
+  }, [_vm._v("\n            Platform ujian berbasis komputer yang mendukung evaluasi akademik secara efisien dan real-time.\n          ")]), _vm._v(" "), _c("ul", {
     staticClass: "hero-benefits"
   }, [_c("li", [_vm._v("Anti-kecurangan dengan fitur acak soal & timer")]), _vm._v(" "), _c("li", [_vm._v("Soal objektif dan esai")]), _vm._v(" "), _c("li", [_vm._v("Rekap nilai otomatis")])]), _vm._v(" "), _c("button", {
     staticClass: "btn btn-cta mt-3"
@@ -3341,38 +3354,40 @@ var staticRenderFns = [function () {
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("section", {
-    staticClass: "why-section"
+  return _c("div", {
+    staticClass: "col-lg-6 d-flex"
   }, [_c("div", {
-    staticClass: "container-fluid p-0"
+    staticClass: "why-container p-4 h-100"
   }, [_c("div", {
-    staticClass: "row g-0 align-items-center"
-  }, [_c("div", {
-    staticClass: "col-md-5 text-center bg-light py-5 title-wrapper"
+    staticClass: "text-center"
   }, [_c("h2", {
     staticClass: "why-title"
-  }, [_vm._v("Why Choose"), _c("br"), _vm._v("CBT ISEMA?")])]), _vm._v(" "), _c("div", {
-    staticClass: "col-md-7 content-wrapper p-5"
-  }, [_c("p", {
-    staticClass: "why-desc"
-  }, [_vm._v("\n              CBT ISEMA memastikan proses ujian yang modern dan efisien, baik untuk ujian tengah semester, akhir semester, maupun seleksi kampus.\n            ")]), _vm._v(" "), _c("p", {
-    staticClass: "why-desc"
-  }, [_vm._v("\n              Dilengkapi fitur keamanan ujian, bank soal, dan integrasi dengan SIAKAD untuk hasil otomatis.\n            ")]), _vm._v(" "), _c("p", {
+  }, [_vm._v("Why Choose CBT ISEMA?")]), _vm._v(" "), _c("hr", {
+    staticClass: "hr-border"
+  }), _vm._v(" "), _c("p", {
+    staticClass: "why-desc mb-3"
+  }, [_vm._v("\n                CBT ISEMA dirancang untuk mempermudah proses ujian di kampus Anda, mulai dari pembuatan soal hingga penilaian.\n              ")]), _vm._v(" "), _c("p", {
     staticClass: "why-note"
-  }, [_vm._v("\n              Dapat diakses di laboratorium maupun perangkat pribadi mahasiswa.\n            ")])])])])]);
+  }, [_c("i", {
+    staticClass: "fas fa-lock"
+  }), _vm._v(" Ujian Aman | "), _c("i", {
+    staticClass: "fas fa-chart-line"
+  }), _vm._v(" Analisis Cepat | "), _c("i", {
+    staticClass: "fas fa-cogs"
+  }), _vm._v(" Integrasi Mudah\n              ")])])])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("section", {
-    staticClass: "cta-cbt-section py-5"
+    staticClass: "cta-section py-5"
   }, [_c("div", {
-    staticClass: "container-container text-center"
+    staticClass: "container text-center"
   }, [_c("h2", {
-    staticClass: "mb-3"
-  }, [_vm._v("Ingin Mempunyai sistem yang cepat?")]), _vm._v(" "), _c("p", {
-    staticClass: "mb-4 fw-bold fs-5"
-  }, [_vm._v("Hubungi kami untuk demo CBT ISEMA")]), _vm._v(" "), _c("button", {
-    staticClass: "btn-cbt px-4 py-2"
+    staticClass: "mb-3 fw-bold fs-2"
+  }, [_vm._v("Siap Tingkatkan Efisiensi Ujian Kampus Anda?")]), _vm._v(" "), _c("p", {
+    staticClass: "mb-4 fw-bold fs-6"
+  }, [_vm._v("Hubungi tim kami untuk konsultasi dan demo eksklusif CBT ISEMA")]), _vm._v(" "), _c("button", {
+    staticClass: "btn btn-primary px-4 py-2"
   }, [_vm._v("Hubungi Kami")])])]);
 }];
 render._withStripped = true;
@@ -3397,30 +3412,43 @@ var render = function render() {
   return _c("div", {
     staticClass: "jurnal-page"
   }, [_vm._m(0), _vm._v(" "), _c("section", {
-    staticClass: "fitur-jurnal py-5 bg-light"
+    staticClass: "why-and-features-section py-5 bg-light"
   }, [_c("div", {
-    staticClass: "container-container"
+    staticClass: "container px-5"
+  }, [_c("div", {
+    staticClass: "row g-4 justify-content-center align-items-stretch"
+  }, [_vm._m(1), _vm._v(" "), _c("div", {
+    staticClass: "col-lg-6 d-flex"
+  }, [_c("div", {
+    staticClass: "feature-container h-100"
+  }, [_c("div", {
+    staticClass: "feature-head"
   }, [_c("h2", {
-    staticClass: "text-center mb-4 fw-bold fs-2"
-  }, [_vm._v("Fitur Unggulan Jurnal ISEMA")]), _vm._v(" "), _c("div", {
-    staticClass: "row"
-  }, _vm._l(_vm.features, function (fitur, index) {
-    return _c("div", {
-      key: index,
-      staticClass: "col-md-4 mb-4"
+    staticClass: "feature-title text-center"
+  }, [_vm._v("Fitur Unggulan Jurnal ISEMA")]), _vm._v(" "), _c("p", {
+    staticClass: "feature-subtitle"
+  }, [_vm._v("Publikasikan karya ilmiah Anda dengan mudah")]), _vm._v(" "), _c("hr", {
+    staticClass: "hr-border"
+  }), _vm._v(" "), _c("ul", {
+    staticClass: "features-item"
+  }, _vm._l(_vm.displayedFeatures, function (feature, index) {
+    return _c("li", {
+      key: "jurnal-" + index
     }, [_c("div", {
-      staticClass: "card h-100 shadow-sm"
-    }, [_c("div", {
-      staticClass: "card-body"
+      staticClass: "list-feature d-flex align-items-center"
     }, [_c("i", {
-      staticClass: "mb-3 d-block fa-2x",
-      "class": fitur.icon
+      "class": ["mb-1", "fa-1x", feature.icon]
     }), _vm._v(" "), _c("h5", {
-      staticClass: "card-title"
-    }, [_vm._v(_vm._s(fitur.title))]), _vm._v(" "), _c("p", {
-      staticClass: "card-text"
-    }, [_vm._v(_vm._s(fitur.desc))])])])]);
-  }), 0)])]), _vm._v(" "), _vm._m(1)]);
+      staticClass: "mt-1 mb-1"
+    }, [_vm._v(_vm._s(feature.title))])])]);
+  }), 0)]), _vm._v(" "), _vm.featuresJurnal.length > _vm.visibleFeatures ? _c("div", {
+    staticClass: "see-more-wrapper text-center"
+  }, [_c("button", {
+    staticClass: "see-more-btn",
+    on: {
+      click: _vm.toggleFeatures
+    }
+  }, [_vm._v("\n                " + _vm._s(_vm.showAllFeatures ? "Sembunyikan" : "Lihat Selengkapnya") + "\n              ")])]) : _vm._e()])])])])]), _vm._v(" "), _vm._m(2)]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
@@ -3455,14 +3483,40 @@ var staticRenderFns = [function () {
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
+  return _c("div", {
+    staticClass: "col-lg-6 d-flex"
+  }, [_c("div", {
+    staticClass: "why-container p-4 h-100"
+  }, [_c("div", {
+    staticClass: "text-center"
+  }, [_c("h2", {
+    staticClass: "why-title"
+  }, [_vm._v("Why Choose Jurnal ISEMA?")]), _vm._v(" "), _c("hr", {
+    staticClass: "hr-border"
+  }), _vm._v(" "), _c("p", {
+    staticClass: "why-desc mb-3"
+  }, [_vm._v("\n                Jurnal ISEMA menyediakan solusi komprehensif untuk mengelola publikasi ilmiah, dari submisi hingga penerbitan.\n              ")]), _vm._v(" "), _c("p", {
+    staticClass: "why-desc mb-3"
+  }, [_vm._v("\n                Mendukung peningkatan kualitas dan visibilitas penelitian di kampus Anda dengan fitur-fitur terdepan.\n              ")]), _vm._v(" "), _c("p", {
+    staticClass: "why-note"
+  }, [_c("i", {
+    staticClass: "fas fa-file-upload"
+  }), _vm._v(" Submisi Mudah | "), _c("i", {
+    staticClass: "fas fa-check-double"
+  }), _vm._v(" Review Efisien | "), _c("i", {
+    staticClass: "fas fa-globe"
+  }), _vm._v(" Akses Global\n              ")])])])]);
+}, function () {
+  var _vm = this,
+    _c = _vm._self._c;
   return _c("section", {
     staticClass: "cta-section py-5"
   }, [_c("div", {
-    staticClass: "container-cta text-center"
+    staticClass: "container text-center"
   }, [_c("h2", {
-    staticClass: "cta-text mb-3 fw-bold fs-2"
+    staticClass: "mb-3 fw-bold fs-2"
   }, [_vm._v("Publikasikan Karya Ilmiah Anda dengan Mudah")]), _vm._v(" "), _c("p", {
-    staticClass: "cta-text mb-4 fw-bold fs-6"
+    staticClass: "mb-4 fw-bold fs-6"
   }, [_vm._v("Jurnal Digital ISEMA mendukung visibilitas dan kredibilitas akademik institusi Anda.")]), _vm._v(" "), _c("button", {
     staticClass: "btn btn-primary px-4 py-2"
   }, [_vm._v("Hubungi Kami")])])]);
@@ -3488,12 +3542,53 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("div", {
     staticClass: "lms-page"
-  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("section", {
+  }, [_vm._m(0), _vm._v(" "), _c("section", {
+    staticClass: "why-and-features-section py-5 bg-light"
+  }, [_c("div", {
+    staticClass: "container-fluid px-5"
+  }, [_c("div", {
+    staticClass: "row g-4 justify-content-center align-items-start"
+  }, [_vm._m(1), _vm._v(" "), _c("div", {
+    staticClass: "col-lg-6"
+  }, [_c("div", {
+    staticClass: "feature-container h-100",
+    staticStyle: {
+      "border-color": "#2e3131"
+    }
+  }, [_c("div", {
+    staticClass: "feature-head"
+  }, [_c("h2", {
+    staticClass: "feature text-center",
+    staticStyle: {
+      color: "#2e3131"
+    }
+  }, [_vm._v("Fitur LMS")]), _vm._v(" "), _c("p", [_vm._v("Semua fitur yang Anda butuhkan untuk pembelajaran yang efektif")]), _vm._v(" "), _c("hr", {
+    staticClass: "hr-border"
+  }), _vm._v(" "), _c("ul", {
+    staticClass: "features-item"
+  }, _vm._l(_vm.displayedFeatures, function (feature, index) {
+    return _c("li", {
+      key: "lms-" + index
+    }, [_c("div", {
+      staticClass: "list-feature d-flex align-items-center"
+    }, [_c("i", {
+      "class": ["mb-1", "fa-1x", feature.icon]
+    }), _vm._v(" "), _c("h5", {
+      staticClass: "mt-1 mb-1"
+    }, [_vm._v(_vm._s(feature.title))])])]);
+  }), 0)]), _vm._v(" "), _c("div", {
+    staticClass: "see-more-wrapper text-center"
+  }, [_c("button", {
+    staticClass: "see-more-btn",
+    on: {
+      click: _vm.toggleFeatures
+    }
+  }, [_vm._v("\n                " + _vm._s(_vm.showAllFeatures ? "See Less" : "See More") + "\n              ")])])])])])])]), _vm._v(" "), _c("section", {
     staticClass: "lms-benefit-section py-5"
   }, [_c("div", {
     staticClass: "container-fluid"
   }, [_c("h2", {
-    staticClass: "text-center mb-5 text-tittle"
+    staticClass: "text-center mb-4 text-tittle"
   }, [_vm._v("Apa saja yang Anda Dapatkan ketika Menggunakan LMS?")]), _vm._v(" "), _c("div", {
     staticClass: "row gx-4 gy-4"
   }, _vm._l(_vm.benefits, function (benefit, index) {
@@ -3505,42 +3600,7 @@ var render = function render() {
     }, [_c("i", {
       "class": benefit.icon + " fa-2x me-3 text-grey"
     }), _vm._v(" "), _c("div", [_c("strong", [_vm._v(_vm._s(benefit.title))]), _c("br"), _vm._v(" "), _c("span", [_vm._v(_vm._s(benefit.desc))])])])]);
-  }), 0)])]), _vm._v(" "), _c("section", {
-    staticClass: "features-section py-5 bg-light"
-  }, [_c("div", {
-    staticClass: "container-fluid px-5"
-  }, [_vm._m(2), _vm._v(" "), _c("div", {
-    staticClass: "row gx-4 gy-4"
-  }, _vm._l(_vm.features, function (feature, index) {
-    return _c("div", {
-      key: index,
-      staticClass: "col-sm-6 col-md-4 col-lg-3"
-    }, [_c("div", {
-      staticClass: "feature-card h-100"
-    }, [_c("div", {
-      staticClass: "feature-card-header"
-    }, [feature.headerImage ? _c("img", {
-      staticClass: "card-header-bg-image",
-      attrs: {
-        src: feature.headerImage,
-        alt: "Card Header Background"
-      }
-    }) : _vm._e()]), _vm._v(" "), _c("div", {
-      staticClass: "feature-card-content p-3"
-    }, [_c("h5", {
-      staticClass: "font-weight-bold mt-2 mb-2"
-    }, [_vm._v(_vm._s(feature.title))]), _vm._v(" "), _c("p", {
-      staticClass: "text-muted mb-2"
-    }, [_vm._v(_vm._s(feature.description))]), _vm._v(" "), _c("p", {
-      staticClass: "metadata mb-1"
-    }, [_c("i", {
-      staticClass: "fas fa-bolt me-2 text-warning"
-    }), _vm._v(" " + _vm._s(feature.metadata) + "\n                ")]), _vm._v(" "), _c("p", {
-      staticClass: "sub-description"
-    }, [_c("i", {
-      staticClass: "fas fa-check-circle me-2 text-success"
-    }), _vm._v(" " + _vm._s(feature.subDescription) + "\n                ")])])])]);
-  }), 0)])]), _vm._v(" "), _vm._m(3)]);
+  }), 0)])]), _vm._v(" "), _vm._m(2)]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
@@ -3557,9 +3617,9 @@ var staticRenderFns = [function () {
     staticClass: "tagline"
   }, [_vm._v("Pembelajaran Digital Tanpa Batas")]), _vm._v(" "), _c("h1", {
     staticClass: "hero-title"
-  }, [_vm._v("\n              LMS Terintegrasi"), _c("br"), _c("span", [_vm._v("untuk Pembelajaran Modern")])]), _vm._v(" "), _c("p", {
+  }, [_vm._v("\n            LMS Terintegrasi"), _c("br"), _c("span", [_vm._v("untuk Pembelajaran Modern")])]), _vm._v(" "), _c("p", {
     staticClass: "hero-subtext"
-  }, [_vm._v("\n              Mempermudah interaksi dosen dan mahasiswa, akses materi, tugas, dan penilaian dalam satu sistem.\n            ")]), _vm._v(" "), _c("ul", {
+  }, [_vm._v("\n            Mempermudah interaksi dosen dan mahasiswa, akses materi, tugas, dan penilaian dalam satu sistem.\n          ")]), _vm._v(" "), _c("ul", {
     staticClass: "hero-benefits"
   }, [_c("li", [_vm._v("Mendukung pembelajaran daring & hybrid")]), _vm._v(" "), _c("li", [_vm._v("Upload materi, video, dan tugas")]), _vm._v(" "), _c("li", [_vm._v("Fitur forum diskusi dan kuis interaktif")])]), _vm._v(" "), _c("button", {
     staticClass: "btn btn-cta mt-3"
@@ -3575,37 +3635,26 @@ var staticRenderFns = [function () {
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("section", {
-    staticClass: "why-lms-section"
+  return _c("div", {
+    staticClass: "col-lg-6"
   }, [_c("div", {
-    staticClass: "lms-section p-0"
+    staticClass: "why-container h-100 p-4",
+    staticStyle: {
+      "border-color": "#2e3131"
+    }
   }, [_c("div", {
-    staticClass: "row g-0 align-items-center"
-  }, [_c("div", {
-    staticClass: "col-md-5 bg-light text-dark text-center py-5 px-4 title-wrapper"
+    staticClass: "text-center"
   }, [_c("h2", {
     staticClass: "why-title"
-  }, [_vm._v("Why Choose "), _c("br"), _vm._v(" LMS ISEMA?")])]), _vm._v(" "), _c("div", {
-    staticClass: "col-md-7 content-wrapper p-5"
-  }, [_c("p", {
-    staticClass: "why-desc"
-  }, [_vm._v("\n            LMS ISEMA dirancang untuk mendukung proses pembelajaran digital secara menyeluruh — dari akses materi hingga interaksi dengan dosen.\n          ")]), _vm._v(" "), _c("p", {
-    staticClass: "why-desc"
-  }, [_vm._v("\n            Platform ini mudah digunakan, terintegrasi dengan sistem akademik, dan mendukung aktivitas belajar yang fleksibel, kolaboratif, serta real-time.\n          ")]), _vm._v(" "), _c("p", {
+  }, [_vm._v("Why Choose LMS ISEMA?")]), _vm._v(" "), _c("hr", {
+    staticClass: "hr-border"
+  }), _vm._v(" "), _c("p", {
+    staticClass: "why-desc mb-3"
+  }, [_vm._v("\n                LMS ISEMA dirancang untuk mendukung proses pembelajaran digital secara menyeluruh — dari akses materi hingga interaksi dengan dosen.\n              ")]), _vm._v(" "), _c("p", {
+    staticClass: "why-desc mb-3"
+  }, [_vm._v("\n                Platform ini mudah digunakan, terintegrasi dengan sistem akademik, dan mendukung aktivitas belajar yang fleksibel, kolaboratif, serta real-time.\n              ")]), _vm._v(" "), _c("p", {
     staticClass: "why-note"
-  }, [_vm._v("\n            *LMS ISEMA dapat diakses melalui laptop dan smartphone kapan saja, di mana saja.*\n          ")])])])])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("div", {
-    staticClass: "row mb-5 text-center"
-  }, [_c("div", {
-    staticClass: "col"
-  }, [_c("h2", {
-    staticClass: "section-title"
-  }, [_vm._v("Fitur Unggulan")]), _vm._v(" "), _c("p", {
-    staticClass: "section-subtitle"
-  }, [_vm._v("Satu sistem untuk semua kebutuhan akademik Anda")])])]);
+  }, [_vm._v("\n                *LMS ISEMA dapat diakses melalui laptop dan smartphone kapan saja, di mana saja.*\n              ")])])])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
@@ -3642,81 +3691,53 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("div", {
     staticClass: "mbkm-page"
-  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c("section", {
-    staticClass: "fitur-mbkm-section py-5"
+  }, [_vm._m(0), _vm._v(" "), _c("section", {
+    staticClass: "why-and-features-section py-5 bg-light"
   }, [_c("div", {
-    staticClass: "container"
+    staticClass: "container px-5"
+  }, [_c("div", {
+    staticClass: "row g-4 justify-content-center"
+  }, [_vm._m(1), _vm._v(" "), _c("div", {
+    staticClass: "col-lg-6 d-flex"
+  }, [_c("div", {
+    staticClass: "feature-container h-100",
+    staticStyle: {
+      "border-color": "#4e727d"
+    }
+  }, [_c("div", {
+    staticClass: "feature-head"
   }, [_c("h2", {
-    staticClass: "mb-4 text-center fitur-title"
-  }, [_vm._v("Fitur MBKM ISEMA")]), _vm._v(" "), _c("div", {
-    staticClass: "row g-4"
-  }, _vm._l(_vm.features, function (feature, index) {
-    return _c("div", {
-      key: index,
-      staticClass: "col-md-3 col-sm-6"
+    staticClass: "feature-title text-center",
+    staticStyle: {
+      color: "#4e727d"
+    }
+  }, [_vm._v("Fitur MBKM ISEMA")]), _vm._v(" "), _c("p", {
+    staticClass: "feature-subtitle"
+  }, [_vm._v("Dukung pengembangan karier mahasiswa di luar kampus")]), _vm._v(" "), _c("hr", {
+    staticClass: "hr-border"
+  }), _vm._v(" "), _c("ul", {
+    staticClass: "features-item"
+  }, _vm._l(_vm.displayedFeatures, function (feature, index) {
+    return _c("li", {
+      key: "mbkm-" + index
     }, [_c("div", {
-      staticClass: "fitur-card text-center p-4 h-100",
-      on: {
-        click: function click($event) {
-          return _vm.showFeature(feature);
-        }
-      }
+      staticClass: "list-feature d-flex align-items-center"
     }, [_c("i", {
-      staticClass: "mb-3 d-block fa-2x",
-      "class": feature.icon
+      "class": ["mb-1", "fa-1x", feature.icon]
     }), _vm._v(" "), _c("h5", {
-      staticClass: "fw-bold"
-    }, [_vm._v(_vm._s(feature.title))]), _vm._v(" "), _c("p", {
-      staticClass: "text-muted mb-2"
-    }, [_vm._v(_vm._s(feature.subDescription))])])]);
+      staticClass: "mt-1 mb-1"
+    }, [_vm._v(_vm._s(feature.title))])])]);
   }), 0)]), _vm._v(" "), _c("div", {
-    staticClass: "modal fade",
-    attrs: {
-      id: "featureModal",
-      tabindex: "-1",
-      role: "dialog",
-      "aria-labelledby": "featureModalLabel",
-      "aria-hidden": "true"
+    staticClass: "see-more-wrapper text-center"
+  }, [_c("button", {
+    staticClass: "see-more-btn",
+    staticStyle: {
+      "background-color": "#4e727d"
+    },
+    on: {
+      click: _vm.toggleFeatures
     }
-  }, [_c("div", {
-    staticClass: "modal-dialog modal-lg modal-dialog-centered",
-    attrs: {
-      role: "document"
-    }
-  }, [_c("div", {
-    staticClass: "modal-content shadow-lg border-0 rounded-4"
-  }, [_c("div", {
-    staticClass: "modal-header text-white border-0 rounded-top-4"
-  }, [_c("h5", {
-    staticClass: "modal-title fw-bold d-flex align-items-center text-dark",
-    attrs: {
-      id: "featureModalLabel"
-    }
-  }, [_c("i", {
-    "class": _vm.selectedFeature.icon + " me-2 fa-lg"
-  }), _vm._v("\n          " + _vm._s(_vm.selectedFeature.title) + "\n        ")]), _vm._v(" "), _c("button", {
-    staticClass: "btn-close btn-close-dark",
-    attrs: {
-      type: "button",
-      "data-bs-dismiss": "modal",
-      "aria-label": "Close"
-    }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "modal-body"
-  }, [_vm.selectedFeature.subfeatures && _vm.selectedFeature.subfeatures.length ? _c("div", {
-    staticClass: "row g-4"
-  }, _vm._l(_vm.selectedFeature.subfeatures, function (sub, idx) {
-    return _c("div", {
-      key: idx,
-      staticClass: "col-md-4 col-sm-6"
-    }, [_c("div", {
-      staticClass: "fitur-card text-center p-4 h-100"
-    }, [_c("i", {
-      "class": sub.icon + " fa-2x mb-3 text-dark"
-    }), _vm._v(" "), _c("h5", {
-      staticClass: "fw-bold"
-    }, [_vm._v(_vm._s(sub.title))])])]);
-  }), 0) : _vm._e()])])])])]), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3)]);
+  }, [_vm._v("\n                " + _vm._s(_vm.showAllFeatures ? "See Less" : "See More") + "\n              ")])])])])])])]), _vm._v(" "), _vm._m(2)]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
@@ -3733,9 +3754,9 @@ var staticRenderFns = [function () {
     staticClass: "tagline"
   }, [_vm._v("Program Inovatif Kampus Merdeka")]), _vm._v(" "), _c("h1", {
     staticClass: "hero-title"
-  }, [_vm._v("\n              MBKM ISEMA"), _c("br"), _c("span", [_vm._v("Dukungan Penuh untuk Mahasiswa Berprestasi")])]), _vm._v(" "), _c("p", {
+  }, [_vm._v("\n            MBKM ISEMA"), _c("br"), _c("span", [_vm._v("Dukungan Penuh untuk Mahasiswa Berprestasi")])]), _vm._v(" "), _c("p", {
     staticClass: "hero-subtext"
-  }, [_vm._v("\n              Kelola program magang, pertukaran pelajar, studi independen, dan banyak lagi dalam satu platform.\n            ")]), _vm._v(" "), _c("ul", {
+  }, [_vm._v("\n            Kelola program magang, pertukaran pelajar, studi independen, dan banyak lagi dalam satu platform.\n          ")]), _vm._v(" "), _c("ul", {
     staticClass: "hero-benefits"
   }, [_c("li", [_vm._v("Dashboard Mahasiswa dan Dosen Pembimbing")]), _vm._v(" "), _c("li", [_vm._v("Pendaftaran Kegiatan MBKM Otomatis")]), _vm._v(" "), _c("li", [_vm._v("Rekap Penilaian dan Laporan Kegiatan")])]), _vm._v(" "), _c("button", {
     staticClass: "btn btn-cta mt-3"
@@ -3751,61 +3772,35 @@ var staticRenderFns = [function () {
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("section", {
-    staticClass: "why-mbkm-section"
+  return _c("div", {
+    staticClass: "col-lg-6 d-flex"
   }, [_c("div", {
-    staticClass: "row g-0 align-items-center"
+    staticClass: "why-container p-4 h-100",
+    staticStyle: {
+      "border-color": "#4e727d"
+    }
   }, [_c("div", {
-    staticClass: "col-md-5 bg-light text-dark text-center py-5 px-4 title-wrapper"
+    staticClass: "text-center"
   }, [_c("h2", {
-    staticClass: "why-title"
-  }, [_vm._v("MBKM ISEMA"), _c("br"), _vm._v(" Siap Mendukung Mobilitas Mahasiswa")])]), _vm._v(" "), _c("div", {
-    staticClass: "col-md-7 content-wrapper p-5"
-  }, [_c("p", {
-    staticClass: "why-desc"
-  }, [_vm._v("\n        Dirancang untuk memfasilitasi semua skema Kampus Merdeka dengan alur kerja yang efisien.\n      ")]), _vm._v(" "), _c("p", {
-    staticClass: "why-desc"
-  }, [_vm._v("\n        Terhubung dengan sistem akademik untuk kelancaran administrasi dan pelaporan kegiatan MBKM.\n      ")]), _vm._v(" "), _c("p", {
+    staticClass: "why-title",
+    staticStyle: {
+      color: "#4e727d"
+    }
+  }, [_vm._v("Mengapa Memilih MBKM ISEMA?")]), _vm._v(" "), _c("hr", {
+    staticClass: "hr-border"
+  }), _vm._v(" "), _c("p", {
+    staticClass: "why-desc mb-3"
+  }, [_vm._v("\n                Dirancang untuk memfasilitasi semua skema Kampus Merdeka dengan alur kerja yang efisien.\n              ")]), _vm._v(" "), _c("p", {
+    staticClass: "why-desc mb-3"
+  }, [_vm._v("\n                Terhubung dengan sistem akademik untuk kelancaran administrasi dan pelaporan kegiatan MBKM.\n              ")]), _vm._v(" "), _c("p", {
     staticClass: "why-note"
-  }, [_vm._v("\n        💻 Terintegrasi Sistem Akademik | 📱 Akses Fleksibel | 🔐 Proteksi Data Mahasiswa\n      ")])])])]);
-}, function () {
-  var _vm = this,
-    _c = _vm._self._c;
-  return _c("section", {
-    staticClass: "mbkm-advantages-section container-fluid py-5"
-  }, [_c("div", {
-    staticClass: "text-center mb-5"
-  }, [_c("h2", {
-    staticClass: "fw-bold display-5"
-  }, [_vm._v("Mengapa Memilih MBKM ISEMA?")]), _vm._v(" "), _c("p", {
-    staticClass: "lead"
-  }, [_vm._v("Dukung pengembangan karier dan kompetensi mahasiswa di luar kampus")])]), _vm._v(" "), _c("div", {
-    staticClass: "row text-center justify-content-center gy-4"
-  }, [_c("div", {
-    staticClass: "col-md-4 col-sm-12"
-  }, [_c("div", {
-    staticClass: "mbkm-feature-item"
   }, [_c("i", {
-    staticClass: "fas fa-user-check mb-3"
-  }), _vm._v(" "), _c("h5", {
-    staticClass: "fw-semibold"
-  }, [_vm._v("Terverifikasi dan Terpantau")]), _vm._v(" "), _c("p", [_vm._v("Kegiatan MBKM mahasiswa terpantau langsung oleh dosen pembimbing dan mitra melalui sistem.")])])]), _vm._v(" "), _c("div", {
-    staticClass: "col-md-4 col-sm-12"
-  }, [_c("div", {
-    staticClass: "mbkm-feature-item"
-  }, [_c("i", {
-    staticClass: "fas fa-laptop-house mb-3"
-  }), _vm._v(" "), _c("h5", {
-    staticClass: "fw-semibold"
-  }, [_vm._v("Belajar Fleksibel")]), _vm._v(" "), _c("p", [_vm._v("Mahasiswa bebas belajar dan mengabdi di luar kampus tanpa kehilangan hak akademik di kampus.")])])]), _vm._v(" "), _c("div", {
-    staticClass: "col-md-4 col-sm-12"
-  }, [_c("div", {
-    staticClass: "mbkm-feature-item"
-  }, [_c("i", {
-    staticClass: "fas fa-award mb-3"
-  }), _vm._v(" "), _c("h5", {
-    staticClass: "fw-semibold"
-  }, [_vm._v("Konversi Otomatis")]), _vm._v(" "), _c("p", [_vm._v("Setiap kegiatan terkonversi langsung ke SKS, nilai, dan dokumentasi resmi akademik.")])])])])]);
+    staticClass: "fas fa-laptop-house"
+  }), _vm._v(" Terintegrasi Sistem Akademik | "), _c("i", {
+    staticClass: "fas fa-sync-alt"
+  }), _vm._v(" Akses Fleksibel | "), _c("i", {
+    staticClass: "fas fa-award"
+  }), _vm._v(" Konversi Otomatis\n              ")])])])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
@@ -3843,29 +3838,50 @@ var render = function render() {
   return _c("div", {
     staticClass: "modul-page"
   }, [_vm._m(0), _vm._v(" "), _c("section", {
-    staticClass: "fitur-lms-section py-5"
+    staticClass: "why-and-features-section py-5 bg-light"
   }, [_c("div", {
-    staticClass: "container"
+    staticClass: "container px-5"
+  }, [_c("div", {
+    staticClass: "row g-4 justify-content-center"
+  }, [_vm._m(1), _vm._v(" "), _c("div", {
+    staticClass: "col-lg-6 d-flex"
+  }, [_c("div", {
+    staticClass: "feature-container h-100",
+    staticStyle: {
+      "border-color": "#365486"
+    }
+  }, [_c("div", {
+    staticClass: "feature-head"
   }, [_c("h2", {
-    staticClass: "mb-4 text-center fitur-title"
-  }, [_vm._v("Fitur Modul Keuangan")]), _vm._v(" "), _c("div", {
-    staticClass: "row g-4"
-  }, _vm._l(_vm.fiturKeuangan, function (item, index) {
-    return _c("div", {
-      key: index,
-      staticClass: "col-md-3 col-sm-6"
+    staticClass: "feature text-center",
+    staticStyle: {
+      color: "#365486"
+    }
+  }, [_vm._v("Fitur Modul Keuangan")]), _vm._v(" "), _c("p", [_vm._v("Semua fitur yang Anda butuhkan untuk manajemen keuangan yang efektif")]), _vm._v(" "), _c("hr", {
+    staticClass: "hr-border"
+  }), _vm._v(" "), _c("ul", {
+    staticClass: "features-item"
+  }, _vm._l(_vm.displayedFeatures, function (feature, index) {
+    return _c("li", {
+      key: "keuangan-" + index
     }, [_c("div", {
-      staticClass: "fitur-card text-center p-4 h-100"
-    }, [_c("img", {
-      staticClass: "fitur-icon mb-3",
-      attrs: {
-        src: item.icon,
-        alt: "Icon"
-      }
+      staticClass: "list-feature d-flex align-items-center"
+    }, [_c("i", {
+      "class": ["mb-1", "fa-1x", feature.icon]
     }), _vm._v(" "), _c("h5", {
-      staticClass: "fw-bold"
-    }, [_vm._v(_vm._s(item.title))])])]);
-  }), 0)])]), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2)]);
+      staticClass: "mt-1 mb-1"
+    }, [_vm._v(_vm._s(feature.title))])])]);
+  }), 0)]), _vm._v(" "), _c("div", {
+    staticClass: "see-more-wrapper text-center"
+  }, [_c("button", {
+    staticClass: "see-more-btn",
+    staticStyle: {
+      "background-color": "#365486"
+    },
+    on: {
+      click: _vm.toggleFeatures
+    }
+  }, [_vm._v("\n                " + _vm._s(_vm.showAllFeatures ? "See Less" : "See More") + "\n              ")])])])])])])]), _vm._v(" "), _vm._m(2)]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
@@ -3882,9 +3898,9 @@ var staticRenderFns = [function () {
     staticClass: "tagline"
   }, [_vm._v("Solusi Terpadu Modul Kampus")]), _vm._v(" "), _c("h1", {
     staticClass: "hero-title"
-  }, [_vm._v("\n              Modul Keuangan ISEMA\n            ")]), _vm._v(" "), _c("p", {
+  }, [_vm._v("\n            Modul Keuangan ISEMA\n          ")]), _vm._v(" "), _c("p", {
     staticClass: "hero-subtext"
-  }, [_vm._v("\n              Atur keuangan kampus  dengan sistem modern yang terintegrasi.\n            ")]), _vm._v(" "), _c("ul", {
+  }, [_vm._v("\n            Atur keuangan kampus dengan sistem modern yang terintegrasi.\n          ")]), _vm._v(" "), _c("ul", {
     staticClass: "hero-benefits"
   }, [_c("li", [_vm._v("Manajemen pembayaran dan tagihan mahasiswa")]), _vm._v(" "), _c("li", [_vm._v("Dashboard real-time & histori transaksi")])]), _vm._v(" "), _c("button", {
     staticClass: "btn btn-cta mt-3"
@@ -3900,25 +3916,29 @@ var staticRenderFns = [function () {
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("section", {
-    staticClass: "why-lms-section"
+  return _c("div", {
+    staticClass: "col-lg-6 d-flex"
   }, [_c("div", {
-    staticClass: "lms-section p-0"
+    staticClass: "why-container p-4",
+    staticStyle: {
+      "border-color": "#365486"
+    }
   }, [_c("div", {
-    staticClass: "row g-0 align-items-center"
-  }, [_c("div", {
-    staticClass: "col-md-5 bg-light text-dark text-center py-5 px-4 title-wrapper"
+    staticClass: "text-center"
   }, [_c("h2", {
-    staticClass: "why-title"
-  }, [_vm._v("Why Choose "), _c("br"), _vm._v(" Modul Keuangan ISEMA?")])]), _vm._v(" "), _c("div", {
-    staticClass: "col-md-7 content-wrapper p-5"
-  }, [_c("p", {
-    staticClass: "why-desc"
-  }, [_vm._v("\n          Modul ISEMA dirancang untuk memudahkan pengelolaan keuangan kampus  secara efisien dan terdigitalisasi.\n        ")]), _vm._v(" "), _c("p", {
-    staticClass: "why-desc"
-  }, [_vm._v("\n          Terintegrasi langsung dengan sistem akademik dan LMS, modul ini membantu pihak kampus dalam mencatat, menyimpan, serta mengakses informasi penting dengan cepat dan aman.\n        ")]), _vm._v(" "), _c("p", {
+    staticClass: "why-title",
+    staticStyle: {
+      color: "#365486"
+    }
+  }, [_vm._v("Why Choose Modul Keuangan ISEMA?")]), _vm._v(" "), _c("hr", {
+    staticClass: "hr-border"
+  }), _vm._v(" "), _c("p", {
+    staticClass: "why-desc mb-3"
+  }, [_vm._v("\n                Modul ISEMA dirancang untuk memudahkan pengelolaan keuangan kampus secara efisien dan terdigitalisasi.\n              ")]), _vm._v(" "), _c("p", {
+    staticClass: "why-desc mb-3"
+  }, [_vm._v("\n                Terintegrasi langsung dengan sistem akademik dan LMS, modul ini membantu pihak kampus dalam mencatat, menyimpan, serta mengakses informasi penting dengan cepat dan aman.\n              ")]), _vm._v(" "), _c("p", {
     staticClass: "why-note"
-  }, [_vm._v("\n          *Modul ISEMA dapat digunakan oleh staf keuangan  mendukung transparansi dan efisiensi pengelolaan data.*\n        ")])])])])]);
+  }, [_vm._v("\n                *Modul ISEMA dapat mendukung transparansi dan efisiensi pengelolaan data.*\n              ")])])])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
@@ -3960,29 +3980,50 @@ var render = function render() {
   return _c("div", {
     staticClass: "modul-page"
   }, [_vm._m(0), _vm._v(" "), _c("section", {
-    staticClass: "fitur-lms-section py-5"
+    staticClass: "why-and-features-section py-5 bg-light"
   }, [_c("div", {
-    staticClass: "container"
+    staticClass: "container px-5"
+  }, [_c("div", {
+    staticClass: "row g-4 justify-content-center"
+  }, [_vm._m(1), _vm._v(" "), _c("div", {
+    staticClass: "col-lg-6 d-flex"
+  }, [_c("div", {
+    staticClass: "feature-container h-100",
+    staticStyle: {
+      "border-color": "#365486"
+    }
+  }, [_c("div", {
+    staticClass: "feature-head"
   }, [_c("h2", {
-    staticClass: "mb-4 text-center fitur-title"
-  }, [_vm._v("Fitur Modul Repository")]), _vm._v(" "), _c("div", {
-    staticClass: "row g-4"
-  }, _vm._l(_vm.fiturKeuangan, function (item, index) {
-    return _c("div", {
-      key: index,
-      staticClass: "col-md-3 col-sm-6"
+    staticClass: "feature text-center",
+    staticStyle: {
+      color: "#365486"
+    }
+  }, [_vm._v("Fitur Modul Repository")]), _vm._v(" "), _c("p", [_vm._v("Semua fitur yang Anda butuhkan untuk manajemen dokumen yang efektif")]), _vm._v(" "), _c("hr", {
+    staticClass: "hr-border"
+  }), _vm._v(" "), _c("ul", {
+    staticClass: "features-item"
+  }, _vm._l(_vm.displayedFeatures, function (feature, index) {
+    return _c("li", {
+      key: "repo-" + index
     }, [_c("div", {
-      staticClass: "fitur-card text-center p-4 h-100"
-    }, [_c("img", {
-      staticClass: "fitur-icon mb-3",
-      attrs: {
-        src: item.icon,
-        alt: "Icon"
-      }
+      staticClass: "list-feature d-flex align-items-center"
+    }, [_c("i", {
+      "class": ["mb-1", "fa-1x", feature.icon]
     }), _vm._v(" "), _c("h5", {
-      staticClass: "fw-bold"
-    }, [_vm._v(_vm._s(item.title))])])]);
-  }), 0)])]), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2)]);
+      staticClass: "mt-1 mb-1"
+    }, [_vm._v(_vm._s(feature.title))])])]);
+  }), 0)]), _vm._v(" "), _c("div", {
+    staticClass: "see-more-wrapper text-center"
+  }, [_c("button", {
+    staticClass: "see-more-btn",
+    staticStyle: {
+      "background-color": "#365486"
+    },
+    on: {
+      click: _vm.toggleFeatures
+    }
+  }, [_vm._v("\n                " + _vm._s(_vm.showAllFeatures ? "See Less" : "See More") + "\n              ")])])])])])])]), _vm._v(" "), _vm._m(2)]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
@@ -3999,9 +4040,9 @@ var staticRenderFns = [function () {
     staticClass: "tagline"
   }, [_vm._v("Solusi Terpadu Modul Kampus")]), _vm._v(" "), _c("h1", {
     staticClass: "hero-title"
-  }, [_vm._v("\n              Modul Repository Digital\n            ")]), _vm._v(" "), _c("p", {
+  }, [_vm._v("\n            Modul Repository Digital\n          ")]), _vm._v(" "), _c("p", {
     staticClass: "hero-subtext"
-  }, [_vm._v("\n              Atur pengelolaan dokumen akademik dengan sistem modern yang terintegrasi.\n            ")]), _vm._v(" "), _c("ul", {
+  }, [_vm._v("\n            Atur pengelolaan dokumen akademik dengan sistem modern yang terintegrasi.\n          ")]), _vm._v(" "), _c("ul", {
     staticClass: "hero-benefits"
   }, [_c("li", [_vm._v("Repository dokumen: skripsi, jurnal, dan arsip")]), _vm._v(" "), _c("li", [_vm._v("Dashboard real-time")])]), _vm._v(" "), _c("button", {
     staticClass: "btn btn-cta mt-3"
@@ -4017,23 +4058,29 @@ var staticRenderFns = [function () {
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("section", {
-    staticClass: "why-lms-section"
+  return _c("div", {
+    staticClass: "col-lg-6 d-flex"
   }, [_c("div", {
-    staticClass: "lms-section p-0"
+    staticClass: "why-container p-4 h-100",
+    staticStyle: {
+      "border-color": "#365486"
+    }
   }, [_c("div", {
-    staticClass: "row g-0 align-items-center"
-  }, [_c("div", {
-    staticClass: "col-md-5 bg-light text-dark text-center py-5 px-4 title-wrapper"
+    staticClass: "text-center"
   }, [_c("h2", {
-    staticClass: "why-title"
-  }, [_vm._v("Why Choose "), _c("br"), _vm._v(" Modul Repository ISEMA?")])]), _vm._v(" "), _c("div", {
-    staticClass: "col-md-7 content-wrapper p-5"
-  }, [_c("p", {
-    staticClass: "why-desc"
-  }, [_vm._v("\n          Terintegrasi langsung dengan sistem akademik dan LMS, modul ini membantu pihak kampus dalam mencatat, menyimpan, serta mengakses informasi penting dengan cepat dan aman.\n        ")]), _vm._v(" "), _c("p", {
+    staticClass: "why-title",
+    staticStyle: {
+      color: "#365486"
+    }
+  }, [_vm._v("Why Choose Modul Repository ISEMA?")]), _vm._v(" "), _c("hr", {
+    staticClass: "hr-border"
+  }), _vm._v(" "), _c("p", {
+    staticClass: "why-desc mb-3"
+  }, [_vm._v("\n                Modul ISEMA dirancang untuk memudahkan pengelolaan dokumen akademik secara efisien dan terdigitalisasi.\n              ")]), _vm._v(" "), _c("p", {
+    staticClass: "why-desc mb-3"
+  }, [_vm._v("\n                Terintegrasi langsung dengan sistem akademik dan LMS, modul ini membantu pihak kampus dalam mencatat, menyimpan, serta mengakses informasi penting dengan cepat dan aman.\n              ")]), _vm._v(" "), _c("p", {
     staticClass: "why-note"
-  }, [_vm._v("\n          *Modul ISEMA dapat digunakan oleh staf akademik untuk mendukung transparansi dan efisiensi pengelolaan data.*\n        ")])])])])]);
+  }, [_vm._v("\n                *Modul ISEMA dapat mendukung transparansi dan efisiensi pengelolaan data.*\n              ")])])])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
@@ -4075,29 +4122,52 @@ var render = function render() {
   return _c("div", {
     staticClass: "pmb-page"
   }, [_vm._m(0), _vm._v(" "), _c("section", {
-    staticClass: "fitur-pmb-section py-5"
+    staticClass: "why-and-features-section py-5 bg-light"
   }, [_c("div", {
-    staticClass: "container"
+    staticClass: "container px-5"
+  }, [_c("div", {
+    staticClass: "row g-4 justify-content-center"
+  }, [_vm._m(1), _vm._v(" "), _c("div", {
+    staticClass: "col-lg-6 d-flex"
+  }, [_c("div", {
+    staticClass: "feature-container h-100",
+    staticStyle: {
+      "border-color": "#075E54"
+    }
+  }, [_c("div", {
+    staticClass: "feature-head"
   }, [_c("h2", {
-    staticClass: "mb-4 text-center fitur-title"
-  }, [_vm._v("Fitur Unggulan PMB")]), _vm._v(" "), _c("div", {
-    staticClass: "row g-4"
-  }, _vm._l(_vm.fiturPmb, function (item, index) {
-    return _c("div", {
-      key: index,
-      staticClass: "col-md-3 col-sm-6"
+    staticClass: "feature-title text-center",
+    staticStyle: {
+      color: "#075E54"
+    }
+  }, [_vm._v("Fitur Unggulan PMB")]), _vm._v(" "), _c("p", {
+    staticClass: "feature-subtitle"
+  }, [_vm._v("Kelola seluruh alur penerimaan dengan mudah")]), _vm._v(" "), _c("hr", {
+    staticClass: "hr-border"
+  }), _vm._v(" "), _c("ul", {
+    staticClass: "features-item"
+  }, _vm._l(_vm.displayedFeatures, function (feature, index) {
+    return _c("li", {
+      key: "pmb-" + index
     }, [_c("div", {
-      staticClass: "fitur-card text-center p-4 h-100"
+      staticClass: "list-feature d-flex align-items-center"
     }, [_c("i", {
-      staticClass: "mb-3 d-block fa-2x",
-      "class": item.icon,
-      attrs: {
-        alt: "Icon"
-      }
+      "class": ["mb-1", "fa-1x", feature.icon]
     }), _vm._v(" "), _c("h5", {
-      staticClass: "fw-bold"
-    }, [_vm._v(_vm._s(item.title))])])]);
-  }), 0)])]), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2)]);
+      staticClass: "mt-1 mb-1"
+    }, [_vm._v(_vm._s(feature.title))])])]);
+  }), 0)]), _vm._v(" "), _c("div", {
+    staticClass: "see-more-wrapper text-center"
+  }, [_c("button", {
+    staticClass: "see-more-btn",
+    staticStyle: {
+      "background-color": "#075E54"
+    },
+    on: {
+      click: _vm.toggleFeatures
+    }
+  }, [_vm._v("\n                " + _vm._s(_vm.showAllFeatures ? "See Less" : "See More") + "\n              ")])])])])])])]), _vm._v(" "), _vm._m(2)]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
@@ -4132,23 +4202,29 @@ var staticRenderFns = [function () {
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("section", {
-    staticClass: "why-pmb-section"
+  return _c("div", {
+    staticClass: "col-lg-6 d-flex"
   }, [_c("div", {
-    staticClass: "row g-0 align-items-center"
+    staticClass: "why-container p-4 h-100",
+    staticStyle: {
+      "border-color": "#075E54"
+    }
   }, [_c("div", {
-    staticClass: "col-md-5 bg-light text-dark text-center py-5 px-4 title-wrapper"
+    staticClass: "text-center"
   }, [_c("h2", {
-    staticClass: "why-title"
-  }, [_vm._v("Why Choose "), _c("br"), _vm._v(" PMB ISEMA?")])]), _vm._v(" "), _c("div", {
-    staticClass: "col-md-7 content-wrapper p-5"
-  }, [_c("p", {
-    staticClass: "why-desc"
-  }, [_vm._v("\n          Sistem PMB ISEMA mendukung alur pendaftaran mahasiswa baru secara digital dan efisien.\n        ")]), _vm._v(" "), _c("p", {
-    staticClass: "why-desc"
-  }, [_vm._v("\n          Dari pengisian formulir hingga cetak kartu ujian, semua terintegrasi dan dipantau real-time oleh admin kampus.\n        ")]), _vm._v(" "), _c("p", {
+    staticClass: "why-title",
+    staticStyle: {
+      color: "#075E54"
+    }
+  }, [_vm._v("Why Choose PMB ISEMA?")]), _vm._v(" "), _c("hr", {
+    staticClass: "hr-border"
+  }), _vm._v(" "), _c("p", {
+    staticClass: "why-desc mb-3"
+  }, [_vm._v("\n                Sistem PMB ISEMA mendukung alur pendaftaran mahasiswa baru secara digital dan efisien.\n              ")]), _vm._v(" "), _c("p", {
+    staticClass: "why-desc mb-3"
+  }, [_vm._v("\n                Dari pengisian formulir hingga cetak kartu ujian, semua terintegrasi dan dipantau real-time oleh admin kampus.\n              ")]), _vm._v(" "), _c("p", {
     staticClass: "why-note"
-  }, [_vm._v("\n          *PMB ISEMA dapat digunakan oleh calon mahasiswa, admin kampus, hingga tim seleksi akademik.*\n        ")])])])]);
+  }, [_vm._v("\n                *PMB ISEMA dapat digunakan oleh calon mahasiswa, admin kampus, hingga tim seleksi akademik.*\n              ")])])])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
@@ -4186,25 +4262,43 @@ var render = function render() {
   return _c("div", {
     staticClass: "reporting-page"
   }, [_vm._m(0), _vm._v(" "), _c("section", {
-    staticClass: "reporting-slider-section py-5"
+    staticClass: "why-and-features-section py-5 bg-light"
   }, [_c("div", {
-    staticClass: "container-fluid"
+    staticClass: "container px-5"
+  }, [_c("div", {
+    staticClass: "row g-4 justify-content-center"
   }, [_vm._m(1), _vm._v(" "), _c("div", {
-    staticClass: "scroll-container d-flex flex-nowrap overflow-auto px-4"
-  }, _vm._l(_vm.features, function (feature, index) {
-    return _c("div", {
-      key: index,
-      staticClass: "reporting-slide-card me-3 flex-shrink-0 text-center bg-white shadow-sm"
-    }, [_c("img", {
-      staticClass: "img-fluid mb-2",
-      attrs: {
-        src: feature.image,
-        alt: "icon"
-      }
-    }), _vm._v(" "), _c("h6", {
-      staticClass: "fw-semibold"
-    }, [_vm._v(_vm._s(feature.title))])]);
-  }), 0)])]), _vm._v(" "), _vm._m(2)]);
+    staticClass: "col-lg-6 d-flex"
+  }, [_c("div", {
+    staticClass: "feature-container h-100"
+  }, [_c("div", {
+    staticClass: "feature-head"
+  }, [_c("h2", {
+    staticClass: "feature-title text-center"
+  }, [_vm._v("Fitur Unggulan Reporting")]), _vm._v(" "), _c("p", {
+    staticClass: "feature-subtitle"
+  }, [_vm._v("Membantu pengambilan keputusan berbasis data")]), _vm._v(" "), _c("hr", {
+    staticClass: "hr-border"
+  }), _vm._v(" "), _c("ul", {
+    staticClass: "features-item"
+  }, _vm._l(_vm.displayedFeatures, function (feature, index) {
+    return _c("li", {
+      key: "reporting-" + index
+    }, [_c("div", {
+      staticClass: "list-feature d-flex align-items-center"
+    }, [_c("i", {
+      "class": ["mb-1", "fa-1x", feature.icon]
+    }), _vm._v(" "), _c("h5", {
+      staticClass: "mt-1 mb-1"
+    }, [_vm._v(_vm._s(feature.title))])])]);
+  }), 0)]), _vm._v(" "), _c("div", {
+    staticClass: "see-more-wrapper text-center"
+  }, [_c("button", {
+    staticClass: "see-more-btn",
+    on: {
+      click: _vm.toggleFeatures
+    }
+  }, [_vm._v("\n                " + _vm._s(_vm.showAllFeatures ? "See Less" : "See More") + "\n              ")])])])])])])]), _vm._v(" "), _vm._m(2)]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
@@ -4221,9 +4315,9 @@ var staticRenderFns = [function () {
     staticClass: "tagline"
   }, [_vm._v("Laporan Akademik Modern")]), _vm._v(" "), _c("h1", {
     staticClass: "hero-title"
-  }, [_vm._v("\n              Reporting ISEMA"), _c("br"), _c("span", [_vm._v("Visualisasi Data Kampus")])]), _vm._v(" "), _c("p", {
+  }, [_vm._v("\n            Reporting ISEMA"), _c("br"), _c("span", [_vm._v("Visualisasi Data Kampus")])]), _vm._v(" "), _c("p", {
     staticClass: "hero-subtext"
-  }, [_vm._v("\n              Akses laporan real-time dengan grafik interaktif, rekap nilai, kehadiran, dan performa institusi dalam satu dashboard.\n            ")]), _vm._v(" "), _c("ul", {
+  }, [_vm._v("\n            Akses laporan real-time dengan grafik interaktif, rekap nilai, kehadiran, dan performa institusi dalam satu dashboard.\n          ")]), _vm._v(" "), _c("ul", {
     staticClass: "hero-benefits"
   }, [_c("li", [_vm._v("Visualisasi Data Akademik & Keuangan")]), _vm._v(" "), _c("li", [_vm._v("Rekap Nilai & Kehadiran Otomatis")]), _vm._v(" "), _c("li", [_vm._v("Dashboard Interaktif & Dinamis")])]), _vm._v(" "), _c("button", {
     staticClass: "btn btn-cta mt-3"
@@ -4240,19 +4334,35 @@ var staticRenderFns = [function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
-    staticClass: "text-center mb-4"
+    staticClass: "col-lg-6 d-flex"
+  }, [_c("div", {
+    staticClass: "why-container p-4 h-100"
+  }, [_c("div", {
+    staticClass: "text-center"
   }, [_c("h2", {
-    staticClass: "fw-bold section-title fs-2"
-  }, [_vm._v("Fitur Unggulan Reporting")]), _vm._v(" "), _c("p", {
-    staticClass: "section-subtitle fw-bold fs-5"
-  }, [_vm._v("Membantu pengambilan keputusan berbasis data")])]);
+    staticClass: "why-title"
+  }, [_vm._v("Why Choose Reporting ISEMA?")]), _vm._v(" "), _c("hr", {
+    staticClass: "hr-border"
+  }), _vm._v(" "), _c("p", {
+    staticClass: "why-desc mb-3"
+  }, [_vm._v("\n                Akses laporan real-time dengan grafik interaktif, rekap nilai, kehadiran, dan performa institusi dalam satu dashboard.\n              ")]), _vm._v(" "), _c("p", {
+    staticClass: "why-desc mb-3"
+  }, [_vm._v("\n                Membuat pengambilan keputusan berbasis data menjadi lebih mudah dan cepat bagi tim kepemimpinan di kampus.\n              ")]), _vm._v(" "), _c("p", {
+    staticClass: "why-note"
+  }, [_c("i", {
+    staticClass: "fas fa-chart-line"
+  }), _vm._v(" Data Visualisasi | "), _c("i", {
+    staticClass: "fas fa-sync-alt"
+  }), _vm._v(" Laporan Real-Time | "), _c("i", {
+    staticClass: "fas fa-database"
+  }), _vm._v(" Integrasi Otomatis\n              ")])])])]);
 }, function () {
   var _vm = this,
     _c = _vm._self._c;
   return _c("section", {
     staticClass: "cta-section py-5"
   }, [_c("div", {
-    staticClass: "container-container text-center"
+    staticClass: "container text-center"
   }, [_c("h2", {
     staticClass: "mb-3 fw-bold fs-3"
   }, [_vm._v("Siap Meningkatkan Efisiensi Pelaporan Kampus?")]), _vm._v(" "), _c("p", {
@@ -4287,8 +4397,7 @@ var render = function render() {
   }, [_c("div", {
     staticClass: "feature-container",
     staticStyle: {
-      "border-color": "darkgreen",
-      border: "2px solid darkgreen"
+      "border-color": "darkgreen"
     }
   }, [_c("div", {
     staticClass: "feature-head"
@@ -4297,19 +4406,54 @@ var render = function render() {
     staticStyle: {
       color: "darkgreen"
     }
-  }, [_vm._v("Fitur SIAKAD Admin")]), _vm._v(" "), _c("p", [_vm._v("Membantu Admin untuk mengelola akademik")]), _vm._v(" "), _c("hr", {
+  }, [_vm._v("Fitur SIAKAD Admin")]), _vm._v(" "), _c("p", [_vm._v("Mempermudah pengelolaan data kampus")]), _vm._v(" "), _c("hr", {
     staticClass: "hr-border"
   }), _vm._v(" "), _c("ul", {
-    staticClass: "features-item"
+    staticClass: "features-item",
+    "class": {
+      expanded: _vm.showAllAdmin
+    }
   }, _vm._l(_vm.limitedFeaturesAdmin, function (feature, index) {
     return _c("li", {
-      key: "admin-" + (feature.title || index),
-      staticClass: "list-feature d-flex"
+      key: "admin-" + (feature.title || index)
+    }, [_c("div", {
+      staticClass: "list-feature d-flex",
+      "class": {
+        "has-subfeatures": feature.subfeatures
+      },
+      on: {
+        click: function click($event) {
+          return _vm.toggleSubfeatures(feature);
+        }
+      }
     }, [_c("i", {
       "class": ["mb-1", "fa-1x", feature.icon]
     }), _vm._v(" "), _c("h5", {
       staticClass: "mt-1 mb-1"
-    }, [_vm._v(_vm._s(feature.title))])]);
+    }, [_vm._v(_vm._s(feature.title))]), _vm._v(" "), feature.subfeatures ? _c("i", {
+      staticClass: "fa-solid fa-angle-right ms-auto toggle-icon",
+      "class": {
+        rotated: _vm.isSubfeatureOpen(feature)
+      }
+    }) : _vm._e()]), _vm._v(" "), _c("ul", {
+      directives: [{
+        name: "show",
+        rawName: "v-show",
+        value: _vm.isSubfeatureOpen(feature),
+        expression: "isSubfeatureOpen(feature)"
+      }],
+      staticClass: "sub-features-list"
+    }, _vm._l(feature.subfeatures, function (sub, subIdx) {
+      return _c("li", {
+        key: "sub-" + subIdx
+      }, [_c("div", {
+        staticClass: "sub-feature-item d-flex"
+      }, [_c("i", {
+        "class": ["fa-2x", "mb-1", "fa-1x", sub.icon]
+      }), _vm._v(" "), _c("h5", {
+        staticClass: "mt-1 mb-1"
+      }, [_vm._v(_vm._s(sub.title))])])]);
+    }), 0)]);
   }), 0)]), _vm._v(" "), _c("div", {
     staticClass: "see-more-wrapper text-center"
   }, [_c("button", {
@@ -4319,11 +4463,10 @@ var render = function render() {
         return _vm.toggleFeatures("admin");
       }
     }
-  }, [_vm._v("\r\n            " + _vm._s(_vm.showAllAdmin ? "See less" : "See more") + "\r\n          ")])])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\r\n      " + _vm._s(_vm.showAllAdmin ? "See less" : "See more") + "\r\n    ")])])]), _vm._v(" "), _c("div", {
     staticClass: "feature-container",
     staticStyle: {
-      "border-color": "darkmagenta",
-      border: "2px solid darkmagenta"
+      "border-color": "darkmagenta"
     }
   }, [_c("div", {
     staticClass: "feature-head"
@@ -4332,19 +4475,54 @@ var render = function render() {
     staticStyle: {
       color: "darkmagenta"
     }
-  }, [_vm._v("Fitur SIAKAD Dosen")]), _vm._v(" "), _c("p", [_vm._v("Membantu Dosen mengelola akademik")]), _vm._v(" "), _c("hr", {
+  }, [_vm._v("Fitur SIAKAD Dosen")]), _vm._v(" "), _c("p", [_vm._v("Membantu dosen dalam mengelola perkuliahan")]), _vm._v(" "), _c("hr", {
     staticClass: "hr-border"
   }), _vm._v(" "), _c("ul", {
-    staticClass: "features-item"
+    staticClass: "features-item",
+    "class": {
+      expanded: _vm.showAllDosen
+    }
   }, _vm._l(_vm.limitedFeaturesDosen, function (feature, index) {
     return _c("li", {
-      key: "dosen-" + (feature.title || index),
-      staticClass: "list-feature d-flex"
+      key: "dosen-" + (feature.title || index)
+    }, [_c("div", {
+      staticClass: "list-feature d-flex",
+      "class": {
+        "has-subfeatures": feature.subfeatures
+      },
+      on: {
+        click: function click($event) {
+          return _vm.toggleSubfeatures(feature);
+        }
+      }
     }, [_c("i", {
       "class": ["mb-1", "fa-1x", feature.icon]
     }), _vm._v(" "), _c("h5", {
       staticClass: "mt-1 mb-1"
-    }, [_vm._v(_vm._s(feature.title))])]);
+    }, [_vm._v(_vm._s(feature.title))]), _vm._v(" "), feature.subfeatures ? _c("i", {
+      staticClass: "fa-solid fa-angle-right ms-auto toggle-icon",
+      "class": {
+        rotated: _vm.isSubfeatureOpen(feature)
+      }
+    }) : _vm._e()]), _vm._v(" "), _c("ul", {
+      directives: [{
+        name: "show",
+        rawName: "v-show",
+        value: _vm.isSubfeatureOpen(feature),
+        expression: "isSubfeatureOpen(feature)"
+      }],
+      staticClass: "sub-features-list"
+    }, _vm._l(feature.subfeatures, function (sub, subIdx) {
+      return _c("li", {
+        key: "sub-" + subIdx
+      }, [_c("div", {
+        staticClass: "sub-feature-item d-flex"
+      }, [_c("i", {
+        "class": ["fa-2x", "mb-1", "fa-1x", sub.icon]
+      }), _vm._v(" "), _c("h5", {
+        staticClass: "mt-1 mb-1"
+      }, [_vm._v(_vm._s(sub.title))])])]);
+    }), 0)]);
   }), 0)]), _vm._v(" "), _c("div", {
     staticClass: "see-more-wrapper text-center"
   }, [_c("button", {
@@ -4354,11 +4532,10 @@ var render = function render() {
         return _vm.toggleFeatures("dosen");
       }
     }
-  }, [_vm._v("\r\n            " + _vm._s(_vm.showAllDosen ? "See less" : "See more") + "\r\n          ")])])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\r\n      " + _vm._s(_vm.showAllDosen ? "See less" : "See more") + "\r\n    ")])])]), _vm._v(" "), _c("div", {
     staticClass: "feature-container",
     staticStyle: {
-      "border-color": "darkslateblue",
-      border: "2px solid darkslateblue"
+      "border-color": "darkslateblue"
     }
   }, [_c("div", {
     staticClass: "feature-head"
@@ -4367,19 +4544,54 @@ var render = function render() {
     staticStyle: {
       color: "darkslateblue"
     }
-  }, [_vm._v("Fitur SIAKAD Mahasiswa")]), _vm._v(" "), _c("p", [_vm._v("Membantu Mahasiswa mengelola akademik")]), _vm._v(" "), _c("hr", {
+  }, [_vm._v("Fitur SIAKAD Mahasiswa")]), _vm._v(" "), _c("p", [_vm._v("Memberikan akses mudah bagi mahasiswa")]), _vm._v(" "), _c("hr", {
     staticClass: "hr-border"
   }), _vm._v(" "), _c("ul", {
-    staticClass: "features-item"
+    staticClass: "features-item",
+    "class": {
+      expanded: _vm.showAllMahasiswa
+    }
   }, _vm._l(_vm.limitedFeaturesMahasiswa, function (feature, index) {
     return _c("li", {
-      key: "mahasiswa-" + (feature.title || index),
-      staticClass: "list-feature d-flex"
+      key: "mahasiswa-" + (feature.title || index)
+    }, [_c("div", {
+      staticClass: "list-feature d-flex",
+      "class": {
+        "has-subfeatures": feature.subfeatures
+      },
+      on: {
+        click: function click($event) {
+          return _vm.toggleSubfeatures(feature);
+        }
+      }
     }, [_c("i", {
       "class": ["mb-1", "fa-1x", feature.icon]
     }), _vm._v(" "), _c("h5", {
       staticClass: "mt-1 mb-1"
-    }, [_vm._v(_vm._s(feature.title))])]);
+    }, [_vm._v(_vm._s(feature.title))]), _vm._v(" "), feature.subfeatures ? _c("i", {
+      staticClass: "fa-solid fa-angle-right ms-auto toggle-icon",
+      "class": {
+        rotated: _vm.isSubfeatureOpen(feature)
+      }
+    }) : _vm._e()]), _vm._v(" "), _c("ul", {
+      directives: [{
+        name: "show",
+        rawName: "v-show",
+        value: _vm.isSubfeatureOpen(feature),
+        expression: "isSubfeatureOpen(feature)"
+      }],
+      staticClass: "sub-features-list"
+    }, _vm._l(feature.subfeatures, function (sub, subIdx) {
+      return _c("li", {
+        key: "sub-" + subIdx
+      }, [_c("div", {
+        staticClass: "sub-feature-item d-flex"
+      }, [_c("i", {
+        "class": ["fa-2x", "mb-1", "fa-1x", sub.icon]
+      }), _vm._v(" "), _c("h5", {
+        staticClass: "mt-1 mb-1"
+      }, [_vm._v(_vm._s(sub.title))])])]);
+    }), 0)]);
   }), 0)]), _vm._v(" "), _c("div", {
     staticClass: "see-more-wrapper text-center"
   }, [_c("button", {
@@ -4389,7 +4601,7 @@ var render = function render() {
         return _vm.toggleFeatures("mahasiswa");
       }
     }
-  }, [_vm._v("\r\n            " + _vm._s(_vm.showAllMahasiswa ? "See less" : "See more") + "\r\n          ")])])])]), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2)]);
+  }, [_vm._v("\r\n      " + _vm._s(_vm.showAllMahasiswa ? "See less" : "See more") + "\r\n    ")])])])]), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2)]);
 };
 var staticRenderFns = [function () {
   var _vm = this,
@@ -8882,7 +9094,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.cbt-page[data-v-08fb0b62] {\r\n  font-family: 'Poppins', sans-serif;\r\n  color: #ffffff;\r\n  background-color: #f8f9fa;\r\n  padding: 50px;\n}\r\n\r\n/* Hero Section */\n.hero-section[data-v-08fb0b62] {\r\n  background: linear-gradient(135deg, #4e727d, #45818c);\r\n  padding: 20px;\n}\n.hero-title[data-v-08fb0b62] {\r\n  font-size: 2.5rem;\r\n  font-weight: 800;\r\n  margin-bottom: 15px;\r\n  color: #ffffff;\n}\n.hero-title span[data-v-08fb0b62] {\r\n  color: #ffffff;\n}\n.tagline[data-v-08fb0b62] {\r\n  text-transform: uppercase;\r\n  font-size: 0.9rem;\r\n  color: #ffffff;\r\n  font-weight: 600;\n}\n.hero-subtext[data-v-08fb0b62] {\r\n  font-size: 1.1rem;\r\n  margin-bottom: 20px;\r\n  color: #ffffff;\n}\n.hero-benefits[data-v-08fb0b62] {\r\n  list-style: none;\r\n  padding-left: 0;\r\n  color: #ffffff;\n}\n.hero-benefits li[data-v-08fb0b62] {\r\n  position: relative;\r\n  padding-left: 25px;\r\n  margin-bottom: 10px;\n}\n.hero-benefits li[data-v-08fb0b62]::before {\r\n  content: '\\2714';\r\n  color: #ffffff;\r\n  font-weight: bold;\r\n  position: absolute;\r\n  left: 0;\n}\n.btn-cta[data-v-08fb0b62] {\r\n  background-color: rgb(255, 255, 255) ;\r\n  color: rgb(0, 0, 0);\r\n  border: none;\r\n  padding: 12px 30px;\r\n  border-radius: 8px;\r\n  font-weight: bold;\r\n  transition: 0.3s ease;\n}\n.btn-cta[data-v-08fb0b62]:hover {\r\n  background-color: #218838;\n}\r\n\r\n/* Why Choose Section */\n.why-section[data-v-08fb0b62] {\r\n  background-color: #ffffff;\r\n  color: #45818c;\n}\n.title-wrapper[data-v-08fb0b62] {\r\n  background-color: #e8f5e9;\n}\n.why-title[data-v-08fb0b62] {\r\n  font-size: 2.2rem;\r\n  font-weight: 800;\r\n  color: #000000;\n}\n.content-wrapper[data-v-08fb0b62] {\r\n  background-color: #ffffff;\r\n  font-size: 1.1rem;\r\n  line-height: 1.8;\n}\n.why-desc[data-v-08fb0b62] {\r\n  margin-bottom: 1rem;\n}\n.why-note[data-v-08fb0b62] {\r\n  font-style: italic;\r\n  color: #45818c;\n}\r\n\r\n/* Fitur Section */\r\n/* .fitur-section {\r\n  background-color: #f1fdf4;\r\n} */\n.fitur-section h2[data-v-08fb0b62] {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color:#45818c;\n}\n.fitur-section .bg-white[data-v-08fb0b62] {\r\n  border-left: 5px solid #45818c;\r\n  transition: transform 0.3s ease;\n}\n.fitur-section .bg-white[data-v-08fb0b62]:hover {\r\n  transform: translateY(-5px);\n}\n.cta-cbt-section[data-v-08fb0b62] {\r\n  background: linear-gradient(135deg, #4e727d, #45818c);\r\n\r\n\r\n  color: #fff;\n}\n.cta-cbt-section h2[data-v-08fb0b62] {\r\n  font-weight: 700;\r\n  font-size: 2rem;\n}\n.cta-cbt-section p[data-v-08fb0b62] {\r\n  font-size: 1.1rem;\n}\n.btn-cbt[data-v-08fb0b62] {\r\n  background-color: rgb(255, 255, 255) ;\r\n  color: #45818c;\r\n  font-weight: 600;\r\n  border: none;\r\n  border-radius: 8px;\r\n  transition: 0.3s ease;\n}\n.btn-cbt[data-v-08fb0b62]:hover {\r\n    background-color: #000000;\r\n  color: rgb(255, 255, 255)\n}\n@media (max-width: 575.98px) {\n.cbt-page[data-v-08fb0b62]{\r\n    padding: 0px;\n}\n}\r\n", ""]);
+exports.push([module.i, "\n.cbt-page[data-v-08fb0b62] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f7f9fc;\r\n  color: #333;\r\n  padding: 50px;\n}\r\n\r\n/* Hero Section */\n.hero-section[data-v-08fb0b62] {\r\n  background: linear-gradient(135deg, #4e727d, #45818c);\r\n  padding: 100px 0;\r\n  color: #ffffff;\n}\n.hero-title[data-v-08fb0b62] {\r\n  font-size: 2.8rem;\r\n  font-weight: 700;\n}\n.hero-benefits[data-v-08fb0b62] {\r\n  list-style: none;\r\n  padding-left: 0;\n}\n.hero-benefits li[data-v-08fb0b62] {\r\n  padding-left: 25px;\r\n  position: relative;\r\n  margin-bottom: 10px;\n}\n.hero-benefits li[data-v-08fb0b62]::before {\r\n  content: \"\\2714\";\r\n  position: absolute;\r\n  left: 0;\r\n  color: #ffffff;\n}\n.btn-cta[data-v-08fb0b62] {\r\n  background-color: #ffffff;\r\n  color: #45818c;\r\n  border: none;\r\n  padding: 10px 20px;\r\n  font-weight: bold;\r\n  border-radius: 6px;\n}\r\n\r\n/* --- CSS BARU UNTUK WHY & FEATURES --- */\n.why-and-features-section[data-v-08fb0b62] {\r\n  background-color: #f8f9fa;\r\n  font-family: 'Poppins', sans-serif;\n}\n.why-and-features-section .row[data-v-08fb0b62] {\r\n  display: flex;\r\n  align-items: stretch;\n}\n.why-container[data-v-08fb0b62] {\r\n  background: #fff;\r\n  border: 1px solid #ddd;\r\n  border-radius: 8px;\r\n  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);\r\n  border-color: #4e727d; /* Menggunakan warna yang sudah ada dari hero */\n}\n.why-title[data-v-08fb0b62] {\r\n  font-size: 2rem;\r\n  font-weight: 800;\r\n  color: #4e727d; /* Menggunakan warna yang sudah ada dari hero */\n}\n.why-desc[data-v-08fb0b62] {\r\n  font-size: 1.1rem;\r\n  color: #333;\r\n  line-height: 1.7;\n}\n.why-note[data-v-08fb0b62] {\r\n  font-style: italic;\r\n  color: #4e727d; /* Menggunakan warna yang sudah ada dari hero */\r\n  font-size: 0.95rem;\r\n  margin-top: 1.5rem;\n}\n.feature-container[data-v-08fb0b62] {\r\n  background: #fff;\r\n  border: 1px solid #ddd;\r\n  border-radius: 8px;\r\n  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);\r\n  border-color: #4e727d; /* Menggunakan warna yang sudah ada dari hero */\n}\n.feature-head[data-v-08fb0b62] {\r\n  padding: 20px;\r\n  text-align: center;\n}\n.feature-title[data-v-08fb0b62] {\r\n  font-size: 1.5rem;\r\n  font-weight: 600;\r\n  color: #4e727d; /* Menggunakan warna yang sudah ada dari hero */\r\n  margin-bottom: 5px;\n}\n.feature-subtitle[data-v-08fb0b62] {\r\n  font-size: 0.9rem;\r\n  color: #666;\n}\n.hr-border[data-v-08fb0b62] {\r\n  border-top: 1px solid #ccc;\r\n  margin: 15px 0;\n}\n.features-item[data-v-08fb0b62] {\r\n  list-style: none;\r\n  padding: 0;\r\n  margin: 0;\n}\n.features-item li[data-v-08fb0b62] {\r\n  padding: 10px 20px;\r\n  border-bottom: 1px solid #f0f0f0;\n}\n.features-item li[data-v-08fb0b62]:last-child {\r\n  border-bottom: none;\n}\n.features-item .list-feature[data-v-08fb0b62] {\r\n  gap: 15px;\n}\n.features-item .list-feature i[data-v-08fb0b62] {\r\n  color: #4e727d; /* Menggunakan warna yang sudah ada dari hero */\r\n  font-size: 1rem;\r\n  width: 20px;\r\n  text-align: center;\n}\n.features-item .list-feature h5[data-v-08fb0b62] {\r\n  font-size: 1rem;\r\n  font-weight: 400;\r\n  color: #333;\r\n  margin: 0;\n}\r\n\r\n\r\n/* CTA */\n.cta-section[data-v-08fb0b62] {\r\n  background: linear-gradient(135deg, #4e727d, #45818c);\r\n  color: #fff;\r\n  padding: 60px 0;\n}\n.container-cta[data-v-08fb0b62] {\r\n  max-width: 800px;\r\n  margin: 0 auto;\n}\n.cta-text[data-v-08fb0b62] {\r\n  color: #fff;\r\n  font-family: 'Poppins', sans-serif;\n}\n.cta-section .btn-primary[data-v-08fb0b62] {\r\n  background-color: #ffffff;\r\n  border: none;\r\n  color: #45818c;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  transition: background-color 0.3s ease;\n}\n.cta-section .btn-primary[data-v-08fb0b62]:hover {\r\n  background-color: #45818c;\r\n  color: #fff;\n}\r\n\r\n/* Responsive CSS */\n@media (max-width: 768px) {\n.hero-section[data-v-08fb0b62] {\r\n    padding: 60px 0;\n}\n.hero-title[data-v-08fb0b62] {\r\n    font-size: 2rem;\n}\n.features-list[data-v-08fb0b62] {\r\n    grid-template-columns: 1fr;\n}\n.feature-list-container[data-v-08fb0b62] {\r\n    padding: 1rem;\n}\n}\n@media (max-width: 576px) {\n.cbt-page[data-v-08fb0b62] {\r\n    padding: 0;\n}\n.hero-title[data-v-08fb0b62] {\r\n    font-size: 1.8rem;\n}\n.cta-text[data-v-08fb0b62] {\r\n    font-size: 1.5rem !important;\n}\n.cta-section .btn-primary[data-v-08fb0b62] {\r\n    padding: 8px 20px;\n}\n}\r\n", ""]);
 
 // exports
 
@@ -8901,7 +9113,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.jurnal-page[data-v-470fd0fe] {\r\n  padding: 50px;\n}\n.jurnal-page .hero-title[data-v-470fd0fe] {\r\n  font-size: 2.8rem;\r\n  font-weight: 700;\n}\n.jurnal-page .hero-benefits[data-v-470fd0fe] {\r\n  list-style: none;\r\n  padding-left: 0;\n}\n.jurnal-page .hero-benefits li[data-v-470fd0fe] {\r\n  padding-left: 25px;\r\n  position: relative;\r\n  margin-bottom: 10px;\n}\n.jurnal-page .hero-benefits li[data-v-470fd0fe]::before {\r\n  content: \"\\2714\";\r\n  position: absolute;\r\n  left: 0;\r\n  color: #fcbf49;\n}\n.fitur-jurnal .card-title[data-v-470fd0fe] {\r\n  font-size: 1.2rem;\r\n  font-weight: 600;\n}\n.card[data-v-470fd0fe]{\r\n    background-color: #003049;\r\n    padding: 2px;\n}\n.card-body[data-v-470fd0fe]{\r\n    background-color: rgb(248, 248, 242);\n}\n.hero-section[data-v-470fd0fe]{\r\n    background-image: url(/assets/bg-jurnall.png);\r\n    background-size: cover;\r\n    padding: 30px;\r\n    border-radius: 10px;\r\n    color: rgb(0, 0, 0);\n}\n.container-container[data-v-470fd0fe]{\r\n    padding: 50px;\n}\n.cta-section[data-v-470fd0fe] {\r\n  background: linear-gradient(90deg, #6b0000, #8e1c1c); /* gradasi maroon */\r\n  color: #fff;\r\n  padding: 60px 0;\n}\n.container-cta[data-v-470fd0fe] {\r\n  max-width: 800px;\r\n  margin: 0 auto;\n}\n.btn-cta[data-v-470fd0fe]{\r\n  background-color: #6b0000;\r\n  color:  #fff;\n}\n.cta-text[data-v-470fd0fe] {\r\n  color: #fff;\r\n  font-family: 'Poppins', sans-serif;\n}\n.cta-section .btn-primary[data-v-470fd0fe] {\r\n  background-color: #ffffff;\r\n  border: none;\r\n  color: #6b0000;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  transition: background-color 0.3s ease;\n}\n.cta-section .btn-primary[data-v-470fd0fe]:hover {\r\n  background-color: #e6a828;\r\n  color: #fff;\n}\n@media (max-width: 575.98px) {\n.jurnal-page[data-v-470fd0fe]{\r\n    padding: 0px;\n}\n}\r\n", ""]);
+exports.push([module.i, "\n.jurnal-page[data-v-470fd0fe] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f7f9fc;\r\n  color: #333;\r\n  padding: 80px;\n}\r\n\r\n/* Hero Section */\n.hero-section[data-v-470fd0fe] {\r\n  background-image: url(/assets/bg-jurnall.png);\r\n  background-size: cover;\r\n  padding: 100px 0;\r\n  color: rgb(0, 0, 0);\n}\n.hero-title[data-v-470fd0fe] {\r\n  font-size: 2.8rem;\r\n  font-weight: 700;\n}\n.hero-benefits[data-v-470fd0fe] {\r\n  list-style: none;\r\n  padding-left: 0;\n}\n.hero-benefits li[data-v-470fd0fe] {\r\n  padding-left: 25px;\r\n  position: relative;\r\n  margin-bottom: 10px;\n}\n.hero-benefits li[data-v-470fd0fe]::before {\r\n  content: \"\\2714\";\r\n  position: absolute;\r\n  left: 0;\r\n  color: #fcbf49; /* Warna kuning dari hero asli */\n}\n.btn-cta[data-v-470fd0fe] {\r\n  background-color: #6b0000;\r\n  color: #fff;\r\n  border: none;\r\n  padding: 10px 20px;\r\n  font-weight: bold;\r\n  border-radius: 6px;\n}\r\n\r\n/* --- CSS BARU UNTUK WHY & FEATURES --- */\n.why-and-features-section[data-v-470fd0fe] {\r\n  background-color: #f8f9fa;\r\n  font-family: 'Poppins', sans-serif;\n}\n.why-and-features-section .row[data-v-470fd0fe] {\r\n  display: flex;\r\n  align-items: stretch;\n}\n.why-container[data-v-470fd0fe] {\r\n  background: #fff;\r\n  border: 1px solid #ddd;\r\n  border-radius: 8px;\r\n  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);\r\n  border-color: #6b0000; /* Warna merah dari hero asli */\n}\n.why-title[data-v-470fd0fe] {\r\n  font-size: 2rem;\r\n  font-weight: 800;\r\n  color: #6b0000; /* Warna merah dari hero asli */\n}\n.why-desc[data-v-470fd0fe] {\r\n  font-size: 1.1rem;\r\n  color: #333;\r\n  line-height: 1.7;\n}\n.why-note[data-v-470fd0fe] {\r\n  font-style: italic;\r\n  color: #6b0000; /* Warna merah dari hero asli */\r\n  font-size: 0.95rem;\r\n  margin-top: 1.5rem;\n}\n.feature-container[data-v-470fd0fe] {\r\n  background: #fff;\r\n  border: 1px solid #ddd;\r\n  border-radius: 8px;\r\n  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);\r\n  border-color: #6b0000; /* Warna merah dari hero asli */\n}\n.feature-head[data-v-470fd0fe] {\r\n  padding: 20px;\r\n  text-align: center;\n}\n.feature-title[data-v-470fd0fe] {\r\n  font-size: 1.5rem;\r\n  font-weight: 600;\r\n  color: #6b0000; /* Warna merah dari hero asli */\r\n  margin-bottom: 5px;\n}\n.feature-subtitle[data-v-470fd0fe] {\r\n  font-size: 0.9rem;\r\n  color: #666;\n}\n.hr-border[data-v-470fd0fe] {\r\n  border-top: 1px solid #ccc;\r\n  margin: 15px 0;\n}\n.features-item[data-v-470fd0fe] {\r\n  list-style: none;\r\n  padding: 0;\r\n  margin: 0;\n}\n.features-item li[data-v-470fd0fe] {\r\n  padding: 10px 20px;\r\n  border-bottom: 1px solid #f0f0f0;\n}\n.features-item li[data-v-470fd0fe]:last-child {\r\n  border-bottom: none;\n}\n.features-item .list-feature[data-v-470fd0fe] {\r\n  gap: 15px;\n}\n.features-item .list-feature i[data-v-470fd0fe] {\r\n  color: #6b0000; /* Warna merah dari hero asli */\r\n  font-size: 1rem;\r\n  width: 20px;\r\n  text-align: center;\n}\n.features-item .list-feature h5[data-v-470fd0fe] {\r\n  font-size: 1rem;\r\n  font-weight: 400;\r\n  color: #333;\r\n  margin: 0;\n}\n.see-more-wrapper[data-v-470fd0fe] {\r\n  padding: 15px;\n}\n.see-more-btn[data-v-470fd0fe] {\r\n  background-color: #6b0000; /* Warna merah dari hero asli */\r\n  color: #fff;\r\n  border: none;\r\n  padding: 10px 20px;\r\n  border-radius: 5px;\r\n  cursor: pointer;\r\n  font-size: 0.9rem;\r\n  transition: background-color 0.3s ease;\r\n  width: 100%;\r\n  display: block;\r\n  box-sizing: border-box;\n}\n.see-more-btn[data-v-470fd0fe]:hover {\r\n  background-color: #8e1c1c; /* Warna hover yang sedikit lebih gelap */\n}\r\n\r\n/* CTA */\n.cta-section[data-v-470fd0fe] {\r\n  background: linear-gradient(90deg, #6b0000, #8e1c1c);\r\n  color: #fff;\r\n  padding: 60px 0;\n}\n.container-cta[data-v-470fd0fe] {\r\n  max-width: 800px;\r\n  margin: 0 auto;\n}\n.cta-text[data-v-470fd0fe] {\r\n  color: #fff;\r\n  font-family: 'Poppins', sans-serif;\n}\n.cta-section .btn-primary[data-v-470fd0fe] {\r\n  background-color: #ffffff;\r\n  border: none;\r\n  color: #6b0000;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  transition: background-color 0.3s ease;\n}\n.cta-section .btn-primary[data-v-470fd0fe]:hover {\r\n  background-color: #e6a828;\r\n  color: #fff;\n}\r\n\r\n/* Responsive CSS */\n@media (max-width: 768px) {\n.hero-section[data-v-470fd0fe] {\r\n    padding: 60px 0;\n}\n.hero-title[data-v-470fd0fe] {\r\n    font-size: 2rem;\n}\n.features-list[data-v-470fd0fe] {\r\n    grid-template-columns: 1fr;\n}\n.feature-list-container[data-v-470fd0fe] {\r\n    padding: 1rem;\n}\n}\n@media (max-width: 576px) {\n.jurnal-page[data-v-470fd0fe] {\r\n    padding: 0;\n}\n.hero-title[data-v-470fd0fe] {\r\n    font-size: 1.8rem;\n}\n.cta-text[data-v-470fd0fe] {\r\n    font-size: 1.5rem !important;\n}\n.cta-section .btn-primary[data-v-470fd0fe] {\r\n    padding: 8px 20px;\n}\n}\r\n", ""]);
 
 // exports
 
@@ -8920,7 +9132,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.lms-page[data-v-68d21b65] {\r\n  font-family: 'Poppins', sans-serif;\r\n  /* padding: 70px; */\n}\n.hero-section[data-v-68d21b65] {\r\n  background: linear-gradient(135deg, #a0b1b5, #2e3131);\r\n  color: #fff;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-68d21b65] {\r\n  font-size: 2.5rem;\r\n  font-weight: 700;\r\n  margin-bottom: 15px;\n}\n.hero-title span[data-v-68d21b65] {\r\n  color: #F9A825;\n}\n.tagline[data-v-68d21b65] {\r\n  font-size: 1rem;\r\n  letter-spacing: 1px;\r\n  text-transform: uppercase;\n}\n.hero-subtext[data-v-68d21b65] {\r\n  font-size: 1.1rem;\r\n  margin-bottom: 20px;\n}\n.hero-benefits[data-v-68d21b65] {\r\n  list-style: none;\r\n  padding-left: 0;\n}\n.hero-benefits li[data-v-68d21b65] {\r\n  margin-bottom: 10px;\r\n  padding-left: 20px;\r\n  position: relative;\n}\n.hero-benefits li[data-v-68d21b65]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #F9A825;\n}\n.btn-cta[data-v-68d21b65] {\r\n  background-color: #F9A825;\r\n  color: #fff;\r\n  padding: 10px 24px;\r\n  border: none;\r\n  font-weight: bold;\r\n  border-radius: 8px;\n}\n.container[data-v-68d21b65]{\r\n  background-color: #2e3131;\r\n  border-radius: 20px;\r\n  padding: 20px;\n}\n.container-fluid[data-v-68d21b65]{\r\n  padding: 80px;\n}\n.why-lms-section[data-v-68d21b65] {\r\n  background-color: #f8f9fa;\r\n  font-family: 'Poppins', sans-serif;\n}\n.title-wrapper[data-v-68d21b65] {\r\n  background-color: #a9a8a8;\n}\n.why-title[data-v-68d21b65] {\r\n  font-size: 2.4rem;\r\n  font-weight: 800;\r\n  color: #003049;\n}\n.content-wrapper[data-v-68d21b65] {\r\n  background-color: #ffffff;\r\n  font-size: 1.1rem;\r\n  color: #333;\r\n  line-height: 1.7;\r\n  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.05);\n}\n.why-desc[data-v-68d21b65] {\r\n  margin-bottom: 1rem;\n}\n.why-note[data-v-68d21b65] {\r\n  font-style: italic;\r\n  color: #006d77;\r\n  font-size: 0.95rem;\r\n  margin-top: 1.5rem;\n}\n.text-tittle[data-v-68d21b65]{\r\n  width: 100%;\r\n  font-size: 1.5rem;\r\n  font-weight: 800;\r\n  color: #003049;\r\n  font-family: 'Poppins', sans-serif;\n}\n.lms-benefit-section[data-v-68d21b65] {\r\n  background-color: #f8f9fa;\r\n  padding: 80px 0;\n}\n.text-tittle[data-v-68d21b65] {\r\n  font-size: 2rem;\r\n  color: #003049;\r\n  font-weight: 600;\n}\n.lms-benefit-section .rounded[data-v-68d21b65] {\r\n  border: 2px solid #dee2e6;\r\n  transition: 0.3s ease;\n}\n.lms-benefit-section .rounded[data-v-68d21b65]:hover {\r\n  transform: translateY(-5px);\r\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);\r\n  border-color: #F9A825;\n}\n.lms-benefit-section i[data-v-68d21b65] {\r\n  color: #003049;\n}\n.cta-section[data-v-68d21b65] {\r\n  background: linear-gradient(45deg, #424141 0%, #8c8c8c 100%);\r\n  color: #fff;\r\n  text-align: center;\n}\n.cta-section .btn[data-v-68d21b65] {\r\n  background-color: #fff;\r\n  color: #E95420;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  border: none;\n}\n.features-section[data-v-68d21b65] {\r\n  font-family: 'Montserrat', 'Poppins', sans-serif;\r\n  background-color: #ededed !important;\n}\n.section-title[data-v-68d21b65]{\r\n  font-size: 40px;\r\n  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;\n}\n.section-subtitle[data-v-68d21b65]{\r\n  font-size: 20px;\r\n  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;\n}\n.feature-card[data-v-68d21b65] {\r\n  background-color: whitesmoke;\r\n  border-radius: 15px !important;\r\n  /* box-shadow: 0 5px 20px rgba(0,0,0,0.08); */\r\n  border: 1px solid rgb(185, 185, 185);\r\n  overflow: hidden;\r\n  width: 280px;\r\n  color: rgb(81, 81, 81);\r\n  height: 350px !important;\n}\n.feature-card-header[data-v-68d21b65] {\r\n  height: 150px;\r\n  position: relative;\n}\n.card-header-bg-image[data-v-68d21b65] {\r\n  width: 100%;\r\n  height: 100%;\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  filter: brightness(0.9);\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  border-radius: 15px;\r\n  padding: 10px;\n}\n.card-header-tag[data-v-68d21b65] {\r\n  position: relative;\r\n  z-index: 1;\r\n  background-color: rgba(255,255,255,0.25);\r\n  color: #fff;\r\n  border-radius: 5px;\r\n  font-size: 0.85em;\r\n  font-weight: 600;\n}\n.feature-card-content h5[data-v-68d21b65] {\r\n  font-weight: bold;\r\n  font-size: 1.2em;\n}\n.feature-card-content p[data-v-68d21b65] {\r\n  font-size: 0.95em;\r\n  color: #003049;\n}\n.metadata[data-v-68d21b65], .sub-description[data-v-68d21b65] {\r\n  font-size: 0.9rem;\r\n  color: #ccc;\r\n  display: flex;\r\n  align-items: center;\n}\n.metadata i[data-v-68d21b65],\r\n.sub-description i[data-v-68d21b65] {\r\n  margin-right: 8px;\n}\n@media (max-width: 575.98px) {\n.lms-page[data-v-68d21b65]{\r\n    padding: 0px;\n}\n}\r\n", ""]);
+exports.push([module.i, "\n.lms-page[data-v-68d21b65] {\r\n  font-family: 'Poppins', sans-serif;\n}\n.hero-section[data-v-68d21b65] {\r\n  background: linear-gradient(135deg, #a0b1b5, #2e3131);\r\n  color: #fff;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-68d21b65] {\r\n  font-size: 2.5rem;\r\n  font-weight: 700;\r\n  margin-bottom: 15px;\n}\n.hero-title span[data-v-68d21b65] {\r\n  color: #F9A825;\n}\n.tagline[data-v-68d21b65] {\r\n  font-size: 1rem;\r\n  letter-spacing: 1px;\r\n  text-transform: uppercase;\n}\n.hero-subtext[data-v-68d21b65] {\r\n  font-size: 1.1rem;\r\n  margin-bottom: 20px;\n}\n.hero-benefits[data-v-68d21b65] {\r\n  list-style: none;\r\n  padding-left: 0;\n}\n.hero-benefits li[data-v-68d21b65] {\r\n  margin-bottom: 10px;\r\n  padding-left: 20px;\r\n  position: relative;\n}\n.hero-benefits li[data-v-68d21b65]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #F9A825;\n}\n.btn-cta[data-v-68d21b65] {\r\n  background-color: #F9A825;\r\n  color: #fff;\r\n  padding: 10px 24px;\r\n  border: none;\r\n  font-weight: bold;\r\n  border-radius: 8px;\n}\n.container[data-v-68d21b65] {\r\n  background-color: #2e3131;\r\n  border-radius: 20px;\r\n  padding: 20px;\n}\r\n\r\n/* Bagian Gabungan Why & Features */\n.why-and-features-section[data-v-68d21b65] {\r\n  background-color: #f8f9fa;\r\n  font-family: 'Poppins', sans-serif;\n}\n.why-container[data-v-68d21b65] {\r\n  background: #fff;\r\n  border: 2px solid #e5e8ec;\r\n  border-radius: 8px;\r\n  box-shadow: 0 2px 6px rgba(0,0,0,0.05);\r\n  min-height: 480px;\n}\n.why-title[data-v-68d21b65] {\r\n  font-size: 2.4rem;\r\n  font-weight: 800;\r\n  color: #003049;\n}\n.why-desc[data-v-68d21b65] {\r\n  font-size: 1.1rem;\r\n  color: #333;\r\n  line-height: 1.7;\n}\n.why-note[data-v-68d21b65] {\r\n  font-style: italic;\r\n  color: #006d77;\r\n  font-size: 0.95rem;\r\n  margin-top: 1.5rem;\n}\n.text-tittle[data-v-68d21b65] {\r\n  width: 100%;\r\n  font-size: 1.5rem;\r\n  font-weight: 800;\r\n  color: #003049;\r\n  font-family: 'Poppins', sans-serif;\n}\n.lms-benefit-section[data-v-68d21b65] {\r\n  background-color: #f8f9fa;\r\n  padding: 40px 0;\n}\n.text-tittle[data-v-68d21b65] {\r\n  font-size: 2rem;\r\n  color: #003049;\r\n  font-weight: 600;\n}\n.lms-benefit-section .rounded[data-v-68d21b65] {\r\n  border: 2px solid #dee2e6;\r\n  transition: 0.3s ease;\n}\n.lms-benefit-section .rounded[data-v-68d21b65]:hover {\r\n  transform: translateY(-5px);\r\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);\r\n  border-color: #F9A825;\n}\n.lms-benefit-section i[data-v-68d21b65] {\r\n  color: #003049;\n}\n.cta-section[data-v-68d21b65] {\r\n  background: linear-gradient(45deg, #424141 0%, #8c8c8c 100%);\r\n  color: #fff;\r\n  text-align: center;\n}\n.cta-section .btn[data-v-68d21b65] {\r\n  background-color: #fff;\r\n  color: #E95420;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  border: none;\n}\n.feature-container[data-v-68d21b65] {\r\n  background: #fff;\r\n  border: 2px solid #e5e8ec;\r\n  border-radius: 8px;\r\n  box-shadow: 0 2px 6px rgba(0,0,0,0.05);\n}\n.feature-head[data-v-68d21b65] {\r\n  padding: 20px;\r\n  text-align: center;\n}\n.feature-head h2.feature[data-v-68d21b65] {\r\n  font-size: 1.5rem;\r\n  font-weight: 600;\r\n  color: inherit;\r\n  margin-bottom: 5px;\n}\n.feature-head p[data-v-68d21b65] {\r\n  font-size: 0.9rem;\r\n  color: #666;\n}\n.hr-border[data-v-68d21b65] {\r\n  border-top: 1px solid #ccc;\r\n  margin: 15px 0;\n}\n.features-item[data-v-68d21b65] {\r\n  list-style: none;\r\n  padding: 0;\r\n  margin: 0;\n}\n.features-item li[data-v-68d21b65] {\r\n  padding: 10px 20px;\r\n  border-bottom: 1px solid #f0f0f0;\n}\n.features-item li[data-v-68d21b65]:last-child {\r\n  border-bottom: none;\n}\n.features-item .list-feature[data-v-68d21b65] {\r\n  gap: 15px;\n}\n.features-item .list-feature i[data-v-68d21b65] {\r\n  color: #2e3131;\r\n  font-size: 1rem;\r\n  width: 20px;\r\n  text-align: center;\n}\n.features-item .list-feature h5[data-v-68d21b65] {\r\n  font-size: 1rem;\r\n  font-weight: 400;\r\n  color: #333;\r\n  margin: 0;\n}\n.see-more-wrapper[data-v-68d21b65] {\r\n  padding: 10px;\n}\n.see-more-btn[data-v-68d21b65] {\r\n  background-color: #2e3131;\r\n  color: #fff;\r\n  border: none;\r\n  padding: 10px 20px;\r\n  border-radius: 5px;\r\n  cursor: pointer;\r\n  font-size: 0.9rem;\r\n  transition: background-color 0.3s ease;\r\n  width: 100%;\r\n  display: block;\r\n  box-sizing: border-box;\n}\n.see-more-btn[data-v-68d21b65]:hover {\r\n  background-color: #3d4242;\n}\n.btn-success[data-v-68d21b65]:hover{\r\n  background-color: #3d4242;\n}\n@media (max-width: 991.98px) {\n.why-and-features-section .col-lg-6[data-v-68d21b65] {\r\n    margin-bottom: 20px;\n}\n}\r\n", ""]);
 
 // exports
 
@@ -8939,7 +9151,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.mbkm-page[data-v-2f6b809c] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f8faff;\r\ncolor: #16092e;\r\npadding: 50px;\n}\r\n\r\n/* Hero Section */\n.hero-section[data-v-2f6b809c] {\r\n    background: linear-gradient(135deg, #4e727d, #45818c);\r\n  color: #ffd166;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-2f6b809c] {\r\n  font-size: 2.5rem;\r\n  font-weight: 700;\r\n  margin-bottom: 15px;\n}\n.hero-title span[data-v-2f6b809c] {\r\n  color: #ffd166;\n}\n.tagline[data-v-2f6b809c] {\r\n  font-size: 1rem;\r\n  letter-spacing: 1px;\r\n  text-transform: uppercase;\n}\n.hero-subtext[data-v-2f6b809c] {\r\n  font-size: 1.1rem;\r\n  margin-bottom: 20px;\n}\n.hero-benefits[data-v-2f6b809c] {\r\n  list-style: none;\r\n  padding-left: 0;\r\n  color: #ffd166;\n}\n.hero-benefits li[data-v-2f6b809c] {\r\n  margin-bottom: 10px;\r\n  padding-left: 25px;\r\n  position: relative;\n}\n.hero-benefits li[data-v-2f6b809c]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #ffd166;\r\n  font-weight: bold;\n}\n.btn-cta[data-v-2f6b809c] {\r\n  background-color: #ffd166;\r\n  color: #333;\r\n  padding: 10px 24px;\r\n  border: none;\r\n  font-weight: bold;\r\n  border-radius: 8px;\n}\r\n\r\n/* Gambar Hero */\n.hero-image[data-v-2f6b809c] {\r\n  max-width: 100%;\r\n  height: auto;\r\n  border-radius: 10px;\r\n  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);\n}\r\n\r\n/* Why MBKM Section */\n.why-mbkm-section[data-v-2f6b809c] { \r\n  /* background-color: #f1f1f1; */\r\n  font-family: 'Poppins', sans-serif;\n}\n.title-wrapper[data-v-2f6b809c] {\r\n  background-color: #caf0f8;\n}\n.why-title[data-v-2f6b809c] {\r\n  font-size: 2.4rem;\r\n  font-weight: 800;\r\n  color: #023047;\n}\n.content-wrapper[data-v-2f6b809c] {\r\n  background-color: #ffffff; \r\n  font-size: 1.1rem;\r\n  color: #333;\r\n  line-height: 1.7;\r\n  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.05);\n}\n.why-desc[data-v-2f6b809c] {\r\n  margin-bottom: 1rem;\n}\n.why-note[data-v-2f6b809c] {\r\n  font-style: italic;\r\n  color: #006d77;\r\n  font-size: 0.95rem;\r\n  margin-top: 1.5rem;\n}\n.mbkm-advantages-section[data-v-2f6b809c] {\r\n  background-color: #fafafa;\r\n  color: #002b36;\r\n  font-family: 'Poppins', sans-serif;\n}\n.features-section[data-v-2f6b809c] {\r\n  font-family: 'Montserrat', 'Poppins', sans-serif;\r\n  background-color: #ededed !important;\n}\n.section-title[data-v-2f6b809c]{\r\n  font-size: 40px;\r\n  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;\n}\n.section-subtitle[data-v-2f6b809c]{\r\n  font-size: 20px;\r\n  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;\n}\n.feature-card[data-v-2f6b809c] {\r\n  background-color: whitesmoke;\r\n  border-radius: 15px !important;\r\n  /* box-shadow: 0 5px 20px rgba(0,0,0,0.08); */\r\n  border: 1px solid rgb(185, 185, 185);\r\n  overflow: hidden;\r\n  width: 280px;\r\n  color: rgb(81, 81, 81);\r\n  height: 350px !important;\n}\n.feature-card-header[data-v-2f6b809c] {\r\n  height: 150px;\r\n  position: relative;\n}\n.card-header-bg-image[data-v-2f6b809c] {\r\n  width: 100%;\r\n  height: 100%;\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  filter: brightness(0.9);\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  border-radius: 15px;\r\n  padding: 10px;\n}\n.card-header-tag[data-v-2f6b809c] {\r\n  position: relative;\r\n  z-index: 1;\r\n  background-color: rgba(255,255,255,0.25);\r\n  color: #fff;\r\n  border-radius: 5px;\r\n  font-size: 0.85em;\r\n  font-weight: 600;\n}\n.feature-card-content h5[data-v-2f6b809c] {\r\n  font-weight: bold;\r\n  font-size: 1.2em;\n}\n.feature-card-content p[data-v-2f6b809c] {\r\n  font-size: 0.95em;\r\n  color: #003049;\n}\n.metadata[data-v-2f6b809c], .sub-description[data-v-2f6b809c] {\r\n  font-size: 0.9rem;\r\n  color: #ccc;\r\n  display: flex;\r\n  align-items: center;\n}\n.metadata i[data-v-2f6b809c],\r\n.sub-description i[data-v-2f6b809c] {\r\n  margin-right: 8px;\n}\n.cta-section[data-v-2f6b809c] {\r\n    background: linear-gradient(135deg, #4e727d, #45818c);\r\n\r\n  color: #ffd166;\r\n  text-align: center;\n}\n.cta-section .btn[data-v-2f6b809c] {\r\n  background-color: #fff;\r\n  color: #E95420;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  border: none;\n}\n.fitur-title[data-v-2f6b809c] {\r\n  font-size: 1.8rem;\r\n  font-weight: 700;\r\n  color: #003049;\n}\n.fitur-card[data-v-2f6b809c] {\r\n  border-radius: 16px;\r\n  background-color: #fafafa;\r\n  border: 1px solid #ddd;\r\n  transition: 0.3s ease;\n}\n.fitur-card[data-v-2f6b809c]:hover {\r\n  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);\r\n  transform: translateY(-4px);\n}\n.fitur-icon[data-v-2f6b809c] {\r\n  width: 48px;\r\n  height: 48px;\n}\n@media (max-width: 575.98px) {\n.mbkm-page[data-v-2f6b809c]{\r\n    padding: 10px;\n}\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.mbkm-page[data-v-2f6b809c] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f8faff;\r\n  color: #16092e;\r\n  padding: 50px;\n}\r\n\r\n/* Hero Section */\n.hero-section[data-v-2f6b809c] {\r\n  background: linear-gradient(135deg, #4e727d, #45818c);\r\n  color: #fff;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-2f6b809c] {\r\n  font-size: 2.5rem;\r\n  font-weight: 700;\r\n  margin-bottom: 15px;\n}\n.hero-title span[data-v-2f6b809c] {\r\n  color: #ffd166;\n}\n.tagline[data-v-2f6b809c] {\r\n  font-size: 1rem;\r\n  letter-spacing: 1px;\r\n  text-transform: uppercase;\n}\n.hero-subtext[data-v-2f6b809c] {\r\n  font-size: 1.1rem;\r\n  margin-bottom: 20px;\n}\n.hero-benefits[data-v-2f6b809c] {\r\n  list-style: none;\r\n  padding-left: 0;\r\n  color: #fff;\n}\n.hero-benefits li[data-v-2f6b809c] {\r\n  margin-bottom: 10px;\r\n  padding-left: 25px;\r\n  position: relative;\n}\n.hero-benefits li[data-v-2f6b809c]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #ffd166;\r\n  font-weight: bold;\n}\n.btn-cta[data-v-2f6b809c] {\r\n  background-color: #ffd166;\r\n  color: #333;\r\n  padding: 10px 24px;\r\n  border: none;\r\n  font-weight: bold;\r\n  border-radius: 8px;\n}\r\n\r\n/* --- CSS BARU UNTUK WHY & FEATURES --- */\n.why-and-features-section[data-v-2f6b809c] {\r\n  background-color: #f8f9fa;\r\n  font-family: 'Poppins', sans-serif;\n}\n.why-and-features-section .row[data-v-2f6b809c] {\r\n  display: flex;\r\n  align-items: flex-start;\n}\n.why-container[data-v-2f6b809c] {\r\n  background: #fff;\r\n  border: 1px solid #e5e8ec;\r\n  border-radius: 8px;\r\n  box-shadow: 0 2px 6px rgba(0,0,0,0.05);\r\n  min-height: 490px;\n}\n.why-title[data-v-2f6b809c] {\r\n  font-size: 2rem;\r\n  font-weight: 800;\r\n  color: #003049;\n}\n.why-desc[data-v-2f6b809c] {\r\n  font-size: 1.1rem;\r\n  color: #333;\r\n  line-height: 1.7;\n}\n.why-note[data-v-2f6b809c] {\r\n  font-style: italic;\r\n  color: #006d77;\r\n  font-size: 0.95rem;\r\n  margin-top: 1.5rem;\n}\n.feature-container[data-v-2f6b809c] {\r\n  background: #fff;\r\n  border: 1px solid #e5e8ec;\r\n  border-radius: 8px;\r\n  box-shadow: 0 2px 6px rgba(0,0,0,0.05);\n}\n.feature-head[data-v-2f6b809c] {\r\n  padding: 20px;\r\n  text-align: center;\n}\n.feature-title[data-v-2f6b809c] {\r\n  font-size: 1.5rem;\r\n  font-weight: 600;\r\n  color: inherit;\r\n  margin-bottom: 5px;\n}\n.feature-subtitle[data-v-2f6b809c] {\r\n  font-size: 0.9rem;\r\n  color: #666;\n}\n.hr-border[data-v-2f6b809c] {\r\n  border-top: 1px solid #ccc;\r\n  margin: 15px 0;\n}\n.features-item[data-v-2f6b809c] {\r\n  list-style: none;\r\n  padding: 0;\r\n  margin: 0;\n}\n.features-item li[data-v-2f6b809c] {\r\n  padding: 10px 20px;\r\n  border-bottom: 1px solid #f0f0f0;\n}\n.features-item li[data-v-2f6b809c]:last-child {\r\n  border-bottom: none;\n}\n.features-item .list-feature[data-v-2f6b809c] {\r\n  gap: 15px;\n}\n.features-item .list-feature i[data-v-2f6b809c] {\r\n  color: #4e727d;\r\n  font-size: 1rem;\r\n  width: 20px;\r\n  text-align: center;\n}\n.features-item .list-feature h5[data-v-2f6b809c] {\r\n  font-size: 1rem;\r\n  font-weight: 400;\r\n  color: #333;\r\n  margin: 0;\n}\n.see-more-wrapper[data-v-2f6b809c] {\r\n  padding: 15px;\n}\n.see-more-btn[data-v-2f6b809c] {\r\n  background-color: #4e727d;\r\n  color: #fff;\r\n  border: none;\r\n  padding: 10px 20px;\r\n  border-radius: 5px;\r\n  cursor: pointer;\r\n  font-size: 0.9rem;\r\n  transition: background-color 0.3s ease;\r\n  width: 100%;\r\n  display: block;\r\n  box-sizing: border-box;\n}\n.see-more-btn[data-v-2f6b809c]:hover {\r\n  background-color: #5d8c97;\n}\r\n\r\n/* --- AKHIR CSS BARU --- */\n.cta-section[data-v-2f6b809c] {\r\n  background: linear-gradient(135deg, #4e727d, #45818c);\r\n  color: #fff;\r\n  text-align: center;\n}\n.cta-section .btn[data-v-2f6b809c] {\r\n  background-color: #fff;\r\n  color: #4e727d;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  border: none;\n}\r\n", ""]);
 
 // exports
 
@@ -8958,7 +9170,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.modul-page[data-v-46157c3e] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f8faff;\r\n  padding: 50px;\n}\n.hero-section[data-v-46157c3e] {\r\n  background: linear-gradient(135deg, #29374A, #365486);\r\n  color: #fff;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-46157c3e] {\r\n  font-size: 2.5rem;\r\n  font-weight: 700;\n}\n.hero-title span[data-v-46157c3e] {\r\n  color: #FFD54F;\n}\n.tagline[data-v-46157c3e] {\r\n  font-size: 0.9rem;\r\n  text-transform: uppercase;\n}\n.hero-benefits[data-v-46157c3e] {\r\n  list-style: none;\r\n  padding: 0;\n}\n.hero-benefits li[data-v-46157c3e] {\r\n  position: relative;\r\n  padding-left: 25px;\r\n  margin-bottom: 10px;\n}\n.hero-benefits li[data-v-46157c3e]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #FFD54F;\n}\n.btn-cta[data-v-46157c3e] {\r\n  background-color: #FFD54F;\r\n  border: none;\r\n  padding: 10px 20px;\r\n  color: #333;\r\n  font-weight: bold;\r\n  border-radius: 6px;\n}\n.fitur-title[data-v-46157c3e] {\r\n  font-size: 1.8rem;\r\n  font-weight: 700;\r\n  color: #003049;\n}\n.fitur-card[data-v-46157c3e] {\r\n  border-radius: 16px;\r\n  background-color: #fafafa;\r\n  border: 1px solid #ddd;\r\n  transition: 0.3s ease;\n}\n.fitur-card[data-v-46157c3e]:hover {\r\n  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);\r\n  transform: translateY(-4px);\n}\n.fitur-icon[data-v-46157c3e] {\r\n  width: 48px;\r\n  height: 48px;\n}\n.why-lms-section[data-v-46157c3e] {\r\n  background-color: #f8f9fa;\r\n  font-family: 'Poppins', sans-serif;\n}\n.title-wrapper[data-v-46157c3e] {\r\n  background-color: #a9a8a8;\n}\n.why-title[data-v-46157c3e] {\r\n  font-size: 2.4rem;\r\n  font-weight: 800;\r\n  color: #003049;\n}\n.content-wrapper[data-v-46157c3e] {\r\n  background-color: #ffffff;\r\n  font-size: 1.1rem;\r\n  color: #333;\r\n  line-height: 1.7;\r\n  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.05);\n}\n.why-desc[data-v-46157c3e] {\r\n  margin-bottom: 1rem;\n}\n.why-note[data-v-46157c3e] {\r\n  font-style: italic;\r\n  color: #006d77;\r\n  font-size: 0.95rem;\r\n  margin-top: 1.5rem;\n}\n.text-tittle[data-v-46157c3e]{\r\n  width: 100%;\r\n  font-size: 1.5rem;\r\n  font-weight: 800;\r\n  color: #003049;\r\n  font-family: 'Poppins', sans-serif;\n}\n.lms-benefit-section[data-v-46157c3e] {\r\n  background-color: #f8f9fa;\r\n  padding: 80px 0;\n}\n.text-tittle[data-v-46157c3e] {\r\n  font-size: 2rem;\r\n  color: #003049;\r\n  font-weight: 600;\n}\n.lms-benefit-section .rounded[data-v-46157c3e] {\r\n  border: 2px solid #dee2e6;\r\n  transition: 0.3s ease;\n}\n.lms-benefit-section .rounded[data-v-46157c3e]:hover {\r\n  transform: translateY(-5px);\r\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);\r\n  border-color: #F9A825;\n}\n.lms-benefit-section i[data-v-46157c3e] {\r\n  color: #003049;\n}\n.combined-sections[data-v-46157c3e] {\r\n  background: linear-gradient(135deg,#29374A, #365486);\r\n  padding: 60px 0;\n}\n.contact-section[data-v-46157c3e] {\r\n  padding: 40px;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\n}\n.contact-content[data-v-46157c3e] {\r\n  max-width: 600px;\n}\n.contact-title[data-v-46157c3e] {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color: whitesmoke;\r\n  margin-bottom: 20px;\n}\n.contact-subtitle[data-v-46157c3e] {\r\n  font-size: 1.1rem;\r\n  color: whitesmoke;\r\n  margin-bottom: 30px;\n}\n.btn-contact-us[data-v-46157c3e] {\r\n  background-color: #FFD54F;\r\n  color: #000000;\r\n  padding: 12px 30px;\r\n  font-weight: 600;\r\n  border-radius: 8px;\r\n  border: none;\r\n  transition: 0.3s ease;\n}\n.btn-contact-us[data-v-46157c3e]:hover {\r\n  background-color: #c74319;\n}\n.mbkm-features-section .section-title[data-v-46157c3e] {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color: #023516;\n}\n.mbkm-features-section .section-subtitle[data-v-46157c3e] {\r\n  font-size: 1.1rem;\r\n  color: #555;\n}\n.feature-box i[data-v-46157c3e] {\r\n  color: #2a7b55;\n}\n.feature-box[data-v-46157c3e] {\r\n  border: 1px solid #eee;\r\n  transition: transform 0.3s ease;\n}\n.feature-box[data-v-46157c3e]:hover {\r\n  transform: translateY(-5px);\r\n  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);\n}\n@media (max-width: 575.98px) {\n.modul-page[data-v-46157c3e]{\r\n    padding: 0px;\n}\n}\r\n", ""]);
+exports.push([module.i, "\n.modul-page[data-v-46157c3e] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f8faff;\r\n  padding: 50px;\n}\n.hero-section[data-v-46157c3e] {\r\n  background: linear-gradient(135deg, #29374A, #365486);\r\n  color: #fff;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-46157c3e] {\r\n  font-size: 2.5rem;\r\n  font-weight: 700;\n}\n.hero-title span[data-v-46157c3e] {\r\n  color: #FFD54F;\n}\n.tagline[data-v-46157c3e] {\r\n  font-size: 0.9rem;\r\n  text-transform: uppercase;\n}\n.hero-benefits[data-v-46157c3e] {\r\n  list-style: none;\r\n  padding: 0;\n}\n.hero-benefits li[data-v-46157c3e] {\r\n  position: relative;\r\n  padding-left: 25px;\r\n  margin-bottom: 10px;\n}\n.hero-benefits li[data-v-46157c3e]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #FFD54F;\n}\n.btn-cta[data-v-46157c3e] {\r\n  background-color: #FFD54F;\r\n  border: none;\r\n  padding: 10px 20px;\r\n  color: #333;\r\n  font-weight: bold;\r\n  border-radius: 6px;\n}\r\n\r\n\r\n/* --- CSS BARU UNTUK WHY & FEATURES --- */\n.why-and-features-section[data-v-46157c3e] {\r\n  background-color: #f8f9fa;\r\n  font-family: 'Poppins', sans-serif;\n}\n.why-and-features-section .row[data-v-46157c3e] {\r\n  display: flex;\r\n  align-items: flex-start;\n}\n.why-container[data-v-46157c3e] {\r\n  background: #fff;\r\n  border: 1px solid #e5e8ec;\r\n  border-radius: 8px;\r\n  box-shadow: 0 2px 6px rgba(0,0,0,0.05);\r\n  min-height: 500px !important;\n}\n.why-title[data-v-46157c3e] {\r\n  font-size: 2rem;\r\n  font-weight: 800;\r\n  color: #003049;\n}\n.why-desc[data-v-46157c3e] {\r\n  font-size: 1.1rem;\r\n  color: #333;\r\n  line-height: 1.7;\n}\n.why-note[data-v-46157c3e] {\r\n  font-style: italic;\r\n  color: #006d77;\r\n  font-size: 0.95rem;\r\n  margin-top: 1.5rem;\n}\n.feature-container[data-v-46157c3e] {\r\n  background: #fff;\r\n  border: 1px solid #e5e8ec;\r\n  border-radius: 8px;\r\n  box-shadow: 0 2px 6px rgba(0,0,0,0.05);\r\n  min-height: 500px;\n}\n.feature-head[data-v-46157c3e] {\r\n  padding: 20px;\r\n  text-align: center;\n}\n.feature-head h2.feature[data-v-46157c3e] {\r\n  font-size: 1.5rem;\r\n  font-weight: 600;\r\n  color: inherit;\r\n  margin-bottom: 5px;\n}\n.feature-head p[data-v-46157c3e] {\r\n  font-size: 0.9rem;\r\n  color: #666;\n}\n.hr-border[data-v-46157c3e] {\r\n  border-top: 1px solid #ccc;\r\n  margin: 15px 0;\n}\n.features-item[data-v-46157c3e] {\r\n  list-style: none;\r\n  padding: 0;\r\n  margin: 0;\n}\n.features-item li[data-v-46157c3e] {\r\n  padding: 10px 20px;\r\n  border-bottom: 1px solid #f0f0f0;\n}\n.features-item li[data-v-46157c3e]:last-child {\r\n  border-bottom: none;\n}\n.features-item .list-feature[data-v-46157c3e] {\r\n  gap: 15px;\n}\n.features-item .list-feature i[data-v-46157c3e] {\r\n  color: #365486;\r\n  font-size: 1rem;\r\n  width: 20px;\r\n  text-align: center;\n}\n.features-item .list-feature h5[data-v-46157c3e] {\r\n  font-size: 1rem;\r\n  font-weight: 400;\r\n  color: #333;\r\n  margin: 0;\n}\n.see-more-wrapper[data-v-46157c3e] {\r\n  padding: 15px;\n}\n.see-more-btn[data-v-46157c3e] {\r\n  background-color: #365486;\r\n  color: #fff;\r\n  border: none;\r\n  padding: 10px 20px;\r\n  border-radius: 5px;\r\n  cursor: pointer;\r\n  font-size: 0.9rem;\r\n  transition: background-color 0.3s ease;\r\n  width: 100%;\r\n  display: block;\r\n  box-sizing: border-box;\n}\n.see-more-btn[data-v-46157c3e]:hover {\r\n  background-color: #4b6a9e;\n}\n.text-tittle[data-v-46157c3e]{\r\n  width: 100%;\r\n  font-size: 1.5rem;\r\n  font-weight: 800;\r\n  color: #003049;\r\n  font-family: 'Poppins', sans-serif;\n}\n.lms-benefit-section[data-v-46157c3e] {\r\n  background-color: #f8f9fa;\r\n  padding: 80px 0;\n}\n.text-tittle[data-v-46157c3e] {\r\n  font-size: 2rem;\r\n  color: #003049;\r\n  font-weight: 600;\n}\n.lms-benefit-section .rounded[data-v-46157c3e] {\r\n  border: 2px solid #dee2e6;\r\n  transition: 0.3s ease;\n}\n.lms-benefit-section .rounded[data-v-46157c3e]:hover {\r\n  transform: translateY(-5px);\r\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);\r\n  border-color: #F9A825;\n}\n.lms-benefit-section i[data-v-46157c3e] {\r\n  color: #003049;\n}\n.combined-sections[data-v-46157c3e] {\r\n  background: linear-gradient(135deg,#29374A, #365486);\r\n  padding: 60px 0;\n}\n.contact-section[data-v-46157c3e] {\r\n  padding: 40px;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\n}\n.contact-content[data-v-46157c3e] {\r\n  max-width: 600px;\n}\n.contact-title[data-v-46157c3e] {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color: whitesmoke;\r\n  margin-bottom: 20px;\n}\n.contact-subtitle[data-v-46157c3e] {\r\n  font-size: 1.1rem;\r\n  color: whitesmoke;\r\n  margin-bottom: 30px;\n}\n.btn-contact-us[data-v-46157c3e] {\r\n  background-color: #FFD54F;\r\n  color: #000000;\r\n  padding: 12px 30px;\r\n  font-weight: 600;\r\n  border-radius: 8px;\r\n  border: none;\r\n  transition: 0.3s ease;\n}\n.btn-contact-us[data-v-46157c3e]:hover {\r\n  background-color: #c74319;\n}\n.mbkm-features-section .section-title[data-v-46157c3e] {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color: #023516;\n}\n.mbkm-features-section .section-subtitle[data-v-46157c3e] {\r\n  font-size: 1.1rem;\r\n  color: #555;\n}\n.feature-box i[data-v-46157c3e] {\r\n  color: #2a7b55;\n}\n.feature-box[data-v-46157c3e] {\r\n  border: 1px solid #eee;\r\n  transition: transform 0.3s ease;\n}\n.feature-box[data-v-46157c3e]:hover {\r\n  transform: translateY(-5px);\r\n  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);\n}\n@media (max-width: 575.98px) {\n.modul-page[data-v-46157c3e]{\r\n    padding: 0px;\n}\n}\r\n", ""]);
 
 // exports
 
@@ -8977,7 +9189,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.modul-page[data-v-74f2fd35] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f8faff;\r\n  padding: 50px;\n}\n.hero-section[data-v-74f2fd35] {\r\n  background: linear-gradient(135deg, #365486, #29374A);\r\n  color: #fff;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-74f2fd35] {\r\n  font-size: 2.5rem;\r\n  font-weight: 700;\n}\n.hero-title span[data-v-74f2fd35] {\r\n  color: #FFD54F;\n}\n.tagline[data-v-74f2fd35] {\r\n  font-size: 0.9rem;\r\n  text-transform: uppercase;\n}\n.hero-benefits[data-v-74f2fd35] {\r\n  list-style: none;\r\n  padding: 0;\n}\n.hero-benefits li[data-v-74f2fd35] {\r\n  position: relative;\r\n  padding-left: 25px;\r\n  margin-bottom: 10px;\n}\n.hero-benefits li[data-v-74f2fd35]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #FFD54F;\n}\n.btn-cta[data-v-74f2fd35] {\r\n  background-color: #FFD54F;\r\n  border: none;\r\n  padding: 10px 20px;\r\n  color: #333;\r\n  font-weight: bold;\r\n  border-radius: 6px;\n}\n.fitur-title[data-v-74f2fd35] {\r\n  font-size: 1.8rem;\r\n  font-weight: 700;\r\n  color: #003049;\n}\n.fitur-card[data-v-74f2fd35] {\r\n  border-radius: 16px;\r\n  background-color: #fafafa;\r\n  border: 1px solid #ddd;\r\n  transition: 0.3s ease;\n}\n.fitur-card[data-v-74f2fd35]:hover {\r\n  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);\r\n  transform: translateY(-4px);\n}\n.fitur-icon[data-v-74f2fd35] {\r\n  width: 48px;\r\n  height: 48px;\n}\n.why-lms-section[data-v-74f2fd35] {\r\n  background-color: #f8f9fa;\r\n  font-family: 'Poppins', sans-serif;\n}\n.title-wrapper[data-v-74f2fd35] {\r\n  background-color: #a9a8a8;\n}\n.why-title[data-v-74f2fd35] {\r\n  font-size: 2.4rem;\r\n  font-weight: 800;\r\n  color: #003049;\n}\n.content-wrapper[data-v-74f2fd35] {\r\n  background-color: #ffffff;\r\n  font-size: 1.1rem;\r\n  color: #333;\r\n  line-height: 1.7;\r\n  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.05);\n}\n.why-desc[data-v-74f2fd35] {\r\n  margin-bottom: 1rem;\n}\n.why-note[data-v-74f2fd35] {\r\n  font-style: italic;\r\n  color: #006d77;\r\n  font-size: 0.95rem;\r\n  margin-top: 1.5rem;\n}\n.text-tittle[data-v-74f2fd35]{\r\n  width: 100%;\r\n  font-size: 1.5rem;\r\n  font-weight: 800;\r\n  color: #003049;\r\n  font-family: 'Poppins', sans-serif;\n}\n.lms-benefit-section[data-v-74f2fd35] {\r\n  background-color: #f8f9fa;\r\n  padding: 80px 0;\n}\n.text-tittle[data-v-74f2fd35] {\r\n  font-size: 2rem;\r\n  color: #003049;\r\n  font-weight: 600;\n}\n.lms-benefit-section .rounded[data-v-74f2fd35] {\r\n  border: 2px solid #dee2e6;\r\n  transition: 0.3s ease;\n}\n.lms-benefit-section .rounded[data-v-74f2fd35]:hover {\r\n  transform: translateY(-5px);\r\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);\r\n  border-color: #F9A825;\n}\n.lms-benefit-section i[data-v-74f2fd35] {\r\n  color: #003049;\n}\n.combined-sections[data-v-74f2fd35] {\r\n  background: linear-gradient(135deg,#29374A, #365486);\r\n  padding: 60px 0;\n}\n.contact-section[data-v-74f2fd35] {\r\n  padding: 40px;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\n}\n.contact-content[data-v-74f2fd35] {\r\n  max-width: 600px;\n}\n.contact-title[data-v-74f2fd35] {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color: whitesmoke;\r\n  margin-bottom: 20px;\n}\n.contact-subtitle[data-v-74f2fd35] {\r\n  font-size: 1.1rem;\r\n  color: whitesmoke;\r\n  margin-bottom: 30px;\n}\n.btn-contact-us[data-v-74f2fd35] {\r\n  background-color: #E95420;\r\n  color: #fff;\r\n  padding: 12px 30px;\r\n  font-weight: 600;\r\n  border-radius: 8px;\r\n  border: none;\r\n  transition: 0.3s ease;\n}\n.btn-contact-us[data-v-74f2fd35]:hover {\r\n  background-color: #c74319;\n}\n.mbkm-features-section .section-title[data-v-74f2fd35] {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color: #023516;\n}\n.mbkm-features-section .section-subtitle[data-v-74f2fd35] {\r\n  font-size: 1.1rem;\r\n  color: #555;\n}\n.feature-box i[data-v-74f2fd35] {\r\n  color: #2a7b55;\n}\n.feature-box[data-v-74f2fd35] {\r\n  border: 1px solid #eee;\r\n  transition: transform 0.3s ease;\n}\n.feature-box[data-v-74f2fd35]:hover {\r\n  transform: translateY(-5px);\r\n  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);\n}\n@media (max-width: 575.98px) {\n.modul-page[data-v-74f2fd35]{\r\n    padding: 0px;\n}\n}\r\n", ""]);
+exports.push([module.i, "\n.modul-page[data-v-74f2fd35] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f8faff;\r\n  padding: 50px;\n}\n.hero-section[data-v-74f2fd35] {\r\n  background: linear-gradient(135deg, #365486, #29374A);\r\n  color: #fff;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-74f2fd35] {\r\n  font-size: 2.5rem;\r\n  font-weight: 700;\n}\n.hero-title span[data-v-74f2fd35] {\r\n  color: #FFD54F;\n}\n.tagline[data-v-74f2fd35] {\r\n  font-size: 0.9rem;\r\n  text-transform: uppercase;\n}\n.hero-benefits[data-v-74f2fd35] {\r\n  list-style: none;\r\n  padding: 0;\n}\n.hero-benefits li[data-v-74f2fd35] {\r\n  position: relative;\r\n  padding-left: 25px;\r\n  margin-bottom: 10px;\n}\n.hero-benefits li[data-v-74f2fd35]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #FFD54F;\n}\n.btn-cta[data-v-74f2fd35] {\r\n  background-color: #FFD54F;\r\n  border: none;\r\n  padding: 10px 20px;\r\n  color: #333;\r\n  font-weight: bold;\r\n  border-radius: 6px;\n}\r\n\r\n/* --- CSS BARU UNTUK WHY & FEATURES --- */\n.why-and-features-section[data-v-74f2fd35] {\r\n  background-color: #f8f9fa;\r\n  font-family: 'Poppins', sans-serif;\n}\n.why-and-features-section .row[data-v-74f2fd35] {\r\n  display: flex;\r\n  align-items: flex-start;\n}\n.why-container[data-v-74f2fd35] {\r\n  background: #fff;\r\n  border: 1px solid #e5e8ec;\r\n  border-radius: 8px;\r\n  box-shadow: 0 2px 6px rgba(0,0,0,0.05);\n}\n.why-title[data-v-74f2fd35] {\r\n  font-size: 2rem;\r\n  font-weight: 800;\r\n  color: #003049;\n}\n.why-desc[data-v-74f2fd35] {\r\n  font-size: 1.1rem;\r\n  color: #333;\r\n  line-height: 1.7;\n}\n.why-note[data-v-74f2fd35] {\r\n  font-style: italic;\r\n  color: #006d77;\r\n  font-size: 0.95rem;\r\n  margin-top: 1.5rem;\n}\n.feature-container[data-v-74f2fd35] {\r\n  background: #fff;\r\n  border: 1px solid #e5e8ec;\r\n  border-radius: 8px;\r\n  box-shadow: 0 2px 6px rgba(0,0,0,0.05);\n}\n.feature-head[data-v-74f2fd35] {\r\n  padding: 20px;\r\n  text-align: center;\n}\n.feature-head h2.feature[data-v-74f2fd35] {\r\n  font-size: 1.5rem;\r\n  font-weight: 600;\r\n  color: inherit;\r\n  margin-bottom: 5px;\n}\n.feature-head p[data-v-74f2fd35] {\r\n  font-size: 0.9rem;\r\n  color: #666;\n}\n.hr-border[data-v-74f2fd35] {\r\n  border-top: 1px solid #ccc;\r\n  margin: 15px 0;\n}\n.features-item[data-v-74f2fd35] {\r\n  list-style: none;\r\n  padding: 0;\r\n  margin: 0;\n}\n.features-item li[data-v-74f2fd35] {\r\n  padding: 10px 20px;\r\n  border-bottom: 1px solid #f0f0f0;\n}\n.features-item li[data-v-74f2fd35]:last-child {\r\n  border-bottom: none;\n}\n.features-item .list-feature[data-v-74f2fd35] {\r\n  gap: 15px;\n}\n.features-item .list-feature i[data-v-74f2fd35] {\r\n  color: #365486;\r\n  font-size: 1rem;\r\n  width: 20px;\r\n  text-align: center;\n}\n.features-item .list-feature h5[data-v-74f2fd35] {\r\n  font-size: 1rem;\r\n  font-weight: 400;\r\n  color: #333;\r\n  margin: 0;\n}\n.see-more-wrapper[data-v-74f2fd35] {\r\n  padding: 15px;\n}\n.see-more-btn[data-v-74f2fd35] {\r\n  background-color: #365486;\r\n  color: #fff;\r\n  border: none;\r\n  padding: 10px 20px;\r\n  border-radius: 5px;\r\n  cursor: pointer;\r\n  font-size: 0.9rem;\r\n  transition: background-color 0.3s ease;\r\n  width: 100%;\r\n  display: block;\r\n  box-sizing: border-box;\n}\n.see-more-btn[data-v-74f2fd35]:hover {\r\n  background-color: #4b6a9e;\n}\n.text-tittle[data-v-74f2fd35]{\r\n  width: 100%;\r\n  font-size: 1.5rem;\r\n  font-weight: 800;\r\n  color: #003049;\r\n  font-family: 'Poppins', sans-serif;\n}\n.lms-benefit-section[data-v-74f2fd35] {\r\n  background-color: #f8f9fa;\r\n  padding: 80px 0;\n}\n.text-tittle[data-v-74f2fd35] {\r\n  font-size: 2rem;\r\n  color: #003049;\r\n  font-weight: 600;\n}\n.lms-benefit-section .rounded[data-v-74f2fd35] {\r\n  border: 2px solid #dee2e6;\r\n  transition: 0.3s ease;\n}\n.lms-benefit-section .rounded[data-v-74f2fd35]:hover {\r\n  transform: translateY(-5px);\r\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);\r\n  border-color: #F9A825;\n}\n.lms-benefit-section i[data-v-74f2fd35] {\r\n  color: #003049;\n}\n.combined-sections[data-v-74f2fd35] {\r\n  background: linear-gradient(135deg,#29374A, #365486);\r\n  padding: 60px 0;\n}\n.contact-section[data-v-74f2fd35] {\r\n  padding: 40px;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\n}\n.contact-content[data-v-74f2fd35] {\r\n  max-width: 600px;\n}\n.contact-title[data-v-74f2fd35] {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color: whitesmoke;\r\n  margin-bottom: 20px;\n}\n.contact-subtitle[data-v-74f2fd35] {\r\n  font-size: 1.1rem;\r\n  color: whitesmoke;\r\n  margin-bottom: 30px;\n}\n.btn-contact-us[data-v-74f2fd35] {\r\n  background-color: #E95420;\r\n  color: #fff;\r\n  padding: 12px 30px;\r\n  font-weight: 600;\r\n  border-radius: 8px;\r\n  border: none;\r\n  transition: 0.3s ease;\n}\n.btn-contact-us[data-v-74f2fd35]:hover {\r\n  background-color: #c74319;\n}\n.mbkm-features-section .section-title[data-v-74f2fd35] {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color: #023516;\n}\n.mbkm-features-section .section-subtitle[data-v-74f2fd35] {\r\n  font-size: 1.1rem;\r\n  color: #555;\n}\n.feature-box i[data-v-74f2fd35] {\r\n  color: #2a7b55;\n}\n.feature-box[data-v-74f2fd35] {\r\n  border: 1px solid #eee;\r\n  transition: transform 0.3s ease;\n}\n.feature-box[data-v-74f2fd35]:hover {\r\n  transform: translateY(-5px);\r\n  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);\n}\n@media (max-width: 575.98px) {\n.modul-page[data-v-74f2fd35]{\r\n    padding: 0px;\n}\n}\r\n", ""]);
 
 // exports
 
@@ -8996,7 +9208,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.pmb-page[data-v-488a8af4] {\r\n  font-family: 'Poppins', sans-serif;\r\n  /* background-color: #f8faff; */\r\n  padding: 50px;\n}\r\n\r\n/* Hero */\n.hero-section[data-v-488a8af4] {\r\n  background: linear-gradient(135deg, #075E54, #25D366);\r\n  color: #fff;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-488a8af4] {\r\n  font-size: 2.8rem;\r\n  font-weight: 700;\n}\n.hero-title span[data-v-488a8af4] {\r\n  color: #eafaf1;\n}\n.tagline[data-v-488a8af4] {\r\n  font-size: 0.9rem;\r\n  text-transform: uppercase;\n}\n.hero-benefits[data-v-488a8af4] {\r\n  list-style: none;\r\n  padding: 0;\n}\n.hero-benefits li[data-v-488a8af4] {\r\n  position: relative;\r\n  padding-left: 25px;\r\n  margin-bottom: 10px;\n}\n.hero-benefits li[data-v-488a8af4]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #c8f8dd;\n}\n.btn-cta[data-v-488a8af4] {\r\n  background-color: #c8f8dd;\r\n  border: none;\r\n  padding: 10px 20px;\r\n  color: #075E54;\r\n  font-weight: bold;\r\n  border-radius: 6px;\n}\r\n\r\n/* Fitur */\n.fitur-title[data-v-488a8af4] {\r\n  font-size: 2rem;\r\n  font-weight: 700;\r\n  color: #000000;\n}\n.fitur-card[data-v-488a8af4] {\r\n  border-radius: 16px;\r\n  background-color: #fff;\r\n  border: 2px solid #075E54;\r\n  transition: 0.3s ease;\n}\n.fitur-card[data-v-488a8af4]:hover {\r\n  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);\r\n  transform: translateY(-4px);\n}\n.fitur-icon[data-v-488a8af4] {\r\n  width: 48px;\r\n  height: 48px;\n}\r\n\r\n/* Why Section */\n.why-pmb-section[data-v-488a8af4] {\r\n  background-color: #f8f9fa;\n}\n.title-wrapper[data-v-488a8af4] {\r\n  background-color: #d4fbe7;\n}\n.why-title[data-v-488a8af4] {\r\n  font-size: 2.4rem;\r\n  font-weight: 800;\r\n  color: #075E54;\n}\n.content-wrapper[data-v-488a8af4] {\r\n  background-color: #ffffff;\r\n  font-size: 1.1rem;\r\n  color: #333;\r\n  line-height: 1.7;\r\n  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.05);\n}\n.why-desc[data-v-488a8af4] {\r\n  margin-bottom: 1rem;\n}\n.why-note[data-v-488a8af4] {\r\n  font-style: italic;\r\n  color: #4f8b67;\r\n  font-size: 0.95rem;\r\n  margin-top: 1.5rem;\n}\r\n\r\n/* CTA */\n.cta-section[data-v-488a8af4] {\r\n  background-color: #075E54;\r\n  color: #fff;\n}\n.cta-section .btn[data-v-488a8af4] {\r\n  background-color: #c8f8dd;\r\n  color: #075E54;\r\n  font-weight: bold;\r\n  border: none;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\n}\r\n", ""]);
+exports.push([module.i, "\n.pmb-page[data-v-488a8af4] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f8faff;\r\n  padding: 50px;\n}\r\n\r\n/* Hero */\n.hero-section[data-v-488a8af4] {\r\n  background: linear-gradient(135deg, #075E54, #25D366);\r\n  color: #fff;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-488a8af4] {\r\n  font-size: 2.8rem;\r\n  font-weight: 700;\n}\n.hero-title span[data-v-488a8af4] {\r\n  color: #eafaf1;\n}\n.tagline[data-v-488a8af4] {\r\n  font-size: 0.9rem;\r\n  text-transform: uppercase;\n}\n.hero-benefits[data-v-488a8af4] {\r\n  list-style: none;\r\n  padding: 0;\n}\n.hero-benefits li[data-v-488a8af4] {\r\n  position: relative;\r\n  padding-left: 25px;\r\n  margin-bottom: 10px;\n}\n.hero-benefits li[data-v-488a8af4]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #c8f8dd;\n}\n.btn-cta[data-v-488a8af4] {\r\n  background-color: #c8f8dd;\r\n  border: none;\r\n  padding: 10px 20px;\r\n  color: #075E54;\r\n  font-weight: bold;\r\n  border-radius: 6px;\n}\r\n\r\n/* --- CSS BARU UNTUK WHY & FEATURES --- */\n.why-and-features-section[data-v-488a8af4] {\r\n  background-color: #f8f9fa;\r\n  font-family: 'Poppins', sans-serif;\n}\n.why-and-features-section .row[data-v-488a8af4] {\r\n  display: flex;\r\n  align-items: flex-start;\n}\n.why-container[data-v-488a8af4] {\r\n  background: #fff;\r\n  border: 1px solid #e5e8ec;\r\n  border-radius: 8px;\r\n  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);\r\n  min-height: 490px;\n}\n.why-title[data-v-488a8af4] {\r\n  font-size: 2rem;\r\n  font-weight: 800;\r\n  color: #075E54;\n}\n.why-desc[data-v-488a8af4] {\r\n  font-size: 1.1rem;\r\n  color: #333;\r\n  line-height: 1.7;\n}\n.why-note[data-v-488a8af4] {\r\n  font-style: italic;\r\n  color: #4f8b67;\r\n  font-size: 0.95rem;\r\n  margin-top: 1.5rem;\n}\n.feature-container[data-v-488a8af4] {\r\n  background: #fff;\r\n  border: 1px solid #e5e8ec;\r\n  border-radius: 8px;\r\n  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);\n}\n.feature-head[data-v-488a8af4] {\r\n  padding: 20px;\r\n  text-align: center;\n}\n.feature-title[data-v-488a8af4] {\r\n  font-size: 1.5rem;\r\n  font-weight: 600;\r\n  color: inherit;\r\n  margin-bottom: 5px;\n}\n.feature-subtitle[data-v-488a8af4] {\r\n  font-size: 0.9rem;\r\n  color: #666;\n}\n.hr-border[data-v-488a8af4] {\r\n  border-top: 1px solid #ccc;\r\n  margin: 15px 0;\n}\n.features-item[data-v-488a8af4] {\r\n  list-style: none;\r\n  padding: 0;\r\n  margin: 0;\n}\n.features-item li[data-v-488a8af4] {\r\n  padding: 10px 20px;\r\n  border-bottom: 1px solid #f0f0f0;\n}\n.features-item li[data-v-488a8af4]:last-child {\r\n  border-bottom: none;\n}\n.features-item .list-feature[data-v-488a8af4] {\r\n  gap: 15px;\n}\n.features-item .list-feature i[data-v-488a8af4] {\r\n  color: #075E54;\r\n  font-size: 1rem;\r\n  width: 20px;\r\n  text-align: center;\n}\n.features-item .list-feature h5[data-v-488a8af4] {\r\n  font-size: 1rem;\r\n  font-weight: 400;\r\n  color: #333;\r\n  margin: 0;\n}\n.see-more-wrapper[data-v-488a8af4] {\r\n  padding: 15px;\n}\n.see-more-btn[data-v-488a8af4] {\r\n  background-color: #075E54;\r\n  color: #fff;\r\n  border: none;\r\n  padding: 10px 20px;\r\n  border-radius: 5px;\r\n  cursor: pointer;\r\n  font-size: 0.9rem;\r\n  transition: background-color 0.3s ease;\r\n  width: 100%;\r\n  display: block;\r\n  box-sizing: border-box;\n}\n.see-more-btn[data-v-488a8af4]:hover {\r\n  background-color: #0a7366;\n}\r\n\r\n/* CTA */\n.cta-section[data-v-488a8af4] {\r\n  background-color: #075E54;\r\n  color: #fff;\n}\n.cta-section .btn[data-v-488a8af4] {\r\n  background-color: #c8f8dd;\r\n  color: #075E54;\r\n  font-weight: bold;\r\n  border: none;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\n}\n.cta-section .btn-primary[data-v-488a8af4]:hover{\r\n  background-color: #4f8b67;\n}\r\n", ""]);
 
 // exports
 
@@ -9015,7 +9227,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.reporting-page[data-v-7fb72c49] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f7f9fc;\r\n  color: #333;\r\n  padding: 50px;\n}\n.hero-section[data-v-7fb72c49] {\r\n  /* background: linear-gradient(135deg, #083b66, #0f4c75); */\r\n  background-image: url(/assets/reporting-bg.png);\r\n  background-size: cover;\r\n  color: #000000;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-7fb72c49] {\r\n  font-size: 2.5rem;\r\n  font-weight: 700;\r\n  margin-bottom: 15px;\n}\n.hero-title span[data-v-7fb72c49] {\r\n  color: #8d0202;\n}\n.hero-benefits[data-v-7fb72c49] {\r\n  list-style: none;\r\n  padding-left: 0;\r\n  margin-top: 15px;\n}\n.hero-benefits li[data-v-7fb72c49] {\r\n  margin-bottom: 10px;\r\n  padding-left: 25px;\r\n  position: relative;\n}\n.hero-benefits li[data-v-7fb72c49]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #8d0202;\r\n  font-weight: bold;\n}\n.btn-cta[data-v-7fb72c49] {\r\n  background-color: #8d0202;\r\n  color: #fff;\r\n  padding: 12px 28px;\r\n  border-radius: 8px;\r\n  font-weight: 600;\r\n  border: none;\n}\n.reporting-slider-section[data-v-7fb72c49] {\r\n  background-color: #f8f9fa;\r\n  font-family: 'Poppins', sans-serif;\n}\n.section-title[data-v-7fb72c49] {\r\n  color: #000000;\n}\n.reporting-slide-card[data-v-7fb72c49] {\r\n  width: 160px;\r\n  padding: 10px 12px;\r\n  border-radius: 12px;\r\n  border: 1px solid #ddd;\r\n  transition: all 0.3s ease;\n}\n.reporting-slide-card[data-v-7fb72c49]:hover {\r\n  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);\r\n  transform: translateY(-3px);\n}\n.reporting-slide-card img[data-v-7fb72c49] {\r\n  width: 100%;\r\n  height: 100px;\r\n  -o-object-fit: cover;\r\n     object-fit: cover;\r\n  border-radius: 6px;\n}\n.cta-section[data-v-7fb72c49] {\r\n  background: linear-gradient(45deg, #b5b5b5 0%, #858585 100%);\r\n  color: #8d0202;;\r\n  text-align: center;\n}\n.cta-section .btn[data-v-7fb72c49] {\r\n  background-color: #fff;\r\n  color: #8d0202;;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  border: none;\n}\n@media (max-width: 575.98px) {\n.reporting-page[data-v-7fb72c49]{\r\n    padding: 0px;\n}\n}\r\n", ""]);
+exports.push([module.i, "\n.reporting-page[data-v-7fb72c49] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f7f9fc;\r\n  color: #333;\r\n  padding: 50px;\n}\n.hero-section[data-v-7fb72c49] {\r\n  background-image: url(/assets/reporting-bg.png);\r\n  background-size: cover;\r\n  color: #000000;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-7fb72c49] {\r\n  font-size: 2.5rem;\r\n  font-weight: 700;\r\n  margin-bottom: 15px;\n}\n.hero-title span[data-v-7fb72c49] {\r\n  color: #8d0202;\n}\n.hero-benefits[data-v-7fb72c49] {\r\n  list-style: none;\r\n  padding-left: 0;\r\n  margin-top: 15px;\n}\n.hero-benefits li[data-v-7fb72c49] {\r\n  margin-bottom: 10px;\r\n  padding-left: 25px;\r\n  position: relative;\n}\n.hero-benefits li[data-v-7fb72c49]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #8d0202;\r\n  font-weight: bold;\n}\n.btn-cta[data-v-7fb72c49] {\r\n  background-color: #8d0202;\r\n  color: #fff;\r\n  padding: 12px 28px;\r\n  border-radius: 8px;\r\n  font-weight: 600;\r\n  border: none;\n}\r\n\r\n/* --- CSS BARU UNTUK WHY & FEATURES --- */\n.why-and-features-section[data-v-7fb72c49] {\r\n  background-color: #f8f9fa;\r\n  font-family: 'Poppins', sans-serif;\n}\n.why-and-features-section .row[data-v-7fb72c49] {\r\n  display: flex;\r\n  align-items: flex-start;\n}\n.why-container[data-v-7fb72c49] {\r\n  background: #fff;\r\n  border: 1px solid #e5e8ec;\r\n  border-radius: 8px;\r\n  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);\r\n  border-color: #8d0202;\r\n  min-height: 490px;\n}\n.why-title[data-v-7fb72c49] {\r\n  font-size: 2rem;\r\n  font-weight: 800;\r\n  color: #8d0202;\n}\n.why-desc[data-v-7fb72c49] {\r\n  font-size: 1.1rem;\r\n  color: #333;\r\n  line-height: 1.7;\n}\n.why-note[data-v-7fb72c49] {\r\n  font-style: italic;\r\n  color: #8d0202;\r\n  font-size: 0.95rem;\r\n  margin-top: 1.5rem;\n}\n.feature-container[data-v-7fb72c49] {\r\n  background: #fff;\r\n  border: 1px solid #e5e8ec;\r\n  border-radius: 8px;\r\n  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);\r\n  border-color: #8d0202;\n}\n.feature-head[data-v-7fb72c49] {\r\n  padding: 20px;\r\n  text-align: center;\n}\n.feature-title[data-v-7fb72c49] {\r\n  font-size: 1.5rem;\r\n  font-weight: 600;\r\n  color: #8d0202;\r\n  margin-bottom: 5px;\n}\n.feature-subtitle[data-v-7fb72c49] {\r\n  font-size: 0.9rem;\r\n  color: #666;\n}\n.hr-border[data-v-7fb72c49] {\r\n  border-top: 1px solid #ccc;\r\n  margin: 15px 0;\n}\n.features-item[data-v-7fb72c49] {\r\n  list-style: none;\r\n  padding: 0;\r\n  margin: 0;\n}\n.features-item li[data-v-7fb72c49] {\r\n  padding: 10px 20px;\r\n  border-bottom: 1px solid #f0f0f0;\n}\n.features-item li[data-v-7fb72c49]:last-child {\r\n  border-bottom: none;\n}\n.features-item .list-feature[data-v-7fb72c49] {\r\n  gap: 15px;\n}\n.features-item .list-feature i[data-v-7fb72c49] {\r\n  color: #8d0202;\r\n  font-size: 1rem;\r\n  width: 20px;\r\n  text-align: center;\n}\n.features-item .list-feature h5[data-v-7fb72c49] {\r\n  font-size: 1rem;\r\n  font-weight: 400;\r\n  color: #333;\r\n  margin: 0;\n}\n.see-more-wrapper[data-v-7fb72c49] {\r\n  padding: 15px;\n}\n.see-more-btn[data-v-7fb72c49] {\r\n  background-color: #8d0202;\r\n  color: #fff;\r\n  border: none;\r\n  padding: 10px 20px;\r\n  border-radius: 5px;\r\n  cursor: pointer;\r\n  font-size: 0.9rem;\r\n  transition: background-color 0.3s ease;\r\n  width: 100%;\r\n  display: block;\r\n  box-sizing: border-box;\n}\n.see-more-btn[data-v-7fb72c49]:hover {\r\n  background-color: #a30202;\n}\r\n\r\n/* CTA */\n.cta-section[data-v-7fb72c49] {\r\n  background: linear-gradient(45deg, #b5b5b5 0%, #858585 100%);\r\n  color: #8d0202;\r\n  text-align: center;\n}\n.cta-section .btn[data-v-7fb72c49] {\r\n  background-color: #fff;\r\n  color: #8d0202;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  border: none;\n}\n@media (max-width: 575.98px) {\n.reporting-page[data-v-7fb72c49]{\r\n    padding: 0px;\n}\n}\r\n", ""]);
 
 // exports
 
@@ -9034,7 +9246,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.siakad-page[data-v-5c996da0] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f8faff;\r\n  padding: 70px;\n}\n.hero-section[data-v-5c996da0] {\r\n  background-image: url('/assets/ggreen-bg.png');\r\n  background-size: cover;\r\n  background-position: center;\r\n  color: #16300c;\r\n  min-height: 80vh;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-5c996da0] {\r\n  font-size: 2.8rem;\r\n  font-weight: 800;\r\n  line-height: 1.3;\r\n  margin-bottom: 20px;\n}\n.tagline[data-v-5c996da0] {\r\n  font-size: 1rem;\r\n  font-weight: 600;\r\n  color: #16300c;\r\n  letter-spacing: 1px;\r\n  text-transform: uppercase;\n}\n.hero-subtext[data-v-5c996da0] {\r\n  font-size: 1.1rem;\r\n  color: whitesmoke;\r\n  margin-bottom: 20px;\n}\n.hero-benefits[data-v-5c996da0] {\r\n  list-style: none;\r\n  color: whitesmoke;\r\n  padding-left: 0;\n}\n.hero-benefits li[data-v-5c996da0] {\r\n  position: relative;\r\n  padding-left: 25px;\r\n  margin-bottom: 12px;\r\n  font-size: 1rem;\n}\n.hero-benefits li[data-v-5c996da0]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #16300c;\r\n  font-weight: bold;\n}\n.btn-cta[data-v-5c996da0] {\r\n  background-color: #16300c;\r\n  color: #fff;\r\n  border: none;\r\n  padding: 12px 28px;\r\n  font-size: 1rem;\r\n  font-weight: 600;\r\n  border-radius: 8px;\r\n  transition: 0.3s ease;\n}\n.btn-cta[data-v-5c996da0]:hover {\r\n  background-color: #c74319;\n}\n.hero-image[data-v-5c996da0] {\r\n  max-width: 100%;\r\n  height: auto;\r\n  opacity: 0.9;\n}\n.features-section[data-v-5c996da0] {\r\n  display: flex;\r\n  justify-content: center;\r\n  gap: 20px;\r\n  flex-wrap: wrap;\r\n  padding: 40px 20px;\r\n  background: #f8f9fb;\n}\n.feature-container[data-v-5c996da0] {\r\n  flex: 1 1 300px;\r\n  max-width: 350px;\r\n  background: #fff;\r\n  border: 1px solid #e5e8ec;\r\n  border-radius: 12px;\r\n  box-shadow: 0 4px 12px rgba(0,0,0,0.05);\r\n  transition: all 0.3s ease;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: stretch;\n}\n.hr-border[data-v-5c996da0]{\r\n  border: 1px solid #000000;\r\n  padding: 0;\r\n  margin-bottom:20px ;\n}\n.feature-container[data-v-5c996da0]:hover {\r\n  transform: translateY(-5px);\r\n  box-shadow: 0 8px 24px rgba(0,0,0,0.1);\n}\n.feature-head[data-v-5c996da0] {\r\n  padding: 20px;\r\n  border-bottom: 1px solid #e5e8ec;\r\n  text-align: center;\n}\n.feature-head h2.feature[data-v-5c996da0] {\r\n  font-size: 25px;\r\n  font-weight: 600;\r\n  margin-bottom: 5px;\r\n  color: #222;\r\n  margin-bottom: 10px ;\n}\n.feature-head p[data-v-5c996da0] {\r\n  font-size: 0.9rem;\r\n  color: #666;\r\n  margin-bottom: 10px;\n}\r\n\r\n/* Daftar fitur */\n.features-item[data-v-5c996da0] {\r\n  list-style: none;\r\n  margin: 0;\n}\n.list-feature[data-v-5c996da0] {\r\n  display: flex;\r\n  align-items: flex-start;\r\n  gap: 10px;\r\n  padding: 10px 0;\r\n  padding-left: 30px;\n}\n.list-feature[data-v-5c996da0]:last-child {\r\n  border-bottom: none;\n}\n.list-feature i[data-v-5c996da0] {\r\n  color: #000000;\r\n  font-size: 1rem;\r\n  margin-top: 4px;\n}\n.list-feature h5[data-v-5c996da0] {\r\n  font-size: 0.95rem;\r\n  margin: 0;\r\n  font-weight: 400;\r\n  color: #333;\r\n  text-align: left;\r\n  min-width: 200px;\n}\n.see-more-wrapper[data-v-5c996da0] {\r\n  margin-top: 15px;\n}\n.see-more-btn[data-v-5c996da0] {\r\n  background-color: darkgreen;  /* warna dasar */\r\n  color: #fff;                  /* warna tulisan */\r\n  border: none;                 /* hilangkan border */\r\n  padding: 10px 20px;           /* ruang dalam */\r\n  border-radius: 25px;          /* bikin rounded */\r\n  font-size: 14px;\r\n  font-weight: bold;\r\n  cursor: pointer;              /* pointer pas hover */\r\n  transition: all 0.3s ease;    /* animasi halus */\n}\n.see-more-btn[data-v-5c996da0]:hover {\r\n  background-color: #0b5c0b;    /* warna saat hover */\r\n  transform: translateY(-2px);  /* sedikit naik */\r\n  box-shadow: 0 4px 10px rgba(0,0,0,0.2);\n}\n.see-more-btn[data-v-5c996da0]:active {\r\n  transform: translateY(0);     /* kembali normal saat ditekan */\r\n  box-shadow: 0 2px 5px rgba(0,0,0,0.2);\n}\r\n\r\n/*  \r\n.section-title{\r\n  font-size: 40px;\r\n  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;\r\n  margin-top: 50px;\r\n  color: #57075e;\r\n}\r\n.section-subtitle{\r\n  font-size: 20px;\r\n  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;\r\n}\r\n.feature-card {\r\n  background-color: #ebebeb;\r\n  border-radius: 0 0  20px 20px !important;\r\n  box-shadow: 0 5px 20px rgba(0,0,0,0.08);\r\n  overflow: hidden;\r\n  width: 80%;\r\n  color: rgb(81, 81, 81);\r\n  \r\n}\r\n.feature-card-header {\r\n  height: 150px;\r\n  position: relative;\r\n}\r\n.card-header-bg-image {\r\n  border-radius: 0px !important;\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  filter: brightness(0.9);\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  border-radius: 25px;\r\n  padding: 2px;\r\n}\r\n.card-header-tag {\r\n  position: relative;\r\n  z-index: 1;\r\n  background-color: rgba(255,255,255,0.25);\r\n  color: #fff;\r\n  border-radius: 5px;\r\n  font-size: 0.85em;\r\n  font-weight: 600;\r\n} */\n.cta-section[data-v-5c996da0] {\r\n  background: linear-gradient(45deg, #8b8b8b 0%, #8c8c8c 100%);\r\n  color: #023516;\r\n  font-weight: bold;\r\n  text-align: center;\n}\n.cta-section .btn[data-v-5c996da0] {\r\n  background-color: #023516;\r\n  color: #fff;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  border: none;\n}\n.keunggulan-siakad[data-v-5c996da0] {\r\n  background: #fff;\r\n  overflow: hidden;\n}\n.keunggulan-siakad .container-fluid[data-v-5c996da0] {\r\n  margin: 0 auto;\n}\n.keunggulan-siakad .content[data-v-5c996da0] {\r\n  background: #fcfdff;\r\n  border-radius: 15px;\r\n  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  height: 100%;\n}\n.keunggulan-siakad .headline[data-v-5c996da0] {\r\n  font-size: 2.5em;\r\n  font-weight: 700;\r\n  color: #16300c;\r\n  line-height: 1.2;\r\n  margin-bottom: 20px;\n}\n.keunggulan-siakad .headline em[data-v-5c996da0] {\r\n  font-style: normal;\r\n  color: #E95420;\r\n  font-weight: 800;\n}\n.keunggulan-siakad .subheadline[data-v-5c996da0] {\r\n  font-size: 1.2em;\r\n  color: #555;\r\n  line-height: 1.7;\r\n  margin-bottom: 2px;\n}\n.keunggulan-siakad .benefit-list[data-v-5c996da0] {\r\n  list-style: none;\r\n  padding: 0;\r\n  margin: 0;\n}\n.keunggulan-siakad .benefit-list li[data-v-5c996da0] {\r\n  font-size: 1.1em;\r\n  color: #343a40;\r\n  margin-bottom: 18px;\r\n  position: relative;\r\n  padding-left: 35px;\r\n  line-height: 1.5;\n}\n.keunggulan-siakad .benefit-list li[data-v-5c996da0]::before {\r\n  content: '\\F00C';\r\n  font-family: \"Font Awesome 6 Free\";\r\n  font-weight: 900;\r\n  position: absolute;\r\n  left: 0;\r\n  top: 2px;\r\n  color: #16300c;\r\n  font-size: 1.2em;\n}\n.keunggulan-siakad .image-wrapper[data-v-5c996da0] {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  height: 100%;\r\n  background: #eaf7ff;\n}\n.image-wrapper img[data-v-5c996da0]{\r\n  height: 538px !important;\n}\n.keunggulan-siakad .tilted-image[data-v-5c996da0] {\r\n  width: 100%;\r\n  height: 100%; \r\n  -o-object-fit: cover; \r\n     object-fit: cover; \r\n  border-radius: 20px;\r\n  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35);\r\n  display: block;\n}\n.keunggulan-siakad .row[data-v-5c996da0] {\r\n  display: flex;\r\n  min-height: 100%;\r\n  height: 100%;\n}\r\n/* .fitur-title {\r\n  font-size: 1.8rem;\r\n  font-weight: 700;\r\n  color: #075E54;\r\n}\r\n\r\n.modal-content {\r\n  background-color: #fff;\r\n  transition: all 0.3s ease;\r\n}\r\n\r\n.modal-header {\r\n  padding: 1rem 1.5rem;\r\n  background-color: green;\r\n}\r\n.fitur-card {\r\n  border-radius: 16px;\r\n  background-color: #fff;\r\n  border: 2px solid  #075E54;;\r\n  transition: 0.3s ease;\r\n}\r\n.fitur-card:hover {\r\n  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);\r\n  transform: translateY(-4px);\r\n}\r\n.fitur-icon {\r\n  width: 48px;\r\n  height: 48px;\r\n}\r\n\r\n\r\n.features-section {\r\n  font-family: 'Montserrat', 'Poppins', sans-serif;\r\n  background-color: #ededed !important;\r\n}\r\n\r\n.section-title{\r\n  font-size: 40px;\r\n  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;\r\n}\r\n.section-subtitle{\r\n  font-size: 20px;\r\n  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;\r\n}\r\n.feature-card {\r\n  background-color: whitesmoke;\r\n  border-radius: 15px !important;\r\n  border: 2px solid #57075e;;\r\n  overflow: hidden;\r\n  width: 280px;\r\n  color: rgb(81, 81, 81);\r\n  height: 350px !important;\r\n  \r\n}\r\n.feature-card-header {\r\n  height: 150px;\r\n  position: relative;\r\n}\r\n.card-header-bg-image {\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover;\r\n  filter: brightness(0.9);\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  border-radius: 15px;\r\n  padding: 10px;\r\n}\r\n.card-header-tag {\r\n  position: relative;\r\n  z-index: 1;\r\n  background-color: rgba(255,255,255,0.25);\r\n  color: #fff;\r\n  border-radius: 5px;\r\n  font-size: 0.85em;\r\n  font-weight: 600;\r\n}\r\n\r\n.feature-card-content h5 {\r\n  font-weight: bold;\r\n  font-size: 1.2em;\r\n}\r\n.feature-card-content p {\r\n  font-size: 0.95em;\r\n  color: #003049;\r\n\r\n}\r\n.metadata, .sub-description {\r\n  font-size: 0.9rem;\r\n  color: #ccc;\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.metadata i,\r\n.sub-description i {\r\n  margin-right: 8px;\r\n} */\n@media (max-width: 768px) {\n.siakad-page[data-v-5c996da0]{\r\n    padding: 20px;\n}\n.hero-section[data-v-5c996da0] {\r\n    padding: 50px 20px;\r\n    text-align: center;\n}\n.hero-title[data-v-5c996da0] {\r\n    font-size: 2rem;\r\n    text-align: center;\n}\n.tagline[data-v-5c996da0],\r\n  .hero-subtext[data-v-5c996da0],\r\n  .hero-benefits[data-v-5c996da0] {\r\n    text-align: center;\r\n    font-size: 1rem;\n}\n.hero-benefits li[data-v-5c996da0] {\r\n    padding-left: 20px;\r\n    font-size: 0.95rem;\n}\n.hero-benefits li[data-v-5c996da0]::before {\r\n    left: 5px;\n}\n.btn-cta[data-v-5c996da0] {\r\n    width: 100%;\r\n    padding: 12px 0;\r\n    font-size: 1rem;\n}\n.hero-image[data-v-5c996da0] {\r\n    transform: none;\r\n    margin-top: 30px;\n}\n.feature-card[data-v-5c996da0] {\r\n    width: 100%;\n}\n.keunggulan-siakad .content[data-v-5c996da0] {\r\n    padding: 20px;\n}\n.keunggulan-siakad .headline[data-v-5c996da0] {\r\n    font-size: 1.8em;\r\n    text-align: center;\n}\n.keunggulan-siakad .subheadline[data-v-5c996da0] {\r\n    text-align: center;\r\n    font-size: 1em;\r\n    margin-bottom: 20px;\n}\n.keunggulan-siakad .benefit-list li[data-v-5c996da0] {\r\n    font-size: 1rem;\r\n    padding-left: 28px;\n}\n.keunggulan-siakad .benefit-list li[data-v-5c996da0]::before {\r\n    font-size: 1rem;\r\n    left: 0;\n}\n.keunggulan-siakad .image-wrapper[data-v-5c996da0] {\r\n    padding: 15px;\r\n    height: auto;\n}\n.keunggulan-siakad .tilted-image[data-v-5c996da0] {\r\n    height: auto;\r\n    border-radius: 10px;\n}\n.cta-section h2[data-v-5c996da0] {\r\n    font-size: 1.8rem;\n}\n.cta-section p[data-v-5c996da0] {\r\n    font-size: 1rem;\n}\n.cta-section .btn[data-v-5c996da0] {\r\n    width: 100%;\r\n    padding: 12px;\n}\n.section-title[data-v-5c996da0] {\r\n    font-size: 1.8rem;\n}\n.section-subtitle[data-v-5c996da0] {\r\n    font-size: 1rem;\n}\n}\r\n\r\n\r\n", ""]);
+exports.push([module.i, "\n.siakad-page[data-v-5c996da0] {\r\n  font-family: 'Poppins', sans-serif;\r\n  background-color: #f8faff;\r\n  padding: 70px;\n}\n.hero-section[data-v-5c996da0] {\r\n  background-image: url('/assets/ggreen-bg.png');\r\n  background-size: cover;\r\n  background-position: center;\r\n  color: #16300c;\r\n  min-height: 80vh;\r\n  padding: 100px 0;\n}\n.hero-title[data-v-5c996da0] {\r\n  font-size: 2.8rem;\r\n  font-weight: 800;\r\n  line-height: 1.3;\r\n  margin-bottom: 20px;\n}\n.tagline[data-v-5c996da0] {\r\n  font-size: 1rem;\r\n  font-weight: 600;\r\n  color: #16300c;\r\n  letter-spacing: 1px;\r\n  text-transform: uppercase;\n}\n.hero-subtext[data-v-5c996da0] {\r\n  font-size: 1.1rem;\r\n  color: whitesmoke;\r\n  margin-bottom: 20px;\n}\n.hero-benefits[data-v-5c996da0] {\r\n  list-style: none;\r\n  color: whitesmoke;\r\n  padding-left: 0;\n}\n.hero-benefits li[data-v-5c996da0] {\r\n  position: relative;\r\n  padding-left: 25px;\r\n  margin-bottom: 12px;\r\n  font-size: 1rem;\n}\n.hero-benefits li[data-v-5c996da0]::before {\r\n  content: '\\2714';\r\n  position: absolute;\r\n  left: 0;\r\n  color: #16300c;\r\n  font-weight: bold;\n}\n.btn-cta[data-v-5c996da0] {\r\n  background-color: #16300c;\r\n  color: #fff;\r\n  border: none;\r\n  padding: 12px 28px;\r\n  font-size: 1rem;\r\n  font-weight: 600;\r\n  border-radius: 8px;\r\n  transition: 0.3s ease;\n}\n.btn-cta[data-v-5c996da0]:hover {\r\n  background-color: #0a7366;\n}\n.hero-image[data-v-5c996da0] {\r\n  max-width: 100%;\r\n  height: auto;\r\n  opacity: 0.9;\n}\n.features-section[data-v-5c996da0] {\r\n  display: flex;\r\n  justify-content: center;\r\n  gap: 20px;\r\n  flex-wrap: wrap;\r\n  padding: 40px 20px;\r\n  background: #f8f9fb;\n}\n.feature-container[data-v-5c996da0] {\r\n  flex: 1 1 300px;\r\n  max-width: 350px;\r\n  background: #fff;\r\n  border: 2px solid #e5e8ec;\r\n  border-radius: 12px;\r\n  box-shadow: 0 4px 12px rgba(0,0,0,0.05);\r\n  transition: all 0.3s ease;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: stretch;\r\n  /* * Ini adalah perbaikan utamanya\r\n  * Membuat setiap kolom memiliki tinggi mandiri\r\n  */\r\n  align-self: flex-start;\n}\n.hr-border[data-v-5c996da0]{\r\n  border: 1px solid #000000;\r\n  padding: 0;\r\n  margin-bottom:20px ;\n}\n.feature-container[data-v-5c996da0]:hover {\r\n  transform: translateY(-5px);\r\n  box-shadow: 0 8px 24px rgba(0,0,0,0.1);\n}\n.feature-head[data-v-5c996da0] {\r\n  padding: 20px;\r\n  /* border-bottom: 1px solid #e5e8ec; */\r\n  text-align: center;\n}\n.feature-head h2.feature[data-v-5c996da0] {\r\n  font-size: 25px;\r\n  font-weight: 600;\r\n  margin-bottom: 5px;\r\n  color: #222;\r\n  margin-bottom: 10px ;\n}\n.feature-head p[data-v-5c996da0] {\r\n  font-size: 0.9rem;\r\n  color: #666;\r\n  margin-bottom: 10px;\n}\n.features-item[data-v-5c996da0] {\r\n  list-style: none;\r\n  padding: 0;\r\n  margin: 0;\n}\n.features-item li[data-v-5c996da0] {\r\n  padding: 10px 20px;\r\n  border-bottom: 1px solid #f0f0f0;\n}\n.features-item li[data-v-5c996da0]:last-child {\r\n  border-bottom: none;\n}\n.features-item .list-feature[data-v-5c996da0] {\r\n  gap: 15px;\n}\n.features-item .list-feature i[data-v-5c996da0] {\r\n  color: #2e3131;\r\n  font-size: 1rem;\r\n  width: 20px;\r\n  text-align: center;\n}\n.features-item .list-feature h5[data-v-5c996da0] {\r\n  font-size: 1rem;\r\n  font-weight: 400;\r\n  color: #333;\r\n  margin: 0;\n}\r\n/* Gaya untuk daftar sub-fitur */\n.sub-features-list[data-v-5c996da0] {\r\n  list-style: none;\r\n  padding-left: 50px; /* Indentasi agar terlihat sebagai sub-item */\r\n  padding-top: 10px;\r\n  border-top: 1px dashed #e0e0e0;\r\n  margin-top: 10px;\n}\n.sub-features-list li[data-v-5c996da0] {\r\n  padding: 5px 0;\n}\n.sub-feature-item i[data-v-5c996da0] {\r\n  font-size: 0.8rem !important;\r\n  margin-right: 10px;\r\n  color: #6c757d;\r\n   line-height: 1.5; /* Sesuaikan nilai ini */\r\n   text-align: center;\n}\n.sub-feature-item h5[data-v-5c996da0] {\r\n  font-size: 0.85rem;\r\n  font-weight: 500;\r\n  color: #555;\r\n  margin: 0;\r\n   line-height: 1.5; /* Sesuaikan nilai ini */\n}\r\n\r\n/* Transisi untuk ikon panah */\n.toggle-icon[data-v-5c996da0] {\r\n  transition: transform 0.3s ease;\n}\n.toggle-icon.rotated[data-v-5c996da0] {\r\n  transform: rotate(90deg);\n}\n.see-more-wrapper[data-v-5c996da0] {\r\n  padding: 15px;\n}\n.see-more-btn[data-v-5c996da0] {\r\n  background-color: #075E54;\r\n  color: #fff;\r\n  border: none;\r\n  padding: 10px 20px;\r\n  border-radius: 5px;\r\n  cursor: pointer;\r\n  font-size: 0.9rem;\r\n  transition: background-color 0.3s ease;\r\n  width: 100%;\r\n  display: block;\r\n  box-sizing: border-box;\n}\n.see-more-btn[data-v-5c996da0]:hover {\r\n  background-color: #0a7366;\n}\n.cta-section[data-v-5c996da0] {\r\n  background: linear-gradient(45deg, #263f28 0%, #28451e 100%);\r\n  color: #ffffff;\r\n  font-weight: bold;\r\n  text-align: center;\n}\n.cta-section .btn[data-v-5c996da0] {\r\n  background-color: #ffffff;\r\n  color: #0c3b0e;\r\n  font-weight: bold;\r\n  border-radius: 8px;\r\n  padding: 12px 30px;\r\n  border: none;\n}\n.keunggulan-siakad[data-v-5c996da0] {\r\n  background: #fff;\r\n  overflow: hidden;\n}\n.keunggulan-siakad .container-fluid[data-v-5c996da0] {\r\n  margin: 0 auto;\n}\n.keunggulan-siakad .content[data-v-5c996da0] {\r\n  background: #fcfdff;\r\n  border-radius: 15px;\r\n  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  height: 100%;\n}\n.keunggulan-siakad .headline[data-v-5c996da0] {\r\n  font-size: 2.5em;\r\n  font-weight: 700;\r\n  color: #16300c;\r\n  line-height: 1.2;\r\n  margin-bottom: 20px;\n}\n.keunggulan-siakad .headline em[data-v-5c996da0] {\r\n  font-style: normal;\r\n  color: #E95420;\r\n  font-weight: 800;\n}\n.keunggulan-siakad .subheadline[data-v-5c996da0] {\r\n  font-size: 1.2em;\r\n  color: #555;\r\n  line-height: 1.7;\r\n  margin-bottom: 2px;\n}\n.keunggulan-siakad .benefit-list[data-v-5c996da0] {\r\n  list-style: none;\r\n  padding: 0;\r\n  margin: 0;\n}\n.keunggulan-siakad .benefit-list li[data-v-5c996da0] {\r\n  font-size: 1.1em;\r\n  color: #343a40;\r\n  margin-bottom: 18px;\r\n  position: relative;\r\n  padding-left: 35px;\r\n  line-height: 1.5;\n}\n.keunggulan-siakad .benefit-list li[data-v-5c996da0]::before {\r\n  content: '\\F00C';\r\n  font-family: \"Font Awesome 6 Free\";\r\n  font-weight: 900;\r\n  position: absolute;\r\n  left: 0;\r\n  top: 2px;\r\n  color: #16300c;\r\n  font-size: 1.2em;\n}\n.keunggulan-siakad .image-wrapper[data-v-5c996da0] {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  height: 100%;\r\n  background: #eaf7ff;\n}\n.image-wrapper img[data-v-5c996da0]{\r\n  height: 538px !important;\n}\n.keunggulan-siakad .tilted-image[data-v-5c996da0] {\r\n  width: 100%;\r\n  height: 100%; \r\n  -o-object-fit: cover; \r\n     object-fit: cover; \r\n  border-radius: 20px;\r\n  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.35);\r\n  display: block;\n}\n.keunggulan-siakad .row[data-v-5c996da0] {\r\n  display: flex;\r\n  min-height: 100%;\r\n  height: 100%;\n}\n@media (max-width: 768px) {\n.siakad-page[data-v-5c996da0]{\r\n    padding: 20px;\n}\n.hero-section[data-v-5c996da0] {\r\n    padding: 50px 20px;\r\n    text-align: center;\n}\n.hero-title[data-v-5c996da0] {\r\n    font-size: 2rem;\r\n    text-align: center;\n}\n.tagline[data-v-5c996da0],\r\n  .hero-subtext[data-v-5c996da0],\r\n  .hero-benefits[data-v-5c996da0] {\r\n    text-align: center;\r\n    font-size: 1rem;\n}\n.hero-benefits li[data-v-5c996da0] {\r\n    padding-left: 20px;\r\n    font-size: 0.95rem;\n}\n.hero-benefits li[data-v-5c996da0]::before {\r\n    left: 5px;\n}\n.btn-cta[data-v-5c996da0] {\r\n    width: 100%;\r\n    padding: 12px 0;\r\n    font-size: 1rem;\n}\n.hero-image[data-v-5c996da0] {\r\n    transform: none;\r\n    margin-top: 30px;\n}\n.feature-card[data-v-5c996da0] {\r\n    width: 100%;\n}\n.keunggulan-siakad .content[data-v-5c996da0] {\r\n    padding: 20px;\n}\n.keunggulan-siakad .headline[data-v-5c996da0] {\r\n    font-size: 1.8em;\r\n    text-align: center;\n}\n.keunggulan-siakad .subheadline[data-v-5c996da0] {\r\n    text-align: center;\r\n    font-size: 1em;\r\n    margin-bottom: 20px;\n}\n.keunggulan-siakad .benefit-list li[data-v-5c996da0] {\r\n    font-size: 1rem;\r\n    padding-left: 28px;\n}\n.keunggulan-siakad .benefit-list li[data-v-5c996da0]::before {\r\n    font-size: 1rem;\r\n    left: 0;\n}\n.keunggulan-siakad .image-wrapper[data-v-5c996da0] {\r\n    padding: 15px;\r\n    height: auto;\n}\n.keunggulan-siakad .tilted-image[data-v-5c996da0] {\r\n    height: auto;\r\n    border-radius: 10px;\n}\n.cta-section h2[data-v-5c996da0] {\r\n    font-size: 1.8rem;\n}\n.cta-section p[data-v-5c996da0] {\r\n    font-size: 1rem;\n}\n.cta-section .btn[data-v-5c996da0] {\r\n    width: 100%;\r\n    padding: 12px;\n}\n.section-title[data-v-5c996da0] {\r\n    font-size: 1.8rem;\n}\n.section-subtitle[data-v-5c996da0] {\r\n    font-size: 1rem;\n}\n}\r\n\r\n\r\n", ""]);
 
 // exports
 

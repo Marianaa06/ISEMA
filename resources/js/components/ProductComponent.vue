@@ -144,7 +144,7 @@ export default {
           text: "Sistem LMS ini memudahkan mahasiswa dan dosen dalam pembelajaran jarak jauh. Luar biasa!",
           name: "Prof. Lisa M. Brown",
           position: "Kaprodi Informatika - Universitas XYZ",
-          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPAEGNILM8eg7jxCzwEmNbTfK2kZ641aesGyh2Y7WEuO1EbYxRWyX9Sk5v3Ia_0F7eJ-8&usqp=CAU",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJLIJqXm0aH3NWm7sHFxxaU0Lzkw2qpXfc8g&s",
         },
         {
           text: "Modul MBKM-nya sangat membantu dalam administrasi magang mahasiswa secara terstruktur.",

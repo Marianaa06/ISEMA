@@ -1,125 +1,4 @@
-<!-- <template>
-  <div class="lms-promo">
-    <div class="promo-header">
-      <h1 class="promo-title" data-aos="fade-down">LMS Dosen</h1>
-      <p class="promo-subtitle" data-aos="fade-up">Solusi Cerdas Perkuliahan Digital</p>
-    </div>
-
-    <div class="promo-features">
-      <div class="feature-card" data-aos="fade-right">
-        <img src="http://localhost:8000/assets/upload.png" alt="Upload Materi" />
-        <h4>Upload Materi Mudah</h4>
-        <p>Materi perkuliahan tersusun rapi dan mudah diakses oleh mahasiswa.</p>
-      </div>
-      <div class="feature-card" data-aos="fade-up">
-        <img src="http://localhost:8000/assets/tugas.png" alt="Tugas Online" />
-        <h4>Manajemen Tugas</h4>
-        <p>Berikan tugas dengan deadline yang terjadwal dan pantau progres mahasiswa.</p>
-      </div>
-      <div class="feature-card" data-aos="fade-left">
-        <img src="http://localhost:8000/assets/diskusi.png" alt="Forum Diskusi" />
-        <h4>Forum Diskusi Interaktif</h4>
-        <p>Diskusi langsung dengan mahasiswa kapan saja dan di mana saja.</p>
-      </div>
-      <div class="feature-card" data-aos="fade-right">
-        <img src="http://localhost:8000/assets/nilai.png" alt="Penilaian Otomatis" />
-        <h4>Penilaian Otomatis</h4>
-        <p>Proses penilaian tugas mahasiswa lebih cepat dan akurat.</p>
-      </div>
-    </div>
-
-    <div class="promo-action" data-aos="zoom-in">
-      <button class="promo-button">Hubungi Kami Sekarang</button>
-    </div>
-  </div>
-</template>
-
-<script>
-export default {
-  name: 'LMSSiakadPromo',
-  mounted() {
-    AOS.init();
-  }
-};
-</script>
-
-<style scoped>
-.lms-promo {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.promo-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.promo-title {
-  font-size: 50px;
-  font-weight: bold;
-}
-
-.promo-subtitle {
-  font-size: 24px;
-  color: #555;
-}
-
-.promo-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.feature-card {
-  background-color: #a77fff;
-  color: white;
-  padding: 30px 20px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-card img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  margin-bottom: 15px;
-}
-
-.feature-card h4 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.feature-card p {
-  font-size: 16px;
-}
-
-.promo-action {
-  text-align: center;
-  margin-top: 50px;
-}
-
-.promo-button {
-  background-color: #2563eb;
-  color: white;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 10px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.promo-button:hover {
-  background-color: #1d4ed8;
-}
-</style> -->
-
-
 <template>
-
   <div class="lms-page">
     <section class="hero-section d-flex align-items-center">
       <div class="container">
@@ -146,74 +25,62 @@ export default {
       </div>
     </section>
 
-
-    <section class="why-lms-section">
-    <div class="lms-section p-0">
-      <div class="row g-0 align-items-center">
-        <!-- Kiri: Judul -->
-        <div class="col-md-5 bg-light text-dark text-center py-5 px-4 title-wrapper">
-          <h2 class="why-title">Why Choose <br> LMS ISEMA?</h2>
-        </div>
-
-        <!-- Kanan: Isi -->
-        <div class="col-md-7 content-wrapper p-5">
-          <p class="why-desc">
-            LMS ISEMA dirancang untuk mendukung proses pembelajaran digital secara menyeluruh — dari akses materi hingga interaksi dengan dosen.
-          </p>
-          <p class="why-desc">
-            Platform ini mudah digunakan, terintegrasi dengan sistem akademik, dan mendukung aktivitas belajar yang fleksibel, kolaboratif, serta real-time.
-          </p>
-          <p class="why-note">
-            *LMS ISEMA dapat diakses melalui laptop dan smartphone kapan saja, di mana saja.*
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  
-<section class="lms-benefit-section py-5">
-  <div class="container-fluid">
-    <h2 class="text-center mb-5 text-tittle">Apa saja yang Anda Dapatkan ketika Menggunakan LMS?</h2>
-    <div class="row gx-4 gy-4">
-      <div class="col-md-6 col-lg-4" v-for="(benefit, index) in benefits" :key="index">
-        <div class="p-4 bg-white shadow rounded h-100 d-flex">
-          <i :class="benefit.icon + ' fa-2x me-3 text-grey'"></i>
-          <div>
-            <strong>{{ benefit.title }}</strong><br>
-            <span>{{ benefit.desc }}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <section class="features-section py-5 bg-light">
+    <section class="why-and-features-section py-5 bg-light">
       <div class="container-fluid px-5">
-        <div class="row mb-5 text-center">
-          <div class="col">
-            <h2 class="section-title">Fitur Unggulan</h2>
-            <p class="section-subtitle">Satu sistem untuk semua kebutuhan akademik Anda</p>
+        <div class="row g-4 justify-content-center align-items-start">
+          <div class="col-lg-6">
+            <div class="why-container h-100 p-4" style="border-color: #2e3131;">
+              <div class="text-center">
+                <h2 class="why-title">Why Choose LMS ISEMA?</h2>
+                <hr class="hr-border" />
+                <p class="why-desc mb-3">
+                  LMS ISEMA dirancang untuk mendukung proses pembelajaran digital secara menyeluruh — dari akses materi hingga interaksi dengan dosen.
+                </p>
+                <p class="why-desc mb-3">
+                  Platform ini mudah digunakan, terintegrasi dengan sistem akademik, dan mendukung aktivitas belajar yang fleksibel, kolaboratif, serta real-time.
+                </p>
+                <p class="why-note">
+                  *LMS ISEMA dapat diakses melalui laptop dan smartphone kapan saja, di mana saja.*
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="feature-container h-100" style="border-color: #2e3131;">
+              <div class="feature-head">
+                <h2 class="feature text-center" style="color: #2e3131;">Fitur LMS</h2>
+                <p>Semua fitur yang Anda butuhkan untuk pembelajaran yang efektif</p>
+                <hr class="hr-border" />
+                <ul class="features-item">
+                  <li v-for="(feature, index) in displayedFeatures" :key="'lms-' + index">
+                    <div class="list-feature d-flex align-items-center">
+                      <i :class="['mb-1', 'fa-1x', feature.icon]"></i>
+                      <h5 class="mt-1 mb-1">{{ feature.title }}</h5>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="see-more-wrapper text-center">
+                <button class="see-more-btn" @click="toggleFeatures">
+                  {{ showAllFeatures ? 'See Less' : 'See More' }}
+                </button>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
+    <section class="lms-benefit-section py-5">
+      <div class="container-fluid">
+        <h2 class="text-center mb-4 text-tittle">Apa saja yang Anda Dapatkan ketika Menggunakan LMS?</h2>
         <div class="row gx-4 gy-4">
-          <div class="col-sm-6 col-md-4 col-lg-3" v-for="(feature, index) in features" :key="index">
-            <div class="feature-card h-100  ">
-              <div class="feature-card-header">
-                <img v-if="feature.headerImage" :src="feature.headerImage" class="card-header-bg-image" alt="Card Header Background">
-              </div>
-              <div class="feature-card-content p-3">
-                <h5 class="font-weight-bold mt-2 mb-2">{{ feature.title }}</h5>
-                <p class="text-muted mb-2">{{ feature.description }}</p>
-                <p class="metadata mb-1">
-                <i class="fas fa-bolt me-2 text-warning"></i> {{ feature.metadata }}
-                </p>
-                <p class="sub-description">
-                  <i class="fas fa-check-circle me-2 text-success"></i> {{ feature.subDescription }}
-                </p>
+          <div class="col-md-6 col-lg-4" v-for="(benefit, index) in benefits" :key="index">
+            <div class="p-4 bg-white shadow rounded h-100 d-flex">
+              <i :class="benefit.icon + ' fa-2x me-3 text-grey'"></i>
+              <div>
+                <strong>{{ benefit.title }}</strong><br>
+                <span>{{ benefit.desc }}</span>
               </div>
             </div>
           </div>
@@ -228,12 +95,9 @@ export default {
         <button class="btn btn-success px-4 py-2">Hubungi Kami</button>
       </div>
     </section>
-    </div>
-
-    
-
+  </div>
 </template>
-<script>
+<!-- <script>
 export default {
   name: 'LmsComponent',
   data() {
@@ -309,13 +173,53 @@ features: [
   }
 }
 </script>
-
-
+ -->
+<script>
+export default {
+  name: 'LmsComponent',
+  data() {
+    return {
+      benefits: [
+        { icon: 'fas fa-mobile-alt', title: 'Akses Mobile', desc: 'Sistem dapat diakses dari mana saja, kapan saja, melalui alat digital.' },
+        { icon: 'fas fa-clock', title: 'Notifikasi Real-Time', desc: 'Informasi jadwal, nilai, dan pengumuman langsung ke perangkat Anda.' },
+        { icon: 'fas fa-tasks', title: 'KRS Mudah Online', desc: 'Pengisian KRS menjadi cepat dan efisien, tanpa antrian panjang.' },
+        { icon: 'fas fa-graduation-cap', title: 'Transparansi Nilai', desc: 'Nilai langsung terinput dan dapat dicek secara berkala oleh mahasiswa.' },
+        { icon: 'fas fa-bell', title: 'Update Informasi Cepat', desc: 'Perubahan jadwal atau pengumuman kampus selalu ter-update secara otomatis.' },
+        { icon: 'fas fa-shield-alt', title: 'Keamanan Data', desc: 'Data mahasiswa terjamin keamanannya dengan sistem terenkripsi.' }
+      ],
+      featuresLms: [
+        { icon: 'fas fa-desktop', title: 'Dashboard' },
+        { icon: 'fas fa-book-open', title: 'My Class' },
+        { icon: 'fas fa-question-circle', title: 'Question' },
+        { icon: 'fas fa-edit', title: 'Edit Article' },
+        { icon: 'fas fa-clipboard-check', title: 'Assessment' },
+        { icon: 'fas fa-credit-card', title: 'Payment' },
+        { icon: 'fas fa-calendar-alt', title: 'Event' },
+        { icon: 'fas fa-calendar', title: 'Calendar' },
+        { icon: 'fas fa-users', title: 'User Management' },
+        { icon: 'fas fa-chart-bar', title: 'Reports & Analytics' },
+        { icon: 'fas fa-envelope', title: 'Messaging System' },
+        { icon: 'fas fa-cog', title: 'System Settings' }
+      ],
+      showAllFeatures: false,
+      visibleFeatures: 6 // Jumlah fitur yang ditampilkan di awal
+    };
+  },
+  computed: {
+    displayedFeatures() {
+      return this.showAllFeatures ? this.featuresLms : this.featuresLms.slice(0, this.visibleFeatures);
+    }
+  },
+  methods: {
+    toggleFeatures() {
+      this.showAllFeatures = !this.showAllFeatures;
+    }
+  }
+}
+</script>
 <style scoped>
-
 .lms-page {
   font-family: 'Poppins', sans-serif;
-  /* padding: 70px; */
 }
 
 .hero-section {
@@ -374,23 +278,24 @@ features: [
 }
 
 
-.container{
+.container {
   background-color: #2e3131;
   border-radius: 20px;
   padding: 20px;
 }
 
-.container-fluid{
-  padding: 80px;
-}
-
-.why-lms-section {
+/* Bagian Gabungan Why & Features */
+.why-and-features-section {
   background-color: #f8f9fa;
   font-family: 'Poppins', sans-serif;
 }
 
-.title-wrapper {
-  background-color: #a9a8a8;
+.why-container {
+  background: #fff;
+  border: 2px solid #e5e8ec;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  min-height: 480px;
 }
 
 .why-title {
@@ -399,16 +304,10 @@ features: [
   color: #003049;
 }
 
-.content-wrapper {
-  background-color: #ffffff;
+.why-desc {
   font-size: 1.1rem;
   color: #333;
   line-height: 1.7;
-  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.05);
-}
-
-.why-desc {
-  margin-bottom: 1rem;
 }
 
 .why-note {
@@ -418,19 +317,17 @@ features: [
   margin-top: 1.5rem;
 }
 
-.text-tittle{
+.text-tittle {
   width: 100%;
   font-size: 1.5rem;
   font-weight: 800;
   color: #003049;
   font-family: 'Poppins', sans-serif;
-
 }
-
 
 .lms-benefit-section {
   background-color: #f8f9fa;
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
 .text-tittle {
@@ -459,6 +356,7 @@ features: [
   color: #fff;
   text-align: center;
 }
+
 .cta-section .btn {
   background-color: #fff;
   color: #E95420;
@@ -468,80 +366,96 @@ features: [
   border: none;
 }
 
-.features-section {
-  font-family: 'Montserrat', 'Poppins', sans-serif;
-  background-color: #ededed !important;
+.feature-container {
+  background: #fff;
+  border: 2px solid #e5e8ec;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-.section-title{
-  font-size: 40px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+.feature-head {
+  padding: 20px;
+  text-align: center;
 }
-.section-subtitle{
-  font-size: 20px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+
+.feature-head h2.feature {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: inherit;
+  margin-bottom: 5px;
 }
-.feature-card {
-  background-color: whitesmoke;
-  border-radius: 15px !important;
-  /* box-shadow: 0 5px 20px rgba(0,0,0,0.08); */
-  border: 1px solid rgb(185, 185, 185);
-  overflow: hidden;
-  width: 280px;
-  color: rgb(81, 81, 81);
-  height: 350px !important;
-  
+
+.feature-head p {
+  font-size: 0.9rem;
+  color: #666;
 }
-.feature-card-header {
-  height: 150px;
-  position: relative;
+
+.hr-border {
+  border-top: 1px solid #ccc;
+  margin: 15px 0;
 }
-.card-header-bg-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.9);
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 15px;
+
+.features-item {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-item li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.features-item li:last-child {
+  border-bottom: none;
+}
+
+.features-item .list-feature {
+  gap: 15px;
+}
+
+.features-item .list-feature i {
+  color: #2e3131;
+  font-size: 1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.features-item .list-feature h5 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333;
+  margin: 0;
+}
+
+.see-more-wrapper {
   padding: 10px;
 }
-.card-header-tag {
-  position: relative;
-  z-index: 1;
-  background-color: rgba(255,255,255,0.25);
+
+.see-more-btn {
+  background-color: #2e3131;
   color: #fff;
+  border: none;
+  padding: 10px 20px;
   border-radius: 5px;
-  font-size: 0.85em;
-  font-weight: 600;
-}
-
-.feature-card-content h5 {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-.feature-card-content p {
-  font-size: 0.95em;
-  color: #003049;
-
-}
-.metadata, .sub-description {
+  cursor: pointer;
   font-size: 0.9rem;
-  color: #ccc;
-  display: flex;
-  align-items: center;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
 }
 
-.metadata i,
-.sub-description i {
-  margin-right: 8px;
+.see-more-btn:hover {
+  background-color: #3d4242;
 }
 
-@media (max-width: 575.98px) {
-
-  .lms-page{
-    padding: 0px;
+.btn-success:hover{
+  background-color: #3d4242;
+}
+@media (max-width: 991.98px) {
+  .why-and-features-section .col-lg-6 {
+    margin-bottom: 20px;
   }
 }
 </style>

@@ -1,6 +1,5 @@
 <template>
   <div class="cbt-page">
-    <!-- Hero Section -->
     <section class="hero-section d-flex align-items-center">
       <div class="container">
         <div class="row align-items-center">
@@ -26,235 +25,279 @@
       </div>
     </section>
 
-    <!-- Why Choose CBT -->
-    <section class="why-section">
-      <div class="container-fluid p-0">
-        <div class="row g-0 align-items-center">
-          <div class="col-md-5 text-center bg-light py-5 title-wrapper">
-            <h2 class="why-title">Why Choose<br>CBT ISEMA?</h2>
+    <section class="why-and-features-section py-5 bg-light">
+      <div class="container px-5">
+        <div class="row g-4 justify-content-center align-items-stretch">
+          <div class="col-lg-6 d-flex">
+            <div class="why-container p-4 h-100">
+              <div class="text-center">
+                <h2 class="why-title">Why Choose CBT ISEMA?</h2>
+                <hr class="hr-border" />
+                <p class="why-desc mb-3">
+                  CBT ISEMA dirancang untuk mempermudah proses ujian di kampus Anda, mulai dari pembuatan soal hingga penilaian.
+                </p>
+                <p class="why-note">
+                  <i class="fas fa-lock"></i> Ujian Aman | <i class="fas fa-chart-line"></i> Analisis Cepat | <i class="fas fa-cogs"></i> Integrasi Mudah
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="col-md-7 content-wrapper p-5">
-            <p class="why-desc">
-              CBT ISEMA memastikan proses ujian yang modern dan efisien, baik untuk ujian tengah semester, akhir semester, maupun seleksi kampus.
-            </p>
-            <p class="why-desc">
-              Dilengkapi fitur keamanan ujian, bank soal, dan integrasi dengan SIAKAD untuk hasil otomatis.
-            </p>
-            <p class="why-note">
-              Dapat diakses di laboratorium maupun perangkat pribadi mahasiswa.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Fitur Unggulan -->
-    <section class="fitur-section py-5">
-      <div class="container">
-        <h2 class="text-center text-dark mb-5">Fitur Unggulan CBT</h2>
-        <div class="row gy-4">
-          <div class="col-md-4" v-for="(feature, index) in features" :key="index">
-            <div class="bg-white shadow rounded p-4 h-100">
-              <i :class="feature.icon + ' fa-2x mb-3 text-dark'"></i>
-              <h5 class="fw-bold text-dark">{{ feature.title }}</h5>
-              <p class="text-muted">{{ feature.description }}</p>
+          <div class="col-lg-6 d-flex">
+            <div class="feature-container h-100">
+              <div class="feature-head">
+                <h2 class="feature-title text-center">Fitur Unggulan CBT</h2>
+                <p class="feature-subtitle">Maksimalkan proses ujian dan penilaian</p>
+                <hr class="hr-border" />
+                <ul class="features-item">
+                  <li v-for="(feature, index) in displayedFeatures" :key="'cbt-' + index">
+                    <div class="list-feature d-flex align-items-center">
+                      <i :class="['mb-1', 'fa-1x', feature.icon]"></i>
+                      <h5 class="mt-1 mb-1">{{ feature.title }}</h5>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="cta-cbt-section py-5">
-  <div class="container-container text-center">
-    <h2 class="mb-3">Ingin Mempunyai sistem yang cepat?</h2>
-    <p class="mb-4 fw-bold fs-5">Hubungi kami untuk demo CBT ISEMA</p>
-    <button class="btn-cbt px-4 py-2">Hubungi Kami</button>
-  </div>
-</section>
+    <section class="cta-section py-5">
+      <div class="container text-center">
+        <h2 class="mb-3 fw-bold fs-2">Siap Tingkatkan Efisiensi Ujian Kampus Anda?</h2>
+        <p class="mb-4 fw-bold fs-6">Hubungi tim kami untuk konsultasi dan demo eksklusif CBT ISEMA</p>
+        <button class="btn btn-primary px-4 py-2">Hubungi Kami</button>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'CbtComponent',
+  name: "CBTComponent",
   data() {
     return {
-features: [
-  {
-    title: 'Dashboard',
-    description: 'Pusat kontrol untuk memantau jadwal ujian, jumlah peserta, dan status tes secara real-time.',
-    icon: 'fas fa-tv'
+      featuresCBT: [
+        { icon: "fas fa-tv", title: "Dashboard Ujian" },
+        { icon: "fas fa-door-open", title: "Entrance Test" },
+        { icon: "fas fa-file-alt", title: "Custom Test" },
+      ],
+      showAllFeatures: false,
+      visibleFeatures: 3 // Menampilkan 3 fitur utama di awal
+    };
   },
-  {
-    title: 'Entrance Test',
-    description: 'Digunakan untuk seleksi awal mahasiswa baru dengan sistem ujian berbasis komputer.',
-    icon: 'fas fa-door-open'
-  },
-  {
-    title: 'TOEFL Test',
-    description: 'Ujian kemampuan bahasa Inggris dengan sesi Listening, Structure, dan Reading.',
-    icon: 'fas fa-headphones-alt'
-  },
-  {
-    title: 'TOAFL Test',
-    description: 'Tes kemampuan bahasa Arab lengkap dengan timer dan sistem koreksi otomatis.',
-    icon: 'fas fa-language'
-  },
-  {
-    title: 'SAT Test',
-    description: 'Evaluasi potensi akademik calon mahasiswa berbasis standar nasional.',
-    icon: 'fas fa-file-alt'
-  },
-  {
-    title: 'Logout',
-    description: 'Sistem logout otomatis setelah tes selesai untuk keamanan dan validasi data.',
-    icon: 'fas fa-sign-out-alt'
-  },
-]
+  computed: {
+    displayedFeatures() {
+      return this.showAllFeatures ? this.featuresCBT : this.featuresCBT.slice(0, this.visibleFeatures);
     }
-  }
-}
+  },
+  methods: {
+    toggleFeatures() {
+      this.showAllFeatures = !this.showAllFeatures;
+    }
+  },
+};
 </script>
+
 <style scoped>
 .cbt-page {
   font-family: 'Poppins', sans-serif;
-  color: #ffffff;
-  background-color: #f8f9fa;
+  background-color: #f7f9fc;
+  color: #333;
   padding: 50px;
 }
 
 /* Hero Section */
 .hero-section {
   background: linear-gradient(135deg, #4e727d, #45818c);
-  padding: 20px;
+  padding: 100px 0;
+  color: #ffffff;
 }
+
 .hero-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 15px;
-  color: #ffffff;
+  font-size: 2.8rem;
+  font-weight: 700;
 }
-.hero-title span {
-  color: #ffffff;
-}
-.tagline {
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  color: #ffffff;
-  font-weight: 600;
-}
-.hero-subtext {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  color: #ffffff;
-}
+
 .hero-benefits {
   list-style: none;
   padding-left: 0;
-  color: #ffffff;
-}
-.hero-benefits li {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 10px;
-}
-.hero-benefits li::before {
-  content: '✔';
-  color: #ffffff;
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-}
-.btn-cta {
-  background-color: rgb(255, 255, 255) ;
-  color: rgb(0, 0, 0);
-  border: none;
-  padding: 12px 30px;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: 0.3s ease;
-}
-.btn-cta:hover {
-  background-color: #218838;
 }
 
-/* Why Choose Section */
-.why-section {
+.hero-benefits li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.hero-benefits li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+}
+
+.btn-cta {
   background-color: #ffffff;
   color: #45818c;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 6px;
 }
-.title-wrapper {
-  background-color: #e8f5e9;
+
+/* --- CSS BARU UNTUK WHY & FEATURES --- */
+.why-and-features-section {
+  background-color: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
+}
+.why-and-features-section .row {
+  display: flex;
+  align-items: stretch;
+}
+.why-container {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-color: #4e727d; /* Menggunakan warna yang sudah ada dari hero */
 }
 .why-title {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 800;
-  color: #000000;
-}
-.content-wrapper {
-  background-color: #ffffff;
-  font-size: 1.1rem;
-  line-height: 1.8;
+  color: #4e727d; /* Menggunakan warna yang sudah ada dari hero */
 }
 .why-desc {
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.7;
 }
 .why-note {
   font-style: italic;
-  color: #45818c;
+  color: #4e727d; /* Menggunakan warna yang sudah ada dari hero */
+  font-size: 0.95rem;
+  margin-top: 1.5rem;
+}
+.feature-container {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-color: #4e727d; /* Menggunakan warna yang sudah ada dari hero */
+}
+.feature-head {
+  padding: 20px;
+  text-align: center;
+}
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4e727d; /* Menggunakan warna yang sudah ada dari hero */
+  margin-bottom: 5px;
+}
+.feature-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+}
+.hr-border {
+  border-top: 1px solid #ccc;
+  margin: 15px 0;
+}
+.features-item {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.features-item li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.features-item li:last-child {
+  border-bottom: none;
+}
+.features-item .list-feature {
+  gap: 15px;
+}
+.features-item .list-feature i {
+  color: #4e727d; /* Menggunakan warna yang sudah ada dari hero */
+  font-size: 1rem;
+  width: 20px;
+  text-align: center;
+}
+.features-item .list-feature h5 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333;
+  margin: 0;
 }
 
-/* Fitur Section */
-/* .fitur-section {
-  background-color: #f1fdf4;
-} */
-.fitur-section h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  color:#45818c;
-}
-.fitur-section .bg-white {
-  border-left: 5px solid #45818c;
-  transition: transform 0.3s ease;
-}
-.fitur-section .bg-white:hover {
-  transform: translateY(-5px);
-}
 
-.cta-cbt-section {
+/* CTA */
+.cta-section {
   background: linear-gradient(135deg, #4e727d, #45818c);
+  color: #fff;
+  padding: 60px 0;
+}
 
+.container-cta {
+  max-width: 800px;
+  margin: 0 auto;
+}
 
+.cta-text {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cta-section .btn-primary {
+  background-color: #ffffff;
+  border: none;
+  color: #45818c;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 12px 30px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-section .btn-primary:hover {
+  background-color: #45818c;
   color: #fff;
 }
 
-.cta-cbt-section h2 {
-  font-weight: 700;
-  font-size: 2rem;
+/* Responsive CSS */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 0;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .features-list {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-list-container {
+    padding: 1rem;
+  }
 }
 
-.cta-cbt-section p {
-  font-size: 1.1rem;
-}
+@media (max-width: 576px) {
+  .cbt-page {
+    padding: 0;
+  }
+  .hero-title {
+    font-size: 1.8rem;
+  }
 
-.btn-cbt {
-  background-color: rgb(255, 255, 255) ;
-  color: #45818c;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
-  transition: 0.3s ease;
-}
+  .cta-text {
+    font-size: 1.5rem !important;
+  }
 
-.btn-cbt:hover {
-    background-color: #000000;
-  color: rgb(255, 255, 255) 
-}
-
-@media (max-width: 575.98px) {
-
-  .cbt-page{
-    padding: 0px;
+  .cta-section .btn-primary {
+    padding: 8px 20px;
   }
 }
 </style>
