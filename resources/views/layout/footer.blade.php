@@ -127,7 +127,7 @@
                     <li><a href="{{url('/privacy')}}">Privacy Policy</a></li>
                     <li><a href="{{url('/karir')}}">Career</a></li>
                     <li><a href="{{url('/dokumentasi')}}">Documentation</a></li>
-                    <li><a href="/term">Term And Condition</a></li>
+                    <li><a href="{{url('/term')}}">Term And Condition</a></li>
                 </ul>
             </div>
 

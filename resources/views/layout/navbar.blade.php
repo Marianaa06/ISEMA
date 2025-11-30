@@ -2,7 +2,8 @@
     .navbar-custom {
         background-color: white;
         border-radius: 40px;
-        margin: 20px auto;
+    margin: 0 auto;       /* navbar langsung nempel atas */
+    top: 0;
         padding: 14px 32px;
         /* Perbesar padding */
         width: 92%;
@@ -11,9 +12,15 @@
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
 
-        position: relative;
+        position: sticky;
         z-index: 9999;
     }
+    .navbar-custom.scrolled {
+    border-radius: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 20px;
+}
 
     .btn-gradient {
         background: linear-gradient(to right, #a78bfa, #c084fc);

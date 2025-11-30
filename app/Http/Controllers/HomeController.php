@@ -9,7 +9,7 @@ class HomeController extends Controller
     public function __construct()
     {
         // Hanya halaman 'about' dan 'contact' yang bisa diakses tanpa login
-        $this->middleware('auth')->except(['about', 'contact','tims','credit','privacy','karir','dokumentasi','harga','front','marketing','designer','backend']);
+        $this->middleware('auth')->except(['about', 'contact','tims','credit','privacy','karir','dokumentasi','term','harga','front','marketing','designer','backend']);
     }
 
     public function index()
@@ -50,6 +50,11 @@ class HomeController extends Controller
     public function dokumentasi()
     {
         return view('page.dokumentasi');
+    }
+
+    public function term()
+    {
+        return view('page.term');
     }
 
 

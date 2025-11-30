@@ -6,12 +6,6 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KarirController;
 
 
-
-
-Route::get('/about', function () {
-    return view('page.about');
-})->name('about');
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -29,6 +23,7 @@ Route::get('/credit', [HomeController::class, 'credit'])->name('credit');
 Route::get('/privacy', [HomeController::class, 'privacy'])->name('privacy');
 Route::get('/karir', [HomeController::class, 'karir'])->name('karir');
 Route::get('/dokumentasi', [HomeController::class, 'dokumentasi'])->name('dokumentasi');
+Route::get('/term', [HomeController::class, 'term'])->name('term');
 
 
 Route::get('/harga', [HomeController::class, 'harga'])->name('harga');
