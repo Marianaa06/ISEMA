@@ -11,7 +11,7 @@ body {
   max-width: 1200px;
   margin: 1.5rem auto 0 auto;
   padding: 0.75rem 2rem;
-  position: sticky;
+  /* position: sticky; */
   top: 10;
   z-index: 1000;
 }
@@ -288,4 +288,18 @@ body {
 .highlight-box i {
   margin-right: 8px;
   color: #6a1b9a;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }

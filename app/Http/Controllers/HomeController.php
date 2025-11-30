@@ -6,24 +6,10 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    // /**
-    //  * Create a new controller instance.
-    //  *
-    //  * @return void
-    //  */
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
-
-    // /**
-    //  * Show the application dashboard.
-    //  *
-    //  * @return \Illuminate\Contracts\Support\Renderable
-    //  */
     public function __construct()
     {
-        $this->middleware('auth')->except(['about']);
+        // Hanya halaman 'about' dan 'contact' yang bisa diakses tanpa login
+        $this->middleware('auth')->except(['about', 'contact','tims','credit','privacy','karir','harga','front','marketing','designer','backend']);
     }
 
     public function index()
@@ -35,4 +21,58 @@ class HomeController extends Controller
     {
         return view('page.about');
     }
+
+    public function contact()
+    {
+        return view('page.contact');
+    }
+    
+    public function tims()
+    {
+        return view('page.tims');
+    }
+
+    public function credit()
+    {
+        return view('page.credit');
+    }
+
+    public function privacy()
+    {
+        return view('page.privacy');
+    }
+
+    public function karir()
+    {
+        return view('page.karir');
+    }
+
+
+    public function harga()
+    {
+        return view('page.harga');
+    }
+
+
+
+    public function front()
+    {
+        return view('page.front');
+    }
+
+    public function marketing()
+    {
+        return view('page.marketing');
+    }
+
+    public function designer()
+    {
+        return view('page.designer');
+    }
+
+    public function backend()
+    {
+        return view('page.backend');
+    }
+
 }

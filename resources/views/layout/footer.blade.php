@@ -1,86 +1,138 @@
 <style>
-    .bg-soft-purple {
-        background-color: #ede7f6 !important; /* soft ungu */
+    .footer-elegant {
+        background-color: #f6f3fc;
+        padding: 60px 0 30px;
+        border-top: 2px solid rgba(111, 66, 193, 0.2);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #4b367c;
     }
 
-    .text-purple {
-        color: #6f42c1 !important;
+    .footer-elegant h5 {
+        font-weight: 600;
+        font-size: 1.1rem;
+        position: relative;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 
-    .text-purple a {
-        color: #6f42c1 !important;
+    .footer-elegant h5::after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 2px;
+        background-color: #c5aaff;
+        bottom: -8px;
+        left: 0;
+    }
+
+    .footer-elegant a {
+        color: #6f42c1;
         text-decoration: none;
+        transition: all 0.3s ease;
     }
 
-    .text-purple a:hover {
+    .footer-elegant a:hover {
+        color: #4a2c8c;
         text-decoration: underline;
+    }
+
+    .social-icons a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        margin-right: 10px;
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(5px);
+        border-radius: 50%;
+        text-align: center;
+        color: #6f42c1;
+        font-size: 18px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .social-icons a:hover {
+        background: #6f42c1;
+        color: #fff;
+        transform: scale(1.1);
+    }
+
+    .map-frame {
+        width: 100%;
+        height: 220px;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid #dcd1f3;
+        color: #6c5b91;
+    }
+
+    @media (max-width: 767.98px) {
+        .text-center-mobile {
+            text-align: center;
+        }
+
+        .social-icons {
+            justify-content: center;
+        }
     }
 </style>
 
-<div class="container-fluid footer bg-soft-purple">
-    <div class="container text-purple py-5">
-        <div class="row g-4">
-            <!-- Kalender -->
-            <div class="col-lg-3 text-center">
-                <h5 class="fw-bold">Kalender:</h5>
-                <iframe class="py-2 shadow-lg"
-                    style="border: none; height: 300px"
-                    src="https://calendar.google.com/calendar/embed?src=example%40gmail.com&ctz=Asia%2FMakassar">
-                </iframe>
-            </div>
-
-            <!-- Link Terkait -->
-            <div class="col-lg-3 text-center">
-                <h5 class="fw-bold">Link Terkait:</h5>
-                <br>
+<div class="container-fluid footer-elegant">
+    <div class="container">
+        <div class="row gy-4">
+            <!-- Kolom 1 -->
+            <div class="col-md-4 text-center-mobile">
+                <h5>Link Terkait</h5>
                 <ul class="list-unstyled">
                     <li><a href="https://techno-celebes.com/" target="_blank">Website Techno Celebes</a></li>
                 </ul>
+
+                <h5 class="mt-4">Kontak</h5>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-telephone-fill me-2"></i> <a href="tel:+6282189705433">+62-822-9954-3317</a></li>
+                    <li><i class="bi bi-envelope-fill me-2"></i> <a href="mailto:official@techno-celebes.com">official@techno-celebes.com</a></li>
+                </ul>
             </div>
 
-            <!-- Social & Alamat -->
-            <div class="col-lg-3">
-                <h5 class="fw-bold">Social Media:</h5>
-                <div class="d-flex gap-3 mb-3">
-                    <a href="https://www.instagram.com/technocelebes?igsh=cjh1eHdrbDg3bXp3" target="_blank" class="fs-3 text-purple"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="fs-3 text-purple"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="fs-3 text-purple"><i class="fab fa-youtube"></i></a>
-                    <a href="#" class="fs-3 text-purple"><i class="fab fa-tiktok"></i></a>
+            <!-- Kolom 2 -->
+            <div class="col-md-4 text-center-mobile">
+                <h5>Social Media</h5>
+                <div class="social-icons d-flex">
+                    <a href="https://www.instagram.com/technocelebes" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1Ajxosb8o7/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
+                    <a href="https://www.tiktok.com/@techno.celebes?_t=ZS-8xZpVSu5rfk&_r=1"><i class="fab fa-tiktok"></i></a>
                 </div>
 
-                <h5 class="fw-bold">Alamat:</h5>
+                <h5 class="mt-4">Alamat</h5>
                 <p class="mb-1">Sistem Informasi Akademik <strong>ISEMA</strong></p>
-                <p class="mb-0">Jalan Tadulako, Kelurahan Besusu Tengah, Kecamatan Palu Timur, Kota Palu</p>
-                <p>Provinsi Sulawesi Tengah, Indonesia</p>
-                <br>
+                <p class="mb-0">Jalan Tadulako, Besusu Tengah, Palu Timur</p>
+                <p>Sulawesi Tengah, Indonesia</p>
             </div>
 
-            <!-- Map -->
-            <div class="col-lg-3">
-                <h5 class="fw-bold">Kontak:</h5>
+            <!-- Kolom 3 -->
+            <div class="col-md-4 text-center-mobile">
+                <h5>Informasi</h5>
                 <ul class="list-unstyled">
-                    <li class="mb-2">
-                        <i class="bi bi-telephone-fill me-2"></i>
-                        <a href="tel:0451460798" class="text-purple">+62-821-8970-5433</a>
-                    </li>
-                    <li>
-                        <i class="bi bi-envelope-fill me-2"></i>
-                        <a href="mailto:fuad@uinpalu.ac.id" class="text-purple">official@techno-celebes.com</a>
-                    </li>
+                    <li><a href="{{url('/tims')}}">Tims</a></li>
+                    <li><a href="{{url('/credit')}}">Credit</a></li>
+                    <li><a href="{{url('/privacy')}}">Privacy Policy</a></li>
+                    <li><a href="{{url('/karir')}}">Karir</a></li>
+                    <li><a href="/dokumentasi">Dokumentasi</a></li>
+                    <li><a href="/term">Term And Condition</a></li>
                 </ul>
-                <h5 class="fw-bold">Location:</h5>
-                <iframe class="py-2 shadow-lg"
-                    style="border: none; width: 100%; max-width: 300px; height: 300px;"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.333780841165!2d119.87664550000001!3d-0.8929559999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d8bedc0398bbf61%3A0x6b38cb63e4e092c!2sTechno%20Celebes!5e0!3m2!1sid!2sid!4v1749978179863!5m2!1sid!2sid"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+            </div>
+
+            <div class="footer-bottom mt-4 text-center">
+                <small>© 2025 <strong>ISEMA</strong> • All rights reserved.</small>
             </div>
         </div>
     </div>
-
-    <hr class="border-light mt-4" />
-
-    <div class="text-center text-purple pb-3">
-        <small>&copy; 2025 <strong>ISEMA</strong> • All rights reserved.</small>
-    </div>
-</div>

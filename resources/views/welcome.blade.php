@@ -1,23 +1,8 @@
 @extends('layout.layout')
-
 @section('content')
-<!-- Navbar -->
-
-<!-- Hero Section -->
-<!-- <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
-   Payze
-  </title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
- </head> -->
 
 <head>
-    <script src="{{ asset('js/app.js') }}" defer></script>
+  <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <!-- Hero Section -->
 <section class="container mt-5 d-md-flex align-items-center justify-content-between px-3 px-md-0">
@@ -37,13 +22,11 @@
       mulai dari pemesanan produk hingga layanan purna jual yang andal.
     </p>
     <div class="d-flex gap-3">
-      <button class="btn btn-gradient btn-sm px-4">
+      <a href="{{url('/harga')}}" class="btn btn-gradient btn-sm px-4">
         Pesan Sekarang
-      </button>
-      <button class="btn btn-white-rounded btn-sm px-4">
-        Pelajari Selengkapnya
-      </button>
+      </a>
     </div>
+
   </div>
   <div class="w-100 w-md-50 position-relative">
     <div class="position-absolute top-0 end-0 h-100 d-none d-md-block rounded-tr-4 rounded-br-4" style="
@@ -56,7 +39,7 @@
           z-index: 1;
         ">
     </div>
-    <img alt="Smiling woman wearing white shirt holding multiple credit cards in her right hand, standing with left hand in pocket" class="position-relative rounded-tr-4 rounded-br-4 mx-auto mx-md-0" height="400" src="https://storage.googleapis.com/a1aa/image/87cd3051-e600-44be-a318-8f177f14f3e2.jpg" style="width: 280px; max-width: 100%; z-index: 2" width="400" />
+    <img alt="Smiling woman wearing white shirt holding multiple credit cards in her right hand, standing with left hand in pocket" class="position-relative rounded-tr-4 rounded-br-4 mx-auto mx-md-0" height="400" src="{{ asset('images/samping2.jpg') }}" style="width: 280px; max-width: 100%; z-index: 2" width="400" />
   </div>
 </section>
 <!-- Email & Info Cards Section -->
@@ -102,11 +85,6 @@
         </i>
         Perlindungan Data & Layanan Purna Jual
       </li>
-      <!-- <li class="d-flex align-items-center gap-2">
-        <i class="fas fa-check text-purple fs-6">
-        </i>
-        Lock Protection
-      </li> -->
     </ul>
     <div class="text-secondary fs-7" style="flex:1">
       <h4 class="fw-semibold text-dark fs-6 mb-2">
@@ -116,24 +94,14 @@
         We are ready to assist you in every step of ISEMA sales
         from product consultation and order processing to after-sales service.
       </p>
-      <a class="text-purple fs-7 fw-semibold text-decoration-none d-inline-flex align-items-center gap-1" href="#">
-        Read More
-        <i class="fas fa-arrow-right fs-7">
-        </i>
-      </a>
     </div>
   </div>
 </section>
 <!-- Trusted Section -->
 <section class="container mt-5 d-flex flex-column flex-md-row align-items-center gap-4 gap-md-5 px-3 px-md-0">
   <div class="position-relative w-100 w-md-50">
-    <img alt="Smiling man in black suit holding a card in his right hand, standing outside" class="rounded-3 w-100" height="320" src="https://storage.googleapis.com/a1aa/image/c3322e5f-606d-421a-850b-b565127ea204.jpg" width="320" />
-    <img alt="Woman sitting on a couch with laptop on lap, waving with right hand" class="position-absolute rounded-3 border border-white shadow" height="140" src="https://storage.googleapis.com/a1aa/image/6de1fa90-c84e-47c9-2b62-ff15e98b657d.jpg" style="top: 2.5rem; left: 0; width: 140px; height: 140px; object-fit: cover" width="140" />
-    <!-- <div class="position-absolute bottom-0 start-50 translate-middle-x bg-purple-gradient text-white fs-7 fw-semibold rounded-pill px-3 py-2 shadow" style="min-width: 100px">
-      1,485 +
-      <br />
-      Trusted Clients
-    </div> -->
+    <img alt="Smiling man in black suit holding a card in his right hand, standing outside" class="rounded-3 w-100" height="320" src="{{ asset('images/tunjuk2.jpg') }}" width="320" />
+    <img alt="Woman sitting on a couch with laptop on lap, waving with right hand" class="position-absolute rounded-3 border border-white shadow" height="140" src="{{ asset('images/samping2.jpg') }}" style="top: 2.5rem; left: 0; width: 140px; height: 140px; object-fit: cover" width="140" />
   </div>
   <div class="w-100 w-md-50 text-secondary fs-7">
     <p class="text-purple d-flex align-items-center gap-2 mb-2">
@@ -148,7 +116,6 @@
     </h3>
     <p class="mb-4">
       Kami siap mendampingi Anda dalam setiap langkah penjualan ISEMA, mulai dari konsultasi, pemesanan, hingga layanan purna jual. Kami berkomitmen memberikan produk berkualitas dengan proses yang aman dan transparan.
-
     </p>
     <div class="d-flex flex-column gap-4">
       <div class="d-flex gap-3 align-items-start">
@@ -162,8 +129,6 @@
           </h5>
           <p class="fs-7 text-secondary mb-0">
             Kami adalah mitra yang dapat Anda andalkan untuk mendapatkan produk ISEMA terbaik dan original.
-
-
           </p>
         </div>
       </div>
@@ -178,8 +143,6 @@
           </h5>
           <p class="fs-7 text-secondary mb-0">
             Kami menyediakan platform penjualan ISEMA yang memudahkan Anda dalam memilih dan memesan produk dengan cepat.
-
-
           </p>
         </div>
       </div>
@@ -251,12 +214,11 @@
 <section class="container mt-5 rounded-3 py-5 px-3 px-md-0">
   <p class="text-purple fs-7 mb-2 d-flex justify-content-center align-items-center gap-2">
     <span class="border border-purple rounded-circle d-inline-block" style="width: 10px; height: 10px">
-      </span>
-      Layanan Kami  
+    </span>
+    Layanan Kami
   </p>
   <h2 class="text-center fw-semibold fs-4 mb-3" style="max-width: 600px; margin: 0 auto">
     Kami Memprioritaskan Keamanan dan Kepuasan dalam Penjualan ISEMA
-
   </h2>
   <p class="text-center text-secondary fs-7 mb-5" style="max-width: 600px; margin: 0 auto">
     Kami berkomitmen memberikan pengalaman penjualan ISEMA yang aman, transparan, dan berkualitas untuk semua pelanggan.
@@ -270,17 +232,10 @@
         </div>
         <h4 class="fw-semibold fs-6 mb-2">
           Produk Berkualitas
-
         </h4>
         <p class="text-secondary fs-7 mb-3">
           Kami hanya menyediakan produk ISEMA asli dan terjamin kualitasnya untuk memenuhi kebutuhan Anda.
-
         </p>
-        <a class="text-purple fs-7 fw-semibold d-inline-flex align-items-center gap-1 text-decoration-none" href="#">
-          Read More
-          <i class="fas fa-arrow-right fs-7">
-          </i>
-        </a>
       </div>
     </div>
     <div class="col-12 col-sm-6 col-md-4">
@@ -291,17 +246,10 @@
         </div>
         <h4 class="fw-semibold fs-6 mb-2">
           Fitur Penjualan Fleksibel
-
         </h4>
         <p class="text-secondary fs-7 mb-3">
           Nikmati kemudahan dalam memilih, memesan, dan mengelola produk ISEMA sesuai kebutuhan Anda, dengan proses yang cepat dan efisien.
-
         </p>
-        <a class="text-purple fs-7 fw-semibold d-inline-flex align-items-center gap-1 text-decoration-none" href="#">
-          Read More
-          <i class="fas fa-arrow-right fs-7">
-          </i>
-        </a>
       </div>
     </div>
     <div class="col-12 col-sm-6 col-md-4">
@@ -315,13 +263,7 @@
         </h4>
         <p class="text-secondary fs-7 mb-3">
           Seluruh harga produk ISEMA kami transparan tanpa ada biaya tambahan di luar yang diinformasikan.
-
         </p>
-        <a class="text-purple fs-7 fw-semibold d-inline-flex align-items-center gap-1 text-decoration-none" href="#">
-          Read More
-          <i class="fas fa-arrow-right fs-7">
-          </i>
-        </a>
       </div>
     </div>
   </div>
@@ -333,7 +275,6 @@
         </h4>
         <p class="fs-7 mb-0">
           Temukan berbagai layanan tambahan untuk mendukung pembelian dan distribusi produk ISEMA Anda.
-
         </p>
       </div>
     </div>
@@ -345,16 +286,10 @@
         </div>
         <h4 class="fw-semibold fs-6 mb-2">
           Dukungan Profesional
-
         </h4>
         <p class="text-secondary fs-7 mb-3">
           Tim kami siap membantu Anda dalam setiap tahap penjualan, mulai dari konsultasi hingga layanan purna jual.
         </p>
-        <a class="text-purple fs-7 fw-semibold d-inline-flex align-items-center gap-1 text-decoration-none" href="#">
-          Read More
-          <i class="fas fa-arrow-right fs-7">
-          </i>
-        </a>
       </div>
     </div>
     <div class="col-12 col-sm-6 col-md-4">
@@ -365,17 +300,10 @@
         </div>
         <h4 class="fw-semibold fs-6 mb-2">
           Akun Pelanggan
-
         </h4>
         <p class="text-secondary fs-7 mb-3">
           Nikmati fitur akun pelanggan untuk memudahkan pengelolaan pesanan dan riwayat pembelian ISEMA Anda.
-
         </p>
-        <a class="text-purple fs-7 fw-semibold d-inline-flex align-items-center gap-1 text-decoration-none" href="#">
-          Read More
-          <i class="fas fa-arrow-right fs-7">
-          </i>
-        </a>
       </div>
     </div>
   </div>
