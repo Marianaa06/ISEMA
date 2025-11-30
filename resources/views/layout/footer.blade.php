@@ -90,12 +90,12 @@
         <div class="row gy-4">
             <!-- Kolom 1 -->
             <div class="col-md-4 text-center-mobile">
-                <h5>Link Terkait</h5>
+                <h5>Related Links</h5>
                 <ul class="list-unstyled">
-                    <li><a href="https://techno-celebes.com/" target="_blank">Website Techno Celebes</a></li>
+                    <li><a href="https://techno-celebes.com/" target="_blank">Techno Celebes Website</a></li>
                 </ul>
 
-                <h5 class="mt-4">Kontak</h5>
+                <h5 class="mt-4">Contact</h5>
                 <ul class="list-unstyled">
                     <li><i class="bi bi-telephone-fill me-2"></i> <a href="tel:+6282189705433">+62-822-9954-3317</a></li>
                     <li><i class="bi bi-envelope-fill me-2"></i> <a href="mailto:official@techno-celebes.com">official@techno-celebes.com</a></li>
@@ -112,8 +112,8 @@
                     <a href="https://www.tiktok.com/@techno.celebes?_t=ZS-8xZpVSu5rfk&_r=1"><i class="fab fa-tiktok"></i></a>
                 </div>
 
-                <h5 class="mt-4">Alamat</h5>
-                <p class="mb-1">Sistem Informasi Akademik <strong>ISEMA</strong></p>
+                <h5 class="mt-4">Address</h5>
+                <p class="mb-1">Academic Information System <strong>ISEMA</strong></p>
                 <p class="mb-0">Jalan Tadulako, Besusu Tengah, Palu Timur</p>
                 <p>Sulawesi Tengah, Indonesia</p>
             </div>
@@ -122,11 +122,11 @@
             <div class="col-md-4 text-center-mobile">
                 <h5>Informasi</h5>
                 <ul class="list-unstyled">
-                    <li><a href="{{url('/tims')}}">Tims</a></li>
+                    <li><a href="{{url('/tims')}}">Team Members</a></li>
                     <li><a href="{{url('/credit')}}">Credit</a></li>
                     <li><a href="{{url('/privacy')}}">Privacy Policy</a></li>
-                    <li><a href="{{url('/karir')}}">Karir</a></li>
-                    <li><a href="/dokumentasi">Dokumentasi</a></li>
+                    <li><a href="{{url('/karir')}}">Career</a></li>
+                    <li><a href="{{url('/dokumentasi')}}">Documentation</a></li>
                     <li><a href="/term">Term And Condition</a></li>
                 </ul>
             </div>

@@ -28,6 +28,7 @@ Route::get('/tims', [HomeController::class, 'tims'])->name('tims');
 Route::get('/credit', [HomeController::class, 'credit'])->name('credit');
 Route::get('/privacy', [HomeController::class, 'privacy'])->name('privacy');
 Route::get('/karir', [HomeController::class, 'karir'])->name('karir');
+Route::get('/dokumentasi', [HomeController::class, 'dokumentasi'])->name('dokumentasi');
 
 
 Route::get('/harga', [HomeController::class, 'harga'])->name('harga');

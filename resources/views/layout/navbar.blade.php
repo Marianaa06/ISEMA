@@ -10,6 +10,9 @@
         max-width: 1200px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
+
+        position: relative;
+        z-index: 9999;
     }
 
     .btn-gradient {
